@@ -7,6 +7,7 @@
 ## 저장소
 
 - GitHub Repository: https://github.com/FutureAria/Major
+- 실제 서비스 주소: https://juwwkd.dothome.co.kr/MajorLink/
 - 기본 브랜치: `main`
 
 ## 업로드 자료
@@ -35,6 +36,7 @@ MajorLink는 대학생 팀 프로젝트에서 전공, 역할, 기술 스택, 참
 - 파일 SHA-256 해시
 - HTML 디자인 미리보기와 원본 JSX 소스
 - 저장소 URL
+- 실제 서비스 URL
 
 ## 한계
 

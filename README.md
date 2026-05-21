@@ -9,6 +9,7 @@ MajorLink는 대학생 팀 프로젝트에서 전공, 역할, 기술 스택, 일
 ## 저장소 주소
 
 - GitHub Repository: https://github.com/FutureAria/Major
+- 실제 서비스 주소: https://juwwkd.dothome.co.kr/MajorLink/
 - GitHub Pages 예상 주소: https://futurearia.github.io/Major/
 
 > GitHub Pages 주소는 저장소 설정에서 Pages 배포가 활성화된 뒤 사용할 수 있습니다.
@@ -70,5 +71,6 @@ open index-print.html
 ## 배포 / 외부 연동 상태
 
 - 현재 저장소는 정적 프론트엔드 미리보기입니다.
+- 실제 서비스 주소는 `https://juwwkd.dothome.co.kr/MajorLink/`입니다.
 - 백엔드 서버, DB, 외부 API 연동은 포함되어 있지 않습니다.
 - Oracle Cloud, Oracle DB, Oracle Object Storage 배포 설정은 포함되어 있지 않습니다.
