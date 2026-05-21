@@ -1,27 +1,74 @@
 # MajorLink
 
-MajorLink is a static HTML preview for a student project matching and collaboration dashboard.
+## 프로젝트 소개
 
-## Run Locally
+MajorLink는 대학생 팀 프로젝트에서 전공, 역할, 기술 스택, 일정, 포트폴리오 정보를 바탕으로 팀원을 더 빠르게 찾고 협업을 관리할 수 있도록 설계한 서비스 기획/디자인 프로젝트입니다.
 
-Open `index.html` in a browser.
+이 저장소는 MajorLink의 정적 HTML 디자인 미리보기와 발표/기획 자료를 보관합니다. 저작권 및 최초 제작 시점 증빙을 위해 GitHub 커밋 기록과 원본 산출물 파일을 함께 남깁니다.
+
+## 저장소 주소
+
+- GitHub Repository: https://github.com/FutureAria/Major
+- GitHub Pages 예상 주소: https://futurearia.github.io/Major/
+
+> GitHub Pages 주소는 저장소 설정에서 Pages 배포가 활성화된 뒤 사용할 수 있습니다.
+
+## 우리가 만드는 것
+
+MajorLink는 전공 기반 프로젝트 팀빌딩을 돕는 플랫폼입니다.
+
+- 프로젝트 리더는 필요한 역할과 기술을 등록합니다.
+- 지원자는 자신의 전공, 역할, 기술 스택, 포트폴리오를 기반으로 프로젝트에 지원합니다.
+- 서비스는 역할 적합도, 기술 스택, 참여 가능 기간, 관심도, 포트폴리오 정보를 기준으로 지원자를 비교합니다.
+- 팀 구성 이후에는 칸반 보드, 역할 분담, 자료 관리, 일정 확인 같은 협업 화면을 제공합니다.
+
+## 핵심 가치
+
+- 전공과 역할이 섞인 팀을 더 쉽게 구성할 수 있습니다.
+- 프로젝트 리더가 지원자를 한눈에 비교할 수 있습니다.
+- 팀빌딩 이후 협업 상태를 한 화면에서 관리할 수 있습니다.
+- 발표 자료, 기획 자료, 디자인 미리보기를 함께 보관해 프로젝트 진행 증거를 남길 수 있습니다.
+
+## 포함된 자료
+
+| 구분 | 파일 | 설명 |
+|---|---|---|
+| 정적 HTML 미리보기 | `index.html` | MajorLink 메인 디자인 미리보기 |
+| 출력용 미리보기 | `index-print.html` | 인쇄/제출용 화면 미리보기 |
+| 발표 자료 | `docs/MajorLink_v2_final_합본.pptx` | MajorLink 최종 발표자료 합본 |
+| 기획 자료 | `docs/MajorLink_기획자료_최신화_final.xlsx` | MajorLink 최신화 기획자료 |
+| 증빙 문서 | `docs/evidence/CREATION_EVIDENCE.md` | 업로드 파일 해시와 커밋 기록 정리 |
+
+## 로컬 실행 방법
+
+별도 서버 없이 브라우저에서 열 수 있습니다.
 
 ```bash
 open index.html
 ```
 
-The print-oriented preview is available at `index-print.html`.
+출력용 화면은 아래 파일을 열면 됩니다.
 
-## Included Files
+```bash
+open index-print.html
+```
 
-- `index.html`: main preview page
-- `index-print.html`: print preview page
-- `styles.css`: compiled styles
-- `bundle.js`, `print-bundle.js`: browser bundles
-- `src/`: JSX source files
-- `vendor/`: local React browser builds
+## 기술 구성
 
-## Notes
+- HTML
+- CSS
+- React browser build
+- JSX source files
+- Static frontend bundle
 
-- This repository is a static frontend preview.
-- No backend, database, external API, or Oracle Cloud deployment is configured in this upload.
+## 저작권 / 제작 증빙 안내
+
+이 저장소의 커밋 기록, 파일 해시, 발표자료, 기획자료는 MajorLink 프로젝트의 제작 시점과 산출물 보관을 위한 보조 증빙 자료입니다.
+
+다만 GitHub 업로드만으로 법적 권리 확정이나 분쟁 대응이 완전히 보장되는 것은 아닙니다. 중요한 외부 제출, 공모전, 사업화, 법적 분쟁 가능성이 있으면 원본 파일, 작업 로그, 발표 기록, 제출 기록, 공증 또는 공식 저작권 등록 자료를 함께 보관하는 것이 좋습니다.
+
+## 배포 / 외부 연동 상태
+
+- 현재 저장소는 정적 프론트엔드 미리보기입니다.
+- 백엔드 서버, DB, 외부 API 연동은 포함되어 있지 않습니다.
+- Oracle Cloud, Oracle DB, Oracle Object Storage 배포 설정은 포함되어 있지 않습니다.
