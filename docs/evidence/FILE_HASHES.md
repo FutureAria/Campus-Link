@@ -1,0 +1,40 @@
+# MajorLink 파일 해시
+
+## 목적
+
+이 문서는 MajorLink 주요 산출물의 SHA-256 해시를 기록해 파일 동일성을 확인하기 위한 보조 증빙 자료입니다.
+
+## 해시 기준
+
+- 알고리즘: SHA-256
+- 기록일: 2026-05-21
+
+## 주요 산출물 해시
+
+| 파일 | SHA-256 |
+|---|---|
+| `index.html` | `1f57d6032d0a69212f49e9416f1d15e0926571b0eaee38eb554192c816ba3df6` |
+| `index-print.html` | `d8ababba85cfe59c267e7ee6f07674bc8078a6b16819f0c8adb8576e460e9370` |
+| `styles.css` | `722488ecb01e7d4f5712b2b8ec45c6e41c7c9a17ad3c44368c679bc23bf54f76` |
+| `bundle.js` | `1d4b7c69ca316515deff67be4464498b2e39ee29d7ce0ebdb469113352d6c710` |
+| `print-bundle.js` | `6c7e2ca838915f7d4ccb60cc423afa39dedfff1d01f6c3f561e03d6d20f70459` |
+| `docs/MajorLink_v2_final_합본.pptx` | `3474ee2a6d16be357895ffaa4bab5c35c1bdc3e188d559789a2d15e674488ce4` |
+| `docs/MajorLink_v2_final.pdf` | `c9fed41645c2f31ed10e0027d70313ce8fe9480f8d1401947c9b10df67441c88` |
+| `docs/MajorLink_기획자료_최신화_final.xlsx` | `3579dd98f0c52a71bd008241455c1fa350a721bf1559082306398627129fd074` |
+| `docs/evidence/screenshots/majorlink-live-site-2026-05-21.jpg` | `cfa6c628f3df3b85353e270d15d5a5cc5bcd6b2dccf3290c2863f513199add0d` |
+
+## 검증 명령
+
+macOS 또는 Linux에서 아래 명령으로 해시를 다시 확인할 수 있습니다.
+
+```bash
+shasum -a 256 index.html index-print.html styles.css bundle.js print-bundle.js \
+  docs/MajorLink_v2_final_합본.pptx \
+  docs/MajorLink_v2_final.pdf \
+  docs/MajorLink_기획자료_최신화_final.xlsx \
+  docs/evidence/screenshots/majorlink-live-site-2026-05-21.jpg
+```
+
+## 한계
+
+해시는 특정 파일이 변경되지 않았는지 확인하는 데 유용하지만, 저작권 자체를 법적으로 확정하지는 않습니다. GitHub 커밋 기록, 원본 파일, 작업 일지, 제출 기록과 함께 보관하는 것이 좋습니다.

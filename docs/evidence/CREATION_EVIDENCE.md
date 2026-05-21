@@ -9,13 +9,16 @@
 - GitHub Repository: https://github.com/FutureAria/Major
 - 실제 서비스 주소: https://juwwkd.dothome.co.kr/MajorLink/
 - 기본 브랜치: `main`
+- 팀명: MajorLink
 
 ## 업로드 자료
 
 | 자료 | 저장소 경로 | 원본 위치 | SHA-256 |
 |---|---|---|---|
 | 최종 발표자료 합본 | `docs/MajorLink_v2_final_합본.pptx` | `/Users/juyoung/Desktop/MajorLink/MajorLink_v2_final_합본.pptx` | `3474ee2a6d16be357895ffaa4bab5c35c1bdc3e188d559789a2d15e674488ce4` |
+| 발표자료 PDF | `docs/MajorLink_v2_final.pdf` | `/Users/juyoung/Desktop/MajorLink/슬라이드/MajorLink_v2_final.pdf` | `c9fed41645c2f31ed10e0027d70313ce8fe9480f8d1401947c9b10df67441c88` |
 | 최신화 기획자료 | `docs/MajorLink_기획자료_최신화_final.xlsx` | `/Users/juyoung/Desktop/MajorLink/슬라이드/MajorLink_기획자료_최신화_final.xlsx` | `3579dd98f0c52a71bd008241455c1fa350a721bf1559082306398627129fd074` |
+| 실제 사이트 캡처 | `docs/evidence/screenshots/majorlink-live-site-2026-05-21.jpg` | `https://juwwkd.dothome.co.kr/MajorLink/` | `cfa6c628f3df3b85353e270d15d5a5cc5bcd6b2dccf3290c2863f513199add0d` |
 
 ## 프로젝트 설명
 
@@ -37,6 +40,8 @@ MajorLink는 대학생 팀 프로젝트에서 전공, 역할, 기술 스택, 참
 - HTML 디자인 미리보기와 원본 JSX 소스
 - 저장소 URL
 - 실제 서비스 URL
+- 사이트 캡처 이미지
+- 팀명 및 팀원 역할 기록
 
 ## 한계
 

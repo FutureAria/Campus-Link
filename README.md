@@ -37,8 +37,27 @@ MajorLink는 전공 기반 프로젝트 팀빌딩을 돕는 플랫폼입니다.
 | 정적 HTML 미리보기 | `index.html` | MajorLink 메인 디자인 미리보기 |
 | 출력용 미리보기 | `index-print.html` | 인쇄/제출용 화면 미리보기 |
 | 발표 자료 | `docs/MajorLink_v2_final_합본.pptx` | MajorLink 최종 발표자료 합본 |
+| 발표 자료 PDF | `docs/MajorLink_v2_final.pdf` | 열람/공유용 발표자료 PDF |
 | 기획 자료 | `docs/MajorLink_기획자료_최신화_final.xlsx` | MajorLink 최신화 기획자료 |
 | 증빙 문서 | `docs/evidence/CREATION_EVIDENCE.md` | 업로드 파일 해시와 커밋 기록 정리 |
+| 사이트 기록 | `docs/evidence/SITE_RECORD.md` | 실제 서비스 URL과 캡처 기록 |
+| 파일 해시 | `docs/evidence/FILE_HASHES.md` | 주요 산출물 SHA-256 해시 |
+| 제작자 기록 | `docs/evidence/PROJECT_OWNERSHIP.md` | 팀명, 팀원, 역할, 제작 목적 |
+| 작업 일지 | `docs/WORKLOG.md` | 날짜별 작업/업로드 기록 |
+| 리뷰용 요약 | `docs/README_FOR_REVIEW.md` | 교수님/심사자/팀원 확인용 요약 |
+
+## 팀 정보
+
+팀명: MajorLink
+
+| 이름 | 전공 | 역할 |
+|---|---|---|
+| 박주영 | 소프트웨어학과 | PM + 프론트 |
+| 김상윤 | 정보보안학과 | 프론트 |
+| 우가은 | 경영학과 | 기획 |
+| 오영은 | 시각디자인과 | 디자인 |
+| 정진명 | 컴퓨터공학부 | 백엔드 |
+| 신정민 | 컴퓨터공학부 | 백엔드 |
 
 ## 로컬 실행 방법
 
@@ -67,6 +86,8 @@ open index-print.html
 이 저장소의 커밋 기록, 파일 해시, 발표자료, 기획자료는 MajorLink 프로젝트의 제작 시점과 산출물 보관을 위한 보조 증빙 자료입니다.
 
 다만 GitHub 업로드만으로 법적 권리 확정이나 분쟁 대응이 완전히 보장되는 것은 아닙니다. 중요한 외부 제출, 공모전, 사업화, 법적 분쟁 가능성이 있으면 원본 파일, 작업 로그, 발표 기록, 제출 기록, 공증 또는 공식 저작권 등록 자료를 함께 보관하는 것이 좋습니다.
+
+이 저장소는 저작권 보호 목적의 `All Rights Reserved` 정책을 사용합니다. 자세한 내용은 `COPYRIGHT.md`와 `LICENSE`를 확인하세요.
 
 ## 배포 / 외부 연동 상태
 
