@@ -15,13 +15,13 @@ Protected materials include, but are not limited to:
 - UI screens
 - static HTML preview
 - source code
-- evidence documents
+- evidence documents / 증빙 문서
 - project name and related descriptions
 
 This license is intentionally not an open-source license.
 
-For evidence and ownership context, see:
+For ownership and evidence context, see:
 
 - `COPYRIGHT.md`
-- `docs/evidence/CREATION_EVIDENCE.md`
-- `docs/evidence/PROJECT_OWNERSHIP.md`
+- `문서/증빙자료/제작_증빙.md`
+- `문서/증빙자료/팀_소유권_기록.md`

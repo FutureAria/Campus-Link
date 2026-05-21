@@ -46,9 +46,9 @@ MajorLink 팀의 명시적 허가 없이 아래 행위를 금지합니다.
 
 - GitHub Repository: https://github.com/FutureAria/Major
 - 실제 서비스 주소: https://juwwkd.dothome.co.kr/MajorLink/
-- 제작 증빙 문서: `docs/evidence/CREATION_EVIDENCE.md`
-- 파일 해시 문서: `docs/evidence/FILE_HASHES.md`
-- 사이트 기록 문서: `docs/evidence/SITE_RECORD.md`
+- 제작 증빙 문서: `문서/증빙자료/제작_증빙.md`
+- 파일 해시 문서: `문서/증빙자료/파일_해시.md`
+- 사이트 기록 문서: `문서/증빙자료/사이트_기록.md`
 
 ## 법적 한계
 

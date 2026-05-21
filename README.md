@@ -36,16 +36,39 @@ MajorLink는 전공 기반 프로젝트 팀빌딩을 돕는 플랫폼입니다.
 |---|---|---|
 | 정적 HTML 미리보기 | `index.html` | MajorLink 메인 디자인 미리보기 |
 | 출력용 미리보기 | `index-print.html` | 인쇄/제출용 화면 미리보기 |
-| 발표 자료 | `docs/MajorLink_v2_final_합본.pptx` | MajorLink 최종 발표자료 합본 |
-| 발표 자료 PDF | `docs/MajorLink_v2_final.pdf` | 열람/공유용 발표자료 PDF |
-| 기획 자료 | `docs/MajorLink_기획자료_최신화_final.xlsx` | MajorLink 최신화 기획자료 |
-| 증빙 문서 | `docs/evidence/CREATION_EVIDENCE.md` | 업로드 파일 해시와 커밋 기록 정리 |
-| 사이트 기록 | `docs/evidence/SITE_RECORD.md` | 실제 서비스 URL과 캡처 기록 |
-| 파일 해시 | `docs/evidence/FILE_HASHES.md` | 주요 산출물 SHA-256 해시 |
-| 제작자 기록 | `docs/evidence/PROJECT_OWNERSHIP.md` | 팀명, 팀원, 역할, 제작 목적 |
-| 작업 일지 | `docs/WORKLOG.md` | 날짜별 작업/업로드 기록 |
-| 리뷰용 요약 | `docs/README_FOR_REVIEW.md` | 교수님/심사자/팀원 확인용 요약 |
-| 사용자 조사 | `docs/evidence/research/google-form-survey-summary.md` | Google Forms 조사 결과 캡처 및 요약 |
+| 발표 자료 | `문서/MajorLink_최종발표자료_합본.pptx` | MajorLink 최종 발표자료 합본 |
+| 발표 자료 PDF | `문서/MajorLink_발표자료_PDF.pdf` | 열람/공유용 발표자료 PDF |
+| 기획 자료 | `문서/MajorLink_기획자료_최신화_final.xlsx` | MajorLink 최신화 기획자료 |
+| 증빙 문서 | `문서/증빙자료/제작_증빙.md` | 업로드 파일 해시와 커밋 기록 정리 |
+| 사이트 기록 | `문서/증빙자료/사이트_기록.md` | 실제 서비스 URL과 캡처 기록 |
+| 실제 서비스 캡처 | `문서/증빙자료/사이트_캡처/MajorLink_실제서비스_캡처_2026-05-21.jpg` | 배포된 MajorLink 화면 캡처 |
+| 파일 해시 | `문서/증빙자료/파일_해시.md` | 주요 산출물 SHA-256 해시 |
+| 제작자 기록 | `문서/증빙자료/팀_소유권_기록.md` | 팀명, 팀원, 역할, 제작 목적 |
+| 작업 일지 | `문서/작업일지.md` | 날짜별 작업/업로드 기록 |
+| 리뷰용 요약 | `문서/리뷰용_요약.md` | 교수님/심사자/팀원 확인용 요약 |
+| 사용자 조사 | `문서/증빙자료/사용자조사_구글폼/구글폼_사용자조사_요약.md` | Google Forms 조사 결과 캡처 및 요약 |
+
+## 증빙자료 빠른 위치
+
+```text
+문서/
+  작업일지.md
+  리뷰용_요약.md
+  MajorLink_최종발표자료_합본.pptx
+  MajorLink_발표자료_PDF.pdf
+  MajorLink_기획자료_최신화_final.xlsx
+  증빙자료/
+    제작_증빙.md
+    사이트_기록.md
+    사이트_캡처/
+      MajorLink_실제서비스_캡처_2026-05-21.jpg
+    사용자조사_구글폼/
+      구글폼_사용자조사_요약.md
+      스크린샷/
+        01_현재_학년_응답_2026-05-21.png
+        02_전공_계열_응답_2026-05-21.png
+        ...
+```
 
 ## 팀 정보
 
@@ -88,8 +111,8 @@ MajorLink는 Google Forms 기반 사전 조사를 통해 대학생 팀 프로젝
 
 - 응답 수: 52개
 - 개인정보 포함 여부: 이름, 이메일, 학번 등 직접 식별 정보 없음
-- 조사 요약: `docs/evidence/research/google-form-survey-summary.md`
-- 조사 캡처: `docs/evidence/research/screenshots/`
+- 조사 요약: `문서/증빙자료/사용자조사_구글폼/구글폼_사용자조사_요약.md`
+- 조사 캡처: `문서/증빙자료/사용자조사_구글폼/스크린샷/`
 
 ## 저작권 / 제작 증빙 안내
 
