@@ -19,6 +19,7 @@
 | 발표자료 PDF | `docs/MajorLink_v2_final.pdf` | `/Users/juyoung/Desktop/MajorLink/슬라이드/MajorLink_v2_final.pdf` | `c9fed41645c2f31ed10e0027d70313ce8fe9480f8d1401947c9b10df67441c88` |
 | 최신화 기획자료 | `docs/MajorLink_기획자료_최신화_final.xlsx` | `/Users/juyoung/Desktop/MajorLink/슬라이드/MajorLink_기획자료_최신화_final.xlsx` | `3579dd98f0c52a71bd008241455c1fa350a721bf1559082306398627129fd074` |
 | 실제 사이트 캡처 | `docs/evidence/screenshots/majorlink-live-site-2026-05-21.jpg` | `https://juwwkd.dothome.co.kr/MajorLink/` | `cfa6c628f3df3b85353e270d15d5a5cc5bcd6b2dccf3290c2863f513199add0d` |
+| Google Forms 조사 요약 | `docs/evidence/research/google-form-survey-summary.md` | 사용자 제공 조사 결과 캡처 기반 | 파일별 해시는 `docs/evidence/research/RESEARCH_FILE_HASHES.md` 참고 |
 
 ## 프로젝트 설명
 
@@ -42,6 +43,7 @@ MajorLink는 대학생 팀 프로젝트에서 전공, 역할, 기술 스택, 참
 - 실제 서비스 URL
 - 사이트 캡처 이미지
 - 팀명 및 팀원 역할 기록
+- Google Forms 사용자 조사 결과 캡처와 요약
 
 ## 한계
 

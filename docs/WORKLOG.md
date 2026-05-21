@@ -56,6 +56,16 @@
 - 실제 사이트 캡처 추가:
   - `docs/evidence/screenshots/majorlink-live-site-2026-05-21.jpg`
 
+### Google Forms 사용자 조사 결과 보관
+
+- Google Forms 조사 결과 캡처 14장 추가:
+  - `docs/evidence/research/screenshots/`
+- 조사 요약 문서 추가:
+  - `docs/evidence/research/google-form-survey-summary.md`
+- 조사 캡처 해시 문서 추가:
+  - `docs/evidence/research/RESEARCH_FILE_HASHES.md`
+- README와 제작 증빙 문서에 조사 자료 링크 추가
+
 ## 현재 상태
 
 - GitHub 저장소에 HTML 미리보기, 발표자료, 기획자료, PDF, 사이트 캡처, 증빙 문서가 함께 보관되어 있습니다.

@@ -45,6 +45,7 @@ MajorLink는 전공 기반 프로젝트 팀빌딩을 돕는 플랫폼입니다.
 | 제작자 기록 | `docs/evidence/PROJECT_OWNERSHIP.md` | 팀명, 팀원, 역할, 제작 목적 |
 | 작업 일지 | `docs/WORKLOG.md` | 날짜별 작업/업로드 기록 |
 | 리뷰용 요약 | `docs/README_FOR_REVIEW.md` | 교수님/심사자/팀원 확인용 요약 |
+| 사용자 조사 | `docs/evidence/research/google-form-survey-summary.md` | Google Forms 조사 결과 캡처 및 요약 |
 
 ## 팀 정보
 
@@ -80,6 +81,15 @@ open index-print.html
 - React browser build
 - JSX source files
 - Static frontend bundle
+
+## 사용자 조사
+
+MajorLink는 Google Forms 기반 사전 조사를 통해 대학생 팀 프로젝트 팀빌딩 문제와 서비스 사용 의향을 확인했습니다.
+
+- 응답 수: 52개
+- 개인정보 포함 여부: 이름, 이메일, 학번 등 직접 식별 정보 없음
+- 조사 요약: `docs/evidence/research/google-form-survey-summary.md`
+- 조사 캡처: `docs/evidence/research/screenshots/`
 
 ## 저작권 / 제작 증빙 안내
 
