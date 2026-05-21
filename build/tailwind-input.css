@@ -1,0 +1,17 @@
+@import "tailwindcss";
+@source "../index.html";
+@source "../index-print.html";
+@source "../src/**/*.jsx";
+@source "../tweaks-panel.jsx";
+@source "../build/*.jsx";
+
+@theme {
+  --font-sans: Pretendard, -apple-system, BlinkMacSystemFont, system-ui, sans-serif;
+  --color-brand-50: #EEF2FF;
+  --color-brand-600: #4F46E5;
+  --color-brand-800: #3730A3;
+  --color-lime-100: #ECFCCB;
+  --color-lime-500: #84CC16;
+  --shadow-card: 0 2px 8px rgba(15,23,42,0.04);
+  --shadow-cardHov: 0 4px 16px rgba(15,23,42,0.08);
+}
