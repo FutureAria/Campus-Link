@@ -39,6 +39,7 @@ MajorLink는 전공 기반 프로젝트 팀빌딩을 돕는 플랫폼입니다.
 | 발표 자료 | `문서/MajorLink_최종발표자료_합본.pptx` | MajorLink 최종 발표자료 합본 |
 | 발표 자료 PDF | `문서/MajorLink_발표자료_PDF.pdf` | 열람/공유용 발표자료 PDF |
 | 기획 자료 | `문서/MajorLink_기획자료_최신화_final.xlsx` | MajorLink 최신화 기획자료 |
+| 서비스 기획서 | `문서/MajorLink_서비스기획서.docx` | MajorLink 서비스 기획서 원본 |
 | 증빙 문서 | `문서/증빙자료/제작_증빙.md` | 업로드 파일 해시와 커밋 기록 정리 |
 | 사이트 기록 | `문서/증빙자료/사이트_기록.md` | 실제 서비스 URL과 캡처 기록 |
 | 실제 서비스 캡처 | `문서/증빙자료/사이트_캡처/MajorLink_실제서비스_캡처_2026-05-21.jpg` | 배포된 MajorLink 화면 캡처 |
@@ -59,6 +60,7 @@ MajorLink는 전공 기반 프로젝트 팀빌딩을 돕는 플랫폼입니다.
   MajorLink_최종발표자료_합본.pptx
   MajorLink_발표자료_PDF.pdf
   MajorLink_기획자료_최신화_final.xlsx
+  MajorLink_서비스기획서.docx
   증빙자료/
     제작_증빙.md
     HTML_최초_업로드_및_배포_기록.md
