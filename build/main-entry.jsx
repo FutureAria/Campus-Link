@@ -1844,7 +1844,7 @@ function TaskModal({ task, onClose }) {
 // ============ MY PAGE ============
 function ScreenMyPage({ device, animKey }) {
   const isM = device === 'mobile';
-  const me = { name: '김민준', dept: '컴퓨터공학', year: 3, school: '한양대', mail: 'mj.kim@hanyang.ac.kr', skills: ['React','Spring','MySQL','Git','Figma'], interests: ['교내 서비스','AI/ML','헬스케어'] };
+  const me = { name: '김민준', dept: '컴퓨터공학', year: 3, school: '한양대', mail: 'demo@majorlink.example', skills: ['React','Spring','MySQL','Git','Figma'], interests: ['교내 서비스','AI/ML','헬스케어'] };
   return (
     <div className="tab-enter" key={animKey}>
       {/* Header banner */}
