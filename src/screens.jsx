@@ -1,7 +1,7 @@
 // Screens 1-4: Landing, Explore, Detail, Compare
 const { useState: useS1, useEffect: useE1, useRef: useR1 } = React;
-const A = window.MajorAtoms;
-const D = window.MajorLinkData;
+const A = window.CampusAtoms;
+const D = window.CampusData;
 const Lc = window.lucideReact || {};
 
 // ============ SCREEN 1: LANDING ============
@@ -762,6 +762,6 @@ function Top3Compare({ applicants, animKey }) {
   );
 }
 
-window.MajorScreens = {
+window.CampusScreens = {
   ScreenLanding, ScreenExplore, ScreenDetail, ScreenCompare,
 };

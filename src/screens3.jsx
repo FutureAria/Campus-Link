@@ -1,6 +1,6 @@
 // Modals + My Page
-const A3 = window.MajorAtoms;
-const D3 = window.MajorLinkData;
+const A3 = window.CampusAtoms;
+const D3 = window.CampusData;
 const Lc3 = window.lucideReact || {};
 const { useState: useS3, useEffect: useE3 } = React;
 
@@ -171,7 +171,7 @@ function TaskModal({ task, onClose }) {
 // ============ MY PAGE ============
 function ScreenMyPage({ device, animKey }) {
   const isM = device === 'mobile';
-  const me = { name: '김민준', dept: '컴퓨터공학', year: 3, school: '한양대', mail: 'demo@majorlink.example', skills: ['React','Spring','MySQL','Git','Figma'], interests: ['교내 서비스','AI/ML','헬스케어'] };
+  const me = { name: '김민준', dept: '컴퓨터공학', year: 3, school: '한양대', mail: 'demo@campus-link.example', skills: ['React','Spring','MySQL','Git','Figma'], interests: ['교내 서비스','AI/ML','헬스케어'] };
   return (
     <div className="tab-enter" key={animKey}>
       {/* Header banner */}
@@ -318,4 +318,4 @@ function ScreenMyPage({ device, animKey }) {
   );
 }
 
-window.MajorScreens3 = { ApplicantModal, TaskModal, ScreenMyPage };
+window.CampusScreens3 = { ApplicantModal, TaskModal, ScreenMyPage };

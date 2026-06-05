@@ -1,7 +1,7 @@
 // Reusable atoms — donut, bar, chip, browser/phone frames
 const { useState, useEffect, useRef } = React;
 const L = window.lucideReact || {};
-const { MAJOR, majorOf } = window.MajorLinkData;
+const { MAJOR, majorOf } = window.CampusData;
 
 // === Match score gradient color ===
 function scoreColor(score) {
@@ -149,7 +149,7 @@ function Avatar({ name, dept, size = 32, ring = true }) {
 }
 
 // === Browser frame ===
-function BrowserFrame({ url = 'majorlink.kr/', children, height }) {
+function BrowserFrame({ url = 'campus-link.kr/', children, height }) {
   return (
     <div className="rounded-2xl overflow-hidden shadow-card border" style={{ borderColor: '#E4E4E7', background: '#FFFFFF' }}>
       <div className="flex items-center gap-3 px-4 py-3 border-b" style={{ background: '#F4F4F5', borderColor: '#E4E4E7' }}>
@@ -160,8 +160,8 @@ function BrowserFrame({ url = 'majorlink.kr/', children, height }) {
         </div>
         <div className="flex-1 mx-2 px-3 py-1 rounded-md text-xs flex items-center gap-2" style={{ background: '#FFFFFF', border: '1px solid #E4E4E7', color: '#94A3B8' }}>
           <L.Lock size={11} />
-          <span style={{ color: '#475569' }}>majorlink.kr</span>
-          <span>/{url.replace('majorlink.kr/', '')}</span>
+          <span style={{ color: '#475569' }}>campus-link.kr</span>
+          <span>/{url.replace('campus-link.kr/', '')}</span>
         </div>
         <div className="flex gap-2 text-zinc-400">
           <L.Plus size={14} />
@@ -232,7 +232,7 @@ function Wordmark({ size = 'md' }) {
   const big = size === 'lg';
   return (
     <div className="inline-flex items-center gap-1" style={{ color: '#4F46E5', fontWeight: 800, fontSize: big ? 22 : 17, letterSpacing: '-0.02em' }}>
-      <span>MajorLink</span>
+      <span>Campus Link</span>
       <span className="rounded-full" style={{ width: big ? 8 : 6, height: big ? 8 : 6, background: '#84CC16', display: 'inline-block', marginTop: big ? 6 : 4 }} />
     </div>
   );
@@ -272,7 +272,7 @@ function Placeholder({ label, height = 160, gradient = ['#EEF2FF', '#ECFCCB'], c
   );
 }
 
-window.MajorAtoms = {
+window.CampusAtoms = {
   scoreColor, useCountUp, DonutScore, ScoreBars, MajorChip, Chip, Avatar,
   BrowserFrame, PhoneFrame, MobileTabBar, Wordmark, Section, Placeholder,
   BREAKDOWN_LABELS,

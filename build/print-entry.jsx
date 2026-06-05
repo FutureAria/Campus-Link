@@ -162,7 +162,7 @@ const NOTIFS_WEEK = [
   { type: 'apply',   icon: '📥', color: '#4F46E5', title: '새 지원자',     body: '강민서(데이터 2)가 [캠퍼스 분실물]에 지원했어요. 매칭 71점', time: '5일 전', cta: '지원자 보기' },
 ];
 
-window.MajorLinkData = {
+window.CampusData = {
   MAJOR, majorOf, APPLICANTS, PROJECTS, LEADER, ROLES_NEEDED, TASKS, FEATURES, FLOW,
   NOTIFS_TODAY, NOTIFS_WEEK,
 };
@@ -171,7 +171,7 @@ window.MajorLinkData = {
 // Reusable atoms — donut, bar, chip, browser/phone frames
 const { useState, useEffect, useRef } = React;
 const L = window.lucideReact || {};
-const { MAJOR, majorOf } = window.MajorLinkData;
+const { MAJOR, majorOf } = window.CampusData;
 
 // === Match score gradient color ===
 function scoreColor(score) {
@@ -319,7 +319,7 @@ function Avatar({ name, dept, size = 32, ring = true }) {
 }
 
 // === Browser frame ===
-function BrowserFrame({ url = 'majorlink.kr/', children, height }) {
+function BrowserFrame({ url = 'campus-link.kr/', children, height }) {
   return (
     <div className="rounded-2xl overflow-hidden shadow-card border" style={{ borderColor: '#E4E4E7', background: '#FFFFFF' }}>
       <div className="flex items-center gap-3 px-4 py-3 border-b" style={{ background: '#F4F4F5', borderColor: '#E4E4E7' }}>
@@ -330,8 +330,8 @@ function BrowserFrame({ url = 'majorlink.kr/', children, height }) {
         </div>
         <div className="flex-1 mx-2 px-3 py-1 rounded-md text-xs flex items-center gap-2" style={{ background: '#FFFFFF', border: '1px solid #E4E4E7', color: '#94A3B8' }}>
           <L.Lock size={11} />
-          <span style={{ color: '#475569' }}>majorlink.kr</span>
-          <span>/{url.replace('majorlink.kr/', '')}</span>
+          <span style={{ color: '#475569' }}>campus-link.kr</span>
+          <span>/{url.replace('campus-link.kr/', '')}</span>
         </div>
         <div className="flex gap-2 text-zinc-400">
           <L.Plus size={14} />
@@ -402,7 +402,7 @@ function Wordmark({ size = 'md' }) {
   const big = size === 'lg';
   return (
     <div className="inline-flex items-center gap-1" style={{ color: '#4F46E5', fontWeight: 800, fontSize: big ? 22 : 17, letterSpacing: '-0.02em' }}>
-      <span>MajorLink</span>
+      <span>Campus Link</span>
       <span className="rounded-full" style={{ width: big ? 8 : 6, height: big ? 8 : 6, background: '#84CC16', display: 'inline-block', marginTop: big ? 6 : 4 }} />
     </div>
   );
@@ -442,15 +442,15 @@ function Placeholder({ label, height = 160, gradient = ['#EEF2FF', '#ECFCCB'], c
   );
 }
 
-window.MajorAtoms = {
+window.CampusAtoms = {
   scoreColor, useCountUp, DonutScore, ScoreBars, MajorChip, Chip, Avatar,
   BrowserFrame, PhoneFrame, MobileTabBar, Wordmark, Section, Placeholder,
   BREAKDOWN_LABELS,
 };
 // Screens 1-4: Landing, Explore, Detail, Compare
 const { useState: useS1, useEffect: useE1, useRef: useR1 } = React;
-const A = window.MajorAtoms;
-const D = window.MajorLinkData;
+const A = window.CampusAtoms;
+const D = window.CampusData;
 const Lc = window.lucideReact || {};
 
 // ============ SCREEN 1: LANDING ============
@@ -1211,12 +1211,12 @@ function Top3Compare({ applicants, animKey }) {
   );
 }
 
-window.MajorScreens = {
+window.CampusScreens = {
   ScreenLanding, ScreenExplore, ScreenDetail, ScreenCompare,
 };
 // Screens 5-7: Dashboard, Portfolio, Notifications
-const A2 = window.MajorAtoms;
-const D2 = window.MajorLinkData;
+const A2 = window.CampusAtoms;
+const D2 = window.CampusData;
 const Lc2 = window.lucideReact || {};
 const { useState: useS2 } = React;
 
@@ -1350,7 +1350,7 @@ function ScreenDashboard({ device, animKey }) {
                   <Lc2.MessageSquare size={16} style={{ color: '#5865F2' }} />
                   <div>
                     <div className="text-[12px] font-semibold">디스코드 알림</div>
-                    <div className="text-[10px]" style={{ color: '#94A3B8' }}>#majorlink-team</div>
+                    <div className="text-[10px]" style={{ color: '#94A3B8' }}>#campus-link-team</div>
                   </div>
                 </div>
                 <div className="w-9 h-5 rounded-full p-0.5" style={{ background: '#4F46E5' }}>
@@ -1668,13 +1668,13 @@ function NotifCard({ n, idx, animKey, dim }) {
   );
 }
 
-window.MajorScreens2 = {
+window.CampusScreens2 = {
   ScreenDashboard, ScreenPortfolio, ScreenNotifWeb, ScreenNotifMobile,
 };
 // Print version: render ALL 7 screens stacked, each as its own page
-const Atoms = window.MajorAtoms;
-const S1 = window.MajorScreens;
-const S2 = window.MajorScreens2;
+const Atoms = window.CampusAtoms;
+const S1 = window.CampusScreens;
+const S2 = window.CampusScreens2;
 const Li = window.lucideReact || {};
 
 const TABS = [
@@ -1721,7 +1721,7 @@ function PrintApp() {
               전공이 다르면,<br />팀이 강해집니다.
             </h1>
             <p className="mt-6 text-[16px]" style={{ color: '#475569', maxWidth: 540, lineHeight: 1.6 }}>
-              MajorLink — 전공 기반 대학생 협업 플랫폼.<br/>
+              Campus Link — 전공 기반 대학생 협업 플랫폼.<br/>
               7개 핵심 화면을 데스크톱과 모바일에서 미리보기 합니다.
             </p>
           </div>
@@ -1731,7 +1731,7 @@ function PrintApp() {
                 <div className="rounded-md w-7 h-7 flex items-center justify-center text-[11px] font-bold" style={{ background: '#EEF2FF', color: '#4F46E5' }}>0{i+1}</div>
                 <div>
                   <div className="text-[13px] font-bold">{t.label}</div>
-                  <div className="text-[10px]" style={{ color: '#94A3B8' }}>majorlink.kr/{t.url}</div>
+                  <div className="text-[10px]" style={{ color: '#94A3B8' }}>campus-link.kr/{t.url}</div>
                 </div>
               </div>
             ))}
@@ -1749,7 +1749,7 @@ function PrintApp() {
               <span className="text-[11px] font-bold tracking-wider" style={{ color: '#94A3B8' }}>0{i+1} / 07</span>
               <span className="text-[14px] font-bold" style={{ color: '#0F172A' }}>{t.label}</span>
             </div>
-            <div className="text-[10px] font-mono" style={{ color: '#94A3B8' }}>majorlink.kr/{t.url}</div>
+            <div className="text-[10px] font-mono" style={{ color: '#94A3B8' }}>campus-link.kr/{t.url}</div>
           </div>
 
           <div className="page-body">
@@ -1776,7 +1776,7 @@ function PrintApp() {
           </div>
 
           <div className="page-footer">
-            <span>MajorLink · 2026.07 정식 출시</span>
+            <span>Campus Link · 2026.07 정식 출시</span>
             <span>{i + 2} / {TABS.length + 1}</span>
           </div>
         </section>

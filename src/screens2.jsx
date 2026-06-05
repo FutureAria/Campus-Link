@@ -1,6 +1,6 @@
 // Screens 5-7: Dashboard, Portfolio, Notifications
-const A2 = window.MajorAtoms;
-const D2 = window.MajorLinkData;
+const A2 = window.CampusAtoms;
+const D2 = window.CampusData;
 const Lc2 = window.lucideReact || {};
 const { useState: useS2 } = React;
 
@@ -134,7 +134,7 @@ function ScreenDashboard({ device, animKey }) {
                   <Lc2.MessageSquare size={16} style={{ color: '#5865F2' }} />
                   <div>
                     <div className="text-[12px] font-semibold">디스코드 알림</div>
-                    <div className="text-[10px]" style={{ color: '#94A3B8' }}>#majorlink-team</div>
+                    <div className="text-[10px]" style={{ color: '#94A3B8' }}>#campus-link-team</div>
                   </div>
                 </div>
                 <div className="w-9 h-5 rounded-full p-0.5" style={{ background: '#4F46E5' }}>
@@ -452,6 +452,6 @@ function NotifCard({ n, idx, animKey, dim }) {
   );
 }
 
-window.MajorScreens2 = {
+window.CampusScreens2 = {
   ScreenDashboard, ScreenPortfolio, ScreenNotifWeb, ScreenNotifMobile,
 };

@@ -101,7 +101,7 @@ const NOTIFS_WEEK = [
   { type: 'apply',   icon: '📥', color: '#4F46E5', title: '새 지원자',     body: '강민서(데이터 2)가 [캠퍼스 분실물]에 지원했어요. 매칭 71점', time: '5일 전', cta: '지원자 보기' },
 ];
 
-window.MajorLinkData = {
+window.CampusData = {
   MAJOR, majorOf, APPLICANTS, PROJECTS, LEADER, ROLES_NEEDED, TASKS, FEATURES, FLOW,
   NOTIFS_TODAY, NOTIFS_WEEK,
 };

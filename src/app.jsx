@@ -1,8 +1,8 @@
 // App shell: tabs + side-by-side desktop + mobile preview
-const Atoms = window.MajorAtoms;
-const S1 = window.MajorScreens;
-const S2 = window.MajorScreens2;
-const S3 = window.MajorScreens3;
+const Atoms = window.CampusAtoms;
+const S1 = window.CampusScreens;
+const S2 = window.CampusScreens2;
+const S3 = window.CampusScreens3;
 const Li = window.lucideReact || {};
 const { useState: useApp, useEffect: useAppE } = React;
 
@@ -183,8 +183,8 @@ function App() {
           <div className="rounded-2xl border bg-white p-5" style={{ borderColor: '#E4E4E7' }}>
             <div className="text-[11px] font-bold tracking-wider" style={{ color: '#EC4899' }}>MAJORS · 5</div>
             <div className="mt-3 flex flex-wrap gap-1.5">
-              {Object.keys(window.MajorLinkData.MAJOR).map(k => {
-                const m = window.MajorLinkData.MAJOR[k];
+              {Object.keys(window.CampusData.MAJOR).map(k => {
+                const m = window.CampusData.MAJOR[k];
                 return (
                   <span key={k} className="text-[11px] font-semibold rounded-full px-2.5 py-1 inline-flex items-center gap-1.5" style={{ background: m.bg, color: m.text }}>
                     <span className="w-1.5 h-1.5 rounded-full" style={{ background: m.ring }} />
@@ -194,7 +194,7 @@ function App() {
               })}
             </div>
             <div className="mt-4 pt-4 border-t text-[11px]" style={{ borderColor: '#F1F5F9', color: '#94A3B8' }}>
-              MajorLink · 2026.07 정식 출시 예정 · 한국 대학생 20–25세
+              Campus Link · 2026.07 정식 출시 예정 · 한국 대학생 20–25세
             </div>
           </div>
         </div>
@@ -228,7 +228,7 @@ function DeviceBadge({ label, url, mobile }) {
         {mobile ? <Li.Smartphone size={12} /> : <Li.Monitor size={12} />}
         {label}
       </div>
-      <div className="text-[10px] font-mono" style={{ color: '#94A3B8' }}>majorlink.kr/{url}</div>
+      <div className="text-[10px] font-mono" style={{ color: '#94A3B8' }}>campus-link.kr/{url}</div>
     </div>
   );
 }

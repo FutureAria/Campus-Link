@@ -1,11 +1,13 @@
-# MajorLink 저작권 고지
+# Campus Link 저작권 고지
 
-Copyright (c) 2026 MajorLink Team.
+Copyright (c) 2026 Campus Link Team.
 All rights reserved.
 
 ## 저작권자
 
-이 저장소에 포함된 MajorLink 프로젝트 산출물은 MajorLink 팀의 공동 제작물입니다.
+이 저장소에 포함된 Campus Link 프로젝트 산출물은 Campus Link 팀의 공동 제작물입니다.
+
+> 팀명은 2026-06-05 공모전 제출 준비 과정에서 `Campus Link (캠퍼스 링크)`로 정리했습니다. 아이디어명과 서비스명도 `Campus Link (캠퍼스 링크)`로 변경합니다.
 
 | 이름 | 전공 | 역할 |
 |---|---|---|
@@ -18,7 +20,7 @@ All rights reserved.
 
 ## 보호 대상
 
-아래 항목은 MajorLink 팀의 프로젝트 산출물로 보관합니다.
+아래 항목은 Campus Link 팀의 프로젝트 산출물로 보관합니다.
 
 - 서비스 기획
 - 발표자료
@@ -32,7 +34,7 @@ All rights reserved.
 
 ## 무단 사용 금지
 
-MajorLink 팀의 명시적 허가 없이 아래 행위를 금지합니다.
+Campus Link 팀의 명시적 허가 없이 아래 행위를 금지합니다.
 
 - 복제
 - 배포
@@ -53,13 +55,13 @@ MajorLink 팀의 명시적 허가 없이 아래 행위를 금지합니다.
 
 ## 공개 범위 관리
 
-이 공개 저장소는 MajorLink 팀의 제작 시점과 산출물 보관을 위한 자료를 포함합니다.
+이 공개 저장소는 Campus Link 팀의 제작 시점과 Campus Link 산출물 보관을 위한 자료를 포함합니다.
 
 다만 공개 저장소에는 실제 운영 계정, API Key, DB 접속 정보, 팀원 개인정보, 공개 전 특허/BM 검토가 필요한 핵심 로직, 영업비밀로 관리해야 하는 미공개 전략을 올리지 않습니다.
 
 ## 법적 한계
 
-이 문서는 MajorLink 팀의 저작권 보호 의사와 산출물 보관 목적을 명확히 하기 위한 문서입니다.
+이 문서는 Campus Link 팀의 저작권 보호 의사와 Campus Link 산출물 보관 목적을 명확히 하기 위한 문서입니다.
 
 GitHub 커밋 기록, 파일 해시, 사이트 캡처는 제작 시점 및 파일 동일성에 대한 보조 증빙으로 활용할 수 있지만, 법적 권리 확정이나 분쟁 대응을 완전히 보장하지는 않습니다.
 
