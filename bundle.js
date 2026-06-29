@@ -1184,7 +1184,7 @@ function MajorChip({
       background: m.bg,
       color: m.text
     }
-  }, dept, year ? ` ${year}` : '');
+  }, dept, year ? `${year}` : '');
 }
 
 // === Generic chip ===
@@ -4451,7 +4451,8 @@ function ScreenMyPage({
     school: '한양대',
     mail: 'demo@campus-link.example',
     skills: ['React', 'Spring', 'MySQL', 'Git', 'Figma'],
-    interests: ['교내 서비스', 'AI/ML', '헬스케어']
+    interests: ['교내 서비스', 'AI/ML', '헬스케어'],
+    plan: 'pro'
   };
   return /*#__PURE__*/React.createElement("div", {
     className: "tab-enter",
@@ -4498,11 +4499,25 @@ function ScreenMyPage({
   }), /*#__PURE__*/React.createElement("div", {
     className: isM ? '' : 'flex-1'
   }, /*#__PURE__*/React.createElement("div", {
+    className: `flex items-center gap-2 flex-wrap ${isM ? 'justify-center' : ''}`
+  }, /*#__PURE__*/React.createElement("div", {
     className: "font-bold text-[22px]",
     style: {
       letterSpacing: '-0.02em'
     }
-  }, me.name), /*#__PURE__*/React.createElement("div", {
+  }, me.name), me.plan === 'pro' ? /*#__PURE__*/React.createElement("span", {
+    className: "inline-flex items-center gap-1 rounded-full px-2.5 py-1 text-[11px] font-bold",
+    style: {
+      background: 'linear-gradient(90deg,#4F46E5,#7C3AED)',
+      color: '#fff'
+    }
+  }, "★ PRO") : /*#__PURE__*/React.createElement("span", {
+    className: "inline-flex items-center rounded-full px-2.5 py-1 text-[11px] font-semibold",
+    style: {
+      background: '#F4F4F5',
+      color: '#94A3B8'
+    }
+  }, "무료")), /*#__PURE__*/React.createElement("div", {
     className: "mt-1.5 flex items-center gap-2 flex-wrap justify-center"
   }, /*#__PURE__*/React.createElement(A3.MajorChip, {
     dept: me.dept,
@@ -4518,12 +4533,26 @@ function ScreenMyPage({
     style: {
       color: '#94A3B8'
     }
-  }, me.mail)), !isM && /*#__PURE__*/React.createElement("button", {
+  }, me.mail)), !isM && /*#__PURE__*/React.createElement("div", {
+    className: "flex flex-col items-end gap-2"
+  }, /*#__PURE__*/React.createElement("button", {
     className: "rounded-xl border text-[12px] font-semibold px-4 py-2",
     style: {
       borderColor: '#E4E4E7'
     }
-  }, "프로필 수정")), /*#__PURE__*/React.createElement("div", {
+  }, "프로필 수정"), me.plan === 'pro' ? /*#__PURE__*/React.createElement("span", {
+    className: "text-[11px] font-semibold rounded-full px-3 py-1",
+    style: {
+      background: '#EEF2FF',
+      color: '#4F46E5'
+    }
+  }, "구독 중 · 2026.12.31 만료") : /*#__PURE__*/React.createElement("button", {
+    className: "text-[11px] font-bold rounded-full px-3 py-1",
+    style: {
+      background: 'linear-gradient(90deg,#4F46E5,#7C3AED)',
+      color: '#fff'
+    }
+  }, "PRO 업그레이드"))), /*#__PURE__*/React.createElement("div", {
     className: `mt-5 grid ${isM ? 'grid-cols-3' : 'grid-cols-4'} gap-3 pt-5 border-t`,
     style: {
       borderColor: '#F1F5F9'

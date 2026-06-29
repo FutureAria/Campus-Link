@@ -171,7 +171,7 @@ function TaskModal({ task, onClose }) {
 // ============ MY PAGE ============
 function ScreenMyPage({ device, animKey }) {
   const isM = device === 'mobile';
-  const me = { name: '김민준', dept: '컴퓨터공학', year: 3, school: '한양대', mail: 'demo@campus-link.example', skills: ['React','Spring','MySQL','Git','Figma'], interests: ['교내 서비스','AI/ML','헬스케어'] };
+  const me = { name: '김민준', dept: '컴퓨터공학', year: 3, school: '한양대', mail: 'demo@campus-link.example', skills: ['React','Spring','MySQL','Git','Figma'], interests: ['교내 서비스','AI/ML','헬스케어'], plan: 'pro' };
   return (
     <div className="tab-enter" key={animKey}>
       {/* Header banner */}
@@ -192,14 +192,28 @@ function ScreenMyPage({ device, animKey }) {
           <div className={`${isM ? 'flex flex-col items-center text-center gap-3' : 'flex items-center gap-5'}`}>
             <A3.Avatar name={me.name} dept={me.dept} size={isM ? 80 : 96} />
             <div className={isM ? '' : 'flex-1'}>
-              <div className="font-bold text-[22px]" style={{ letterSpacing: '-0.02em' }}>{me.name}</div>
+              <div className={`flex items-center gap-2 flex-wrap ${isM ? 'justify-center' : ''}`}>
+                <div className="font-bold text-[22px]" style={{ letterSpacing: '-0.02em' }}>{me.name}</div>
+                {me.plan === 'pro'
+                  ? <span className="inline-flex items-center gap-1 rounded-full px-2.5 py-1 text-[11px] font-bold" style={{ background: 'linear-gradient(90deg,#4F46E5,#7C3AED)', color: '#fff' }}>★ PRO</span>
+                  : <span className="inline-flex items-center rounded-full px-2.5 py-1 text-[11px] font-semibold" style={{ background: '#F4F4F5', color: '#94A3B8' }}>무료</span>
+                }
+              </div>
               <div className="mt-1.5 flex items-center gap-2 flex-wrap justify-center">
                 <A3.MajorChip dept={me.dept} year={me.year} size="xs" />
                 <span className="text-[12px]" style={{ color: '#475569' }}>{me.school}</span>
               </div>
               <div className="mt-1 text-[12px]" style={{ color: '#94A3B8' }}>{me.mail}</div>
             </div>
-            {!isM && <button className="rounded-xl border text-[12px] font-semibold px-4 py-2" style={{ borderColor: '#E4E4E7' }}>프로필 수정</button>}
+            {!isM && (
+              <div className="flex flex-col items-end gap-2">
+                <button className="rounded-xl border text-[12px] font-semibold px-4 py-2" style={{ borderColor: '#E4E4E7' }}>프로필 수정</button>
+                {me.plan === 'pro'
+                  ? <span className="text-[11px] font-semibold rounded-full px-3 py-1" style={{ background: '#EEF2FF', color: '#4F46E5' }}>구독 중 · 2026.12.31 만료</span>
+                  : <button className="text-[11px] font-bold rounded-full px-3 py-1" style={{ background: 'linear-gradient(90deg,#4F46E5,#7C3AED)', color: '#fff' }}>PRO 업그레이드</button>
+                }
+              </div>
+            )}
           </div>
 
           <div className={`mt-5 grid ${isM ? 'grid-cols-3' : 'grid-cols-4'} gap-3 pt-5 border-t`} style={{ borderColor: '#F1F5F9' }}>

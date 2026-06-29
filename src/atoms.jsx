@@ -110,7 +110,7 @@ function MajorChip({ dept, year, size = 'sm' }) {
   const cls = size === 'xs' ? 'text-[11px] px-2 py-0.5' : 'text-xs px-2.5 py-1';
   return (
     <span className={`inline-flex items-center gap-1 rounded-full font-semibold ${cls}`} style={{ background: m.bg, color: m.text }}>
-      {dept}{year ? ` ${year}` : ''}
+      {dept}{year ? `${year}` : ''}
     </span>
   );
 }
