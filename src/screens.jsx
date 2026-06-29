@@ -1,7 +1,7 @@
 // Screens 1-4: Landing, Explore, Detail, Compare
 const { useState: useS1, useEffect: useE1, useRef: useR1 } = React;
-const A = window.CampusAtoms;
-const D = window.CampusData;
+const A = window.MajorAtoms;
+const D = window.MajorLinkData;
 const Lc = window.lucideReact || {};
 
 // ============ SCREEN 1: LANDING ============
@@ -15,7 +15,7 @@ function ScreenLanding({ device, animKey }) {
         <A.Wordmark size={isM ? 'md' : 'md'} />
         {!isM && (
           <div className="flex items-center gap-7 text-sm" style={{ color: '#475569' }}>
-            <span>둘러보기</span><span>가이드</span><span>요금제</span><span>FAQ</span>
+            <span className="cursor-pointer" onClick={() => window.__nav && window.__nav.go('explore')}>둘러보기</span><span>가이드</span><span className="cursor-pointer hover:text-indigo-600" onClick={() => window.__nav && window.__nav.go('pricing')}>요금제</span><span>FAQ</span>
           </div>
         )}
         <div className="flex items-center gap-2">
@@ -40,10 +40,10 @@ function ScreenLanding({ device, animKey }) {
               흩어진 전공을 하나의 프로젝트로 잇다.
             </p>
             <div className={`mt-7 flex ${isM ? 'flex-col' : ''} gap-3`}>
-              <button className="rounded-xl text-white font-semibold flex items-center justify-center gap-2" style={{ background: '#4F46E5', padding: '14px 22px' }}>
+              <button onClick={() => window.__nav && window.__nav.go('explore')} className="rounded-xl text-white font-semibold flex items-center justify-center gap-2" style={{ background: '#4F46E5', padding: '14px 22px' }}>
                 <Lc.Compass size={16} /> 프로젝트 둘러보기
               </button>
-              <button className="rounded-xl font-semibold border bg-white flex items-center justify-center gap-2" style={{ borderColor: '#E4E4E7', color: '#0F172A', padding: '14px 22px' }}>
+              <button onClick={() => window.__nav && window.__nav.go('explore')} className="rounded-xl font-semibold border bg-white flex items-center justify-center gap-2" style={{ borderColor: '#E4E4E7', color: '#0F172A', padding: '14px 22px' }}>
                 <Lc.Users size={16} /> 팀원 모집하기
               </button>
             </div>
@@ -174,6 +174,9 @@ function LiveMatchDemo({ animKey, compact }) {
         <Lc.Sparkles size={14} style={{ color: '#3F6212' }} />
         <span className="text-[12px] font-semibold" style={{ color: '#3F6212' }}>EXCELLENT — 상위 14% 매칭</span>
       </div>
+      <div className="mt-3">
+        <A.ScoreTrustNote />
+      </div>
     </div>
   );
 }
@@ -255,6 +258,7 @@ function ScreenExplore({ device, animKey }) {
           <div className="px-4 pb-6 grid grid-cols-1 gap-3">
             {D.PROJECTS.map((p,i) => <ProjectCard key={p.id} project={{...p, match: i===0?87:i===1?72:0}} compact withMatch />)}
           </div>
+          <button onClick={() => window.__openCreate && window.__openCreate()} className="fixed bottom-20 right-4 z-30 rounded-full text-white shadow-cardHov flex items-center gap-1.5 font-bold text-[13px] px-4 py-3.5" style={{ background: '#4F46E5' }}><Lc.Plus size={16} /> 프로젝트</button>
         </div>
       ) : (
         <div className="grid grid-cols-12 gap-6 px-10 py-6">
@@ -271,7 +275,7 @@ function ScreenExplore({ device, animKey }) {
                     <span key={s} className={`text-[12px] font-semibold px-3 py-1.5 rounded-lg ${i===2?'text-white':'text-zinc-500'}`} style={i===2?{background:'#4F46E5'}:undefined}>{s}</span>
                   ))}
                 </div>
-                <button className="rounded-xl border bg-white p-2" style={{ borderColor: '#E4E4E7' }}><Lc.Grid3x3 size={14} /></button>
+                <button onClick={() => window.__openCreate && window.__openCreate()} className="rounded-xl text-white text-[12px] font-bold px-3.5 py-2.5 flex items-center gap-1.5" style={{ background: '#4F46E5' }}><Lc.Plus size={14} /> 프로젝트 생성</button>
               </div>
             </div>
             <div className="grid grid-cols-3 gap-4">
@@ -515,6 +519,9 @@ function MyMatchPreview({ score, animKey }) {
             <div className="font-bold text-[20px] mt-0.5" style={{ letterSpacing: '-0.02em' }}>상위 32%</div>
             <div className="text-[12px] mt-1" style={{ color: '#475569' }}>비슷한 점수: 12명 / 38명</div>
           </div>
+        </div>
+        <div className="mt-3">
+          <A.ScoreTrustNote />
         </div>
         <div className="mt-5">
           <A.ScoreBars b={breakdown} animKey={animKey} />
@@ -762,6 +769,73 @@ function Top3Compare({ applicants, animKey }) {
   );
 }
 
-window.CampusScreens = {
-  ScreenLanding, ScreenExplore, ScreenDetail, ScreenCompare,
+// ============ SCREEN: PRICING ============
+function ScreenPricing({ device, animKey }) {
+  const isM = device === 'mobile';
+  return (
+    <div className="tab-enter" key={animKey}>
+      {/* Top nav (shared) */}
+      <div className={`flex items-center justify-between ${isM ? 'px-4 py-3' : 'px-10 py-4'} border-b bg-white sticky top-0 z-20`} style={{ borderColor: '#E4E4E7' }}>
+        <A.Wordmark />
+        {!isM && (
+          <div className="flex items-center gap-7 text-sm" style={{ color: '#475569' }}>
+            <span className="cursor-pointer" onClick={() => window.__nav && window.__nav.go('explore')}>둘러보기</span><span>가이드</span><span className="font-semibold" style={{ color: '#4F46E5' }}>요금제</span><span>FAQ</span>
+          </div>
+        )}
+        <div className="flex items-center gap-2">
+          {!isM && <button className="text-sm px-3 py-2 font-medium" style={{ color: '#475569' }}>로그인</button>}
+          <button onClick={() => window.__nav && window.__nav.go('explore')} className="rounded-xl text-sm font-semibold text-white" style={{ background: '#4F46E5', padding: isM ? '6px 12px' : '8px 14px' }}>시작하기</button>
+        </div>
+      </div>
+
+      <div className={`${isM ? 'px-4 py-8' : 'px-12 py-14'}`}>
+        <div className="text-center max-w-2xl mx-auto">
+          <div className="text-[12px] font-bold tracking-wide" style={{ color: '#4F46E5' }}>PRICING</div>
+          <h1 className="font-bold mt-2" style={{ fontSize: isM ? 28 : 40, letterSpacing: '-0.025em', color: '#0F172A' }}>팀에 맞는 플랜을 선택하세요</h1>
+          <p className="mt-3 text-[15px]" style={{ color: '#475569' }}>매칭 자체는 항상 무료입니다</p>
+        </div>
+
+        <div className={`mt-10 grid ${isM ? 'grid-cols-1 gap-4' : 'grid-cols-4 gap-4'}`}>
+          {D.PRICING.map(plan => {
+            const highlight = plan.tone === 'indigo';
+            return (
+              <div key={plan.id}
+                className="rounded-2xl bg-white border shadow-card p-5 flex flex-col"
+                style={{ borderColor: highlight ? '#4F46E5' : '#E4E4E7', borderWidth: highlight ? 2 : 1 }}>
+                <div className="flex items-center justify-between min-h-[24px]">
+                  <div className="font-bold text-[16px]" style={{ color: highlight ? '#0F172A' : '#475569' }}>{plan.name}</div>
+                  {plan.badge && <A.Chip tone="indigo">{plan.badge}</A.Chip>}
+                </div>
+                <div className="mt-4">
+                  <div className="font-bold" style={{ fontSize: 22, letterSpacing: '-0.02em', color: highlight ? '#4F46E5' : '#0F172A' }}>{plan.price}</div>
+                  <div className="text-[12px] mt-1" style={{ color: '#94A3B8' }}>{plan.sub}</div>
+                  {plan.note && <div className="text-[11px] mt-1.5 leading-snug" style={{ color: '#94A3B8' }}>{plan.note}</div>}
+                </div>
+                <div className="mt-5 pt-5 border-t grid gap-2.5 flex-1" style={{ borderColor: '#F1F5F9' }}>
+                  {plan.items.map(it => (
+                    <div key={it} className="flex items-start gap-2 text-[12.5px]" style={{ color: '#475569' }}>
+                      <Lc.Check size={14} style={{ color: highlight ? '#4F46E5' : '#84CC16', marginTop: 1, flexShrink: 0 }} />
+                      <span className="leading-snug">{it}</span>
+                    </div>
+                  ))}
+                </div>
+                <button className="mt-5 rounded-xl font-semibold text-[13px] py-2.5 transition"
+                  style={highlight
+                    ? { background: '#4F46E5', color: 'white' }
+                    : { background: '#F4F4F5', color: '#475569' }}>
+                  {plan.id === 'org' || plan.id === 'team' ? '문의하기' : '선택하기'}
+                </button>
+              </div>
+            );
+          })}
+        </div>
+
+        <div className="mt-8 text-center text-[11px]" style={{ color: '#94A3B8' }}>프로토타입 단계 가격안 · 확정 매출 아님</div>
+      </div>
+    </div>
+  );
+}
+
+window.MajorScreens = {
+  ScreenLanding, ScreenExplore, ScreenDetail, ScreenCompare, ScreenPricing,
 };

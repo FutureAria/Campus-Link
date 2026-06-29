@@ -2,9 +2,38 @@
 <html lang="ko">
 <head>
 <meta charset="UTF-8" />
-<title>Campus Link — 디자인 미리보기</title>
+<title>MajorLink — 디자인 미리보기</title>
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<link rel="stylesheet" href="styles.css" />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css" rel="stylesheet" />
+<script src="https://cdn.tailwindcss.com"></script>
+<script>
+tailwind.config = {
+  theme: {
+    extend: {
+      fontFamily: {
+        sans: ['Pretendard', '-apple-system', 'BlinkMacSystemFont', 'system-ui', 'sans-serif'],
+      },
+      colors: {
+        brand: {
+          50:  '#EEF2FF',
+          600: '#4F46E5',
+          800: '#3730A3',
+        },
+        lime: {
+          100: '#ECFCCB',
+          500: '#84CC16',
+        },
+      },
+      boxShadow: {
+        card:    '0 2px 8px rgba(15,23,42,0.04)',
+        cardHov: '0 4px 16px rgba(15,23,42,0.08)',
+      }
+    }
+  }
+}
+</script>
 <style>
   html, body { font-family: 'Pretendard', -apple-system, sans-serif; background: #FAFAFA; color: #0F172A; }
   .grid-bg {
@@ -21,52 +50,56 @@
     from { opacity: 0; transform: translateY(8px); }
     to   { opacity: 1; transform: translateY(0); }
   }
-  .tab-enter { animation: slideUpFade 120ms ease-out both; }
+  .tab-enter { animation: slideUpFade 250ms ease-out both; }
 
   @keyframes staggerIn {
     from { opacity: 0; transform: translateY(10px); }
     to   { opacity: 1; transform: translateY(0); }
   }
-  .stagger-card { animation: staggerIn 160ms ease-out both; }
+  .stagger-card { animation: staggerIn 350ms ease-out both; }
 
   @keyframes barGrow {
     from { transform: scaleX(0); }
     to   { transform: scaleX(1); }
   }
-  .anim-bar { transform-origin: left center; animation: barGrow 420ms ease-out both; }
+  .anim-bar { transform-origin: left center; animation: barGrow 900ms ease-out both; }
 
   @keyframes pulseDot {
     0%, 100% { opacity: 1; }
     50% { opacity: 0.35; }
   }
-  .pulse-dot { animation: pulseDot 500ms ease-in-out infinite; }
+  .pulse-dot { animation: pulseDot 1.4s ease-in-out infinite; }
 
   @keyframes confettiFall {
     0% { transform: translateY(-30px) rotate(0deg); opacity: 0; }
     20% { opacity: 1; }
     100% { transform: translateY(40px) rotate(360deg); opacity: 0.6; }
   }
-  .confetti-piece { animation: confettiFall 500ms ease-in infinite; }
+  .confetti-piece { animation: confettiFall 2.4s ease-in infinite; }
 
   @keyframes drawIn {
     from { transform: scaleY(0); }
     to { transform: scaleY(1); }
   }
-  .anim-bar-y { transform-origin: top; animation: drawIn 420ms ease-out both; }
+  .anim-bar-y { transform-origin: top; animation: drawIn 600ms ease-out both; }
 
   /* hide horizontal scrollbar but keep functionality */
   .hscroll { scrollbar-width: thin; }
 </style>
 </head>
 <body>
-  <div id="root">
-    <div style="min-height:100vh;display:flex;align-items:center;justify-content:center;font-family:Pretendard,-apple-system,sans-serif;color:#475569;background:#FAFAFA">
-      <div style="font-size:13px;font-weight:700;letter-spacing:.04em">Campus Link Loading...</div>
-    </div>
-  </div>
+  <div id="root"></div>
 
-  <script src="vendor/react.min.js"></script>
-  <script src="vendor/react-dom.min.js"></script>
-  <script src="bundle.js"></script>
+  <script src="https://unpkg.com/react@18.3.1/umd/react.development.js" integrity="sha384-hD6/rw4ppMLGNu3tX5cjIb+uRZ7UkRJ6BPkLpg4hAu/6onKUg4lLsHAs9EBPT82L" crossorigin="anonymous"></script>
+  <script src="https://unpkg.com/react-dom@18.3.1/umd/react-dom.development.js" integrity="sha384-u6aeetuaXnQ38mYT8rp6sbXaQe3NL9t+IBXmnYxwkUI2Hw4bsp2Wvmx4yRQF1uAm" crossorigin="anonymous"></script>
+  <script src="https://unpkg.com/@babel/standalone@7.29.0/babel.min.js" integrity="sha384-m08KidiNqLdpJqLq95G/LEi8Qvjl/xUYll3QILypMoQ65QorJ9Lvtp2RXYGBFj1y" crossorigin="anonymous"></script>
+  <script type="text/babel" src="src/icons.jsx"></script>
+  <script type="text/babel" src="src/data.jsx"></script>
+  <script type="text/babel" src="src/atoms.jsx"></script>
+  <script type="text/babel" src="src/screens.jsx"></script>
+  <script type="text/babel" src="src/screens2.jsx"></script>
+  <script type="text/babel" src="src/screens3.jsx"></script>
+  <script type="text/babel" src="tweaks-panel.jsx"></script>
+  <script type="text/babel" src="src/app.jsx"></script>
 </body>
 </html>

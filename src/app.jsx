@@ -1,8 +1,8 @@
 // App shell: tabs + side-by-side desktop + mobile preview
-const Atoms = window.CampusAtoms;
-const S1 = window.CampusScreens;
-const S2 = window.CampusScreens2;
-const S3 = window.CampusScreens3;
+const Atoms = window.MajorAtoms;
+const S1 = window.MajorScreens;
+const S2 = window.MajorScreens2;
+const S3 = window.MajorScreens3;
 const Li = window.lucideReact || {};
 const { useState: useApp, useEffect: useAppE } = React;
 
@@ -15,6 +15,7 @@ const TABS = [
   { k: 'portfolio', label: '포트폴리오',  url: 'me/portfolio/892',        desktop: 'web', mobile: 'web' },
   { k: 'notif',     label: '모바일 알림', url: 'notifications',          desktop: 'fallback', mobile: 'web' },
   { k: 'mypage',    label: '마이페이지',   url: 'me',                      desktop: 'web', mobile: 'web' },
+  { k: 'pricing',   label: '요금제',       url: 'pricing',                 desktop: 'web', mobile: 'web' },
 ];
 
 const TWEAK_DEFAULTS = /*EDITMODE-BEGIN*/{
@@ -32,6 +33,11 @@ function App() {
   const [projectId, setProjectId] = useApp(1);
   const [activeApplicant, setActiveApplicant] = useApp(null);
   const [activeTask, setActiveTask] = useApp(null);
+  const [showCreate, setShowCreate] = useApp(false);
+  const [peerTeammate, setPeerTeammate] = useApp(null);
+  const [showAwardSubmit, setShowAwardSubmit] = useApp(false);
+  const [approval, setApproval] = useApp(null);
+  const [, setAwardVersion] = useApp(0);
   const [t, setTweak] = useTweaks(TWEAK_DEFAULTS);
 
   // Expose nav globally so cards/buttons can navigate
@@ -44,6 +50,10 @@ function App() {
     };
     window.__openApplicant = (a) => setActiveApplicant(a);
     window.__openTask = (t) => setActiveTask(t);
+    window.__openCreate = () => setShowCreate(true);
+    window.__openPeerEval = (m) => setPeerTeammate(m);
+    window.__openAwardSubmit = () => setShowAwardSubmit(true);
+    window.__openAwardApproval = (submission, applicantName) => setApproval({ submission, applicantName });
   }, []);
 
   // Push weights into BREAKDOWN_LABELS so ScoreBars + demo reflect them
@@ -72,6 +82,7 @@ function App() {
       dashboard: <S2.ScreenDashboard device="web" animKey={animKey} />,
       portfolio: <S2.ScreenPortfolio device="web" animKey={animKey} />,
       mypage:    <S3.ScreenMyPage    device="web" animKey={animKey} />,
+      pricing:   <S1.ScreenPricing   device="web" animKey={animKey} />,
     };
     return map[tab];
   };
@@ -85,6 +96,7 @@ function App() {
       dashboard: <S2.ScreenDashboard device="mobile" animKey={animKey} />,
       portfolio: <S2.ScreenPortfolio device="mobile" animKey={animKey} />,
       mypage:    <S3.ScreenMyPage    device="mobile" animKey={animKey} />,
+      pricing:   <S1.ScreenPricing   device="mobile" animKey={animKey} />,
     };
     const tabActive = { explore: 'explore', detail: 'explore', compare: 'mine', dashboard: 'mine', portfolio: 'me', mypage: 'me', landing: 'home' }[tab];
     return <>{map[tab]}<Atoms.MobileTabBar active={tabActive} /></>;
@@ -183,8 +195,8 @@ function App() {
           <div className="rounded-2xl border bg-white p-5" style={{ borderColor: '#E4E4E7' }}>
             <div className="text-[11px] font-bold tracking-wider" style={{ color: '#EC4899' }}>MAJORS · 5</div>
             <div className="mt-3 flex flex-wrap gap-1.5">
-              {Object.keys(window.CampusData.MAJOR).map(k => {
-                const m = window.CampusData.MAJOR[k];
+              {Object.keys(window.MajorLinkData.MAJOR).map(k => {
+                const m = window.MajorLinkData.MAJOR[k];
                 return (
                   <span key={k} className="text-[11px] font-semibold rounded-full px-2.5 py-1 inline-flex items-center gap-1.5" style={{ background: m.bg, color: m.text }}>
                     <span className="w-1.5 h-1.5 rounded-full" style={{ background: m.ring }} />
@@ -194,7 +206,7 @@ function App() {
               })}
             </div>
             <div className="mt-4 pt-4 border-t text-[11px]" style={{ borderColor: '#F1F5F9', color: '#94A3B8' }}>
-              Campus Link · 2026.07 정식 출시 예정 · 한국 대학생 20–25세
+              MajorLink · 2026.07 정식 출시 예정 · 한국 대학생 20–25세
             </div>
           </div>
         </div>
@@ -217,6 +229,10 @@ function App() {
 
       {activeApplicant && <S3.ApplicantModal applicant={activeApplicant} onClose={() => setActiveApplicant(null)} />}
       {activeTask && <S3.TaskModal task={activeTask} onClose={() => setActiveTask(null)} />}
+      {showCreate && <S3.CreateProjectModal onClose={() => setShowCreate(false)} />}
+      {peerTeammate && <S3.PeerEvaluationModal teammate={peerTeammate} onClose={() => setPeerTeammate(null)} />}
+      {showAwardSubmit && <S3.AwardSubmissionModal onClose={() => setShowAwardSubmit(false)} />}
+      {approval && <S3.AwardApprovalModal submission={approval.submission} applicantName={approval.applicantName} onClose={() => setApproval(null)} onDecision={(sub, status) => { sub.status = status; setAwardVersion(v => v + 1); }} />}
     </div>
   );
 }
@@ -228,7 +244,7 @@ function DeviceBadge({ label, url, mobile }) {
         {mobile ? <Li.Smartphone size={12} /> : <Li.Monitor size={12} />}
         {label}
       </div>
-      <div className="text-[10px] font-mono" style={{ color: '#94A3B8' }}>campus-link.kr/{url}</div>
+      <div className="text-[10px] font-mono" style={{ color: '#94A3B8' }}>majorlink.kr/{url}</div>
     </div>
   );
 }

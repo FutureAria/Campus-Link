@@ -1,12 +1,21 @@
 // Screens 5-7: Dashboard, Portfolio, Notifications
-const A2 = window.CampusAtoms;
-const D2 = window.CampusData;
+const A2 = window.MajorAtoms;
+const D2 = window.MajorLinkData;
 const Lc2 = window.lucideReact || {};
 const { useState: useS2 } = React;
 
 // ============ SCREEN 5: DASHBOARD ============
 function ScreenDashboard({ device, animKey }) {
   const isM = device === 'mobile';
+  const [evalOpen, setEvalOpen] = useS2(false);
+  const projectComplete = false; // demo project is in-progress; flip to true to surface the completion index
+  const TEAM = [
+    { name: '김민준', dept: '컴퓨터공학', year: 3 },
+    { name: '이수민', dept: '시각디자인', year: 2 },
+    { name: '박서연', dept: '경영학', year: 3 },
+    { name: '정현우', dept: '통계학', year: 4 },
+    { name: '한지우', dept: '미디어커뮤니케이션', year: 2 },
+  ];
   return (
     <div className="tab-enter" key={animKey}>
       <div className={`flex items-center justify-between ${isM ? 'px-4 py-3' : 'px-10 py-4'} border-b bg-white sticky top-0 z-20`} style={{ borderColor: '#E4E4E7' }}>
@@ -51,16 +60,47 @@ function ScreenDashboard({ device, animKey }) {
           <div className="h-2 rounded-full" style={{ background: '#F1F5F9' }}>
             <div className="h-full rounded-full" style={{ width: '47%', background: 'linear-gradient(90deg, #4F46E5 0%, #84CC16 100%)' }} />
           </div>
+          {/* Completion Index — only when project status is complete (demo project is in-progress, so hidden) */}
+          {projectComplete && (
+            <div className="mt-4">
+              <A2.CompletionIndexBadge index={{ output: 33, goal: 23, schedule: 14, roles: 14, record: 9 }} animKey={animKey} />
+            </div>
+          )}
         </div>
       </div>
 
       {/* Tabs */}
-      <div className={`${isM ? 'px-4' : 'px-10'} border-b bg-white`} style={{ borderColor: '#E4E4E7' }}>
-        <div className="flex gap-5 text-[13px] font-semibold">
-          {[['칸반', true], ['멤버'], ['자료'], ['일정']].map(([l, on]) => (
-            <div key={l} className={`py-3 border-b-2 ${on ? '' : 'border-transparent'}`} style={{ color: on ? '#4F46E5' : '#94A3B8', borderColor: on ? '#4F46E5' : 'transparent' }}>{l}</div>
-          ))}
+      <div className={`${isM ? 'px-4' : 'px-10'} border-b bg-white relative`} style={{ borderColor: '#E4E4E7' }}>
+        <div className="flex items-center justify-between">
+          <div className="flex gap-5 text-[13px] font-semibold">
+            {[['칸반', true], ['멤버'], ['자료'], ['일정']].map(([l, on]) => (
+              <div key={l} className={`py-3 border-b-2 ${on ? '' : 'border-transparent'}`} style={{ color: on ? '#4F46E5' : '#94A3B8', borderColor: on ? '#4F46E5' : 'transparent' }}>{l}</div>
+            ))}
+          </div>
+          <button onClick={() => setEvalOpen(o => !o)} className="rounded-xl text-[12px] font-bold px-3 py-2 flex items-center gap-1.5" style={{ background: evalOpen ? '#4F46E5' : '#EEF2FF', color: evalOpen ? 'white' : '#4F46E5' }}>
+            <Lc2.Star size={13} /> 팀원 평가하기
+          </button>
         </div>
+        {evalOpen && (
+          <>
+            <div className="fixed inset-0 z-30" onClick={() => setEvalOpen(false)} />
+            <div className="absolute right-4 sm:right-10 top-full mt-1 z-40 w-64 rounded-2xl bg-white border shadow-cardHov p-2" style={{ borderColor: '#E4E4E7' }}>
+              <div className="text-[11px] font-bold tracking-wider px-2 py-1.5" style={{ color: '#94A3B8' }}>평가할 팀원 선택</div>
+              {TEAM.map(m => (
+                <button key={m.name} onClick={() => { setEvalOpen(false); window.__openPeerEval && window.__openPeerEval(m); }}
+                  className="w-full flex items-center gap-2.5 px-2 py-2 rounded-xl hover:bg-zinc-50 text-left">
+                  <A2.Avatar name={m.name} dept={m.dept} size={30} />
+                  <div className="flex-1 min-w-0">
+                    <div className="text-[13px] font-semibold">{m.name}</div>
+                    <div className="text-[11px]" style={{ color: '#94A3B8' }}>{m.dept} {m.year}</div>
+                  </div>
+                  <Lc2.ChevronRight size={14} style={{ color: '#CBD5E1' }} />
+                </button>
+              ))}
+              <div className="text-[10px] px-2 pt-1.5 pb-1" style={{ color: '#94A3B8' }}>프로젝트 종료 시점 동료평가 · CATME 6개 항목</div>
+            </div>
+          </>
+        )}
       </div>
 
       {/* Body */}
@@ -134,7 +174,7 @@ function ScreenDashboard({ device, animKey }) {
                   <Lc2.MessageSquare size={16} style={{ color: '#5865F2' }} />
                   <div>
                     <div className="text-[12px] font-semibold">디스코드 알림</div>
-                    <div className="text-[10px]" style={{ color: '#94A3B8' }}>#campus-link-team</div>
+                    <div className="text-[10px]" style={{ color: '#94A3B8' }}>#majorlink-team</div>
                   </div>
                 </div>
                 <div className="w-9 h-5 rounded-full p-0.5" style={{ background: '#4F46E5' }}>
@@ -444,7 +484,13 @@ function NotifCard({ n, idx, animKey, dim }) {
         </div>
         <div className="text-[13px] leading-snug" style={{ color: dim ? '#475569' : '#0F172A' }}>{n.body}</div>
         <div className="mt-3 flex items-center justify-between">
-          <button className="text-[11px] font-bold rounded-lg px-3 py-1.5" style={{ background: '#F4F4F5', color: '#0F172A' }}>{n.cta}</button>
+          <button onClick={() => {
+            if (n.type === 'award_verify' && window.__openAwardApproval) {
+              const ap = (D2.APPLICANTS || []).find(a => a.id === n.applicantId);
+              const sub = ap && (ap.trust.awardSubmissions || []).find(s => s.id === n.submissionId);
+              if (sub) window.__openAwardApproval(sub, ap.name);
+            }
+          }} className="text-[11px] font-bold rounded-lg px-3 py-1.5" style={{ background: n.type === 'award_verify' ? '#FEF3C7' : '#F4F4F5', color: n.type === 'award_verify' ? '#B45309' : '#0F172A' }}>{n.cta}</button>
           <Lc2.MoreHorizontal size={14} style={{ color: '#94A3B8' }} />
         </div>
       </div>
@@ -452,6 +498,6 @@ function NotifCard({ n, idx, animKey, dim }) {
   );
 }
 
-window.CampusScreens2 = {
+window.MajorScreens2 = {
   ScreenDashboard, ScreenPortfolio, ScreenNotifWeb, ScreenNotifMobile,
 };

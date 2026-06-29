@@ -1,7 +1,7 @@
 // Print version: render ALL 7 screens stacked, each as its own page
-const Atoms = window.CampusAtoms;
-const S1 = window.CampusScreens;
-const S2 = window.CampusScreens2;
+const Atoms = window.MajorAtoms;
+const S1 = window.MajorScreens;
+const S2 = window.MajorScreens2;
 const Li = window.lucideReact || {};
 
 const TABS = [
@@ -48,7 +48,7 @@ function PrintApp() {
               전공이 다르면,<br />팀이 강해집니다.
             </h1>
             <p className="mt-6 text-[16px]" style={{ color: '#475569', maxWidth: 540, lineHeight: 1.6 }}>
-              Campus Link — 전공 기반 대학생 협업 플랫폼.<br/>
+              MajorLink — 전공 기반 대학생 협업 플랫폼.<br/>
               7개 핵심 화면을 데스크톱과 모바일에서 미리보기 합니다.
             </p>
           </div>
@@ -58,7 +58,7 @@ function PrintApp() {
                 <div className="rounded-md w-7 h-7 flex items-center justify-center text-[11px] font-bold" style={{ background: '#EEF2FF', color: '#4F46E5' }}>0{i+1}</div>
                 <div>
                   <div className="text-[13px] font-bold">{t.label}</div>
-                  <div className="text-[10px]" style={{ color: '#94A3B8' }}>campus-link.kr/{t.url}</div>
+                  <div className="text-[10px]" style={{ color: '#94A3B8' }}>majorlink.kr/{t.url}</div>
                 </div>
               </div>
             ))}
@@ -76,7 +76,7 @@ function PrintApp() {
               <span className="text-[11px] font-bold tracking-wider" style={{ color: '#94A3B8' }}>0{i+1} / 07</span>
               <span className="text-[14px] font-bold" style={{ color: '#0F172A' }}>{t.label}</span>
             </div>
-            <div className="text-[10px] font-mono" style={{ color: '#94A3B8' }}>campus-link.kr/{t.url}</div>
+            <div className="text-[10px] font-mono" style={{ color: '#94A3B8' }}>majorlink.kr/{t.url}</div>
           </div>
 
           <div className="page-body">
@@ -103,7 +103,7 @@ function PrintApp() {
           </div>
 
           <div className="page-footer">
-            <span>Campus Link · 2026.07 정식 출시</span>
+            <span>MajorLink · 2026.07 정식 출시</span>
             <span>{i + 2} / {TABS.length + 1}</span>
           </div>
         </section>
@@ -118,6 +118,6 @@ ReactDOM.createRoot(document.getElementById('root')).render(<PrintApp />);
 (async function () {
   try { if (document.fonts && document.fonts.ready) await document.fonts.ready; } catch (e) {}
   // Wait for React to render
-  await new Promise(r => setTimeout(r, 500));
+  await new Promise(r => setTimeout(r, 1500));
   window.print();
 })();

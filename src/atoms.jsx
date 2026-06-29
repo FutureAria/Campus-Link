@@ -1,7 +1,7 @@
 // Reusable atoms — donut, bar, chip, browser/phone frames
 const { useState, useEffect, useRef } = React;
 const L = window.lucideReact || {};
-const { MAJOR, majorOf } = window.CampusData;
+const { MAJOR, majorOf } = window.MajorLinkData;
 
 // === Match score gradient color ===
 function scoreColor(score) {
@@ -12,7 +12,7 @@ function scoreColor(score) {
 }
 
 // === Animated count-up ===
-function useCountUp(target, durationMs = 500, delayMs = 40, key = 0) {
+function useCountUp(target, durationMs = 1200, delayMs = 200, key = 0) {
   const [val, setVal] = useState(0);
   useEffect(() => {
     setVal(0);
@@ -27,17 +27,17 @@ function useCountUp(target, durationMs = 500, delayMs = 40, key = 0) {
         if (p < 1) raf = requestAnimationFrame(tick);
       };
       raf = requestAnimationFrame(tick);
-    }, Math.min(delayMs, 80));
+    }, delayMs);
     return () => { clearTimeout(t); if (raf) cancelAnimationFrame(raf); };
   }, [target, durationMs, delayMs, key]);
   return val;
 }
 
 // === Donut score chart ===
-function DonutScore({ score, size = 120, stroke = 10, animKey = 0, showLabel = true, delay = 40 }) {
+function DonutScore({ score, size = 120, stroke = 10, animKey = 0, showLabel = true, delay = 200 }) {
   const r = (size - stroke) / 2;
   const c = 2 * Math.PI * r;
-  const v = useCountUp(score, 500, delay, animKey);
+  const v = useCountUp(score, 1200, delay, animKey);
   const col = scoreColor(score);
   const offset = c - (c * v) / 100;
 
@@ -56,7 +56,7 @@ function DonutScore({ score, size = 120, stroke = 10, animKey = 0, showLabel = t
           stroke={col.stroke} strokeWidth={stroke} fill="none"
           strokeDasharray={c} strokeDashoffset={offset}
           strokeLinecap="round"
-          style={{ transition: 'stroke-dashoffset 0.5s ease-out', transform: 'rotate(-90deg)', transformOrigin: 'center' }}
+          style={{ transition: 'stroke-dashoffset 1.2s ease-out', transform: 'rotate(-90deg)', transformOrigin: 'center' }}
         />
       </svg>
       <div className="absolute inset-0 flex flex-col items-center justify-center">
@@ -149,7 +149,7 @@ function Avatar({ name, dept, size = 32, ring = true }) {
 }
 
 // === Browser frame ===
-function BrowserFrame({ url = 'campus-link.kr/', children, height }) {
+function BrowserFrame({ url = 'majorlink.kr/', children, height }) {
   return (
     <div className="rounded-2xl overflow-hidden shadow-card border" style={{ borderColor: '#E4E4E7', background: '#FFFFFF' }}>
       <div className="flex items-center gap-3 px-4 py-3 border-b" style={{ background: '#F4F4F5', borderColor: '#E4E4E7' }}>
@@ -160,8 +160,8 @@ function BrowserFrame({ url = 'campus-link.kr/', children, height }) {
         </div>
         <div className="flex-1 mx-2 px-3 py-1 rounded-md text-xs flex items-center gap-2" style={{ background: '#FFFFFF', border: '1px solid #E4E4E7', color: '#94A3B8' }}>
           <L.Lock size={11} />
-          <span style={{ color: '#475569' }}>campus-link.kr</span>
-          <span>/{url.replace('campus-link.kr/', '')}</span>
+          <span style={{ color: '#475569' }}>majorlink.kr</span>
+          <span>/{url.replace('majorlink.kr/', '')}</span>
         </div>
         <div className="flex gap-2 text-zinc-400">
           <L.Plus size={14} />
@@ -232,7 +232,7 @@ function Wordmark({ size = 'md' }) {
   const big = size === 'lg';
   return (
     <div className="inline-flex items-center gap-1" style={{ color: '#4F46E5', fontWeight: 800, fontSize: big ? 22 : 17, letterSpacing: '-0.02em' }}>
-      <span>Campus Link</span>
+      <span>MajorLink</span>
       <span className="rounded-full" style={{ width: big ? 8 : 6, height: big ? 8 : 6, background: '#84CC16', display: 'inline-block', marginTop: big ? 6 : 4 }} />
     </div>
   );
@@ -272,8 +272,124 @@ function Placeholder({ label, height = 160, gradient = ['#EEF2FF', '#ECFCCB'], c
   );
 }
 
-window.CampusAtoms = {
+// === Score trust note (caption + popover) ===
+function ScoreTrustNote({ caption = '역할·기술·참여기간·관심분야·포트폴리오 5개 항목 기반 초기 가중치예요. 동료평가 선행연구를 참고했어요' }) {
+  const [open, setOpen] = useState(false);
+  return (
+    <div className="relative"
+      onMouseEnter={() => setOpen(true)}
+      onMouseLeave={() => setOpen(false)}>
+      <button
+        onClick={() => setOpen(o => !o)}
+        className="flex items-start gap-1.5 text-left w-full"
+        style={{ color: '#94A3B8' }}>
+        <L.Info size={12} style={{ marginTop: 1, flexShrink: 0 }} />
+        <span className="text-[11px] leading-snug">{caption}</span>
+      </button>
+      {open && (
+        <div className="absolute z-50 bottom-full mb-2 left-0 w-60 rounded-xl p-3 shadow-cardHov"
+          style={{ background: '#0F172A' }}>
+          <div className="text-[11px] leading-relaxed" style={{ color: '#E2E8F0' }}>
+            이 점수는 논문으로 검증된 알고리즘이 아니라, 초기 설계 단계의 가중치입니다. 동료평가 모델(CATME 등)과 프로젝트 기반 학습 선행연구를 참고했어요.
+          </div>
+          <div className="absolute top-full left-4 w-2 h-2 -mt-1 rotate-45" style={{ background: '#0F172A' }} />
+        </div>
+      )}
+    </div>
+  );
+}
+
+// === Trust profile card (behavioral data + badges) ===
+const BADGE_EMOJI = {
+  '완주왕': '🏅', '협업우수': '🤝', '마감준수': '📅', '창의왕': '💡',
+  '리더십': '🧭', '소통왕': '💬', '데이터장인': '📊', '콘텐츠왕': '🎬',
+  '성실참여': '✨', '신규멤버': '🌱',
+};
+
+function TrustProfileCard({ trust, title = '신뢰 프로필', dense = false }) {
+  if (!trust) return null;
+  const subs = trust.awardSubmissions || [];
+  const approvedAwards = subs.filter(s => s.status === 'approved').length;
+  const pendingAwards = subs.filter(s => s.status === 'pending').length;
+  const stats = [
+    { label: '프로젝트 완료율', value: `${trust.completionRate}%`, color: trust.completionRate >= 90 ? '#15803D' : trust.completionRate >= 75 ? '#B45309' : '#BE123C' },
+    { label: '중도이탈', value: `${trust.dropoutCount}회`, color: trust.dropoutCount === 0 ? '#15803D' : '#B45309' },
+    { label: '공모전 수상', value: `${approvedAwards}회`, color: '#4F46E5', verified: true, sub: pendingAwards > 0 ? `+${pendingAwards} 승인 대기` : null },
+    { label: '팀장 경험', value: `${trust.leaderCount}회`, color: '#0F766E' },
+  ];
+  return (
+    <div className="rounded-2xl border p-4" style={{ borderColor: '#E4E4E7', background: '#FFFFFF' }}>
+      <div className="flex items-center gap-1.5 mb-3">
+        <span className="text-[11px] font-bold tracking-wider" style={{ color: '#94A3B8' }}>{title.toUpperCase()}</span>
+        <span className="text-[10px] rounded-full px-1.5 py-0.5" style={{ background: '#EEF2FF', color: '#4F46E5' }}>행동 데이터</span>
+      </div>
+      <div className="grid grid-cols-2 gap-2">
+        {stats.map(s => (
+          <div key={s.label} className="rounded-xl p-2.5" style={{ background: '#FAFAFA' }}>
+            <div className="text-[10px] flex items-center gap-1" style={{ color: '#94A3B8' }}>
+              {s.label}
+              {s.verified && <L.FileCheck size={11} style={{ color: '#B45309' }} title="증빙 승인이 필요한 항목" />}
+            </div>
+            <div className="flex items-baseline gap-1">
+              <div className="font-bold mt-0.5 tabular-nums" style={{ fontSize: dense ? 15 : 17, color: s.color, letterSpacing: '-0.02em' }}>{s.value}</div>
+              {s.sub && <span className="text-[10px] font-semibold" style={{ color: '#B45309' }}>{s.sub}</span>}
+            </div>
+          </div>
+        ))}
+      </div>
+      {trust.badges && trust.badges.length > 0 && (
+        <div className="mt-3 flex flex-wrap gap-1.5">
+          {trust.badges.map(b => (
+            <span key={b} className="inline-flex items-center gap-1 text-[11px] font-semibold rounded-full px-2.5 py-1" style={{ background: '#ECFCCB', color: '#3F6212' }}>
+              <span>{BADGE_EMOJI[b] || '🏷️'}</span>{b}
+            </span>
+          ))}
+        </div>
+      )}
+    </div>
+  );
+}
+
+// === Project Completion Index badge (only when project is complete) ===
+const COMPLETION_ITEMS = [
+  { key: 'output',   label: '산출물 제출', max: 35, color: '#4F46E5' },
+  { key: 'goal',     label: '핵심기능/목표', max: 25, color: '#22C55E' },
+  { key: 'schedule', label: '일정 준수', max: 15, color: '#F59E0B' },
+  { key: 'roles',    label: '팀원 역할 수행', max: 15, color: '#EC4899' },
+  { key: 'record',   label: '종료 기록', max: 10, color: '#14B8A6' },
+];
+
+function CompletionIndexBadge({ index, animKey = 0 }) {
+  if (!index) return null;
+  const total = COMPLETION_ITEMS.reduce((sum, r) => sum + (index[r.key] || 0), 0);
+  return (
+    <div className="rounded-2xl border p-4" style={{ borderColor: '#E4E4E7', background: '#FFFFFF' }}>
+      <div className="flex items-center justify-between mb-3">
+        <span className="text-[11px] font-bold tracking-wider" style={{ color: '#94A3B8' }}>프로젝트 완료 점수</span>
+        <span className="font-bold tabular-nums" style={{ fontSize: 18, color: '#3F6212' }}>{total}<span className="text-[11px]" style={{ color: '#94A3B8' }}> / 100</span></span>
+      </div>
+      <div className="grid gap-2">
+        {COMPLETION_ITEMS.map((row, i) => {
+          const v = index[row.key] || 0;
+          const pct = (v / row.max) * 100;
+          return (
+            <div key={row.key} className="flex items-center gap-2.5 text-[11px]" style={{ color: '#475569' }}>
+              <div className="w-20 font-medium">{row.label}</div>
+              <div className="flex-1 h-1.5 rounded-full" style={{ background: '#F1F5F9' }}>
+                <div key={`${animKey}-${i}`} className="h-full rounded-full anim-bar" style={{ width: `${pct}%`, background: row.color, animationDelay: `${200 + i * 80}ms` }} />
+              </div>
+              <div className="tabular-nums font-semibold w-10 text-right" style={{ color: '#0F172A' }}>{v}/{row.max}</div>
+            </div>
+          );
+        })}
+      </div>
+    </div>
+  );
+}
+
+window.MajorAtoms = {
   scoreColor, useCountUp, DonutScore, ScoreBars, MajorChip, Chip, Avatar,
   BrowserFrame, PhoneFrame, MobileTabBar, Wordmark, Section, Placeholder,
+  ScoreTrustNote, TrustProfileCard, CompletionIndexBadge,
   BREAKDOWN_LABELS,
 };
