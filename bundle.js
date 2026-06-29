@@ -1,4 +1,4844 @@
-const I=(a,s="0 0 24 24")=>({size:o=16,color:e,fill:t="none",strokeWidth:r=2,style:i,className:d})=>React.createElement("svg",{xmlns:"http://www.w3.org/2000/svg",width:o,height:o,viewBox:s,fill:t,stroke:e||"currentColor",strokeWidth:r,strokeLinecap:"round",strokeLinejoin:"round",style:i,className:d},a),Lock=I(React.createElement(React.Fragment,null,React.createElement("rect",{x:"3",y:"11",width:"18",height:"11",rx:"2"}),React.createElement("path",{d:"M7 11V7a5 5 0 0 1 10 0v4"}))),Plus=I(React.createElement(React.Fragment,null,React.createElement("path",{d:"M12 5v14"}),React.createElement("path",{d:"M5 12h14"}))),MoreVertical=I(React.createElement(React.Fragment,null,React.createElement("circle",{cx:"12",cy:"5",r:"1"}),React.createElement("circle",{cx:"12",cy:"12",r:"1"}),React.createElement("circle",{cx:"12",cy:"19",r:"1"}))),MoreHorizontal=I(React.createElement(React.Fragment,null,React.createElement("circle",{cx:"5",cy:"12",r:"1"}),React.createElement("circle",{cx:"12",cy:"12",r:"1"}),React.createElement("circle",{cx:"19",cy:"12",r:"1"}))),Signal=I(React.createElement(React.Fragment,null,React.createElement("path",{d:"M2 20h.01"}),React.createElement("path",{d:"M7 20v-4"}),React.createElement("path",{d:"M12 20v-8"}),React.createElement("path",{d:"M17 20V8"}),React.createElement("path",{d:"M22 4v16"}))),Wifi=I(React.createElement(React.Fragment,null,React.createElement("path",{d:"M5 12.55a11 11 0 0 1 14 0"}),React.createElement("path",{d:"M1.42 9a16 16 0 0 1 21.16 0"}),React.createElement("path",{d:"M8.53 16.11a6 6 0 0 1 6.95 0"}),React.createElement("circle",{cx:"12",cy:"20",r:"1"}))),BatteryFull=I(React.createElement(React.Fragment,null,React.createElement("rect",{x:"2",y:"7",width:"16",height:"10",rx:"2"}),React.createElement("path",{d:"M22 11v2"}),React.createElement("path",{d:"M5 10v4"}),React.createElement("path",{d:"M9 10v4"}),React.createElement("path",{d:"M13 10v4"}))),Home=I(React.createElement(React.Fragment,null,React.createElement("path",{d:"M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"}),React.createElement("path",{d:"M9 22V12h6v10"}))),Search=I(React.createElement(React.Fragment,null,React.createElement("circle",{cx:"11",cy:"11",r:"7"}),React.createElement("path",{d:"M21 21l-4.3-4.3"}))),Bell=I(React.createElement(React.Fragment,null,React.createElement("path",{d:"M6 8a6 6 0 0 1 12 0c0 7 3 9 3 9H3s3-2 3-9"}),React.createElement("path",{d:"M10.3 21a1.94 1.94 0 0 0 3.4 0"}))),Folder=I(React.createElement(React.Fragment,null,React.createElement("path",{d:"M3 7a2 2 0 0 1 2-2h4l2 2h8a2 2 0 0 1 2 2v9a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"}))),User=I(React.createElement(React.Fragment,null,React.createElement("path",{d:"M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"}),React.createElement("circle",{cx:"12",cy:"7",r:"4"}))),Compass=I(React.createElement(React.Fragment,null,React.createElement("circle",{cx:"12",cy:"12",r:"10"}),React.createElement("polygon",{points:"16.24 7.76 14.12 14.12 7.76 16.24 9.88 9.88 16.24 7.76"}))),Users=I(React.createElement(React.Fragment,null,React.createElement("path",{d:"M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"}),React.createElement("circle",{cx:"9",cy:"7",r:"4"}),React.createElement("path",{d:"M23 21v-2a4 4 0 0 0-3-3.87"}),React.createElement("path",{d:"M16 3.13a4 4 0 0 1 0 7.75"}))),ArrowRight=I(React.createElement(React.Fragment,null,React.createElement("path",{d:"M5 12h14"}),React.createElement("path",{d:"M12 5l7 7-7 7"}))),Sparkles=I(React.createElement(React.Fragment,null,React.createElement("path",{d:"M12 3l1.9 5.1L19 10l-5.1 1.9L12 17l-1.9-5.1L5 10l5.1-1.9L12 3z"}))),Bookmark=I(React.createElement(React.Fragment,null,React.createElement("path",{d:"M19 21l-7-5-7 5V5a2 2 0 0 1 2-2h10a2 2 0 0 1 2 2z"}))),Share2=I(React.createElement(React.Fragment,null,React.createElement("circle",{cx:"18",cy:"5",r:"3"}),React.createElement("circle",{cx:"6",cy:"12",r:"3"}),React.createElement("circle",{cx:"18",cy:"19",r:"3"}),React.createElement("line",{x1:"8.59",y1:"13.51",x2:"15.42",y2:"17.49"}),React.createElement("line",{x1:"15.41",y1:"6.51",x2:"8.59",y2:"10.49"}))),ChevronLeft=I(React.createElement(React.Fragment,null,React.createElement("polyline",{points:"15 18 9 12 15 6"}))),ChevronRight=I(React.createElement(React.Fragment,null,React.createElement("polyline",{points:"9 18 15 12 9 6"}))),ChevronDown=I(React.createElement(React.Fragment,null,React.createElement("polyline",{points:"6 9 12 15 18 9"}))),ChevronUp=I(React.createElement(React.Fragment,null,React.createElement("polyline",{points:"18 15 12 9 6 15"}))),Check=I(React.createElement(React.Fragment,null,React.createElement("polyline",{points:"20 6 9 17 4 12"}))),X=I(React.createElement(React.Fragment,null,React.createElement("line",{x1:"18",y1:"6",x2:"6",y2:"18"}),React.createElement("line",{x1:"6",y1:"6",x2:"18",y2:"18"}))),MessageCircle=I(React.createElement(React.Fragment,null,React.createElement("path",{d:"M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8z"}))),MessageSquare=I(React.createElement(React.Fragment,null,React.createElement("path",{d:"M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"}))),Lightbulb=I(React.createElement(React.Fragment,null,React.createElement("path",{d:"M9 18h6"}),React.createElement("path",{d:"M10 22h4"}),React.createElement("path",{d:"M12 2a7 7 0 0 0-4 12.7c.6.5 1 1.2 1 2v.3h6V17c0-.8.4-1.5 1-2a7 7 0 0 0-4-12.7z"}))),Layers=I(React.createElement(React.Fragment,null,React.createElement("polygon",{points:"12 2 2 7 12 12 22 7 12 2"}),React.createElement("polyline",{points:"2 17 12 22 22 17"}),React.createElement("polyline",{points:"2 12 12 17 22 12"}))),Link=I(React.createElement(React.Fragment,null,React.createElement("path",{d:"M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"}),React.createElement("path",{d:"M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"}))),Grid3x3=I(React.createElement(React.Fragment,null,React.createElement("rect",{x:"3",y:"3",width:"18",height:"18",rx:"2"}),React.createElement("line",{x1:"9",y1:"3",x2:"9",y2:"21"}),React.createElement("line",{x1:"15",y1:"3",x2:"15",y2:"21"}),React.createElement("line",{x1:"3",y1:"9",x2:"21",y2:"9"}),React.createElement("line",{x1:"3",y1:"15",x2:"21",y2:"15"}))),Paperclip=I(React.createElement(React.Fragment,null,React.createElement("path",{d:"M21 11l-9.2 9.2a5 5 0 0 1-7.07-7.07L13.93 4a3.5 3.5 0 0 1 4.95 4.95L9.76 18.07a2 2 0 1 1-2.83-2.83l8.49-8.49"}))),Calendar=I(React.createElement(React.Fragment,null,React.createElement("rect",{x:"3",y:"4",width:"18",height:"18",rx:"2"}),React.createElement("line",{x1:"16",y1:"2",x2:"16",y2:"6"}),React.createElement("line",{x1:"8",y1:"2",x2:"8",y2:"6"}),React.createElement("line",{x1:"3",y1:"10",x2:"21",y2:"10"}))),Star=I(React.createElement(React.Fragment,null,React.createElement("polygon",{points:"12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"}))),Code=I(React.createElement(React.Fragment,null,React.createElement("polyline",{points:"16 18 22 12 16 6"}),React.createElement("polyline",{points:"8 6 2 12 8 18"}))),Globe=I(React.createElement(React.Fragment,null,React.createElement("circle",{cx:"12",cy:"12",r:"10"}),React.createElement("line",{x1:"2",y1:"12",x2:"22",y2:"12"}),React.createElement("path",{d:"M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"}))),Github=I(React.createElement(React.Fragment,null,React.createElement("path",{d:"M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"}))),Figma=I(React.createElement(React.Fragment,null,React.createElement("path",{d:"M5 5.5A3.5 3.5 0 0 1 8.5 2H12v7H8.5A3.5 3.5 0 0 1 5 5.5z"}),React.createElement("path",{d:"M12 2h3.5a3.5 3.5 0 1 1 0 7H12V2z"}),React.createElement("path",{d:"M12 12.5a3.5 3.5 0 1 1 7 0 3.5 3.5 0 1 1-7 0z"}),React.createElement("path",{d:"M5 19.5A3.5 3.5 0 0 1 8.5 16H12v3.5a3.5 3.5 0 1 1-7 0z"}),React.createElement("path",{d:"M5 12.5A3.5 3.5 0 0 1 8.5 9H12v7H8.5A3.5 3.5 0 0 1 5 12.5z"}))),Download=I(React.createElement(React.Fragment,null,React.createElement("path",{d:"M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"}),React.createElement("polyline",{points:"7 10 12 15 17 10"}),React.createElement("line",{x1:"12",y1:"15",x2:"12",y2:"3"}))),Settings=I(React.createElement(React.Fragment,null,React.createElement("circle",{cx:"12",cy:"12",r:"3"}),React.createElement("path",{d:"M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1-2.83 2.83l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 1 1-4 0v-.09a1.65 1.65 0 0 0-1-1.51 1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 1 1-2.83-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 1 1 0-4h.09a1.65 1.65 0 0 0 1.51-1 1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 1 1 2.83-2.83l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1-1.51V3a2 2 0 1 1 4 0v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 1 1 2.83 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 1 1 0 4h-.09a1.65 1.65 0 0 0-1.51 1z"}))),Smartphone=I(React.createElement(React.Fragment,null,React.createElement("rect",{x:"5",y:"2",width:"14",height:"20",rx:"2"}),React.createElement("line",{x1:"12",y1:"18",x2:"12.01",y2:"18"}))),Monitor=I(React.createElement(React.Fragment,null,React.createElement("rect",{x:"2",y:"3",width:"20",height:"14",rx:"2"}),React.createElement("line",{x1:"8",y1:"21",x2:"16",y2:"21"}),React.createElement("line",{x1:"12",y1:"17",x2:"12",y2:"21"})));window.lucideReact={Lock,Plus,MoreVertical,MoreHorizontal,Signal,Wifi,BatteryFull,Home,Search,Bell,Folder,User,Compass,Users,ArrowRight,Sparkles,Bookmark,Share2,ChevronLeft,ChevronRight,ChevronDown,ChevronUp,Check,X,MessageCircle,MessageSquare,Lightbulb,Layers,Link,Grid3x3,Paperclip,Calendar,Star,Code,Globe,Github,Figma,Download,Settings,Smartphone,Monitor},(function(){const a={"\uCEF4\uACF5/SW":{key:"cs",bg:"#DBEAFE",soft:"#EFF6FF",text:"#1D4ED8",ring:"#3B82F6"},\uB514\uC790\uC778:{key:"design",bg:"#FCE7F3",soft:"#FDF2F8",text:"#BE185D",ring:"#EC4899"},"\uACBD\uC601/\uAE30\uD68D":{key:"biz",bg:"#EDE9FE",soft:"#F5F3FF",text:"#6D28D9",ring:"#8B5CF6"},"\uBBF8\uB514\uC5B4/\uD64D\uBCF4":{key:"media",bg:"#FFEDD5",soft:"#FFF7ED",text:"#C2410C",ring:"#F97316"},"\uD1B5\uACC4/\uB370\uC774\uD130":{key:"data",bg:"#CCFBF1",soft:"#F0FDFA",text:"#0F766E",ring:"#14B8A6"}},s=x=>/디자인|산업디자인|시각/.test(x)?"\uB514\uC790\uC778":/컴퓨터|소프트|SW/.test(x)?"\uCEF4\uACF5/SW":/경영|기획/.test(x)?"\uACBD\uC601/\uAE30\uD68D":/미디어|커뮤니|광고|홍보/.test(x)?"\uBBF8\uB514\uC5B4/\uD64D\uBCF4":/통계|데이터/.test(x)?"\uD1B5\uACC4/\uB370\uC774\uD130":"\uACBD\uC601/\uAE30\uD68D",o=[{id:1,name:"\uCD5C\uB3C4\uC724",dept:"\uCEF4\uD4E8\uD130\uACF5\uD559",year:3,school:"\uD55C\uC591\uB300",skills:["React","Spring","MySQL","Git"],score:91,role:"\uD504\uB860\uD2B8\uC5D4\uB4DC \uAC1C\uBC1C\uC790",intro:"\uD480\uC2A4\uD0DD \uAC00\uB2A5, 3\uAC1C \uC0AC\uC774\uB4DC \uD504\uB85C\uC81D\uD2B8 \uC6B4\uC601",portfolio:"github.com/dy-choi",breakdown:{role:30,skill:24,period:19,interest:13,folio:5}},{id:2,name:"\uC774\uC218\uBBFC",dept:"\uC2DC\uAC01\uB514\uC790\uC778",year:2,school:"\uD64D\uC775\uB300",skills:["Figma","Adobe XD","Illustrator","Notion"],score:87,role:"\uD504\uB85C\uB355\uD2B8 \uB514\uC790\uC774\uB108",intro:"\uBE0C\uB79C\uB4DC\xB7\uC571 \uC778\uD130\uD398\uC774\uC2A4 \uBAA8\uB450 OK",portfolio:"behance.net/sumin",breakdown:{role:28,skill:22,period:18,interest:12,folio:7}},{id:3,name:"\uBC15\uC11C\uC5F0",dept:"\uACBD\uC601\uD559",year:3,school:"\uC5F0\uC138\uB300",skills:["\uC2DC\uC7A5\uC870\uC0AC","PPT","Notion","Excel"],score:82,role:"PM/\uAE30\uD68D\uC790",intro:"\uD559\uC0DD \uCC3D\uC5C5\uB3D9\uC544\uB9AC \uBD80\uD68C\uC7A5",portfolio:"notion.so/parkseo",breakdown:{role:27,skill:20,period:17,interest:13,folio:5}},{id:4,name:"\uC815\uD604\uC6B0",dept:"\uD1B5\uACC4\uD559",year:4,school:"\uACE0\uB824\uB300",skills:["R","Python","SPSS","SQL"],score:79,role:"\uB370\uC774\uD130 \uBD84\uC11D\uAC00",intro:"\uD559\uD68C \uB370\uC774\uD130 \uB3D9\uC544\uB9AC \uD68C\uC7A5",portfolio:"kaggle.com/hwjung",breakdown:{role:26,skill:22,period:16,interest:10,folio:5}},{id:5,name:"\uD55C\uC9C0\uC6B0",dept:"\uBBF8\uB514\uC5B4\uCEE4\uBBA4\uB2C8\uCF00\uC774\uC158",year:2,school:"\uC911\uC559\uB300",skills:["Premiere","After Effects","Photoshop"],score:74,role:"\uCF58\uD150\uCE20 \uB9C8\uCF00\uD130",intro:"\uC720\uD29C\uBE0C \uC601\uC0C1 \uD3B8\uC9D1 2\uB144\uCC28",portfolio:"youtube.com/jiwoo",breakdown:{role:24,skill:19,period:15,interest:11,folio:5}},{id:6,name:"\uAC15\uBBFC\uC11C",dept:"\uB370\uC774\uD130\uC0AC\uC774\uC5B8\uC2A4",year:2,school:"\uC131\uADE0\uAD00\uB300",skills:["Python","SQL","Tableau"],score:71,role:"\uB370\uC774\uD130 \uBD84\uC11D\uAC00",intro:"Tableau \uC790\uACA9\uC99D \uBCF4\uC720",portfolio:"github.com/mskang",breakdown:{role:22,skill:18,period:16,interest:11,folio:4}},{id:7,name:"\uC724\uD558\uB298",dept:"\uC0B0\uC5C5\uB514\uC790\uC778",year:3,school:"\uAD6D\uBBFC\uB300",skills:["UX \uB9AC\uC11C\uCE58","\uD504\uB85C\uD1A0\uD0C0\uC774\uD551","Figma"],score:68,role:"UX \uB514\uC790\uC774\uB108",intro:"IDEO \uC778\uD134 \uACBD\uD5D8",portfolio:"haneul.design",breakdown:{role:23,skill:17,period:14,interest:10,folio:4}},{id:8,name:"\uC784\uCC44\uC6D0",dept:"\uAD11\uACE0\uD64D\uBCF4",year:3,school:"\uB3D9\uAD6D\uB300",skills:["\uCF58\uD150\uCE20 \uAE30\uD68D","\uCE74\uD53C","SNS \uC6B4\uC601"],score:63,role:"\uCF58\uD150\uCE20 \uB9C8\uCF00\uD130",intro:"\uC778\uC2A4\uD0C0 9\uB9CC \uD314\uB85C\uC6CC \uC6B4\uC601",portfolio:"instagram.com/im",breakdown:{role:20,skill:16,period:14,interest:9,folio:4}}],e=[{id:1,title:"\uCEA0\uD37C\uC2A4 \uBD84\uC2E4\uBB3C \uCC3E\uC544\uC8FC\uB294 \uC571",school:"\uD55C\uC591\uB300",filled:3,total:5,dday:12,category:"\uAD50\uB0B4 \uC11C\uBE44\uC2A4",match:87,leader:"\uAE40\uBBFC\uC900",period:"2\uAC1C\uC6D4",meeting:"\uC628\uB77C\uC778 + \uD55C\uC591\uB300",desc:"\uD55C\uC591\uB300 \uD559\uC0DD 5,000\uBA85 \uB300\uC0C1 \uBD84\uC2E4\uBB3C \uB9E4\uCE6D \uC11C\uBE44\uC2A4. \uC0AC\uC9C4 \uC778\uC2DD \uAE30\uBC18."},{id:2,title:"\uAD50\uB0B4 \uCE74\uD398 \uC904\uC11C\uAE30 IoT \uC194\uB8E8\uC158",school:"\uC131\uADE0\uAD00\uB300",filled:2,total:4,dday:7,category:"IoT/\uD558\uB4DC\uC6E8\uC5B4",match:72,leader:"\uC774\uC740\uD638",period:"1\uD559\uAE30",meeting:"\uC624\uD504\uB77C\uC778",desc:"\uCE74\uD398 \uC904\uC11C\uAE30 \uB514\uBC14\uC774\uC2A4 + \uC571 \uC5F0\uB3D9. \uB77C\uC988\uBCA0\uB9AC\uD30C\uC774 \uC0AC\uC6A9 \uC608\uC815."},{id:3,title:"AI \uD559\uC2B5 \uB3C4\uC6B0\uBBF8 \uCC57\uBD07 (\uC878\uC5C5\uC791\uD488)",school:"\uACE0\uB824\uB300",filled:4,total:5,dday:21,category:"AI/ML",match:68,leader:"\uC11C\uC9C0\uD6C8",period:"1\uD559\uAE30",meeting:"\uC628\uB77C\uC778",desc:"GPT \uAE30\uBC18 \uAC15\uC758 \uB178\uD2B8 \uC815\uB9AC\xB7\uBB38\uC81C \uC0DD\uC131. \uC878\uC5C5 \uC791\uD488\uC73C\uB85C \uC9C4\uD589."},{id:4,title:"\uC9C0\uC5ED \uC18C\uC0C1\uACF5\uC778 SNS \uB9C8\uCF00\uD305 \uCEA0\uD398\uC778",school:"\uB3D9\uAD6D\uB300",filled:1,total:4,dday:4,category:"\uB9C8\uCF00\uD305",match:0,leader:"\uBC15\uC9C0\uBBFC",period:"1\uAC1C\uC6D4",meeting:"\uC624\uD504\uB77C\uC778",desc:"\uD544\uB3D9 \uC77C\uB300 \uC18C\uC0C1\uACF5\uC778 5\uD300\uACFC \uD611\uC5C5. \uC778\uC2A4\uD0C0 \uCF58\uD150\uCE20 \uC6B4\uC601."},{id:5,title:"\uD559\uC0DD \uBA58\uD0C8 \uD5EC\uC2A4 \uCF00\uC5B4 \uD50C\uB7AB\uD3FC",school:"\uC5F0\uC138\uB300",filled:3,total:6,dday:30,category:"\uD5EC\uC2A4\uCF00\uC5B4",match:0,leader:"\uC548\uC11C\uC601",period:"2-3\uAC1C\uC6D4",meeting:"\uD558\uC774\uBE0C\uB9AC\uB4DC",desc:"\uB300\uD559\uC0DD \uC6B0\uC6B8\uAC10 \uC790\uAC00 \uC9C4\uB2E8 + \uB610\uB798 \uB9E4\uCE6D \uCC57\uBD07."},{id:6,title:"\uC804\uACFC\uC0DD\uC744 \uC704\uD55C \uACFC\uBAA9 \uCD94\uCC9C \uC11C\uBE44\uC2A4",school:"\uC911\uC559\uB300",filled:2,total:3,dday:9,category:"\uAD50\uB0B4 \uC11C\uBE44\uC2A4",match:0,leader:"\uC724\uD558\uB9BC",period:"1\uAC1C\uC6D4",meeting:"\uC628\uB77C\uC778",desc:"\uC804\uACFC\uC0DD \uB370\uC774\uD130 \uAE30\uBC18 \uACFC\uBAA9 \uCD94\uCC9C. \uD559\uC0AC \uC2DC\uC2A4\uD15C \uC5F0\uB3D9 X."}],t={name:"\uAE40\uBBFC\uC900",dept:"\uCEF4\uD4E8\uD130\uACF5\uD559",year:3,school:"\uD55C\uC591\uB300",priorProjects:2},r=[{role:"\uD504\uB860\uD2B8\uC5D4\uB4DC \uAC1C\uBC1C\uC790",count:1,skills:["React","TypeScript","Tailwind"],pref:"\uCEF4\uD3EC\uB10C\uD2B8 \uC124\uACC4 \uACBD\uD5D8"},{role:"\uBC31\uC5D4\uB4DC \uAC1C\uBC1C\uC790",count:1,skills:["Node.js","PostgreSQL","REST"],pref:"API \uC124\uACC4 \uAC00\uB2A5\uC790"},{role:"\uD504\uB85C\uB355\uD2B8 \uB514\uC790\uC774\uB108",count:1,skills:["Figma","Prototype","UX"],pref:"\uBAA8\uBC14\uC77C \uC571 \uACBD\uD5D8 \uC6B0\uB300"},{role:"PM/\uAE30\uD68D\uC790",count:1,skills:["Notion","\uC640\uC774\uC5B4\uD504\uB808\uC784","\uB9AC\uC11C\uCE58"],pref:"\uC8FC 1\uD68C \uBBF8\uD305 \uAC00\uB2A5"},{role:"\uCF58\uD150\uCE20 \uB9C8\uCF00\uD130",count:1,skills:["\uCE74\uD53C","SNS","\uCF58\uD150\uCE20 \uAE30\uD68D"],pref:"\uC778\uC2A4\uD0C0 \uC6B4\uC601 \uACBD\uD5D8"}],i={todo:[{id:"t1",title:"\uB9E4\uCE6D \uC54C\uACE0\uB9AC\uC998 \uAC00\uC911\uCE58 \uAC80\uC99D",desc:"5\uBA85 \uD45C\uBCF8 \uD14C\uC2A4\uD2B8 \uD6C4 \uBCF4\uC815\uAC12 \uACB0\uC815",owner:"\uC815\uD604\uC6B0",due:"D-5",major:"\uD1B5\uACC4/\uB370\uC774\uD130",files:2,comments:4,tag:"Python"},{id:"t2",title:"\uB79C\uB529 \uD398\uC774\uC9C0 \uC640\uC774\uC5B4\uD504\uB808\uC784",desc:"\uD788\uC5B4\uB85C \uC139\uC158 3\uC548",owner:"\uC724\uD558\uB298",due:"D-3",major:"\uB514\uC790\uC778",files:0,comments:1,tag:"Figma"},{id:"t3",title:"\uC778\uD130\uBDF0 \uC2A4\uD06C\uB9BD\uD2B8 \uC791\uC131",desc:"\uD559\uC0DD 5\uBA85 \uB300\uC0C1",owner:"\uBC15\uC11C\uC5F0",due:"D-7",major:"\uACBD\uC601/\uAE30\uD68D",files:1,comments:0},{id:"t4",title:"\uB514\uC2A4\uCF54\uB4DC \uCC44\uB110 \uC815\uB9AC",desc:"\uCE74\uD14C\uACE0\uB9AC\uBCC4 \uBD84\uB9AC",owner:"\uAE40\uBBFC\uC900",due:"D-2",major:"\uCEF4\uACF5/SW",files:0,comments:0},{id:"t5",title:"\uBC1C\uD45C \uC790\uB8CC \uD1A4\uC564\uB9E4\uB108 \uC815\uC758",desc:"\uCEEC\uB7EC/\uD3F0\uD2B8 \uAC00\uC774\uB4DC",owner:"\uC774\uC218\uBBFC",due:"D-6",major:"\uB514\uC790\uC778",files:3,comments:2}],doing:[{id:"d1",title:"\uB85C\uACE0 \uC2DC\uC548 v2",desc:"3\uAC1C \uBC29\uD5A5 \u2192 1\uAC1C \uCD94\uB9AC\uAE30",owner:"\uC774\uC218\uBBFC",due:"\uB0B4\uC77C",urgent:!0,major:"\uB514\uC790\uC778",files:5,comments:7,tag:"Figma"},{id:"d2",title:"\uBC1C\uD45C \uC601\uC0C1 \uD3B8\uC9D1",desc:"2\uBD84 30\uCD08 \uCEF7",owner:"\uD55C\uC9C0\uC6B0",due:"D-4",major:"\uBBF8\uB514\uC5B4/\uD64D\uBCF4",files:12,comments:3,tag:"Premiere"},{id:"d3",title:"\uB85C\uADF8\uC778 API \uAD6C\uD604",desc:"JWT + \uCE74\uCE74\uC624 OAuth",owner:"\uC815\uD604\uC6B0",due:"D-2",urgent:!0,major:"\uCEF4\uACF5/SW",files:0,comments:9,tag:"Spring"}],done:[{id:"D1",title:"\uC0AC\uC6A9\uC790 \uC778\uD130\uBDF0 5\uBA85",desc:"\uC778\uC0AC\uC774\uD2B8 \uC815\uB9AC \uC644\uB8CC",owner:"\uBC15\uC11C\uC5F0",due:"\uC644\uB8CC",major:"\uACBD\uC601/\uAE30\uD68D",files:4,comments:8},{id:"D2",title:"\uACBD\uC7C1\uC0AC \uBD84\uC11D \uB9AC\uC11C\uCE58",desc:"11\uAC1C \uC11C\uBE44\uC2A4 \uC815\uB9AC",owner:"\uAC15\uBBFC\uC11C",due:"\uC644\uB8CC",major:"\uD1B5\uACC4/\uB370\uC774\uD130",files:2,comments:3},{id:"D3",title:"\uBE0C\uB79C\uB4DC \uCEEC\uB7EC \uD655\uC815",desc:"Indigo + Lime",owner:"\uC774\uC218\uBBFC",due:"\uC644\uB8CC",major:"\uB514\uC790\uC778",files:1,comments:5},{id:"D4",title:"\uAE30\uC220 \uC2A4\uD0DD \uACB0\uC815",desc:"React/Spring \uD569\uC758",owner:"\uAE40\uBBFC\uC900",due:"\uC644\uB8CC",major:"\uCEF4\uACF5/SW",files:0,comments:4}]},d=[{id:"F01",title:"\uC5ED\uD560 \uAE30\uBC18 \uB9E4\uCE6D",desc:"5\uAC1C \uD56D\uBAA9 100\uC810 \uB9CC\uC810\uC73C\uB85C \uC801\uD569\uB3C4\uB97C \uACC4\uC0B0\uD574\uC694."},{id:"F02",title:"\uC9C0\uC6D0\uC790 \uBE44\uAD50",desc:"\uCD5C\uB300 3\uBA85\uC744 \uB098\uB780\uD788 \uBE44\uAD50\uD574\uC11C \uD300\uC744 \uC9ED\uB2C8\uB2E4."},{id:"F03",title:"\uC804\uACF5 \uCEEC\uB7EC \uCF54\uB529",desc:"\uC804\uACF5\uBCC4 \uC0C9\uC73C\uB85C \uD55C\uB208\uC5D0 \uB2E4\uC591\uC131\uC744 \uBD05\uB2C8\uB2E4."},{id:"F04",title:"\uD611\uC5C5 \uBCF4\uB4DC",desc:"\uCE78\uBC18 + \uBA64\uBC84 + \uC790\uB8CC + \uC77C\uC815 \uC804\uBD80 \uD55C \uACF3\uC5D0."},{id:"F05",title:"\uC790\uB3D9 \uD3EC\uD2B8\uD3F4\uB9AC\uC624",desc:"\uD504\uB85C\uC81D\uD2B8\uAC00 \uB05D\uB098\uBA74 PDF \uD55C \uC7A5\uC774 \uC790\uB3D9 \uC0DD\uC131."},{id:"F06",title:"\uB514\uC2A4\uCF54\uB4DC \uC5F0\uB3D9",desc:"Task \uC54C\uB9BC\uC774 \uB514\uC2A4\uCF54\uB4DC \uCC44\uB110\uB85C \uD758\uB7EC\uAC11\uB2C8\uB2E4."}],m=[{n:1,title:"\uAC00\uC785",desc:"\uD559\uAD50 \uBA54\uC77C\uB85C \uC778\uC99D"},{n:2,title:"\uD504\uB85C\uD544 \uC791\uC131",desc:"\uC804\uACF5\xB7\uAE30\uC220\xB7\uAD00\uC2EC\uC0AC"},{n:3,title:"\uD504\uB85C\uC81D\uD2B8 \uD0D0\uC0C9",desc:"\uD544\uD130\uB85C \uBC94\uC704 \uC881\uD788\uAE30"},{n:4,title:"\uB9E4\uCE6D \uC810\uC218 \uD655\uC778",desc:"\uC9C0\uC6D0 \uC804 \uBBF8\uB9AC\uBCF4\uAE30"},{n:5,title:"\uD611\uC5C5 \uC9C4\uD589",desc:"\uCE78\uBC18\xB7\uC77C\uC815\xB7\uC790\uB8CC"},{n:6,title:"\uD3EC\uD2B8\uD3F4\uB9AC\uC624",desc:"\uC790\uB3D9 PDF \uC0DD\uC131"}],p=[{type:"success",icon:"\u{1F3AF}",color:"#84CC16",title:"\uB9E4\uCE6D \uC131\uACF5",body:"\uAE40\uBBFC\uC900 \uD300\uC7A5\uC774 [\uCEA0\uD37C\uC2A4 \uBD84\uC2E4\uBB3C \uC571] \uD300\uC5D0 \uB2F9\uC2E0\uC744 \uCD94\uAC00\uD588\uC5B4\uC694",time:"2\uBD84 \uC804",cta:"\uD300 \uB4E4\uC5B4\uAC00\uAE30"},{type:"apply",icon:"\u{1F4E5}",color:"#4F46E5",title:"\uC0C8 \uC9C0\uC6D0\uC790",body:"\uC774\uC218\uBBFC(\uC2DC\uAC01\uB514\uC790\uC778 2)\uC774 [\uBA58\uD0C8 \uD5EC\uC2A4 \uCC57\uBD07]\uC5D0 \uC9C0\uC6D0\uD588\uC5B4\uC694. \uB9E4\uCE6D 87\uC810",time:"14\uBD84 \uC804",cta:"\uC9C0\uC6D0\uC790 \uBCF4\uAE30"},{type:"due",icon:"\u23F0",color:"#F59E0B",title:"\uB9C8\uAC10 \uC784\uBC15",body:"[\uB85C\uACE0 \uC2DC\uC548 v2] Task\uAC00 \uB0B4\uC77C \uB9C8\uAC10\uC774\uC5D0\uC694",time:"1\uC2DC\uAC04 \uC804",cta:"Task \uC5F4\uAE30"}],n=[{type:"folio",icon:"\u{1F389}",color:"#84CC16",title:"\uD3EC\uD2B8\uD3F4\uB9AC\uC624 \uC0DD\uC131",body:"[\uAD50\uB0B4 \uCE74\uD398 \uC904\uC11C\uAE30] \uD3EC\uD2B8\uD3F4\uB9AC\uC624 PDF\uAC00 \uC900\uBE44\uB410\uC5B4\uC694",time:"\uC5B4\uC81C",cta:"PDF \uBCF4\uAE30"},{type:"join",icon:"\u{1F44B}",color:"#4F46E5",title:"\uD300\uC6D0 \uD569\uB958",body:"\uC724\uD558\uB298\uB2D8\uC774 [\uC804\uACFC\uC0DD \uCD94\uCC9C \uC11C\uBE44\uC2A4] \uD300\uC5D0 \uD569\uB958\uD588\uC5B4\uC694",time:"2\uC77C \uC804",cta:"\uD300 \uBCF4\uAE30"},{type:"comment",icon:"\u{1F4AC}",color:"#475569",title:"\uC0C8 \uB313\uAE00",body:"\uBC15\uC11C\uC5F0\uB2D8\uC774 [\uC778\uD130\uBDF0 \uC2A4\uD06C\uB9BD\uD2B8]\uC5D0 \uB313\uAE00\uC744 \uB0A8\uACBC\uC5B4\uC694",time:"3\uC77C \uC804",cta:"\uB313\uAE00 \uBCF4\uAE30"},{type:"review",icon:"\u2B50",color:"#F59E0B",title:"\uD3C9\uAC00 \uC694\uCCAD",body:"\uD568\uAED8\uD55C \uD300\uC6D0 4\uBA85\uC5D0\uAC8C \uBCC4\uC810\uC744 \uB0A8\uACA8\uC8FC\uC138\uC694",time:"4\uC77C \uC804",cta:"\uD3C9\uAC00\uD558\uAE30"},{type:"apply",icon:"\u{1F4E5}",color:"#4F46E5",title:"\uC0C8 \uC9C0\uC6D0\uC790",body:"\uAC15\uBBFC\uC11C(\uB370\uC774\uD130 2)\uAC00 [\uCEA0\uD37C\uC2A4 \uBD84\uC2E4\uBB3C]\uC5D0 \uC9C0\uC6D0\uD588\uC5B4\uC694. \uB9E4\uCE6D 71\uC810",time:"5\uC77C \uC804",cta:"\uC9C0\uC6D0\uC790 \uBCF4\uAE30"}];window.CampusData={MAJOR:a,majorOf:s,APPLICANTS:o,PROJECTS:e,LEADER:t,ROLES_NEEDED:r,TASKS:i,FEATURES:d,FLOW:m,NOTIFS_TODAY:p,NOTIFS_WEEK:n}})();const{useState,useEffect,useRef}=React,L=window.lucideReact||{},{MAJOR,majorOf}=window.CampusData;function scoreColor(a){return a>=85?{stroke:"url(#gradHi)",text:"#4F46E5",label:"EXCELLENT",labelBg:"#EEF2FF",labelText:"#4F46E5"}:a>=70?{stroke:"#22C55E",text:"#15803D",label:"GOOD",labelBg:"#DCFCE7",labelText:"#15803D"}:a>=50?{stroke:"#F59E0B",text:"#B45309",label:"FAIR",labelBg:"#FEF3C7",labelText:"#B45309"}:{stroke:"#F43F5E",text:"#BE123C",label:"LOW",labelBg:"#FFE4E6",labelText:"#BE123C"}}function useCountUp(a,s=500,o=40,e=0){const[t,r]=useState(0);return useEffect(()=>{r(0);let i=null,d;const m=setTimeout(()=>{const p=n=>{i==null&&(i=n);const x=Math.min(1,(n-i)/s),v=1-Math.pow(1-x,3);r(Math.round(a*v)),x<1&&(d=requestAnimationFrame(p))};d=requestAnimationFrame(p)},Math.min(o,80));return()=>{clearTimeout(m),d&&cancelAnimationFrame(d)}},[a,s,o,e]),t}function DonutScore({score:a,size:s=120,stroke:o=10,animKey:e=0,showLabel:t=!0,delay:r=40}){const i=(s-o)/2,d=2*Math.PI*i,m=useCountUp(a,500,r,e),p=scoreColor(a),n=d-d*m/100;return React.createElement("div",{className:"relative inline-block",style:{width:s,height:s}},React.createElement("svg",{width:s,height:s},React.createElement("defs",null,React.createElement("linearGradient",{id:"gradHi",x1:"0",y1:"0",x2:"1",y2:"1"},React.createElement("stop",{offset:"0%",stopColor:"#84CC16"}),React.createElement("stop",{offset:"100%",stopColor:"#4F46E5"}))),React.createElement("circle",{cx:s/2,cy:s/2,r:i,stroke:"#F1F5F9",strokeWidth:o,fill:"none"}),React.createElement("circle",{cx:s/2,cy:s/2,r:i,stroke:p.stroke,strokeWidth:o,fill:"none",strokeDasharray:d,strokeDashoffset:n,strokeLinecap:"round",style:{transition:"stroke-dashoffset 0.5s ease-out",transform:"rotate(-90deg)",transformOrigin:"center"}})),React.createElement("div",{className:"absolute inset-0 flex flex-col items-center justify-center"},React.createElement("div",{className:"font-bold tabular-nums",style:{fontSize:s*.32,color:p.text,letterSpacing:"-0.02em"}},m),t&&React.createElement("div",{className:"text-[10px] font-semibold tracking-wide",style:{color:"#94A3B8"}},"\uC810")))}const BREAKDOWN_LABELS=[{key:"role",label:"\uC5ED\uD560",max:30,color:"#4F46E5"},{key:"skill",label:"\uAE30\uC220",max:25,color:"#22C55E"},{key:"period",label:"\uAE30\uAC04",max:20,color:"#F59E0B"},{key:"interest",label:"\uAD00\uC2EC",max:15,color:"#EC4899"},{key:"folio",label:"\uD3EC\uD3F4",max:10,color:"#14B8A6"}];function ScoreBars({b:a,animKey:s=0,dense:o=!1}){return React.createElement("div",{className:`grid ${o?"gap-1.5":"gap-2"}`},BREAKDOWN_LABELS.map((e,t)=>{const r=a[e.key]||0,i=r/e.max*100;return React.createElement("div",{key:e.key,className:"flex items-center gap-2.5 text-[11px]",style:{color:"#475569"}},React.createElement("div",{className:`${o?"w-7":"w-8"} font-medium`},e.label),React.createElement("div",{className:"flex-1 h-1.5 rounded-full",style:{background:"#F1F5F9"}},React.createElement("div",{key:`${s}-${t}`,className:"h-full rounded-full anim-bar",style:{width:`${i}%`,background:e.color,animationDelay:`${300+t*80}ms`}})),React.createElement("div",{className:"tabular-nums font-semibold w-9 text-right",style:{color:"#0F172A"}},r,"/",e.max))}))}function MajorChip({dept:a,year:s,size:o="sm"}){const e=MAJOR[majorOf(a)];return React.createElement("span",{className:`inline-flex items-center gap-1 rounded-full font-semibold ${o==="xs"?"text-[11px] px-2 py-0.5":"text-xs px-2.5 py-1"}`,style:{background:e.bg,color:e.text}},a,s?` ${s}`:"")}function Chip({children:a,tone:s="gray",className:o=""}){const e={gray:{bg:"#F4F4F5",text:"#475569"},indigo:{bg:"#EEF2FF",text:"#4F46E5"},lime:{bg:"#ECFCCB",text:"#3F6212"},amber:{bg:"#FEF3C7",text:"#B45309"},rose:{bg:"#FFE4E6",text:"#BE123C"}},t=e[s]||e.gray;return React.createElement("span",{className:`inline-flex items-center gap-1 text-[11px] font-semibold rounded-full px-2.5 py-1 ${o}`,style:{background:t.bg,color:t.text}},a)}function Avatar({name:a,dept:s,size:o=32,ring:e=!0}){const t=(a||"?").slice(0,1),r=s?MAJOR[majorOf(s)]:null,i=r?r.bg:"#E4E4E7",d=r?r.text:"#475569",m=r?r.ring:"#E4E4E7";return React.createElement("div",{className:"inline-flex items-center justify-center font-bold rounded-full shrink-0",style:{width:o,height:o,background:i,color:d,fontSize:o*.42,boxShadow:e?`0 0 0 2px white, 0 0 0 ${o>40?3:2}px ${m}`:void 0}},t)}function BrowserFrame({url:a="campus-link.kr/",children:s,height:o}){return React.createElement("div",{className:"rounded-2xl overflow-hidden shadow-card border",style:{borderColor:"#E4E4E7",background:"#FFFFFF"}},React.createElement("div",{className:"flex items-center gap-3 px-4 py-3 border-b",style:{background:"#F4F4F5",borderColor:"#E4E4E7"}},React.createElement("div",{className:"flex gap-1.5"},React.createElement("span",{className:"w-3 h-3 rounded-full",style:{background:"#FB7185"}}),React.createElement("span",{className:"w-3 h-3 rounded-full",style:{background:"#FBBF24"}}),React.createElement("span",{className:"w-3 h-3 rounded-full",style:{background:"#34D399"}})),React.createElement("div",{className:"flex-1 mx-2 px-3 py-1 rounded-md text-xs flex items-center gap-2",style:{background:"#FFFFFF",border:"1px solid #E4E4E7",color:"#94A3B8"}},React.createElement(L.Lock,{size:11}),React.createElement("span",{style:{color:"#475569"}},"campus-link.kr"),React.createElement("span",null,"/",a.replace("campus-link.kr/",""))),React.createElement("div",{className:"flex gap-2 text-zinc-400"},React.createElement(L.Plus,{size:14}),React.createElement(L.MoreVertical,{size:14}))),React.createElement("div",{className:"overflow-hidden",style:{height:o||720,background:"#FAFAFA"}},React.createElement("div",{className:"h-full overflow-y-auto scrollbar-hide"},s)))}function PhoneFrame({children:a,height:s=720}){return React.createElement("div",{className:"relative mx-auto",style:{width:360}},React.createElement("div",{className:"rounded-[44px] p-[10px] shadow-cardHov",style:{background:"#0F172A"}},React.createElement("div",{className:"rounded-[36px] overflow-hidden relative",style:{background:"#FAFAFA",height:s}},React.createElement("div",{className:"absolute top-0 left-0 right-0 h-9 flex items-center justify-between px-6 z-30 text-[12px] font-semibold",style:{color:"#0F172A"}},React.createElement("span",null,"9:41"),React.createElement("div",{className:"flex items-center gap-1"},React.createElement(L.Signal,{size:13}),React.createElement(L.Wifi,{size:13}),React.createElement(L.BatteryFull,{size:15}))),React.createElement("div",{className:"absolute left-1/2 -translate-x-1/2 top-2 z-40 rounded-full",style:{width:110,height:28,background:"#0F172A"}}),React.createElement("div",{className:"h-full overflow-y-auto scrollbar-hide pt-9"},a))))}function MobileTabBar({active:a="notif"}){const s=[{k:"home",label:"\uD648",icon:L.Home},{k:"explore",label:"\uD0D0\uC0C9",icon:L.Search},{k:"notif",label:"\uC54C\uB9BC",icon:L.Bell},{k:"mine",label:"\uB0B4 \uD504\uB85C\uC81D\uD2B8",icon:L.Folder},{k:"me",label:"\uB9C8\uC774",icon:L.User}];return React.createElement("div",{className:"sticky bottom-0 left-0 right-0 grid grid-cols-5 border-t bg-white",style:{borderColor:"#E4E4E7"}},s.map(o=>{const e=o.icon,t=o.k===a;return React.createElement("div",{key:o.k,className:"flex flex-col items-center gap-0.5 py-2.5 text-[10px] font-semibold",style:{color:t?"#4F46E5":"#94A3B8"}},e&&React.createElement(e,{size:20}),React.createElement("span",null,o.label))}),React.createElement("div",{className:"absolute -bottom-0 left-0 right-0 h-1 flex justify-center pt-1"},React.createElement("div",{className:"w-32 h-1 rounded-full",style:{background:"#0F172A"}})))}function Wordmark({size:a="md"}){const s=a==="lg";return React.createElement("div",{className:"inline-flex items-center gap-1",style:{color:"#4F46E5",fontWeight:800,fontSize:s?22:17,letterSpacing:"-0.02em"}},React.createElement("span",null,"Campus Link"),React.createElement("span",{className:"rounded-full",style:{width:s?8:6,height:s?8:6,background:"#84CC16",display:"inline-block",marginTop:s?6:4}}))}function Section({title:a,action:s,children:o,className:e=""}){return React.createElement("div",{className:`rounded-2xl bg-white border shadow-card p-5 ${e}`,style:{borderColor:"#E4E4E7"}},(a||s)&&React.createElement("div",{className:"flex items-center justify-between mb-4"},a&&React.createElement("div",{className:"font-semibold text-[15px]",style:{color:"#0F172A"}},a),s),o)}function Placeholder({label:a,height:s=160,gradient:o=["#EEF2FF","#ECFCCB"],className:e=""}){return React.createElement("div",{className:`relative rounded-xl overflow-hidden flex items-end p-4 ${e}`,style:{height:s,background:`linear-gradient(135deg, ${o[0]} 0%, ${o[1]} 100%)`}},React.createElement("div",{className:"absolute inset-0",style:{backgroundImage:"repeating-linear-gradient(45deg, rgba(255,255,255,0.4) 0 8px, transparent 8px 24px)",opacity:.35}}),a&&React.createElement("div",{className:"relative font-bold text-lg",style:{color:"#0F172A",letterSpacing:"-0.02em"}},a))}window.CampusAtoms={scoreColor,useCountUp,DonutScore,ScoreBars,MajorChip,Chip,Avatar,BrowserFrame,PhoneFrame,MobileTabBar,Wordmark,Section,Placeholder,BREAKDOWN_LABELS};const{useState:useS1,useEffect:useE1,useRef:useR1}=React,A=window.CampusAtoms,D=window.CampusData,Lc=window.lucideReact||{};function ScreenLanding({device:a,animKey:s}){const o=a==="mobile";return React.createElement("div",{className:"tab-enter",key:s},React.createElement("div",{className:`flex items-center justify-between ${o?"px-4 py-3":"px-10 py-4"} border-b bg-white sticky top-0 z-20`,style:{borderColor:"#E4E4E7"}},React.createElement(A.Wordmark,{size:"md"}),!o&&React.createElement("div",{className:"flex items-center gap-7 text-sm",style:{color:"#475569"}},React.createElement("span",null,"\uB458\uB7EC\uBCF4\uAE30"),React.createElement("span",null,"\uAC00\uC774\uB4DC"),React.createElement("span",null,"\uC694\uAE08\uC81C"),React.createElement("span",null,"FAQ")),React.createElement("div",{className:"flex items-center gap-2"},!o&&React.createElement("button",{className:"text-sm px-3 py-2 font-medium",style:{color:"#475569"}},"\uB85C\uADF8\uC778"),React.createElement("button",{className:"rounded-xl text-sm font-semibold text-white",style:{background:"#4F46E5",padding:o?"6px 12px":"8px 14px"}},"\uC2DC\uC791\uD558\uAE30"))),React.createElement("div",{className:`${o?"px-5 py-8":"px-12 py-16"}`,style:{background:"linear-gradient(180deg, #FAFAFA 0%, #FFFFFF 100%)"}},React.createElement("div",{className:o?"flex flex-col gap-7":"grid grid-cols-12 gap-10 items-center"},React.createElement("div",{className:o?"":"col-span-7"},React.createElement("div",{className:"inline-flex items-center gap-2 rounded-full px-3 py-1.5 mb-5",style:{background:"#EEF2FF"}},React.createElement("span",{className:"w-1.5 h-1.5 rounded-full pulse-dot",style:{background:"#84CC16"}}),React.createElement("span",{className:"text-[12px] font-semibold",style:{color:"#4F46E5"}},"2026\uB144 7\uC6D4 \uC815\uC2DD \uCD9C\uC2DC")),React.createElement("h1",{className:"font-bold leading-[1.15]",style:{fontSize:o?30:52,letterSpacing:"-0.025em",color:"#0F172A"}},"\uC804\uACF5\uC774 \uB2E4\uB974\uBA74,",React.createElement("br",null),"\uD300\uC774 \uAC15\uD574\uC9D1\uB2C8\uB2E4."),React.createElement("p",{className:"mt-4 text-[15px] leading-relaxed",style:{color:"#475569",maxWidth:480}},"\uC5ED\uD560 \uAE30\uBC18 \uB9E4\uCE6D \uC810\uC218\uB85C",React.createElement("br",{className:o?"":"hidden"}),"\uD769\uC5B4\uC9C4 \uC804\uACF5\uC744 \uD558\uB098\uC758 \uD504\uB85C\uC81D\uD2B8\uB85C \uC787\uB2E4."),React.createElement("div",{className:`mt-7 flex ${o?"flex-col":""} gap-3`},React.createElement("button",{className:"rounded-xl text-white font-semibold flex items-center justify-center gap-2",style:{background:"#4F46E5",padding:"14px 22px"}},React.createElement(Lc.Compass,{size:16})," \uD504\uB85C\uC81D\uD2B8 \uB458\uB7EC\uBCF4\uAE30"),React.createElement("button",{className:"rounded-xl font-semibold border bg-white flex items-center justify-center gap-2",style:{borderColor:"#E4E4E7",color:"#0F172A",padding:"14px 22px"}},React.createElement(Lc.Users,{size:16})," \uD300\uC6D0 \uBAA8\uC9D1\uD558\uAE30")),React.createElement("div",{className:"mt-7 flex items-center gap-5 text-[13px]",style:{color:"#475569"}},React.createElement("div",{className:"flex items-center gap-2"},React.createElement("div",{className:"flex -space-x-2"},["\uC774\uC218\uBBFC","\uBC15\uC11C\uC5F0","\uC815\uD604\uC6B0","\uD55C\uC9C0\uC6B0"].map(e=>React.createElement(A.Avatar,{key:e,name:e,dept:"\uCEF4\uD4E8\uD130\uACF5\uD559",size:26}))),React.createElement("span",null,React.createElement("b",{style:{color:"#0F172A"}},"1,247\uBA85"),"\uC758 \uD559\uC0DD\uC774 \uC0AC\uC6A9 \uC911")),React.createElement("span",{style:{color:"#E4E4E7"}},"\xB7"),React.createElement("span",null,React.createElement("b",{style:{color:"#0F172A"}},"312\uAC1C")," \uD504\uB85C\uC81D\uD2B8 \uC9C4\uD589"))),React.createElement("div",{className:o?"":"col-span-5"},React.createElement(LiveMatchDemo,{animKey:s,compact:o})))),React.createElement("div",{className:`${o?"px-5 py-10":"px-12 py-16"}`,style:{background:"#FFFFFF"}},React.createElement("div",{className:"flex items-end justify-between mb-7"},React.createElement("div",null,React.createElement("div",{className:"text-[12px] font-bold tracking-wide",style:{color:"#4F46E5"}},"FEATURES"),React.createElement("h2",{className:"font-bold mt-2",style:{fontSize:o?22:28,letterSpacing:"-0.02em"}},"5\uAC00\uC9C0 \uBB38\uC81C, 6\uAC00\uC9C0 \uD574\uB2F5")),!o&&React.createElement("div",{className:"text-sm",style:{color:"#94A3B8"}},"\u2190 \uAC00\uB85C\uB85C \uC2A4\uD06C\uB864 \u2192")),React.createElement("div",{className:`${o?"grid grid-cols-1 gap-3":"flex gap-4 overflow-x-auto hscroll pb-2 -mx-12 px-12"}`},D.FEATURES.map((e,t)=>React.createElement("div",{key:e.id,className:"rounded-2xl border bg-white p-5 shrink-0",style:{borderColor:"#E4E4E7",width:o?"100%":260}},React.createElement("div",{className:"flex items-center justify-between"},React.createElement("span",{className:"text-[11px] font-bold tracking-wider rounded-md px-2 py-1",style:{background:"#EEF2FF",color:"#4F46E5"}},e.id),React.createElement("span",{className:"text-zinc-300 text-xs"},"0",t+1)),React.createElement("div",{className:"mt-5 font-bold text-[17px]",style:{letterSpacing:"-0.02em"}},e.title),React.createElement("div",{className:"mt-2 text-[13px] leading-relaxed",style:{color:"#475569"}},e.desc))))),React.createElement("div",{className:`${o?"px-5 py-10":"px-12 py-16"}`,style:{background:"#FAFAFA"}},React.createElement("div",{className:"text-[12px] font-bold tracking-wide",style:{color:"#4F46E5"}},"HOW IT WORKS"),React.createElement("h2",{className:"font-bold mt-2",style:{fontSize:o?22:28,letterSpacing:"-0.02em"}},"\uAC00\uC785\uC5D0\uC11C \uD3EC\uD2B8\uD3F4\uB9AC\uC624\uAE4C\uC9C0 6\uB2E8\uACC4"),React.createElement("div",{className:`mt-8 ${o?"flex flex-col gap-3":"grid grid-cols-6 gap-3"}`},D.FLOW.map((e,t)=>React.createElement("div",{key:e.n,className:"relative rounded-2xl p-4 bg-white border ",style:{borderColor:"#E4E4E7"}},React.createElement("div",{className:"flex items-center gap-2"},React.createElement("div",{className:"rounded-full text-white font-bold text-[12px] w-7 h-7 flex items-center justify-center",style:{background:t===D.FLOW.length-1?"#84CC16":"#4F46E5"}},e.n),!o&&t<D.FLOW.length-1&&React.createElement("div",{className:"flex-1 h-0.5",style:{background:"#E4E4E7"}})),React.createElement("div",{className:"mt-3 font-bold text-[15px]"},e.title),React.createElement("div",{className:"mt-1 text-[12px]",style:{color:"#475569"}},e.desc))))),React.createElement("div",{className:`${o?"px-5 py-10":"px-12 py-14"}`,style:{background:"#FFFFFF"}},React.createElement("div",{className:"flex items-end justify-between mb-6"},React.createElement("div",null,React.createElement("div",{className:"text-[12px] font-bold tracking-wide",style:{color:"#4F46E5"}},"LIVE PROJECTS"),React.createElement("h2",{className:"font-bold mt-2",style:{fontSize:o?22:28,letterSpacing:"-0.02em"}},"\uC9C0\uAE08 \uBAA8\uC9D1 \uC911\uC778 \uD504\uB85C\uC81D\uD2B8")),!o&&React.createElement("button",{className:"text-sm font-semibold flex items-center gap-1",style:{color:"#4F46E5"}},"\uC804\uCCB4 \uBCF4\uAE30 ",React.createElement(Lc.ArrowRight,{size:14}))),React.createElement("div",{className:`${o?"grid grid-cols-1 gap-3":"grid grid-cols-3 gap-4"}`},D.PROJECTS.slice(0,3).map(e=>React.createElement(ProjectCard,{key:e.id,project:e,compact:o})))),React.createElement("div",{className:`${o?"px-5 py-8":"px-12 py-10"} border-t`,style:{background:"#FAFAFA",borderColor:"#E4E4E7"}},React.createElement("div",{className:`${o?"":"flex items-end justify-between"}`},React.createElement("div",null,React.createElement(A.Wordmark,{size:"md"}),React.createElement("p",{className:"mt-3 text-[13px]",style:{color:"#475569"}},"\uC804\uACF5 \uAE30\uBC18 \uB300\uD559\uC0DD \uD611\uC5C5 \uD50C\uB7AB\uD3FC \xB7 2026.07 \uC815\uC2DD \uCD9C\uC2DC")),React.createElement("div",{className:`${o?"mt-5":""} flex flex-wrap gap-2`},Object.keys(D.MAJOR).map(e=>{const t=D.MAJOR[e];return React.createElement("span",{key:e,className:"text-[11px] font-semibold rounded-full px-2.5 py-1",style:{background:t.bg,color:t.text}},e)})))))}function LiveMatchDemo({animKey:a,compact:s}){const[o,e]=useS1(0);useE1(()=>{const i=setInterval(()=>e(d=>d+1),3500);return()=>clearInterval(i)},[]);const t=a+o,r={role:30,skill:22,period:18,interest:12,folio:5};return React.createElement("div",{className:"rounded-3xl bg-white border p-5 shadow-cardHov",style:{borderColor:"#E4E4E7"}},React.createElement("div",{className:"flex items-center justify-between mb-4"},React.createElement("div",{className:"text-[11px] font-bold tracking-wider",style:{color:"#84CC16"}},"\u25CF LIVE MATCH"),React.createElement("div",{className:"text-[11px]",style:{color:"#94A3B8"}},"\uC2E4\uC2DC\uAC04 \uC2DC\uC5F0")),React.createElement("div",{className:"flex items-center gap-4"},React.createElement(A.Avatar,{name:"\uC774\uC218\uBBFC",dept:"\uC2DC\uAC01\uB514\uC790\uC778",size:56}),React.createElement("div",{className:"flex-1"},React.createElement("div",{className:"font-bold text-[16px]"},"\uC774\uC218\uBBFC"),React.createElement("div",{className:"mt-1 flex items-center gap-1.5"},React.createElement(A.MajorChip,{dept:"\uC2DC\uAC01\uB514\uC790\uC778",year:2,size:"xs"})),React.createElement("div",{className:"text-[11px] mt-1.5",style:{color:"#94A3B8"}},"\uC9C0\uC6D0 \u2192 \uBA58\uD0C8 \uD5EC\uC2A4 \uCC57\uBD07")),React.createElement(A.DonutScore,{score:87,size:s?80:92,stroke:9,animKey:t,delay:200})),React.createElement("div",{className:"mt-5 pt-5 border-t",style:{borderColor:"#F1F5F9"}},React.createElement(A.ScoreBars,{b:r,animKey:t,dense:!0})),React.createElement("div",{className:"mt-4 flex items-center gap-2 rounded-xl px-3 py-2.5",style:{background:"#ECFCCB"}},React.createElement(Lc.Sparkles,{size:14,style:{color:"#3F6212"}}),React.createElement("span",{className:"text-[12px] font-semibold",style:{color:"#3F6212"}},"EXCELLENT \u2014 \uC0C1\uC704 14% \uB9E4\uCE6D")))}function ProjectCard({project:a,compact:s,withMatch:o}){const e=a.dday<=7;return React.createElement("div",{onClick:()=>window.__nav&&window.__nav.go("detail",{projectId:a.id}),className:"rounded-2xl bg-white border p-4 relative shadow-card hover:shadow-cardHov transition cursor-pointer hover:-translate-y-0.5",style:{borderColor:"#E4E4E7"}},o&&a.match>=70&&React.createElement("div",{className:"absolute -top-2 right-3 rounded-full px-2.5 py-1 text-[11px] font-bold text-white shadow",style:{background:"linear-gradient(90deg, #84CC16 0%, #4F46E5 100%)"}},"\u{1F3AF} ",a.match,"% \uB9E4\uCE6D"),React.createElement("div",{className:"flex items-center justify-between"},React.createElement(A.Chip,null,a.category),React.createElement("span",{className:`text-[11px] font-bold rounded-full px-2 py-0.5 ${e?"pulse-dot":""}`,style:{background:e?"#FFE4E6":"#F4F4F5",color:e?"#BE123C":"#475569"}},"D-",a.dday)),React.createElement("div",{className:"mt-3 font-bold text-[15px] leading-snug line-clamp-2",style:{letterSpacing:"-0.01em"}},a.title),React.createElement("div",{className:"mt-1.5 text-[12px] line-clamp-1",style:{color:"#475569"}},a.desc),React.createElement("div",{className:"mt-3 flex flex-wrap gap-1.5"},["\uD504\uB860\uD2B8\uC5D4\uB4DC","\uB514\uC790\uC774\uB108","PM"].slice(0,s?2:3).map(t=>React.createElement(A.Chip,{key:t,tone:"indigo"},t))),React.createElement("div",{className:"mt-4 pt-3 flex items-center justify-between border-t",style:{borderColor:"#F1F5F9"}},React.createElement("div",{className:"flex items-center gap-2"},React.createElement(A.Avatar,{name:a.leader,dept:"\uCEF4\uD4E8\uD130\uACF5\uD559",size:24}),React.createElement("div",{className:"text-[11px]",style:{color:"#475569"}},a.school)),React.createElement("div",{className:"flex items-center gap-2"},React.createElement("div",{className:"text-[11px] font-semibold",style:{color:"#475569"}},a.filled,"/",a.total,"\uBA85"),React.createElement("div",{className:"w-14 h-1.5 rounded-full",style:{background:"#F1F5F9"}},React.createElement("div",{className:"h-full rounded-full",style:{width:`${a.filled/a.total*100}%`,background:"#4F46E5"}})))))}function ScreenExplore({device:a,animKey:s}){const o=a==="mobile";return React.createElement("div",{className:"tab-enter",key:s},React.createElement("div",{className:`flex items-center justify-between ${o?"px-4 py-3":"px-10 py-4"} border-b bg-white sticky top-0 z-20`,style:{borderColor:"#E4E4E7"}},React.createElement(A.Wordmark,null),!o&&React.createElement("div",{className:"flex-1 mx-8 max-w-md"},React.createElement("div",{className:"flex items-center gap-2 rounded-xl border px-3 py-2",style:{borderColor:"#E4E4E7"}},React.createElement(Lc.Search,{size:15,style:{color:"#94A3B8"}}),React.createElement("input",{placeholder:"\uD504\uB85C\uC81D\uD2B8, \uAE30\uC220, \uD559\uAD50 \uAC80\uC0C9",className:"bg-transparent outline-none flex-1 text-sm"}))),React.createElement("div",{className:"flex items-center gap-2"},React.createElement("button",{className:"rounded-xl border bg-white text-sm font-medium px-3 py-2",style:{borderColor:"#E4E4E7"}},React.createElement(Lc.Bell,{size:14})),React.createElement(A.Avatar,{name:"\uAE40\uBBFC\uC900",dept:"\uCEF4\uD4E8\uD130\uACF5\uD559",size:32}))),o?React.createElement("div",null,React.createElement("div",{className:"px-4 py-3 flex items-center gap-2 overflow-x-auto hscroll border-b",style:{borderColor:"#E4E4E7",background:"#FFFFFF"}},["\uC5ED\uD560 \u25BE","\uC804\uACF5 \u25BE","\uAE30\uAC04 \u25BE","\uB9C8\uAC10 \u25BE","\uC778\uC6D0 \u25BE"].map(e=>React.createElement("button",{key:e,className:"rounded-full border px-3 py-1.5 text-[12px] font-semibold whitespace-nowrap",style:{borderColor:"#E4E4E7",color:"#475569"}},e))),React.createElement("div",{className:"px-4 py-3 flex items-center justify-between"},React.createElement("div",{className:"text-[12px]",style:{color:"#475569"}},"\uCD1D ",React.createElement("b",{style:{color:"#0F172A"}},"34\uAC1C")," \uD504\uB85C\uC81D\uD2B8"),React.createElement("div",{className:"flex gap-1 rounded-lg border bg-white",style:{borderColor:"#E4E4E7"}},["\uCD5C\uC2E0","\uC784\uBC15","\uB9E4\uCE6D"].map((e,t)=>React.createElement("span",{key:e,className:`text-[11px] font-semibold px-2.5 py-1 ${t===2?"text-white rounded-md":"text-zinc-500"}`,style:t===2?{background:"#4F46E5"}:void 0},e)))),React.createElement("div",{className:"px-4 pb-6 grid grid-cols-1 gap-3"},D.PROJECTS.map((e,t)=>React.createElement(ProjectCard,{key:e.id,project:{...e,match:t===0?87:t===1?72:0},compact:!0,withMatch:!0})))):React.createElement("div",{className:"grid grid-cols-12 gap-6 px-10 py-6"},React.createElement(FilterSidebar,null),React.createElement("div",{className:"col-span-9"},React.createElement("div",{className:"flex items-center justify-between mb-4"},React.createElement("div",null,React.createElement("h2",{className:"font-bold text-[20px]",style:{letterSpacing:"-0.02em"}},"\uD504\uB85C\uC81D\uD2B8 \uD0D0\uC0C9"),React.createElement("div",{className:"text-[12px] mt-1",style:{color:"#475569"}},"\uCD1D ",React.createElement("b",{style:{color:"#0F172A"}},"34\uAC1C")," \uD504\uB85C\uC81D\uD2B8 \xB7 \uB9E4\uCE6D \uCD94\uCC9C 4\uAC1C")),React.createElement("div",{className:"flex items-center gap-2"},React.createElement("div",{className:"flex gap-1 rounded-xl border bg-white p-1",style:{borderColor:"#E4E4E7"}},["\uCD5C\uC2E0\uC21C","\uB9C8\uAC10 \uC784\uBC15\uC21C","\uB9E4\uCE6D \uCD94\uCC9C\uC21C"].map((e,t)=>React.createElement("span",{key:e,className:`text-[12px] font-semibold px-3 py-1.5 rounded-lg ${t===2?"text-white":"text-zinc-500"}`,style:t===2?{background:"#4F46E5"}:void 0},e))),React.createElement("button",{className:"rounded-xl border bg-white p-2",style:{borderColor:"#E4E4E7"}},React.createElement(Lc.Grid3x3,{size:14})))),React.createElement("div",{className:"grid grid-cols-3 gap-4"},D.PROJECTS.map((e,t)=>React.createElement(ProjectCard,{key:e.id,project:{...e,match:t===0?87:t===1?72:0},withMatch:!0}))))))}function FilterSidebar(){return React.createElement("div",{className:"col-span-3"},React.createElement("div",{className:"rounded-2xl bg-white border p-5 shadow-card sticky top-24",style:{borderColor:"#E4E4E7"}},React.createElement("div",{className:"flex items-center justify-between mb-4"},React.createElement("div",{className:"font-bold text-[14px]"},"\uD544\uD130"),React.createElement("span",{className:"text-[11px] font-semibold",style:{color:"#4F46E5"}},"\uCD08\uAE30\uD654")),React.createElement(FilterGroup,{title:"\uBAA8\uC9D1 \uC5ED\uD560",items:[{l:"\uD504\uB860\uD2B8\uC5D4\uB4DC",n:12,on:!0},{l:"\uBC31\uC5D4\uB4DC",n:9},{l:"\uB514\uC790\uC774\uB108",n:14,on:!0},{l:"\uAE30\uD68D\uC790",n:7},{l:"\uB9C8\uCF00\uD130",n:5},{l:"\uB370\uC774\uD130",n:4}],type:"check"}),React.createElement(FilterGroup,{title:"\uC804\uACF5 \uACC4\uC5F4",type:"majors"}),React.createElement(FilterGroup,{title:"\uCC38\uC5EC \uAE30\uAC04",items:["1\uAC1C\uC6D4","2-3\uAC1C\uC6D4","1\uD559\uAE30","\uAE30\uD0C0"],type:"select",defaultIdx:1}),React.createElement(FilterGroup,{title:"\uB9C8\uAC10\uC77C",items:["\uC624\uB298","\uC774\uBC88\uC8FC","\uC774\uBC88\uB2EC"],type:"radio"}),React.createElement(FilterGroup,{title:"\uC778\uC6D0",type:"slider"})))}function FilterGroup({title:a,items:s,type:o,defaultIdx:e}){return React.createElement("div",{className:"mb-5 pb-5 border-b last:border-b-0 last:mb-0 last:pb-0",style:{borderColor:"#F1F5F9"}},React.createElement("div",{className:"text-[11px] font-bold tracking-wide mb-3",style:{color:"#94A3B8"}},a.toUpperCase()),o==="check"&&React.createElement("div",{className:"grid gap-2"},s.map(t=>React.createElement("label",{key:t.l,className:"flex items-center gap-2 text-[13px]",style:{color:"#475569"}},React.createElement("span",{className:`w-4 h-4 rounded border flex items-center justify-center ${t.on?"text-white":""}`,style:{background:t.on?"#4F46E5":"#FFFFFF",borderColor:t.on?"#4F46E5":"#E4E4E7"}},t.on&&React.createElement(Lc.Check,{size:11})),React.createElement("span",{className:"flex-1"},t.l),React.createElement("span",{className:"text-[11px]",style:{color:"#94A3B8"}},t.n)))),o==="majors"&&React.createElement("div",{className:"flex flex-wrap gap-1.5"},Object.keys(D.MAJOR).map((t,r)=>{const i=D.MAJOR[t],d=r<2;return React.createElement("span",{key:t,className:"text-[11px] font-semibold rounded-full px-2.5 py-1 border",style:{background:d?i.bg:"#FFFFFF",color:d?i.text:"#475569",borderColor:d?i.bg:"#E4E4E7"}},t)})),o==="select"&&React.createElement("div",{className:"rounded-lg border px-3 py-2 text-[13px] flex items-center justify-between bg-white",style:{borderColor:"#E4E4E7",color:"#0F172A"}},React.createElement("span",null,s[e!=null?e:0]),React.createElement(Lc.ChevronDown,{size:14})),o==="radio"&&React.createElement("div",{className:"flex gap-1"},s.map((t,r)=>React.createElement("span",{key:t,className:`text-[12px] font-semibold rounded-lg px-3 py-1.5 ${r===1?"text-white":""}`,style:r===1?{background:"#4F46E5"}:{background:"#F4F4F5",color:"#475569"}},t))),o==="slider"&&React.createElement("div",null,React.createElement("div",{className:"flex justify-between text-[11px] mb-2",style:{color:"#475569"}},React.createElement("span",null,"2\uBA85"),React.createElement("span",{className:"font-bold",style:{color:"#4F46E5"}},"3-5\uBA85"),React.createElement("span",null,"8\uBA85")),React.createElement("div",{className:"h-1.5 rounded-full relative",style:{background:"#F1F5F9"}},React.createElement("div",{className:"absolute h-full rounded-full",style:{left:"15%",right:"38%",background:"#4F46E5"}}),React.createElement("div",{className:"absolute w-3.5 h-3.5 rounded-full bg-white border-2 -top-1",style:{left:"calc(15% - 6px)",borderColor:"#4F46E5"}}),React.createElement("div",{className:"absolute w-3.5 h-3.5 rounded-full bg-white border-2 -top-1",style:{left:"calc(62% - 6px)",borderColor:"#4F46E5"}}))))}function ScreenDetail({device:a,animKey:s,projectId:o}){const e=a==="mobile",t=D.PROJECTS.find(i=>i.id===o)||D.PROJECTS[0],r=76;return React.createElement("div",{className:"tab-enter",key:s},React.createElement("div",{className:`flex items-center justify-between ${e?"px-4 py-3":"px-10 py-4"} border-b bg-white sticky top-0 z-20`,style:{borderColor:"#E4E4E7"}},React.createElement("div",{className:"flex items-center gap-3"},React.createElement(Lc.ChevronLeft,{size:20}),!e&&React.createElement(A.Wordmark,null)),React.createElement("div",{className:"flex items-center gap-2"},React.createElement("button",{className:"rounded-xl border bg-white text-[12px] font-medium px-3 py-2 flex items-center gap-1",style:{borderColor:"#E4E4E7"}},React.createElement(Lc.Bookmark,{size:13})," \uC800\uC7A5"),!e&&React.createElement("button",{className:"rounded-xl border bg-white text-[12px] font-medium px-3 py-2 flex items-center gap-1",style:{borderColor:"#E4E4E7"}},React.createElement(Lc.Share2,{size:13})," \uACF5\uC720"))),React.createElement("div",{className:e?"pb-32":"grid grid-cols-12 gap-6 px-10 py-6"},React.createElement("div",{className:e?"px-4 pt-4":"col-span-7"},React.createElement(A.Placeholder,{label:t.title,height:e?160:220,gradient:["#EEF2FF","#ECFCCB"]}),React.createElement("div",{className:"mt-5"},React.createElement("div",{className:"flex items-center gap-2 flex-wrap"},React.createElement(A.Chip,null,t.category),React.createElement(A.Chip,{tone:"rose"},"D-",t.dday," \uB9C8\uAC10")),React.createElement("h1",{className:"font-bold mt-3",style:{fontSize:e?22:28,letterSpacing:"-0.02em"}},t.title),React.createElement("div",{className:"mt-3 grid grid-cols-2 sm:grid-cols-4 gap-3 text-[12px]"},[{l:"\uAE30\uAC04",v:t.period},{l:"\uB9C8\uAC10",v:"2026.06.15"},{l:"\uC778\uC6D0",v:`${t.filled}/${t.total}\uBA85`},{l:"\uBC29\uC2DD",v:t.meeting}].map(i=>React.createElement("div",{key:i.l,className:"rounded-xl border bg-white p-3",style:{borderColor:"#E4E4E7"}},React.createElement("div",{className:"text-[11px]",style:{color:"#94A3B8"}},i.l),React.createElement("div",{className:"font-semibold mt-1",style:{color:"#0F172A"}},i.v))))),React.createElement(A.Section,{title:"\uD504\uB85C\uC81D\uD2B8 \uBAA9\uD45C",className:"mt-5"},React.createElement("p",{className:"text-[14px] leading-relaxed",style:{color:"#475569"}},"\uD55C\uC591\uB300 \uD559\uC0DD 5,000\uBA85\uC744 \uB300\uC0C1\uC73C\uB85C \uBD84\uC2E4\uBB3C \uB9E4\uCE6D \uC11C\uBE44\uC2A4\uB97C \uB9CC\uB4ED\uB2C8\uB2E4. \uC0AC\uC9C4\uC744 \uC62C\uB9AC\uBA74 AI\uAC00 \uC720\uC0AC \uBD84\uC2E4\uBB3C\uACFC \uC790\uB3D9\uC73C\uB85C \uC5F0\uACB0\uD558\uACE0, \uD559\uAD50 \uC704\uCE58 \uAE30\uBC18\uC73C\uB85C \uAC00\uAE4C\uC6B4 \uC0AC\uB78C\uC5D0\uAC8C \uC54C\uB9BC\uC774 \uAC00\uC694. 1\uCC28 MVP\uB294 8\uC8FC \uC548\uC5D0 \uCD9C\uC2DC \uBAA9\uD45C.",React.createElement("br",null),React.createElement("br",null),"\uB514\uC790\uC778\uC740 \uBAA8\uBC14\uC77C \uC6B0\uC120, \uBC31\uC5D4\uB4DC\uB294 \uAC00\uBCBC\uC6B4 Node.js + S3 \uC774\uBBF8\uC9C0 \uC800\uC7A5. \uB514\uC790\uC778-\uAC1C\uBC1C-\uAE30\uD68D\uC774 \uD568\uAED8 \uC0AC\uC6A9\uC790 \uC778\uD130\uBDF0\uBD80\uD130 \uAC19\uC774 \uC9C4\uD589\uD569\uB2C8\uB2E4.")),React.createElement(A.Section,{title:"\uD544\uC694\uD55C \uC5ED\uD560",className:"mt-5"},React.createElement("div",{className:"grid gap-3"},D.ROLES_NEEDED.map((i,d)=>React.createElement("div",{key:i.role,className:"rounded-xl border p-3.5 flex items-start gap-4",style:{borderColor:"#E4E4E7"}},React.createElement("div",{className:"rounded-lg w-10 h-10 flex items-center justify-center font-bold",style:{background:"#EEF2FF",color:"#4F46E5"}},"0",d+1),React.createElement("div",{className:"flex-1"},React.createElement("div",{className:"flex items-center justify-between gap-2"},React.createElement("div",{className:"font-bold text-[14px]"},i.role),React.createElement(A.Chip,{tone:d===0?"lime":"gray"},d===0?"\uBAA8\uC9D1\uC911":`0/${i.count}`)),React.createElement("div",{className:"mt-1.5 flex flex-wrap gap-1.5"},i.skills.map(m=>React.createElement(A.Chip,{key:m,tone:"indigo"},m))),React.createElement("div",{className:"mt-2 text-[12px]",style:{color:"#475569"}},"\uC6B0\uB300 \xB7 ",i.pref)))))),React.createElement(A.Section,{title:"\uAE30\uC220 \uC2A4\uD0DD",className:"mt-5"},React.createElement("div",{className:"flex flex-wrap gap-1.5"},["React","TypeScript","Tailwind","Figma","Node.js","PostgreSQL","AWS S3","GitHub"].map(i=>React.createElement(A.Chip,{key:i},i)))),React.createElement(A.Section,{title:"\uD300\uC7A5 \uD55C\uB9C8\uB514",className:"mt-5"},React.createElement("p",{className:"text-[14px] leading-relaxed",style:{color:"#475569"}},'"\uC774\uC804\uC5D0 \uB450 \uBC88 \uC0AC\uC774\uB4DC \uD504\uB85C\uC81D\uD2B8\uB97C \uD588\uB294\uB370 \uD55C \uBC88\uB3C4 \uB514\uC790\uC774\uB108\uB791 \uAC19\uC774 \uBABB \uD588\uC5B4\uC694. \uC774\uBC88\uC5D4 \uB514\uC790\uC778\uBD80\uD130 \uAC19\uC774 \uC2DC\uC791\uD574\uC11C \uC9C4\uC9DC \uCD9C\uC2DC\uAE4C\uC9C0 \uAC00\uBCF4\uACE0 \uC2F6\uC5B4\uC694. \uD55C\uC591 \uBD84\uC2E4\uBB3C \uCE74\uD1A1\uBC29 \uBCF4\uBA74\uC11C \uB9CC\uB4E4\uACE0 \uC2F6\uB2E4\uACE0 \uC0DD\uAC01\uD55C \uC9C0 1\uB144 \uB410\uC5B4\uC694."'))),!e&&React.createElement("div",{className:"col-span-5"},React.createElement("div",{className:"sticky top-24 grid gap-4"},React.createElement(A.Section,null,React.createElement("div",{className:"flex items-center gap-3"},React.createElement(A.Avatar,{name:D.LEADER.name,dept:D.LEADER.dept,size:48}),React.createElement("div",{className:"flex-1"},React.createElement("div",{className:"font-bold text-[14px]"},D.LEADER.name),React.createElement("div",{className:"text-[11px] mt-0.5",style:{color:"#475569"}},D.LEADER.school," \xB7 ",D.LEADER.dept," ",D.LEADER.year,"\uD559\uB144"),React.createElement("div",{className:"text-[11px] mt-0.5",style:{color:"#94A3B8"}},"\uC774\uC804 \uD504\uB85C\uC81D\uD2B8 ",D.LEADER.priorProjects,"\uAC74")),React.createElement("button",{className:"rounded-lg border text-[12px] font-semibold px-3 py-2",style:{borderColor:"#E4E4E7"}},"\uD504\uB85C\uD544"))),React.createElement(MyMatchPreview,{score:r,animKey:s}),React.createElement("button",{onClick:()=>window.__nav&&window.__nav.go("compare",{projectId:t.id}),className:"rounded-xl text-white font-bold flex items-center justify-center gap-2 hover:opacity-90 transition",style:{background:"#4F46E5",height:56}},"\uC9C0\uC6D0\uD558\uAE30 ",React.createElement(Lc.ArrowRight,{size:16})),React.createElement("div",{className:"text-center text-[11px]",style:{color:"#94A3B8"}},"\uC9C0\uC6D0 \uD6C4 24\uC2DC\uAC04 \uB0B4 \uD300\uC7A5\uC774 \uC751\uB2F5\uD569\uB2C8\uB2E4")))),e&&React.createElement("div",{className:"fixed left-0 right-0 bottom-0 px-4 py-3 border-t bg-white z-30",style:{borderColor:"#E4E4E7"}},React.createElement("div",{className:"rounded-xl border p-3 mb-3 flex items-center gap-3",style:{borderColor:"#E4E4E7",background:"#FAFAFA"}},React.createElement(A.DonutScore,{score:r,size:48,stroke:6,animKey:s,showLabel:!1,delay:400}),React.createElement("div",{className:"flex-1"},React.createElement("div",{className:"text-[11px]",style:{color:"#475569"}},"\uB0B4 \uB9E4\uCE6D \uC810\uC218"),React.createElement("div",{className:"text-[13px] font-bold mt-0.5"},"\uC0C1\uC704 32% \u2014 \uC9C0\uC6D0 \uCD94\uCC9C")),React.createElement(Lc.ChevronUp,{size:18,style:{color:"#94A3B8"}})),React.createElement("button",{onClick:()=>window.__nav&&window.__nav.go("compare",{projectId:t.id}),className:"w-full rounded-xl text-white font-bold flex items-center justify-center gap-2",style:{background:"#4F46E5",height:52}},"\uC9C0\uC6D0\uD558\uAE30 ",React.createElement(Lc.ArrowRight,{size:16}))))}function MyMatchPreview({score:a,animKey:s}){const o={role:26,skill:16,period:18,interest:12,folio:4};return React.createElement("div",{className:"rounded-2xl bg-white border p-5 shadow-card relative overflow-hidden",style:{borderColor:"#E4E4E7"}},React.createElement("div",{className:"absolute -top-8 -right-8 w-32 h-32 rounded-full opacity-50",style:{background:"radial-gradient(circle, #ECFCCB 0%, transparent 70%)"}}),React.createElement("div",{className:"relative"},React.createElement("div",{className:"flex items-center justify-between mb-4"},React.createElement("div",{className:"font-bold text-[14px]"},"\uB0B4 \uB9E4\uCE6D \uC810\uC218 \uBBF8\uB9AC\uBCF4\uAE30"),React.createElement(A.Chip,{tone:"indigo"},"\u2605 \uD575\uC2EC")),React.createElement("div",{className:"flex items-center gap-5"},React.createElement(A.DonutScore,{score:a,size:120,stroke:10,animKey:s,delay:200}),React.createElement("div",{className:"flex-1"},React.createElement("div",{className:"text-[12px]",style:{color:"#475569"}},"\uC9C0\uC6D0\uD558\uBA74"),React.createElement("div",{className:"font-bold text-[20px] mt-0.5",style:{letterSpacing:"-0.02em"}},"\uC0C1\uC704 32%"),React.createElement("div",{className:"text-[12px] mt-1",style:{color:"#475569"}},"\uBE44\uC2B7\uD55C \uC810\uC218: 12\uBA85 / 38\uBA85"))),React.createElement("div",{className:"mt-5"},React.createElement(A.ScoreBars,{b:o,animKey:s})),React.createElement("div",{className:"mt-4 rounded-xl p-3 flex items-start gap-2",style:{background:"#EEF2FF"}},React.createElement(Lc.Lightbulb,{size:14,style:{color:"#4F46E5",marginTop:2}}),React.createElement("div",null,React.createElement("div",{className:"text-[12px] font-bold",style:{color:"#4F46E5"}},"\uC810\uC218 \uC62C\uB9AC\uB294 \uBC29\uBC95"),React.createElement("div",{className:"text-[12px] mt-0.5",style:{color:"#475569"}},"\uAE30\uC220 \uC2A4\uD0DD\uC744 \uB354 \uB4F1\uB85D\uD558\uBA74 ",React.createElement("b",null,"+9\uC810"),", \uD3EC\uD2B8\uD3F4\uB9AC\uC624 1\uAC1C \uCD94\uAC00\uD558\uBA74 ",React.createElement("b",null,"+5\uC810"))))))}function ScreenCompare({device:a,animKey:s,projectId:o}){const e=a==="mobile",[t,r]=useS1("list"),i=D.PROJECTS.find(p=>p.id===o)||D.PROJECTS[0],d=(i.id||1)-1,m=[...D.APPLICANTS].map((p,n)=>({...p,score:Math.max(45,Math.min(98,p.score+(n+d)%5*3-6))})).sort((p,n)=>n.score-p.score);return React.createElement("div",{className:"tab-enter",key:s},React.createElement("div",{className:`flex items-center justify-between ${e?"px-4 py-3":"px-10 py-4"} border-b bg-white sticky top-0 z-20`,style:{borderColor:"#E4E4E7"}},React.createElement("div",{className:"flex items-center gap-3"},React.createElement(Lc.ChevronLeft,{size:20,className:"cursor-pointer",onClick:()=>window.__nav&&window.__nav.go("detail",{projectId:i.id})}),React.createElement("div",null,React.createElement("div",{className:"font-bold text-[14px]"},i.title),React.createElement("div",{className:"text-[11px]",style:{color:"#475569"}},"\uC9C0\uC6D0\uC790 ",m.length,"\uBA85 \xB7 \uB9C8\uAC10 D-",i.dday))),!e&&React.createElement("div",{className:"flex items-center gap-2"},React.createElement("div",{className:"flex gap-1 rounded-xl border bg-white p-1",style:{borderColor:"#E4E4E7"}},["\uC810\uC218\uC21C","\uCD5C\uC2E0\uC21C"].map((p,n)=>React.createElement("span",{key:p,className:`text-[12px] font-semibold px-3 py-1.5 rounded-lg ${n===0?"text-white":"text-zinc-500"}`,style:n===0?{background:"#0F172A"}:void 0},p))),React.createElement("button",{onClick:()=>r(t==="list"?"top3":"list"),className:"rounded-xl text-[12px] font-bold px-3 py-2 flex items-center gap-1.5 transition",style:{background:t==="top3"?"#4F46E5":"#0F172A",color:"white"}},React.createElement(Lc.Layers,{size:13})," ",t==="top3"?"\uB9AC\uC2A4\uD2B8\uB85C \uBCF4\uAE30":"TOP 3 \uBE44\uAD50\uD558\uAE30"))),!e&&React.createElement("div",{className:"px-10 py-6"},t==="list"?React.createElement("div",{className:"grid gap-3"},m.map((p,n)=>React.createElement(ApplicantCard,{key:p.id,applicant:p,animKey:s,index:n}))):React.createElement(Top3Compare,{applicants:m.slice(0,3),animKey:s})),e&&React.createElement("div",{className:"px-4 py-4"},React.createElement("div",{className:"flex gap-1 rounded-xl border bg-white p-1 mb-3",style:{borderColor:"#E4E4E7"}},["\uC810\uC218\uC21C","\uCD5C\uC2E0\uC21C"].map((p,n)=>React.createElement("span",{key:p,className:`flex-1 text-center text-[12px] font-semibold px-3 py-1.5 rounded-lg ${n===0?"text-white":"text-zinc-500"}`,style:n===0?{background:"#0F172A"}:void 0},p))),React.createElement("div",{className:"text-[11px] mb-3",style:{color:"#475569"}},"\u2190 \uAC70\uC808 / \uC2B9\uC778 \u2192\uB85C \uC2A4\uC640\uC774\uD504"),React.createElement(ApplicantCardMobile,{applicant:m[0],animKey:s}),React.createElement("div",{className:"mt-3 grid gap-3"},m.slice(1,4).map((p,n)=>React.createElement(ApplicantCardMobile,{key:p.id,applicant:p,animKey:s,compact:!0})))))}function ApplicantCard({applicant:a,animKey:s,index:o}){const e=A.scoreColor(a.score);return React.createElement("div",{onClick:()=>window.__openApplicant&&window.__openApplicant(a),className:"rounded-2xl bg-white border p-5 grid grid-cols-12 gap-5 shadow-card hover:shadow-cardHov transition stagger-card cursor-pointer",style:{borderColor:"#E4E4E7",animationDelay:`${o*50}ms`}},React.createElement("div",{className:"col-span-2 flex flex-col items-center gap-2"},React.createElement(A.DonutScore,{score:a.score,size:108,stroke:10,animKey:s,delay:200+o*50}),React.createElement("span",{className:"text-[10px] font-bold tracking-wider rounded-full px-2 py-0.5",style:{background:e.labelBg,color:e.labelText}},e.label)),React.createElement("div",{className:"col-span-5 border-l pl-5",style:{borderColor:"#F1F5F9"}},React.createElement("div",{className:"flex items-center gap-2.5"},React.createElement(A.Avatar,{name:a.name,dept:a.dept,size:36}),React.createElement("div",null,React.createElement("div",{className:"font-bold text-[15px]"},a.name),React.createElement("div",{className:"mt-0.5 flex items-center gap-1.5"},React.createElement(A.MajorChip,{dept:a.dept,year:a.year,size:"xs"}),React.createElement("span",{className:"text-[11px]",style:{color:"#94A3B8"}},a.school)))),React.createElement("div",{className:"mt-3 text-[13px]",style:{color:"#475569"}},a.intro),React.createElement("div",{className:"mt-3 flex flex-wrap gap-1.5"},a.skills.slice(0,5).map(t=>React.createElement(A.Chip,{key:t,tone:"indigo"},t))),React.createElement("div",{className:"mt-3 flex items-center gap-1.5 text-[12px] font-semibold",style:{color:"#4F46E5"}},React.createElement(Lc.Link,{size:12})," ",a.portfolio)),React.createElement("div",{className:"col-span-3 border-l pl-5",style:{borderColor:"#F1F5F9"}},React.createElement(A.ScoreBars,{b:a.breakdown,animKey:s})),React.createElement("div",{className:"col-span-2 flex flex-col gap-2 justify-center border-l pl-5",style:{borderColor:"#F1F5F9"}},React.createElement("button",{className:"rounded-xl text-white font-semibold text-[12px] py-2 flex items-center justify-center gap-1",style:{background:"#84CC16"}},React.createElement(Lc.Check,{size:13})," \uC2B9\uC778"),React.createElement("button",{className:"rounded-xl border text-[12px] font-semibold py-2 flex items-center justify-center gap-1",style:{borderColor:"#E4E4E7",color:"#0F172A"}},React.createElement(Lc.MessageCircle,{size:12})," \uBA54\uC2DC\uC9C0"),React.createElement("button",{className:"rounded-xl text-[12px] font-semibold py-2 flex items-center justify-center gap-1",style:{color:"#BE123C",background:"#FFE4E6"}},React.createElement(Lc.X,{size:12})," \uAC70\uC808")))}function ApplicantCardMobile({applicant:a,animKey:s,compact:o}){const e=A.scoreColor(a.score);return o?React.createElement("div",{onClick:()=>window.__openApplicant&&window.__openApplicant(a),className:"rounded-2xl bg-white border p-3.5 flex items-center gap-3 shadow-card cursor-pointer",style:{borderColor:"#E4E4E7"}},React.createElement(A.DonutScore,{score:a.score,size:56,stroke:6,animKey:s,delay:300,showLabel:!1}),React.createElement("div",{className:"flex-1 min-w-0"},React.createElement("div",{className:"font-bold text-[13px]"},a.name),React.createElement("div",{className:"mt-1"},React.createElement(A.MajorChip,{dept:a.dept,year:a.year,size:"xs"})),React.createElement("div",{className:"mt-1 text-[11px] truncate",style:{color:"#475569"}},a.intro)),React.createElement("span",{className:"text-[10px] font-bold rounded-full px-2 py-0.5",style:{background:e.labelBg,color:e.labelText}},e.label)):React.createElement("div",{onClick:()=>window.__openApplicant&&window.__openApplicant(a),className:"rounded-2xl bg-white border p-5 shadow-cardHov stagger-card cursor-pointer",style:{borderColor:"#E4E4E7"}},React.createElement("div",{className:"flex items-center justify-center mb-3"},React.createElement(A.DonutScore,{score:a.score,size:120,stroke:10,animKey:s,delay:200})),React.createElement("div",{className:"flex items-center justify-center mb-3"},React.createElement("span",{className:"text-[11px] font-bold tracking-wider rounded-full px-2.5 py-1",style:{background:e.labelBg,color:e.labelText}},e.label)),React.createElement("div",{className:"flex items-center gap-3 pb-3 border-b",style:{borderColor:"#F1F5F9"}},React.createElement(A.Avatar,{name:a.name,dept:a.dept,size:36}),React.createElement("div",null,React.createElement("div",{className:"font-bold text-[14px]"},a.name),React.createElement("div",{className:"mt-0.5 flex items-center gap-1.5"},React.createElement(A.MajorChip,{dept:a.dept,year:a.year,size:"xs"})))),React.createElement("div",{className:"mt-3 text-[13px]",style:{color:"#475569"}},a.intro),React.createElement("div",{className:"mt-3 flex flex-wrap gap-1.5"},a.skills.slice(0,4).map(t=>React.createElement(A.Chip,{key:t,tone:"indigo"},t))),React.createElement("div",{className:"mt-4 pt-4 border-t",style:{borderColor:"#F1F5F9"}},React.createElement(A.ScoreBars,{b:a.breakdown,animKey:s})),React.createElement("div",{className:"mt-4 grid grid-cols-3 gap-2"},React.createElement("button",{className:"rounded-xl text-[12px] font-semibold py-2.5 flex items-center justify-center gap-1",style:{color:"#BE123C",background:"#FFE4E6"}},"\uAC70\uC808"),React.createElement("button",{className:"rounded-xl border text-[12px] font-semibold py-2.5",style:{borderColor:"#E4E4E7",color:"#0F172A"}},"\uBA54\uC2DC\uC9C0"),React.createElement("button",{className:"rounded-xl text-white font-semibold text-[12px] py-2.5",style:{background:"#84CC16"}},"\uC2B9\uC778")))}function Top3Compare({applicants:a,animKey:s}){const o=A.BREAKDOWN_LABELS,e={};return o.forEach(t=>{e[t.key]=Math.max(...a.map(r=>r.breakdown[t.key]))}),React.createElement("div",null,React.createElement("div",{className:"text-[12px] mb-3",style:{color:"#475569"}},"\uAC00\uC7A5 \uB192\uC740 \uD56D\uBAA9\uC740 ",React.createElement("span",{className:"rounded px-1.5 py-0.5 font-semibold",style:{background:"#ECFCCB",color:"#3F6212"}},"Lime"),"\uC73C\uB85C \uD45C\uC2DC"),React.createElement("div",{className:"rounded-2xl bg-white border overflow-hidden shadow-card",style:{borderColor:"#E4E4E7"}},React.createElement("div",{className:"grid grid-cols-4"},React.createElement("div",{className:"p-5 text-[11px] font-bold tracking-wide",style:{color:"#94A3B8",background:"#FAFAFA"}},"\uBE44\uAD50 \uD56D\uBAA9"),a.map((t,r)=>React.createElement("div",{key:t.id,className:"p-5 border-l text-center",style:{borderColor:"#F1F5F9",background:"#FAFAFA"}},React.createElement(A.DonutScore,{score:t.score,size:84,stroke:8,animKey:s,delay:200+r*100}),React.createElement("div",{className:"mt-2 font-bold text-[14px]"},t.name),React.createElement("div",{className:"mt-1 flex items-center justify-center"},React.createElement(A.MajorChip,{dept:t.dept,year:t.year,size:"xs"}))))),o.map(t=>React.createElement("div",{key:t.key,className:"grid grid-cols-4 border-t",style:{borderColor:"#F1F5F9"}},React.createElement("div",{className:"p-4 text-[12px] font-semibold",style:{color:"#475569"}},t.label," ",React.createElement("span",{style:{color:"#94A3B8"}},"\xB7 /",t.max)),a.map(r=>{const i=r.breakdown[t.key],d=i===e[t.key];return React.createElement("div",{key:r.id,className:"p-4 border-l",style:{borderColor:"#F1F5F9",background:d?"#ECFCCB":"transparent"}},React.createElement("div",{className:"flex items-center gap-2"},React.createElement("div",{className:"flex-1 h-1.5 rounded-full",style:{background:"#F1F5F9"}},React.createElement("div",{className:"h-full rounded-full",style:{width:`${i/t.max*100}%`,background:t.color}})),React.createElement("div",{className:"text-[12px] font-bold tabular-nums",style:{color:d?"#3F6212":"#0F172A"}},i)))}))),React.createElement("div",{className:"grid grid-cols-4 border-t",style:{borderColor:"#F1F5F9"}},React.createElement("div",{className:"p-4 text-[12px] font-semibold",style:{color:"#475569"}},"\uD55C \uC904 \uC790\uAE30\uC18C\uAC1C"),a.map(t=>React.createElement("div",{key:t.id,className:"p-4 border-l text-[12px]",style:{borderColor:"#F1F5F9",color:"#475569"}},t.intro))),React.createElement("div",{className:"grid grid-cols-4 border-t",style:{borderColor:"#F1F5F9"}},React.createElement("div",{className:"p-4 text-[12px] font-semibold",style:{color:"#475569"}},"\uC8FC\uC694 \uAE30\uC220"),a.map(t=>React.createElement("div",{key:t.id,className:"p-4 border-l flex flex-wrap gap-1",style:{borderColor:"#F1F5F9"}},t.skills.slice(0,3).map(r=>React.createElement(A.Chip,{key:r,tone:"indigo"},r)))))),React.createElement("div",{className:"mt-5 flex items-center justify-between rounded-2xl p-4",style:{background:"linear-gradient(90deg, #ECFCCB 0%, #EEF2FF 100%)"}},React.createElement("div",null,React.createElement("div",{className:"font-bold text-[15px]"},"\uC774 \uC870\uD569\uC73C\uB85C \uD300 \uAD6C\uC131"),React.createElement("div",{className:"text-[12px] mt-0.5",style:{color:"#475569"}},"\uCD5C\uB3C4\uC724 \xB7 \uC774\uC218\uBBFC \xB7 \uBC15\uC11C\uC5F0 \u2014 \uD3C9\uADE0 \uB9E4\uCE6D 86.7\uC810")),React.createElement("button",{className:"rounded-xl text-white font-bold px-5 py-3 flex items-center gap-2",style:{background:"#4F46E5"}},"\uD300 \uAD6C\uC131 \uD655\uC815 ",React.createElement(Lc.ArrowRight,{size:14}))))}window.CampusScreens={ScreenLanding,ScreenExplore,ScreenDetail,ScreenCompare};const A2=window.CampusAtoms,D2=window.CampusData,Lc2=window.lucideReact||{},{useState:useS2}=React;function ScreenDashboard({device:a,animKey:s}){const o=a==="mobile";return React.createElement("div",{className:"tab-enter",key:s},React.createElement("div",{className:`flex items-center justify-between ${o?"px-4 py-3":"px-10 py-4"} border-b bg-white sticky top-0 z-20`,style:{borderColor:"#E4E4E7"}},React.createElement("div",{className:"flex items-center gap-3"},!o&&React.createElement(A2.Wordmark,null),!o&&React.createElement("span",{style:{color:"#E4E4E7"}},"/"),React.createElement("span",{className:"font-semibold text-[14px]"},"\uCEA0\uD37C\uC2A4 \uBD84\uC2E4\uBB3C \uCC3E\uC544\uC8FC\uB294 \uC571")),React.createElement("div",{className:"flex items-center gap-2"},!o&&React.createElement("button",{className:"rounded-xl border bg-white text-[12px] font-medium px-3 py-2 flex items-center gap-1.5",style:{borderColor:"#E4E4E7"}},React.createElement(Lc2.MessageSquare,{size:13})," \uB514\uC2A4\uCF54\uB4DC \uC5F0\uB3D9"),React.createElement(A2.Avatar,{name:"\uAE40\uBBFC\uC900",dept:"\uCEF4\uD4E8\uD130\uACF5\uD559",size:32}))),React.createElement("div",{className:`${o?"px-4 py-4":"px-10 py-5"} bg-white border-b`,style:{borderColor:"#E4E4E7"}},React.createElement("div",{className:`${o?"":"flex items-center justify-between"}`},React.createElement("div",null,React.createElement("div",{className:"flex items-center gap-2 flex-wrap"},React.createElement(A2.Chip,null,"\uAD50\uB0B4 \uC11C\uBE44\uC2A4"),React.createElement(A2.Chip,{tone:"indigo"},"\uC9C4\uD589 \uC911")),React.createElement("h1",{className:"font-bold mt-2",style:{fontSize:o?20:24,letterSpacing:"-0.02em"}},"\uCEA0\uD37C\uC2A4 \uBD84\uC2E4\uBB3C \uCC3E\uC544\uC8FC\uB294 \uC571")),React.createElement("div",{className:`${o?"mt-3":""} flex items-center gap-4`},React.createElement("div",{className:"flex -space-x-2"},["\uAE40\uBBFC\uC900","\uC774\uC218\uBBFC","\uBC15\uC11C\uC5F0","\uC815\uD604\uC6B0","\uD55C\uC9C0\uC6B0"].map((e,t)=>React.createElement(A2.Avatar,{key:e,name:e,dept:["\uCEF4\uD4E8\uD130\uACF5\uD559","\uC2DC\uAC01\uB514\uC790\uC778","\uACBD\uC601\uD559","\uD1B5\uACC4\uD559","\uBBF8\uB514\uC5B4\uCEE4\uBBA4\uB2C8\uCF00\uC774\uC158"][t],size:32}))),React.createElement("div",{className:"rounded-xl px-4 py-2 text-center",style:{background:"#0F172A",color:"white"}},React.createElement("div",{className:"text-[10px] opacity-70"},"\uB9C8\uAC10\uAE4C\uC9C0"),React.createElement("div",{className:"text-[15px] font-bold"},"D-23")))),React.createElement("div",{className:"mt-4"},React.createElement("div",{className:"flex items-center justify-between text-[12px] mb-1.5"},React.createElement("span",{style:{color:"#475569"}},"\uC804\uCCB4 \uC9C4\uD589\uB960"),React.createElement("span",{className:"font-bold"},"47%")),React.createElement("div",{className:"h-2 rounded-full",style:{background:"#F1F5F9"}},React.createElement("div",{className:"h-full rounded-full",style:{width:"47%",background:"linear-gradient(90deg, #4F46E5 0%, #84CC16 100%)"}})))),React.createElement("div",{className:`${o?"px-4":"px-10"} border-b bg-white`,style:{borderColor:"#E4E4E7"}},React.createElement("div",{className:"flex gap-5 text-[13px] font-semibold"},[["\uCE78\uBC18",!0],["\uBA64\uBC84"],["\uC790\uB8CC"],["\uC77C\uC815"]].map(([e,t])=>React.createElement("div",{key:e,className:`py-3 border-b-2 ${t?"":"border-transparent"}`,style:{color:t?"#4F46E5":"#94A3B8",borderColor:t?"#4F46E5":"transparent"}},e)))),React.createElement("div",{className:`${o?"":"grid grid-cols-12 gap-5 px-10 py-5"}`},React.createElement("div",{className:o?"":"col-span-9"},o?React.createElement("div",{className:"px-4 py-4"},React.createElement("div",{className:"flex gap-2 overflow-x-auto hscroll mb-3"},[["To Do",5,!0],["In Progress",3],["Done",8]].map(([e,t,r])=>React.createElement("div",{key:e,className:"rounded-xl px-3 py-2 text-[12px] font-semibold whitespace-nowrap",style:{background:r?"#0F172A":"#F4F4F5",color:r?"white":"#475569"}},e," ",React.createElement("span",{className:"ml-1 opacity-60"},t)))),React.createElement("div",{className:"text-[11px] mb-2",style:{color:"#475569"}},"\u2190 \uAC00\uB85C\uB85C \uC2A4\uC640\uC774\uD504\uD574\uC11C \uB2E4\uB978 \uC5F4 \uBCF4\uAE30"),React.createElement("div",{className:"grid gap-2.5"},D2.TASKS.todo.map(e=>React.createElement(TaskCard,{key:e.id,t:e})))):React.createElement("div",{className:"grid grid-cols-3 gap-4"},React.createElement(KanbanColumn,{title:"To Do",count:D2.TASKS.todo.length,tone:"gray",tasks:D2.TASKS.todo}),React.createElement(KanbanColumn,{title:"In Progress",count:D2.TASKS.doing.length,tone:"indigo",tasks:D2.TASKS.doing}),React.createElement(KanbanColumn,{title:"Done",count:D2.TASKS.done.length,tone:"lime",tasks:D2.TASKS.done,done:!0}))),!o&&React.createElement("div",{className:"col-span-3 grid gap-4"},React.createElement(A2.Section,{title:"\uC774\uBC88 \uC8FC \uB9C8\uAC10"},React.createElement("div",{className:"grid gap-2.5"},[{l:"\uB85C\uADF8\uC778 API \uAD6C\uD604",d:"D-2",urgent:!0,owner:"\uC815\uD604\uC6B0",dept:"\uD1B5\uACC4\uD559"},{l:"\uB85C\uACE0 \uC2DC\uC548 v2",d:"\uB0B4\uC77C",urgent:!0,owner:"\uC774\uC218\uBBFC",dept:"\uC2DC\uAC01\uB514\uC790\uC778"},{l:"\uBC1C\uD45C \uC601\uC0C1 \uD3B8\uC9D1",d:"D-4",owner:"\uD55C\uC9C0\uC6B0",dept:"\uBBF8\uB514\uC5B4\uCEE4\uBBA4\uB2C8\uCF00\uC774\uC158"},{l:"\uC778\uD130\uBDF0 \uC2A4\uD06C\uB9BD\uD2B8",d:"D-7",owner:"\uBC15\uC11C\uC5F0",dept:"\uACBD\uC601\uD559"}].map(e=>React.createElement("div",{key:e.l,className:"flex items-center gap-2.5 rounded-lg p-2 border",style:{borderColor:"#F1F5F9"}},React.createElement(A2.Avatar,{name:e.owner,dept:e.dept,size:26}),React.createElement("div",{className:"flex-1 min-w-0"},React.createElement("div",{className:"text-[12px] font-semibold truncate"},e.l),React.createElement("div",{className:"text-[10px]",style:{color:"#94A3B8"}},e.owner)),React.createElement("span",{className:"text-[10px] font-bold rounded-full px-2 py-0.5",style:{background:e.urgent?"#FFE4E6":"#F4F4F5",color:e.urgent?"#BE123C":"#475569"}},e.d))))),React.createElement(A2.Section,{title:"\uCD5C\uADFC \uD65C\uB3D9"},React.createElement("div",{className:"grid gap-3 text-[12px]"},[{who:"\uBC15\uC11C\uC5F0",dept:"\uACBD\uC601\uD559",what:"[\uB85C\uACE0 \uC2DC\uC548] Task\uB97C \uC644\uB8CC\uD588\uC5B4\uC694",t:"5\uBD84 \uC804"},{who:"\uC815\uD604\uC6B0",dept:"\uD1B5\uACC4\uD559",what:"[\uB85C\uADF8\uC778 API] \uB313\uAE00\uC744 \uB0A8\uACBC\uC5B4\uC694",t:"23\uBD84 \uC804"},{who:"\uD55C\uC9C0\uC6B0",dept:"\uBBF8\uB514\uC5B4\uCEE4\uBBA4\uB2C8\uCF00\uC774\uC158",what:"[\uBC1C\uD45C \uC601\uC0C1] \uC790\uB8CC\uB97C \uC5C5\uB85C\uB4DC\uD588\uC5B4\uC694",t:"1\uC2DC\uAC04 \uC804"},{who:"\uC774\uC218\uBBFC",dept:"\uC2DC\uAC01\uB514\uC790\uC778",what:"\uBE0C\uB79C\uB4DC \uCEEC\uB7EC\uB97C \uD655\uC815\uD588\uC5B4\uC694",t:"3\uC2DC\uAC04 \uC804"}].map((e,t)=>React.createElement("div",{key:t,className:"flex items-start gap-2.5"},React.createElement(A2.Avatar,{name:e.who,dept:e.dept,size:26}),React.createElement("div",{className:"flex-1"},React.createElement("div",{style:{color:"#475569"}},React.createElement("b",{style:{color:"#0F172A"}},e.who),"\uB2D8\uC774 ",e.what),React.createElement("div",{className:"mt-0.5 text-[10px]",style:{color:"#94A3B8"}},e.t)))))),React.createElement(A2.Section,{title:"\uC54C\uB9BC"},React.createElement("div",{className:"flex items-center justify-between rounded-xl p-3",style:{background:"#F4F4F5"}},React.createElement("div",{className:"flex items-center gap-2.5"},React.createElement(Lc2.MessageSquare,{size:16,style:{color:"#5865F2"}}),React.createElement("div",null,React.createElement("div",{className:"text-[12px] font-semibold"},"\uB514\uC2A4\uCF54\uB4DC \uC54C\uB9BC"),React.createElement("div",{className:"text-[10px]",style:{color:"#94A3B8"}},"#campus-link-team"))),React.createElement("div",{className:"w-9 h-5 rounded-full p-0.5",style:{background:"#4F46E5"}},React.createElement("div",{className:"w-4 h-4 rounded-full bg-white ml-auto"})))))))}function KanbanColumn({title:a,count:s,tone:o,tasks:e,done:t}){const i={gray:{dot:"#94A3B8",bg:"#F4F4F5",text:"#475569"},indigo:{dot:"#4F46E5",bg:"#EEF2FF",text:"#4F46E5"},lime:{dot:"#84CC16",bg:"#ECFCCB",text:"#3F6212"}}[o];return React.createElement("div",{className:"rounded-2xl p-3",style:{background:"#FAFAFA",border:"1px solid #E4E4E7"}},React.createElement("div",{className:"flex items-center justify-between mb-3 px-1.5"},React.createElement("div",{className:"flex items-center gap-2"},React.createElement("span",{className:"w-2 h-2 rounded-full",style:{background:i.dot}}),React.createElement("span",{className:"text-[12px] font-bold"},a),React.createElement("span",{className:"text-[11px] font-bold rounded-full px-1.5",style:{background:i.bg,color:i.text}},s)),React.createElement(Lc2.Plus,{size:14,style:{color:"#94A3B8"}})),React.createElement("div",{className:"grid gap-2.5"},e.map(d=>React.createElement(TaskCard,{key:d.id,t:d,done:t})),React.createElement("div",{className:"rounded-xl border-2 border-dashed text-[12px] font-semibold py-2.5 text-center",style:{borderColor:"#E4E4E7",color:"#94A3B8"}},"+ Task \uCD94\uAC00")))}function TaskCard({t:a,done:s}){const o=D2.MAJOR[a.major],e={"\uCEF4\uACF5/SW":"\uCEF4\uD4E8\uD130\uACF5\uD559",\uB514\uC790\uC778:"\uC2DC\uAC01\uB514\uC790\uC778","\uACBD\uC601/\uAE30\uD68D":"\uACBD\uC601\uD559","\uBBF8\uB514\uC5B4/\uD64D\uBCF4":"\uBBF8\uB514\uC5B4\uCEE4\uBBA4\uB2C8\uCF00\uC774\uC158","\uD1B5\uACC4/\uB370\uC774\uD130":"\uD1B5\uACC4\uD559"}[a.major];return React.createElement("div",{onClick:()=>window.__openTask&&window.__openTask(a),className:"rounded-xl bg-white p-3 border shadow-card hover:shadow-cardHov transition cursor-pointer",style:{borderColor:"#E4E4E7",opacity:s?.7:1}},React.createElement("div",{className:"flex items-start justify-between gap-2"},React.createElement("div",{className:`text-[13px] font-bold leading-snug ${s?"line-through":""}`,style:{color:s?"#94A3B8":"#0F172A"}},a.title),a.tag&&React.createElement(A2.Chip,null,a.tag)),React.createElement("div",{className:"text-[11px] mt-1",style:{color:"#94A3B8"}},a.desc),React.createElement("div",{className:"mt-3 flex items-center justify-between"},React.createElement("div",{className:"flex items-center gap-1.5"},React.createElement(A2.Avatar,{name:a.owner,dept:e,size:22}),React.createElement("span",{className:"text-[11px] font-medium",style:{color:"#475569"}},a.owner)),React.createElement("div",{className:"flex items-center gap-2 text-[11px]",style:{color:"#94A3B8"}},a.files>0&&React.createElement("span",{className:"flex items-center gap-0.5"},React.createElement(Lc2.Paperclip,{size:11}),a.files),a.comments>0&&React.createElement("span",{className:"flex items-center gap-0.5"},React.createElement(Lc2.MessageCircle,{size:11}),a.comments),React.createElement("span",{className:"font-bold rounded-full px-1.5 py-0.5",style:{background:a.urgent?"#FFE4E6":"#F4F4F5",color:a.urgent?"#BE123C":"#475569"}},a.due))))}function ScreenPortfolio({device:a,animKey:s}){const o=a==="mobile";return React.createElement("div",{className:"tab-enter relative",key:s,style:{background:"linear-gradient(180deg, #FAFAFA 0%, #FFFFFF 100%)",minHeight:"100%"}},window.__ML_SHOW_CONFETTI!==!1&&React.createElement("div",{className:"absolute inset-0 overflow-hidden pointer-events-none"},Array.from({length:24}).map((e,t)=>{const r=["#4F46E5","#84CC16","#EC4899","#F97316","#14B8A6","#F59E0B"],i=t%3;return React.createElement("span",{key:t,className:"absolute confetti-piece",style:{left:`${t*4.3%100}%`,top:`${t%5*12}%`,width:8,height:8,background:r[t%r.length],borderRadius:i===0?"50%":i===1?"0":"2px",animationDelay:`${t*.15%2.4}s`}})})),React.createElement("div",{className:`relative ${o?"px-4 py-5":"px-10 py-6"}`},React.createElement("div",{className:`flex items-center justify-between ${o?"mb-5":"mb-6"}`},!o&&React.createElement(A2.Wordmark,null),React.createElement("div",{className:"flex gap-2 ml-auto"},React.createElement("button",{className:"rounded-xl border bg-white text-[12px] font-medium px-3 py-2 flex items-center gap-1.5",style:{borderColor:"#E4E4E7"}},React.createElement(Lc2.Share2,{size:13})," \uB9C1\uD06C \uBCF5\uC0AC"))),React.createElement("div",{className:"text-center mb-6"},React.createElement("div",{className:"inline-flex items-center gap-2 rounded-full px-3 py-1.5 mb-3",style:{background:"#ECFCCB"}},React.createElement("span",{className:"w-1.5 h-1.5 rounded-full",style:{background:"#84CC16"}}),React.createElement("span",{className:"text-[12px] font-bold",style:{color:"#3F6212"}},"PROJECT COMPLETE")),React.createElement("h1",{className:"font-bold",style:{fontSize:o?24:36,letterSpacing:"-0.025em"}},"\uD504\uB85C\uC81D\uD2B8 \uC644\uB8CC\uB97C \uCD95\uD558\uD574\uC694!"),React.createElement("p",{className:"mt-2 text-[14px]",style:{color:"#475569"}},"10\uC8FC\uC758 \uD611\uC5C5\uC774 \uD55C \uC7A5\uC758 \uD3EC\uD2B8\uD3F4\uB9AC\uC624\uB85C \uC790\uB3D9 \uC815\uB9AC\uB410\uC5B4\uC694")),React.createElement("div",{className:"mx-auto rounded-3xl bg-white shadow-cardHov border overflow-hidden",style:{borderColor:"#E4E4E7",maxWidth:o?"100%":800}},React.createElement("div",{className:`${o?"p-5":"p-8"}`},React.createElement("div",{className:"flex items-start justify-between pb-5 border-b",style:{borderColor:"#F1F5F9"}},React.createElement("div",null,React.createElement(A2.Wordmark,{size:"md"}),React.createElement("div",{className:"mt-3 flex items-center gap-3"},React.createElement(A2.Avatar,{name:"\uCD5C\uB3C4\uC724",dept:"\uCEF4\uD4E8\uD130\uACF5\uD559",size:48}),React.createElement("div",null,React.createElement("div",{className:"font-bold text-[18px]"},"\uCD5C\uB3C4\uC724"),React.createElement("div",{className:"text-[12px]",style:{color:"#475569"}},"\uD55C\uC591\uB300 \xB7 \uCEF4\uD4E8\uD130\uACF5\uD559 3\uD559\uB144")))),React.createElement("div",{className:"text-right"},React.createElement("div",{className:"text-[10px] font-bold tracking-wider",style:{color:"#94A3B8"}},"PORTFOLIO"),React.createElement("div",{className:"text-[11px] mt-1",style:{color:"#475569"}},"2026.07.14 \uC0DD\uC131"),React.createElement("div",{className:"text-[10px] mt-0.5 font-mono",style:{color:"#94A3B8"}},"#ML-2026-0714-892"))),React.createElement("div",{className:"mt-5"},React.createElement(A2.Placeholder,{label:"\uCEA0\uD37C\uC2A4 \uBD84\uC2E4\uBB3C \uCC3E\uC544\uC8FC\uB294 \uC571",height:o?140:180,gradient:["#EEF2FF","#ECFCCB"]})),React.createElement("div",{className:`mt-5 grid ${o?"grid-cols-2":"grid-cols-4"} gap-3`},React.createElement(InfoTile,{label:"\uB0B4 \uC5ED\uD560",big:"\uD504\uB860\uD2B8\uC5D4\uB4DC",small:"\uAC1C\uBC1C\uC790",icon:React.createElement(Lc2.Code,{size:14})}),React.createElement(InfoTile,{label:"\uAE30\uC5EC\uB3C4",custom:React.createElement("div",{className:"flex items-center gap-2"},React.createElement(A2.DonutScore,{score:28,size:48,stroke:6,animKey:s,delay:400,showLabel:!1}),React.createElement("div",{className:"text-[10px]",style:{color:"#475569"}},"\uB9E4\uCE6D",React.createElement("br",null),"\uC54C\uACE0\uB9AC\uC998 UI"))}),React.createElement(InfoTile,{label:"\uAE30\uAC04",big:"10\uC8FC",small:"2026.05 - 07",icon:React.createElement(Lc2.Calendar,{size:14})}),React.createElement(InfoTile,{label:"\uD300 \uD3C9\uC810",big:"4.7",small:"/ 5.0",icon:React.createElement(Lc2.Star,{size:14})})),React.createElement("div",{className:"mt-5"},React.createElement(SectionLabel,null,"\uC0AC\uC6A9 \uAE30\uC220"),React.createElement("div",{className:"flex flex-wrap gap-1.5 mt-2"},["React","TypeScript","Tailwind","Figma","Git","Vercel"].map(e=>React.createElement(A2.Chip,{key:e,tone:"indigo"},e)))),React.createElement("div",{className:"mt-5"},React.createElement(SectionLabel,null,"\uD300 \uAD6C\uC131 \u2014 5\uBA85"),React.createElement("div",{className:"mt-3 flex items-center justify-between gap-3 flex-wrap"},[{n:"\uCD5C\uB3C4\uC724",d:"\uCEF4\uD4E8\uD130\uACF5\uD559",r:"FE \uAC1C\uBC1C"},{n:"\uC815\uD604\uC6B0",d:"\uD1B5\uACC4\uD559",r:"BE \uAC1C\uBC1C"},{n:"\uC774\uC218\uBBFC",d:"\uC2DC\uAC01\uB514\uC790\uC778",r:"\uB514\uC790\uC778"},{n:"\uBC15\uC11C\uC5F0",d:"\uACBD\uC601\uD559",r:"PM"},{n:"\uD55C\uC9C0\uC6B0",d:"\uBBF8\uB514\uC5B4\uCEE4\uBBA4\uB2C8\uCF00\uC774\uC158",r:"\uCF58\uD150\uCE20"}].map(e=>React.createElement("div",{key:e.n,className:"text-center"},React.createElement(A2.Avatar,{name:e.n,dept:e.d,size:48}),React.createElement("div",{className:"text-[12px] font-bold mt-2"},e.n),React.createElement("div",{className:"text-[10px]",style:{color:"#94A3B8"}},e.r)))),React.createElement("div",{className:"mt-3 text-center text-[11px]",style:{color:"#475569"}},"\uC804\uACF5 \uB2E4\uC591\uC131 ",React.createElement("b",{style:{color:"#0F172A"}},"5/5")," \u2014 5\uAC1C \uACC4\uC5F4 \uBAA8\uB450 \uCC38\uC5EC")),React.createElement("div",{className:"mt-5"},React.createElement(SectionLabel,null,"\uB9C1\uD06C"),React.createElement("div",{className:`mt-2 grid ${o?"grid-cols-1 gap-2":"grid-cols-3 gap-2.5"}`},[{ico:React.createElement(Lc2.Github,{size:14}),l:"GitHub",v:"github.com/lostfound-app"},{ico:React.createElement(Lc2.Globe,{size:14}),l:"\uBC30\uD3EC URL",v:"lostfound.hanyang.kr"},{ico:React.createElement(Lc2.Figma,{size:14}),l:"Figma",v:"figma.com/file/Tn29x"}].map(e=>React.createElement("div",{key:e.l,className:"rounded-xl border p-3 flex items-center gap-2.5",style:{borderColor:"#E4E4E7"}},React.createElement("div",{className:"rounded-md w-7 h-7 flex items-center justify-center",style:{background:"#F4F4F5"}},e.ico),React.createElement("div",{className:"min-w-0"},React.createElement("div",{className:"text-[11px]",style:{color:"#94A3B8"}},e.l),React.createElement("div",{className:"text-[12px] font-semibold truncate"},e.v)))))),React.createElement("div",{className:"mt-5"},React.createElement(SectionLabel,null,"\uB3D9\uB8CC \uD3C9\uAC00 \u2014 4.7 / 5.0"),React.createElement("div",{className:"mt-3 grid gap-2"},[{who:"\uBC15\uC11C\uC5F0",dept:"\uACBD\uC601\uD559",text:"\uCEE4\uBBA4\uB2C8\uCF00\uC774\uC158\uC774 \uC815\uB9D0 \uC88B\uC558\uC5B4\uC694. \uB9C9\uD614\uC744 \uB54C \uD56D\uC0C1 \uBE60\uB974\uAC8C \uD574\uACB0\uCC45\uC744 \uAC00\uC838\uC624\uB294 \uBD84."},{who:"\uC774\uC218\uBBFC",dept:"\uC2DC\uAC01\uB514\uC790\uC778",text:"\uB514\uC790\uC778 \uC758\uB3C4\uB97C \uC815\uD655\uD788 \uAD6C\uD604\uD574\uC918\uC11C \uC791\uC5C5\uC774 \uC815\uB9D0 \uD3B8\uD588\uC5B4\uC694."}].map((e,t)=>React.createElement("div",{key:t,className:"rounded-xl p-3 flex items-start gap-2.5",style:{background:"#FAFAFA"}},React.createElement(A2.Avatar,{name:e.who,dept:e.dept,size:28}),React.createElement("div",{className:"flex-1"},React.createElement("div",{className:"text-[12px] font-semibold"},e.who),React.createElement("div",{className:"text-[12px] mt-1",style:{color:"#475569"}},'"',e.text,'"')),React.createElement("div",{className:"flex gap-0.5",style:{color:"#F59E0B"}},[1,2,3,4,5].map(r=>React.createElement(Lc2.Star,{key:r,size:11,fill:"#F59E0B"}))))))))),React.createElement("div",{className:`mt-6 mx-auto ${o?"":"max-w-[800px]"} grid ${o?"grid-cols-1 gap-2.5":"grid-cols-3 gap-3"}`},React.createElement("button",{className:"rounded-xl text-white font-bold py-3.5 flex items-center justify-center gap-2",style:{background:"#4F46E5"}},React.createElement(Lc2.Download,{size:15})," PDF\uB85C \uB0B4\uBCF4\uB0B4\uAE30 ",React.createElement(Lc2.Lock,{size:11,style:{opacity:.7}})),React.createElement("button",{className:"rounded-xl border bg-white font-semibold py-3.5 flex items-center justify-center gap-2",style:{borderColor:"#E4E4E7"}},React.createElement(Lc2.Link,{size:14})," \uACF5\uC720 \uB9C1\uD06C \uBCF5\uC0AC"),React.createElement("button",{className:"rounded-xl font-semibold py-3.5 flex items-center justify-center gap-2",style:{background:"#ECFCCB",color:"#3F6212"}},React.createElement(Lc2.Compass,{size:14})," \uB2E4\uC74C \uD504\uB85C\uC81D\uD2B8"))))}function SectionLabel({children:a}){return React.createElement("div",{className:"text-[10px] font-bold tracking-wider",style:{color:"#94A3B8"}},a)}function InfoTile({label:a,big:s,small:o,icon:e,custom:t}){return React.createElement("div",{className:"rounded-xl border p-3",style:{borderColor:"#E4E4E7"}},React.createElement("div",{className:"flex items-center gap-1.5 text-[10px] font-bold tracking-wide",style:{color:"#94A3B8"}},e,a.toUpperCase()),t?React.createElement("div",{className:"mt-2"},t):React.createElement("div",{className:"mt-2"},React.createElement("div",{className:"font-bold text-[16px]",style:{letterSpacing:"-0.02em"}},s),React.createElement("div",{className:"text-[11px]",style:{color:"#475569"}},o)))}function ScreenNotifWeb(){return React.createElement("div",{className:"tab-enter h-full flex flex-col items-center justify-center px-12 py-12",style:{background:"#FAFAFA"}},React.createElement("div",{className:"rounded-3xl bg-white border p-10 max-w-md text-center shadow-card",style:{borderColor:"#E4E4E7"}},React.createElement("div",{className:"text-[40px] mb-3"},"\u{1F4F1}"),React.createElement("h2",{className:"font-bold text-[22px]",style:{letterSpacing:"-0.02em"}},"\uBAA8\uBC14\uC77C \uC804\uC6A9 \uD654\uBA74\uC785\uB2C8\uB2E4"),React.createElement("p",{className:"mt-3 text-[14px]",style:{color:"#475569"}},"\uC54C\uB9BC\uC740 \uD478\uC2DC \uC911\uC2EC\uC774\uB77C \uBAA8\uBC14\uC77C \uC571\uC5D0\uC11C \uAC00\uC7A5 \uBE5B\uB098\uC694. \uC624\uB978\uCABD iPhone \uD504\uB808\uC784\uC5D0\uC11C \uD480\uC2A4\uD06C\uB9B0\uC73C\uB85C \uBBF8\uB9AC\uBCF4\uAE30 \uD558\uC138\uC694."),React.createElement("div",{className:"mt-6 flex items-center justify-center gap-2 text-[12px] font-semibold",style:{color:"#4F46E5"}},React.createElement("span",null,"iOS \xB7 Android \xB7 \uCE74\uCE74\uC624\uD1A1 \uC54C\uB9BC \uC5F0\uB3D9"))))}function ScreenNotifMobile({animKey:a}){return React.createElement("div",{className:"tab-enter pb-2",key:a},React.createElement("div",{className:"px-5 pt-4 pb-3 bg-white border-b",style:{borderColor:"#E4E4E7"}},React.createElement("div",{className:"flex items-center justify-between"},React.createElement("h1",{className:"font-bold text-[24px]",style:{letterSpacing:"-0.02em"}},"\uC54C\uB9BC"),React.createElement("div",{className:"flex items-center gap-2"},React.createElement("span",{className:"text-[11px] font-bold rounded-full text-white px-2 py-0.5",style:{background:"#F43F5E"}},"3 NEW"),React.createElement(Lc2.Settings,{size:18,style:{color:"#94A3B8"}})))),React.createElement("div",{className:"px-5 pt-5"},React.createElement("div",{className:"text-[11px] font-bold tracking-wider mb-3",style:{color:"#94A3B8"}},"\uC624\uB298"),React.createElement("div",{className:"grid gap-2.5"},D2.NOTIFS_TODAY.map((s,o)=>React.createElement(NotifCard,{key:o,n:s,idx:o,animKey:a})))),React.createElement("div",{className:"px-5 pt-5"},React.createElement("div",{className:"text-[11px] font-bold tracking-wider mb-3",style:{color:"#94A3B8"}},"\uC774\uBC88 \uC8FC"),React.createElement("div",{className:"grid gap-2.5"},D2.NOTIFS_WEEK.map((s,o)=>React.createElement(NotifCard,{key:o,n:s,idx:o+3,animKey:a,dim:!0})))),React.createElement("div",{className:"h-3"}))}function NotifCard({n:a,idx:s,animKey:o,dim:e}){return React.createElement("div",{className:"rounded-2xl bg-white border shadow-card overflow-hidden flex",style:{borderColor:"#E4E4E7"}},React.createElement("div",{className:"anim-bar-y w-1",style:{background:a.color,animationDelay:`${s*80}ms`}}),React.createElement("div",{className:"flex-1 p-3.5"},React.createElement("div",{className:"flex items-center gap-2 mb-1.5"},React.createElement("span",{className:"text-[14px]"},a.icon),React.createElement("span",{className:"text-[12px] font-bold",style:{color:a.color}},a.title),React.createElement("span",{className:"ml-auto text-[10px]",style:{color:"#94A3B8"}},a.time)),React.createElement("div",{className:"text-[13px] leading-snug",style:{color:e?"#475569":"#0F172A"}},a.body),React.createElement("div",{className:"mt-3 flex items-center justify-between"},React.createElement("button",{className:"text-[11px] font-bold rounded-lg px-3 py-1.5",style:{background:"#F4F4F5",color:"#0F172A"}},a.cta),React.createElement(Lc2.MoreHorizontal,{size:14,style:{color:"#94A3B8"}}))))}window.CampusScreens2={ScreenDashboard,ScreenPortfolio,ScreenNotifWeb,ScreenNotifMobile};const A3=window.CampusAtoms,D3=window.CampusData,Lc3=window.lucideReact||{},{useState:useS3,useEffect:useE3}=React;function ApplicantModal({applicant:a,onClose:s,animKey:o}){if(!a)return null;const e=a,t=A3.scoreColor(e.score),[r,i]=useS3(0);return useE3(()=>{i(d=>d+1)},[e.id]),React.createElement("div",{className:"fixed inset-0 z-[60] flex items-center justify-center p-4",style:{background:"rgba(15,23,42,0.55)"},onClick:s},React.createElement("div",{onClick:d=>d.stopPropagation(),className:"rounded-3xl bg-white shadow-cardHov overflow-hidden w-full max-w-[640px] max-h-[88vh] overflow-y-auto",style:{border:"1px solid #E4E4E7"}},React.createElement("div",{className:"p-6 pb-4 flex items-start justify-between",style:{background:"linear-gradient(135deg, #EEF2FF 0%, #ECFCCB 100%)"}},React.createElement("div",{className:"flex items-center gap-4"},React.createElement(A3.Avatar,{name:e.name,dept:e.dept,size:64}),React.createElement("div",null,React.createElement("div",{className:"font-bold text-[22px]",style:{letterSpacing:"-0.02em"}},e.name),React.createElement("div",{className:"mt-1.5 flex items-center gap-2"},React.createElement(A3.MajorChip,{dept:e.dept,year:e.year,size:"xs"}),React.createElement("span",{className:"text-[12px]",style:{color:"#475569"}},e.school)))),React.createElement("button",{onClick:s,className:"rounded-lg w-8 h-8 flex items-center justify-center bg-white/60"},React.createElement(Lc3.X,{size:16}))),React.createElement("div",{className:"p-6 grid grid-cols-12 gap-5"},React.createElement("div",{className:"col-span-5 flex flex-col items-center text-center"},React.createElement(A3.DonutScore,{score:e.score,size:140,stroke:12,animKey:r,delay:150}),React.createElement("span",{className:"mt-2 text-[10px] font-bold tracking-wider rounded-full px-2.5 py-1",style:{background:t.labelBg,color:t.labelText}},t.label),React.createElement("div",{className:"mt-3 text-[12px]",style:{color:"#475569"}},"\uD76C\uB9DD \uC5ED\uD560"),React.createElement("div",{className:"font-bold text-[14px]"},e.role)),React.createElement("div",{className:"col-span-7"},React.createElement("div",{className:"text-[11px] font-bold tracking-wider mb-2",style:{color:"#94A3B8"}},"\uC810\uC218 \uC0C1\uC138"),React.createElement(A3.ScoreBars,{b:e.breakdown,animKey:r}))),React.createElement("div",{className:"px-6 pb-6 grid gap-4"},React.createElement("div",null,React.createElement("div",{className:"text-[11px] font-bold tracking-wider mb-2",style:{color:"#94A3B8"}},"\uD55C \uC904 \uC790\uAE30\uC18C\uAC1C"),React.createElement("div",{className:"text-[13px] rounded-xl p-3",style:{background:"#FAFAFA",color:"#475569"}},'"',e.intro,'"')),React.createElement("div",null,React.createElement("div",{className:"text-[11px] font-bold tracking-wider mb-2",style:{color:"#94A3B8"}},"\uC8FC\uC694 \uAE30\uC220"),React.createElement("div",{className:"flex flex-wrap gap-1.5"},e.skills.map(d=>React.createElement(A3.Chip,{key:d,tone:"indigo"},d)))),React.createElement("div",null,React.createElement("div",{className:"text-[11px] font-bold tracking-wider mb-2",style:{color:"#94A3B8"}},"\uD3EC\uD2B8\uD3F4\uB9AC\uC624 / \uB9C1\uD06C"),React.createElement("div",{className:"rounded-xl border p-3 flex items-center gap-2.5",style:{borderColor:"#E4E4E7"}},React.createElement(Lc3.Link,{size:14,style:{color:"#4F46E5"}}),React.createElement("span",{className:"text-[13px] font-semibold",style:{color:"#4F46E5"}},e.portfolio))),React.createElement("div",null,React.createElement("div",{className:"text-[11px] font-bold tracking-wider mb-2",style:{color:"#94A3B8"}},"\uC774\uC804 \uD504\uB85C\uC81D\uD2B8"),React.createElement("div",{className:"grid gap-2"},[{t:"\uAD50\uB0B4 \uCE74\uD398 \uC904\uC11C\uAE30 IoT \uC194\uB8E8\uC158",r:"\uD504\uB860\uD2B8\uC5D4\uB4DC",s:4.6},{t:"\uD559\uC0DD \uBA58\uD0C8 \uD5EC\uC2A4 \uCC57\uBD07",r:"\uB514\uC790\uC778 \uBCF4\uC870",s:4.8}].map(d=>React.createElement("div",{key:d.t,className:"rounded-xl border p-3 flex items-center justify-between",style:{borderColor:"#E4E4E7"}},React.createElement("div",null,React.createElement("div",{className:"text-[13px] font-semibold"},d.t),React.createElement("div",{className:"text-[11px] mt-0.5",style:{color:"#94A3B8"}},d.r)),React.createElement("div",{className:"flex items-center gap-1 text-[12px] font-bold",style:{color:"#F59E0B"}},React.createElement(Lc3.Star,{size:12,fill:"#F59E0B"})," ",d.s)))))),React.createElement("div",{className:"grid grid-cols-3 gap-2 p-4 border-t",style:{borderColor:"#F1F5F9",background:"#FAFAFA"}},React.createElement("button",{onClick:s,className:"rounded-xl text-[12px] font-semibold py-3",style:{color:"#BE123C",background:"#FFE4E6"}},"\uAC70\uC808"),React.createElement("button",{className:"rounded-xl border text-[12px] font-semibold py-3",style:{borderColor:"#E4E4E7"}},"\uBA54\uC2DC\uC9C0"),React.createElement("button",{className:"rounded-xl text-white font-bold text-[12px] py-3",style:{background:"#84CC16"}},"\uD300\uC5D0 \uCD94\uAC00"))))}function TaskModal({task:a,onClose:s}){if(!a)return null;const o=a,e={"\uCEF4\uACF5/SW":"\uCEF4\uD4E8\uD130\uACF5\uD559",\uB514\uC790\uC778:"\uC2DC\uAC01\uB514\uC790\uC778","\uACBD\uC601/\uAE30\uD68D":"\uACBD\uC601\uD559","\uBBF8\uB514\uC5B4/\uD64D\uBCF4":"\uBBF8\uB514\uC5B4\uCEE4\uBBA4\uB2C8\uCF00\uC774\uC158","\uD1B5\uACC4/\uB370\uC774\uD130":"\uD1B5\uACC4\uD559"}[o.major]||"\uCEF4\uD4E8\uD130\uACF5\uD559";return React.createElement("div",{className:"fixed inset-0 z-[60] flex items-center justify-center p-4",style:{background:"rgba(15,23,42,0.55)"},onClick:s},React.createElement("div",{onClick:t=>t.stopPropagation(),className:"rounded-3xl bg-white shadow-cardHov overflow-hidden w-full max-w-[560px] max-h-[88vh] overflow-y-auto",style:{border:"1px solid #E4E4E7"}},React.createElement("div",{className:"p-5 flex items-start justify-between border-b",style:{borderColor:"#F1F5F9"}},React.createElement("div",null,React.createElement("div",{className:"flex items-center gap-2"},o.tag&&React.createElement(A3.Chip,null,o.tag),React.createElement("span",{className:"text-[11px] font-bold rounded-full px-2 py-0.5",style:{background:o.urgent?"#FFE4E6":"#F4F4F5",color:o.urgent?"#BE123C":"#475569"}},o.due)),React.createElement("div",{className:"font-bold text-[18px] mt-2",style:{letterSpacing:"-0.02em"}},o.title)),React.createElement("button",{onClick:s,className:"rounded-lg w-8 h-8 flex items-center justify-center"},React.createElement(Lc3.X,{size:16}))),React.createElement("div",{className:"p-5 grid gap-4"},React.createElement("div",{className:"text-[13px] leading-relaxed",style:{color:"#475569"}},o.desc),React.createElement("div",{className:"grid grid-cols-3 gap-2 text-[12px]"},React.createElement("div",{className:"rounded-xl border p-3",style:{borderColor:"#E4E4E7"}},React.createElement("div",{className:"text-[10px]",style:{color:"#94A3B8"}},"\uB2F4\uB2F9\uC790"),React.createElement("div",{className:"mt-1.5 flex items-center gap-2"},React.createElement(A3.Avatar,{name:o.owner,dept:e,size:22}),React.createElement("span",{className:"font-semibold"},o.owner))),React.createElement("div",{className:"rounded-xl border p-3",style:{borderColor:"#E4E4E7"}},React.createElement("div",{className:"text-[10px]",style:{color:"#94A3B8"}},"\uB9C8\uAC10"),React.createElement("div",{className:"mt-1.5 font-bold"},o.due)),React.createElement("div",{className:"rounded-xl border p-3",style:{borderColor:"#E4E4E7"}},React.createElement("div",{className:"text-[10px]",style:{color:"#94A3B8"}},"\uC804\uACF5"),React.createElement("div",{className:"mt-1.5"},React.createElement(A3.MajorChip,{dept:e,size:"xs"})))),o.files>0&&React.createElement("div",null,React.createElement("div",{className:"text-[11px] font-bold tracking-wider mb-2",style:{color:"#94A3B8"}},"\uCCA8\uBD80 \uC790\uB8CC \xB7 ",o.files),React.createElement("div",{className:"grid gap-1.5"},Array.from({length:Math.min(o.files,3)}).map((t,r)=>React.createElement("div",{key:r,className:"rounded-lg border p-2.5 flex items-center gap-2 text-[12px]",style:{borderColor:"#E4E4E7"}},React.createElement(Lc3.Paperclip,{size:12,style:{color:"#94A3B8"}}),React.createElement("span",{className:"font-semibold flex-1"},["\uC2DC\uC548_v2.fig","\uC694\uC57D\uBCF8.pdf","screenshot.png","notes.md"][r]),React.createElement("span",{style:{color:"#94A3B8"}},["1.2MB","340KB","2.1MB","8KB"][r]))))),o.comments>0&&React.createElement("div",null,React.createElement("div",{className:"text-[11px] font-bold tracking-wider mb-2",style:{color:"#94A3B8"}},"\uB313\uAE00 \xB7 ",o.comments),React.createElement("div",{className:"grid gap-2"},[{who:"\uBC15\uC11C\uC5F0",d:"\uACBD\uC601\uD559",txt:"\uD788\uC5B4\uB85C \uCE74\uD53C \uD55C \uC904 \uB354 \uC9E7\uAC8C \uAC08 \uC218 \uC788\uC744\uAE4C\uC694?",t:"15\uBD84 \uC804"},{who:"\uC815\uD604\uC6B0",d:"\uD1B5\uACC4\uD559",txt:"\uD655\uC778\uD588\uC5B4\uC694, \uC624\uB298 \uC548\uC5D0 PR \uC62C\uB9B4\uAC8C\uC694!",t:"1\uC2DC\uAC04 \uC804"}].map((t,r)=>React.createElement("div",{key:r,className:"flex gap-2 items-start"},React.createElement(A3.Avatar,{name:t.who,dept:t.d,size:26}),React.createElement("div",{className:"flex-1 rounded-xl p-2.5",style:{background:"#FAFAFA"}},React.createElement("div",{className:"flex items-center gap-2 text-[11px]"},React.createElement("b",null,t.who),React.createElement("span",{style:{color:"#94A3B8"}},t.t)),React.createElement("div",{className:"text-[12px] mt-1",style:{color:"#475569"}},t.txt))))))),React.createElement("div",{className:"grid grid-cols-2 gap-2 p-4 border-t",style:{borderColor:"#F1F5F9",background:"#FAFAFA"}},React.createElement("button",{className:"rounded-xl border text-[12px] font-semibold py-3",style:{borderColor:"#E4E4E7"}},"\uB313\uAE00 \uB2EC\uAE30"),React.createElement("button",{className:"rounded-xl text-white font-bold text-[12px] py-3",style:{background:"#4F46E5"}},"\uC644\uB8CC \uCC98\uB9AC"))))}function ScreenMyPage({device:a,animKey:s}){const o=a==="mobile",e={name:"\uAE40\uBBFC\uC900",dept:"\uCEF4\uD4E8\uD130\uACF5\uD559",year:3,school:"\uD55C\uC591\uB300",mail:"demo@campus-link.example",skills:["React","Spring","MySQL","Git","Figma"],interests:["\uAD50\uB0B4 \uC11C\uBE44\uC2A4","AI/ML","\uD5EC\uC2A4\uCF00\uC5B4"]};return React.createElement("div",{className:"tab-enter",key:s},React.createElement("div",{className:`${o?"px-4 pt-5 pb-16":"px-10 pt-8 pb-20"} relative overflow-hidden`,style:{background:"linear-gradient(135deg, #4F46E5 0%, #7C3AED 60%, #84CC16 130%)"}},React.createElement("div",{className:"absolute inset-0 opacity-20",style:{backgroundImage:"radial-gradient(circle at 20% 30%, white 0, transparent 50%)"}}),React.createElement("div",{className:"relative flex items-center justify-between"},!o&&React.createElement(A3.Wordmark,{size:"md"}),React.createElement("span",{className:"text-[11px] font-bold tracking-wider text-white/70"},"MY PAGE"),React.createElement("div",{className:"flex gap-2"},React.createElement("button",{className:"rounded-lg bg-white/15 text-white p-2"},React.createElement(Lc3.Settings,{size:14})),React.createElement("button",{className:"rounded-lg bg-white/15 text-white p-2"},React.createElement(Lc3.Bell,{size:14}))))),React.createElement("div",{className:`${o?"px-4":"px-10"} -mt-12 relative z-10`},React.createElement("div",{className:"rounded-3xl bg-white border p-6 shadow-cardHov",style:{borderColor:"#E4E4E7"}},React.createElement("div",{className:`${o?"flex flex-col items-center text-center gap-3":"flex items-center gap-5"}`},React.createElement(A3.Avatar,{name:e.name,dept:e.dept,size:o?80:96}),React.createElement("div",{className:o?"":"flex-1"},React.createElement("div",{className:"font-bold text-[22px]",style:{letterSpacing:"-0.02em"}},e.name),React.createElement("div",{className:"mt-1.5 flex items-center gap-2 flex-wrap justify-center"},React.createElement(A3.MajorChip,{dept:e.dept,year:e.year,size:"xs"}),React.createElement("span",{className:"text-[12px]",style:{color:"#475569"}},e.school)),React.createElement("div",{className:"mt-1 text-[12px]",style:{color:"#94A3B8"}},e.mail)),!o&&React.createElement("button",{className:"rounded-xl border text-[12px] font-semibold px-4 py-2",style:{borderColor:"#E4E4E7"}},"\uD504\uB85C\uD544 \uC218\uC815")),React.createElement("div",{className:`mt-5 grid ${o?"grid-cols-3":"grid-cols-4"} gap-3 pt-5 border-t`,style:{borderColor:"#F1F5F9"}},[{l:"\uC9C4\uD589 \uC911",v:2,c:"#4F46E5"},{l:"\uC644\uB8CC",v:5,c:"#84CC16"},{l:"\uD3C9\uADE0 \u2605",v:"4.7",c:"#F59E0B"},!o&&{l:"\uD3C9\uADE0 \uB9E4\uCE6D",v:"82",c:"#EC4899"}].filter(Boolean).map(t=>React.createElement("div",{key:t.l,className:"text-center rounded-xl p-3",style:{background:"#FAFAFA"}},React.createElement("div",{className:"text-[11px]",style:{color:"#94A3B8"}},t.l),React.createElement("div",{className:"font-bold text-[22px] mt-1 tabular-nums",style:{color:t.c,letterSpacing:"-0.02em"}},t.v)))))),React.createElement("div",{className:`${o?"px-4 py-5":"px-10 py-8 grid grid-cols-12 gap-5"}`},React.createElement("div",{className:o?"":"col-span-7 grid gap-5"},React.createElement(A3.Section,{title:"\uC9C4\uD589 \uC911\uC778 \uD504\uB85C\uC81D\uD2B8",action:React.createElement("span",{className:"text-[11px] font-semibold",style:{color:"#4F46E5"}},"\uC804\uCCB4 \uBCF4\uAE30")},React.createElement("div",{className:"grid gap-3"},D3.PROJECTS.slice(0,2).map(t=>React.createElement("div",{key:t.id,className:"rounded-xl border p-3.5 flex items-center gap-3 hover:shadow-card cursor-pointer",style:{borderColor:"#E4E4E7"},onClick:()=>window.__nav&&window.__nav.go("dashboard",{projectId:t.id})},React.createElement(A3.Placeholder,{height:56,gradient:["#EEF2FF","#ECFCCB"],className:"!w-16 !shrink-0 !p-0"}),React.createElement("div",{className:"flex-1 min-w-0"},React.createElement("div",{className:"text-[13px] font-bold truncate"},t.title),React.createElement("div",{className:"mt-1 flex items-center gap-2 text-[11px]",style:{color:"#475569"}},React.createElement("span",null,t.school),React.createElement("span",null,"\xB7"),React.createElement("span",null,t.filled,"/",t.total,"\uBA85")),React.createElement("div",{className:"mt-2 h-1 rounded-full",style:{background:"#F1F5F9"}},React.createElement("div",{className:"h-full rounded-full",style:{width:`${t.filled/t.total*100}%`,background:"#4F46E5"}}))),React.createElement("span",{className:"text-[11px] font-bold rounded-full px-2 py-0.5",style:{background:t.dday<=7?"#FFE4E6":"#F4F4F5",color:t.dday<=7?"#BE123C":"#475569"}},"D-",t.dday))))),React.createElement(A3.Section,{title:"\uC644\uB8CC\uD55C \uD504\uB85C\uC81D\uD2B8 \xB7 \uD3EC\uD2B8\uD3F4\uB9AC\uC624",className:o?"mt-5":""},React.createElement("div",{className:"grid gap-3"},[{t:"\uD559\uC0DD \uBA58\uD0C8 \uD5EC\uC2A4 \uCC57\uBD07",r:"\uD504\uB860\uD2B8\uC5D4\uB4DC",d:"2025.09\u201312",s:4.8},{t:"\uAD50\uB0B4 \uCE74\uD398 \uC904\uC11C\uAE30 IoT",r:"\uD504\uB860\uD2B8\uC5D4\uB4DC \uBCF4\uC870",d:"2025.06\u201308",s:4.6},{t:"\uAD11\uC6B4\uB300 \uB3D9\uC544\uB9AC \uB9E4\uCE6D",r:"\uD480\uC2A4\uD0DD",d:"2024.12\u20132025.02",s:4.5}].map((t,r)=>React.createElement("div",{key:r,className:"rounded-xl border p-3.5 flex items-center gap-3 cursor-pointer hover:shadow-card",style:{borderColor:"#E4E4E7"},onClick:()=>window.__nav&&window.__nav.go("portfolio")},React.createElement("div",{className:"rounded-lg w-10 h-10 flex items-center justify-center font-bold text-[12px]",style:{background:"#ECFCCB",color:"#3F6212"}},"0",r+1),React.createElement("div",{className:"flex-1 min-w-0"},React.createElement("div",{className:"text-[13px] font-bold truncate"},t.t),React.createElement("div",{className:"text-[11px] mt-0.5",style:{color:"#94A3B8"}},t.r," \xB7 ",t.d)),React.createElement("div",{className:"flex items-center gap-1 text-[12px] font-bold",style:{color:"#F59E0B"}},React.createElement(Lc3.Star,{size:12,fill:"#F59E0B"})," ",t.s),React.createElement(Lc3.Download,{size:14,style:{color:"#94A3B8"}})))))),React.createElement("div",{className:o?"mt-5 grid gap-5":"col-span-5 grid gap-5"},React.createElement(A3.Section,{title:"\uB0B4 \uAE30\uC220 \uC2A4\uD0DD",action:React.createElement(Lc3.Plus,{size:14,style:{color:"#94A3B8"}})},React.createElement("div",{className:"flex flex-wrap gap-1.5"},e.skills.map(t=>React.createElement(A3.Chip,{key:t,tone:"indigo"},t))),React.createElement("div",{className:"mt-3 rounded-xl p-3 flex items-start gap-2",style:{background:"#EEF2FF"}},React.createElement(Lc3.Lightbulb,{size:14,style:{color:"#4F46E5",marginTop:2}}),React.createElement("div",{className:"text-[12px]",style:{color:"#475569"}},React.createElement("b",{style:{color:"#4F46E5"}},"TypeScript")," \uCD94\uAC00\uD558\uBA74 \uB9E4\uCE6D \uC810\uC218\uAC00 \uD3C9\uADE0 ",React.createElement("b",null,"+9\uC810")," \uC62C\uB77C\uC694"))),React.createElement(A3.Section,{title:"\uAD00\uC2EC \uBD84\uC57C"},React.createElement("div",{className:"flex flex-wrap gap-1.5"},e.interests.map(t=>React.createElement(A3.Chip,{key:t,tone:"lime"},t)))),React.createElement(A3.Section,{title:"\uD65C\uB3D9 \uD1B5\uACC4"},React.createElement("div",{className:"grid gap-2.5"},[{l:"\uD568\uAED8\uD55C \uC0AC\uB78C",v:"14\uBA85",c:"#4F46E5"},{l:"\uBC1B\uC740 \uBCC4\uC810",v:"38\uD68C",c:"#F59E0B"},{l:"\uC791\uC131 \uB313\uAE00",v:"127\uAC1C",c:"#14B8A6"},{l:"\uC644\uB8CC Task",v:"64\uAC1C",c:"#84CC16"}].map(t=>React.createElement("div",{key:t.l,className:"flex items-center justify-between text-[13px]"},React.createElement("span",{style:{color:"#475569"}},t.l),React.createElement("span",{className:"font-bold tabular-nums",style:{color:t.c}},t.v))))),React.createElement(A3.Section,{title:"\uC124\uC815"},React.createElement("div",{className:"grid gap-1"},[{l:"\uC54C\uB9BC \uC124\uC815",i:React.createElement(Lc3.Bell,{size:14})},{l:"\uB514\uC2A4\uCF54\uB4DC \uC5F0\uB3D9",i:React.createElement(Lc3.MessageSquare,{size:14})},{l:"\uACC4\uC815 \uC124\uC815",i:React.createElement(Lc3.User,{size:14})},{l:"\uB3C4\uC6C0\uB9D0 / \uBB38\uC758",i:React.createElement(Lc3.Lightbulb,{size:14})}].map(t=>React.createElement("div",{key:t.l,className:"flex items-center gap-3 py-2.5 px-1 cursor-pointer"},React.createElement("div",{className:"rounded-lg w-7 h-7 flex items-center justify-center",style:{background:"#F4F4F5",color:"#475569"}},t.i),React.createElement("span",{className:"flex-1 text-[13px] font-medium"},t.l),React.createElement(Lc3.ChevronRight,{size:14,style:{color:"#94A3B8"}}))))))))}window.CampusScreens3={ApplicantModal,TaskModal,ScreenMyPage};const __TWEAKS_STYLE=`
+// Minimal inline lucide-style icons (stroke-based)
+const I = (paths, viewBox = '0 0 24 24') => ({
+  size = 16,
+  color,
+  fill = 'none',
+  strokeWidth = 2,
+  style,
+  className
+}) => /*#__PURE__*/React.createElement("svg", {
+  xmlns: "http://www.w3.org/2000/svg",
+  width: size,
+  height: size,
+  viewBox: viewBox,
+  fill: fill,
+  stroke: color || 'currentColor',
+  strokeWidth: strokeWidth,
+  strokeLinecap: "round",
+  strokeLinejoin: "round",
+  style: style,
+  className: className
+}, paths);
+const Lock = I(/*#__PURE__*/React.createElement(React.Fragment, null, /*#__PURE__*/React.createElement("rect", {
+  x: "3",
+  y: "11",
+  width: "18",
+  height: "11",
+  rx: "2"
+}), /*#__PURE__*/React.createElement("path", {
+  d: "M7 11V7a5 5 0 0 1 10 0v4"
+})));
+const Plus = I(/*#__PURE__*/React.createElement(React.Fragment, null, /*#__PURE__*/React.createElement("path", {
+  d: "M12 5v14"
+}), /*#__PURE__*/React.createElement("path", {
+  d: "M5 12h14"
+})));
+const MoreVertical = I(/*#__PURE__*/React.createElement(React.Fragment, null, /*#__PURE__*/React.createElement("circle", {
+  cx: "12",
+  cy: "5",
+  r: "1"
+}), /*#__PURE__*/React.createElement("circle", {
+  cx: "12",
+  cy: "12",
+  r: "1"
+}), /*#__PURE__*/React.createElement("circle", {
+  cx: "12",
+  cy: "19",
+  r: "1"
+})));
+const MoreHorizontal = I(/*#__PURE__*/React.createElement(React.Fragment, null, /*#__PURE__*/React.createElement("circle", {
+  cx: "5",
+  cy: "12",
+  r: "1"
+}), /*#__PURE__*/React.createElement("circle", {
+  cx: "12",
+  cy: "12",
+  r: "1"
+}), /*#__PURE__*/React.createElement("circle", {
+  cx: "19",
+  cy: "12",
+  r: "1"
+})));
+const Signal = I(/*#__PURE__*/React.createElement(React.Fragment, null, /*#__PURE__*/React.createElement("path", {
+  d: "M2 20h.01"
+}), /*#__PURE__*/React.createElement("path", {
+  d: "M7 20v-4"
+}), /*#__PURE__*/React.createElement("path", {
+  d: "M12 20v-8"
+}), /*#__PURE__*/React.createElement("path", {
+  d: "M17 20V8"
+}), /*#__PURE__*/React.createElement("path", {
+  d: "M22 4v16"
+})));
+const Wifi = I(/*#__PURE__*/React.createElement(React.Fragment, null, /*#__PURE__*/React.createElement("path", {
+  d: "M5 12.55a11 11 0 0 1 14 0"
+}), /*#__PURE__*/React.createElement("path", {
+  d: "M1.42 9a16 16 0 0 1 21.16 0"
+}), /*#__PURE__*/React.createElement("path", {
+  d: "M8.53 16.11a6 6 0 0 1 6.95 0"
+}), /*#__PURE__*/React.createElement("circle", {
+  cx: "12",
+  cy: "20",
+  r: "1"
+})));
+const BatteryFull = I(/*#__PURE__*/React.createElement(React.Fragment, null, /*#__PURE__*/React.createElement("rect", {
+  x: "2",
+  y: "7",
+  width: "16",
+  height: "10",
+  rx: "2"
+}), /*#__PURE__*/React.createElement("path", {
+  d: "M22 11v2"
+}), /*#__PURE__*/React.createElement("path", {
+  d: "M5 10v4"
+}), /*#__PURE__*/React.createElement("path", {
+  d: "M9 10v4"
+}), /*#__PURE__*/React.createElement("path", {
+  d: "M13 10v4"
+})));
+const Home = I(/*#__PURE__*/React.createElement(React.Fragment, null, /*#__PURE__*/React.createElement("path", {
+  d: "M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"
+}), /*#__PURE__*/React.createElement("path", {
+  d: "M9 22V12h6v10"
+})));
+const Search = I(/*#__PURE__*/React.createElement(React.Fragment, null, /*#__PURE__*/React.createElement("circle", {
+  cx: "11",
+  cy: "11",
+  r: "7"
+}), /*#__PURE__*/React.createElement("path", {
+  d: "M21 21l-4.3-4.3"
+})));
+const Bell = I(/*#__PURE__*/React.createElement(React.Fragment, null, /*#__PURE__*/React.createElement("path", {
+  d: "M6 8a6 6 0 0 1 12 0c0 7 3 9 3 9H3s3-2 3-9"
+}), /*#__PURE__*/React.createElement("path", {
+  d: "M10.3 21a1.94 1.94 0 0 0 3.4 0"
+})));
+const Folder = I(/*#__PURE__*/React.createElement(React.Fragment, null, /*#__PURE__*/React.createElement("path", {
+  d: "M3 7a2 2 0 0 1 2-2h4l2 2h8a2 2 0 0 1 2 2v9a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"
+})));
+const User = I(/*#__PURE__*/React.createElement(React.Fragment, null, /*#__PURE__*/React.createElement("path", {
+  d: "M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"
+}), /*#__PURE__*/React.createElement("circle", {
+  cx: "12",
+  cy: "7",
+  r: "4"
+})));
+const Compass = I(/*#__PURE__*/React.createElement(React.Fragment, null, /*#__PURE__*/React.createElement("circle", {
+  cx: "12",
+  cy: "12",
+  r: "10"
+}), /*#__PURE__*/React.createElement("polygon", {
+  points: "16.24 7.76 14.12 14.12 7.76 16.24 9.88 9.88 16.24 7.76"
+})));
+const Users = I(/*#__PURE__*/React.createElement(React.Fragment, null, /*#__PURE__*/React.createElement("path", {
+  d: "M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"
+}), /*#__PURE__*/React.createElement("circle", {
+  cx: "9",
+  cy: "7",
+  r: "4"
+}), /*#__PURE__*/React.createElement("path", {
+  d: "M23 21v-2a4 4 0 0 0-3-3.87"
+}), /*#__PURE__*/React.createElement("path", {
+  d: "M16 3.13a4 4 0 0 1 0 7.75"
+})));
+const ArrowRight = I(/*#__PURE__*/React.createElement(React.Fragment, null, /*#__PURE__*/React.createElement("path", {
+  d: "M5 12h14"
+}), /*#__PURE__*/React.createElement("path", {
+  d: "M12 5l7 7-7 7"
+})));
+const Sparkles = I(/*#__PURE__*/React.createElement(React.Fragment, null, /*#__PURE__*/React.createElement("path", {
+  d: "M12 3l1.9 5.1L19 10l-5.1 1.9L12 17l-1.9-5.1L5 10l5.1-1.9L12 3z"
+})));
+const Bookmark = I(/*#__PURE__*/React.createElement(React.Fragment, null, /*#__PURE__*/React.createElement("path", {
+  d: "M19 21l-7-5-7 5V5a2 2 0 0 1 2-2h10a2 2 0 0 1 2 2z"
+})));
+const Share2 = I(/*#__PURE__*/React.createElement(React.Fragment, null, /*#__PURE__*/React.createElement("circle", {
+  cx: "18",
+  cy: "5",
+  r: "3"
+}), /*#__PURE__*/React.createElement("circle", {
+  cx: "6",
+  cy: "12",
+  r: "3"
+}), /*#__PURE__*/React.createElement("circle", {
+  cx: "18",
+  cy: "19",
+  r: "3"
+}), /*#__PURE__*/React.createElement("line", {
+  x1: "8.59",
+  y1: "13.51",
+  x2: "15.42",
+  y2: "17.49"
+}), /*#__PURE__*/React.createElement("line", {
+  x1: "15.41",
+  y1: "6.51",
+  x2: "8.59",
+  y2: "10.49"
+})));
+const ChevronLeft = I(/*#__PURE__*/React.createElement(React.Fragment, null, /*#__PURE__*/React.createElement("polyline", {
+  points: "15 18 9 12 15 6"
+})));
+const ChevronRight = I(/*#__PURE__*/React.createElement(React.Fragment, null, /*#__PURE__*/React.createElement("polyline", {
+  points: "9 18 15 12 9 6"
+})));
+const ChevronDown = I(/*#__PURE__*/React.createElement(React.Fragment, null, /*#__PURE__*/React.createElement("polyline", {
+  points: "6 9 12 15 18 9"
+})));
+const ChevronUp = I(/*#__PURE__*/React.createElement(React.Fragment, null, /*#__PURE__*/React.createElement("polyline", {
+  points: "18 15 12 9 6 15"
+})));
+const Check = I(/*#__PURE__*/React.createElement(React.Fragment, null, /*#__PURE__*/React.createElement("polyline", {
+  points: "20 6 9 17 4 12"
+})));
+const X = I(/*#__PURE__*/React.createElement(React.Fragment, null, /*#__PURE__*/React.createElement("line", {
+  x1: "18",
+  y1: "6",
+  x2: "6",
+  y2: "18"
+}), /*#__PURE__*/React.createElement("line", {
+  x1: "6",
+  y1: "6",
+  x2: "18",
+  y2: "18"
+})));
+const MessageCircle = I(/*#__PURE__*/React.createElement(React.Fragment, null, /*#__PURE__*/React.createElement("path", {
+  d: "M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8z"
+})));
+const MessageSquare = I(/*#__PURE__*/React.createElement(React.Fragment, null, /*#__PURE__*/React.createElement("path", {
+  d: "M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"
+})));
+const Lightbulb = I(/*#__PURE__*/React.createElement(React.Fragment, null, /*#__PURE__*/React.createElement("path", {
+  d: "M9 18h6"
+}), /*#__PURE__*/React.createElement("path", {
+  d: "M10 22h4"
+}), /*#__PURE__*/React.createElement("path", {
+  d: "M12 2a7 7 0 0 0-4 12.7c.6.5 1 1.2 1 2v.3h6V17c0-.8.4-1.5 1-2a7 7 0 0 0-4-12.7z"
+})));
+const Layers = I(/*#__PURE__*/React.createElement(React.Fragment, null, /*#__PURE__*/React.createElement("polygon", {
+  points: "12 2 2 7 12 12 22 7 12 2"
+}), /*#__PURE__*/React.createElement("polyline", {
+  points: "2 17 12 22 22 17"
+}), /*#__PURE__*/React.createElement("polyline", {
+  points: "2 12 12 17 22 12"
+})));
+const Link = I(/*#__PURE__*/React.createElement(React.Fragment, null, /*#__PURE__*/React.createElement("path", {
+  d: "M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"
+}), /*#__PURE__*/React.createElement("path", {
+  d: "M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"
+})));
+const Grid3x3 = I(/*#__PURE__*/React.createElement(React.Fragment, null, /*#__PURE__*/React.createElement("rect", {
+  x: "3",
+  y: "3",
+  width: "18",
+  height: "18",
+  rx: "2"
+}), /*#__PURE__*/React.createElement("line", {
+  x1: "9",
+  y1: "3",
+  x2: "9",
+  y2: "21"
+}), /*#__PURE__*/React.createElement("line", {
+  x1: "15",
+  y1: "3",
+  x2: "15",
+  y2: "21"
+}), /*#__PURE__*/React.createElement("line", {
+  x1: "3",
+  y1: "9",
+  x2: "21",
+  y2: "9"
+}), /*#__PURE__*/React.createElement("line", {
+  x1: "3",
+  y1: "15",
+  x2: "21",
+  y2: "15"
+})));
+const Paperclip = I(/*#__PURE__*/React.createElement(React.Fragment, null, /*#__PURE__*/React.createElement("path", {
+  d: "M21 11l-9.2 9.2a5 5 0 0 1-7.07-7.07L13.93 4a3.5 3.5 0 0 1 4.95 4.95L9.76 18.07a2 2 0 1 1-2.83-2.83l8.49-8.49"
+})));
+const Calendar = I(/*#__PURE__*/React.createElement(React.Fragment, null, /*#__PURE__*/React.createElement("rect", {
+  x: "3",
+  y: "4",
+  width: "18",
+  height: "18",
+  rx: "2"
+}), /*#__PURE__*/React.createElement("line", {
+  x1: "16",
+  y1: "2",
+  x2: "16",
+  y2: "6"
+}), /*#__PURE__*/React.createElement("line", {
+  x1: "8",
+  y1: "2",
+  x2: "8",
+  y2: "6"
+}), /*#__PURE__*/React.createElement("line", {
+  x1: "3",
+  y1: "10",
+  x2: "21",
+  y2: "10"
+})));
+const Star = I(/*#__PURE__*/React.createElement(React.Fragment, null, /*#__PURE__*/React.createElement("polygon", {
+  points: "12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"
+})));
+const Code = I(/*#__PURE__*/React.createElement(React.Fragment, null, /*#__PURE__*/React.createElement("polyline", {
+  points: "16 18 22 12 16 6"
+}), /*#__PURE__*/React.createElement("polyline", {
+  points: "8 6 2 12 8 18"
+})));
+const Globe = I(/*#__PURE__*/React.createElement(React.Fragment, null, /*#__PURE__*/React.createElement("circle", {
+  cx: "12",
+  cy: "12",
+  r: "10"
+}), /*#__PURE__*/React.createElement("line", {
+  x1: "2",
+  y1: "12",
+  x2: "22",
+  y2: "12"
+}), /*#__PURE__*/React.createElement("path", {
+  d: "M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"
+})));
+const Github = I(/*#__PURE__*/React.createElement(React.Fragment, null, /*#__PURE__*/React.createElement("path", {
+  d: "M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"
+})));
+const Figma = I(/*#__PURE__*/React.createElement(React.Fragment, null, /*#__PURE__*/React.createElement("path", {
+  d: "M5 5.5A3.5 3.5 0 0 1 8.5 2H12v7H8.5A3.5 3.5 0 0 1 5 5.5z"
+}), /*#__PURE__*/React.createElement("path", {
+  d: "M12 2h3.5a3.5 3.5 0 1 1 0 7H12V2z"
+}), /*#__PURE__*/React.createElement("path", {
+  d: "M12 12.5a3.5 3.5 0 1 1 7 0 3.5 3.5 0 1 1-7 0z"
+}), /*#__PURE__*/React.createElement("path", {
+  d: "M5 19.5A3.5 3.5 0 0 1 8.5 16H12v3.5a3.5 3.5 0 1 1-7 0z"
+}), /*#__PURE__*/React.createElement("path", {
+  d: "M5 12.5A3.5 3.5 0 0 1 8.5 9H12v7H8.5A3.5 3.5 0 0 1 5 12.5z"
+})));
+const Download = I(/*#__PURE__*/React.createElement(React.Fragment, null, /*#__PURE__*/React.createElement("path", {
+  d: "M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"
+}), /*#__PURE__*/React.createElement("polyline", {
+  points: "7 10 12 15 17 10"
+}), /*#__PURE__*/React.createElement("line", {
+  x1: "12",
+  y1: "15",
+  x2: "12",
+  y2: "3"
+})));
+const Settings = I(/*#__PURE__*/React.createElement(React.Fragment, null, /*#__PURE__*/React.createElement("circle", {
+  cx: "12",
+  cy: "12",
+  r: "3"
+}), /*#__PURE__*/React.createElement("path", {
+  d: "M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1-2.83 2.83l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 1 1-4 0v-.09a1.65 1.65 0 0 0-1-1.51 1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 1 1-2.83-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 1 1 0-4h.09a1.65 1.65 0 0 0 1.51-1 1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 1 1 2.83-2.83l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1-1.51V3a2 2 0 1 1 4 0v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 1 1 2.83 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 1 1 0 4h-.09a1.65 1.65 0 0 0-1.51 1z"
+})));
+const Smartphone = I(/*#__PURE__*/React.createElement(React.Fragment, null, /*#__PURE__*/React.createElement("rect", {
+  x: "5",
+  y: "2",
+  width: "14",
+  height: "20",
+  rx: "2"
+}), /*#__PURE__*/React.createElement("line", {
+  x1: "12",
+  y1: "18",
+  x2: "12.01",
+  y2: "18"
+})));
+const Monitor = I(/*#__PURE__*/React.createElement(React.Fragment, null, /*#__PURE__*/React.createElement("rect", {
+  x: "2",
+  y: "3",
+  width: "20",
+  height: "14",
+  rx: "2"
+}), /*#__PURE__*/React.createElement("line", {
+  x1: "8",
+  y1: "21",
+  x2: "16",
+  y2: "21"
+}), /*#__PURE__*/React.createElement("line", {
+  x1: "12",
+  y1: "17",
+  x2: "12",
+  y2: "21"
+})));
+window.lucideReact = {
+  Lock,
+  Plus,
+  MoreVertical,
+  MoreHorizontal,
+  Signal,
+  Wifi,
+  BatteryFull,
+  Home,
+  Search,
+  Bell,
+  Folder,
+  User,
+  Compass,
+  Users,
+  ArrowRight,
+  Sparkles,
+  Bookmark,
+  Share2,
+  ChevronLeft,
+  ChevronRight,
+  ChevronDown,
+  ChevronUp,
+  Check,
+  X,
+  MessageCircle,
+  MessageSquare,
+  Lightbulb,
+  Layers,
+  Link,
+  Grid3x3,
+  Paperclip,
+  Calendar,
+  Star,
+  Code,
+  Globe,
+  Github,
+  Figma,
+  Download,
+  Settings,
+  Smartphone,
+  Monitor
+};
+;
+(function () {
+  // Major colors (전공 컬러 코딩)
+  const MAJOR = {
+    '컴공/SW': {
+      key: 'cs',
+      bg: '#DBEAFE',
+      soft: '#EFF6FF',
+      text: '#1D4ED8',
+      ring: '#3B82F6'
+    },
+    '디자인': {
+      key: 'design',
+      bg: '#FCE7F3',
+      soft: '#FDF2F8',
+      text: '#BE185D',
+      ring: '#EC4899'
+    },
+    '경영/기획': {
+      key: 'biz',
+      bg: '#EDE9FE',
+      soft: '#F5F3FF',
+      text: '#6D28D9',
+      ring: '#8B5CF6'
+    },
+    '미디어/홍보': {
+      key: 'media',
+      bg: '#FFEDD5',
+      soft: '#FFF7ED',
+      text: '#C2410C',
+      ring: '#F97316'
+    },
+    '통계/데이터': {
+      key: 'data',
+      bg: '#CCFBF1',
+      soft: '#F0FDFA',
+      text: '#0F766E',
+      ring: '#14B8A6'
+    }
+  };
+  const majorOf = dept => {
+    if (/디자인|산업디자인|시각/.test(dept)) return '디자인';
+    if (/컴퓨터|소프트|SW/.test(dept)) return '컴공/SW';
+    if (/경영|기획/.test(dept)) return '경영/기획';
+    if (/미디어|커뮤니|광고|홍보/.test(dept)) return '미디어/홍보';
+    if (/통계|데이터/.test(dept)) return '통계/데이터';
+    return '경영/기획';
+  };
+
+  // 8 applicants
+  const APPLICANTS = [{
+    id: 1,
+    name: '최도윤',
+    dept: '컴퓨터공학',
+    year: 3,
+    school: '한양대',
+    skills: ['React', 'Spring', 'MySQL', 'Git'],
+    score: 91,
+    role: '프론트엔드 개발자',
+    intro: '풀스택 가능, 3개 사이드 프로젝트 운영',
+    portfolio: 'github.com/dy-choi',
+    breakdown: {
+      role: 30,
+      skill: 24,
+      period: 19,
+      interest: 13,
+      folio: 5
+    }
+  }, {
+    id: 2,
+    name: '이수민',
+    dept: '시각디자인',
+    year: 2,
+    school: '홍익대',
+    skills: ['Figma', 'Adobe XD', 'Illustrator', 'Notion'],
+    score: 87,
+    role: '프로덕트 디자이너',
+    intro: '브랜드·앱 인터페이스 모두 OK',
+    portfolio: 'behance.net/sumin',
+    breakdown: {
+      role: 28,
+      skill: 22,
+      period: 18,
+      interest: 12,
+      folio: 7
+    }
+  }, {
+    id: 3,
+    name: '박서연',
+    dept: '경영학',
+    year: 3,
+    school: '연세대',
+    skills: ['시장조사', 'PPT', 'Notion', 'Excel'],
+    score: 82,
+    role: 'PM/기획자',
+    intro: '학생 창업동아리 부회장',
+    portfolio: 'notion.so/parkseo',
+    breakdown: {
+      role: 27,
+      skill: 20,
+      period: 17,
+      interest: 13,
+      folio: 5
+    }
+  }, {
+    id: 4,
+    name: '정현우',
+    dept: '통계학',
+    year: 4,
+    school: '고려대',
+    skills: ['R', 'Python', 'SPSS', 'SQL'],
+    score: 79,
+    role: '데이터 분석가',
+    intro: '학회 데이터 동아리 회장',
+    portfolio: 'kaggle.com/hwjung',
+    breakdown: {
+      role: 26,
+      skill: 22,
+      period: 16,
+      interest: 10,
+      folio: 5
+    }
+  }, {
+    id: 5,
+    name: '한지우',
+    dept: '미디어커뮤니케이션',
+    year: 2,
+    school: '중앙대',
+    skills: ['Premiere', 'After Effects', 'Photoshop'],
+    score: 74,
+    role: '콘텐츠 마케터',
+    intro: '유튜브 영상 편집 2년차',
+    portfolio: 'youtube.com/jiwoo',
+    breakdown: {
+      role: 24,
+      skill: 19,
+      period: 15,
+      interest: 11,
+      folio: 5
+    }
+  }, {
+    id: 6,
+    name: '강민서',
+    dept: '데이터사이언스',
+    year: 2,
+    school: '성균관대',
+    skills: ['Python', 'SQL', 'Tableau'],
+    score: 71,
+    role: '데이터 분석가',
+    intro: 'Tableau 자격증 보유',
+    portfolio: 'github.com/mskang',
+    breakdown: {
+      role: 22,
+      skill: 18,
+      period: 16,
+      interest: 11,
+      folio: 4
+    }
+  }, {
+    id: 7,
+    name: '윤하늘',
+    dept: '산업디자인',
+    year: 3,
+    school: '국민대',
+    skills: ['UX 리서치', '프로토타이핑', 'Figma'],
+    score: 68,
+    role: 'UX 디자이너',
+    intro: 'IDEO 인턴 경험',
+    portfolio: 'haneul.design',
+    breakdown: {
+      role: 23,
+      skill: 17,
+      period: 14,
+      interest: 10,
+      folio: 4
+    }
+  }, {
+    id: 8,
+    name: '임채원',
+    dept: '광고홍보',
+    year: 3,
+    school: '동국대',
+    skills: ['콘텐츠 기획', '카피', 'SNS 운영'],
+    score: 63,
+    role: '콘텐츠 마케터',
+    intro: '인스타 9만 팔로워 운영',
+    portfolio: 'instagram.com/im',
+    breakdown: {
+      role: 20,
+      skill: 16,
+      period: 14,
+      interest: 9,
+      folio: 4
+    }
+  }];
+
+  // 6 projects
+  const PROJECTS = [{
+    id: 1,
+    title: '캠퍼스 분실물 찾아주는 앱',
+    school: '한양대',
+    filled: 3,
+    total: 5,
+    dday: 12,
+    category: '교내 서비스',
+    match: 87,
+    leader: '김민준',
+    period: '2개월',
+    meeting: '온라인 + 한양대',
+    desc: '한양대 학생 5,000명 대상 분실물 매칭 서비스. 사진 인식 기반.'
+  }, {
+    id: 2,
+    title: '교내 카페 줄서기 IoT 솔루션',
+    school: '성균관대',
+    filled: 2,
+    total: 4,
+    dday: 7,
+    category: 'IoT/하드웨어',
+    match: 72,
+    leader: '이은호',
+    period: '1학기',
+    meeting: '오프라인',
+    desc: '카페 줄서기 디바이스 + 앱 연동. 라즈베리파이 사용 예정.'
+  }, {
+    id: 3,
+    title: 'AI 학습 도우미 챗봇 (졸업작품)',
+    school: '고려대',
+    filled: 4,
+    total: 5,
+    dday: 21,
+    category: 'AI/ML',
+    match: 68,
+    leader: '서지훈',
+    period: '1학기',
+    meeting: '온라인',
+    desc: 'GPT 기반 강의 노트 정리·문제 생성. 졸업 작품으로 진행.'
+  }, {
+    id: 4,
+    title: '지역 소상공인 SNS 마케팅 캠페인',
+    school: '동국대',
+    filled: 1,
+    total: 4,
+    dday: 4,
+    category: '마케팅',
+    match: 0,
+    leader: '박지민',
+    period: '1개월',
+    meeting: '오프라인',
+    desc: '필동 일대 소상공인 5팀과 협업. 인스타 콘텐츠 운영.'
+  }, {
+    id: 5,
+    title: '학생 멘탈 헬스 케어 플랫폼',
+    school: '연세대',
+    filled: 3,
+    total: 6,
+    dday: 30,
+    category: '헬스케어',
+    match: 0,
+    leader: '안서영',
+    period: '2-3개월',
+    meeting: '하이브리드',
+    desc: '대학생 우울감 자가 진단 + 또래 매칭 챗봇.'
+  }, {
+    id: 6,
+    title: '전과생을 위한 과목 추천 서비스',
+    school: '중앙대',
+    filled: 2,
+    total: 3,
+    dday: 9,
+    category: '교내 서비스',
+    match: 0,
+    leader: '윤하림',
+    period: '1개월',
+    meeting: '온라인',
+    desc: '전과생 데이터 기반 과목 추천. 학사 시스템 연동 X.'
+  }];
+  const LEADER = {
+    name: '김민준',
+    dept: '컴퓨터공학',
+    year: 3,
+    school: '한양대',
+    priorProjects: 2
+  };
+  const ROLES_NEEDED = [{
+    role: '프론트엔드 개발자',
+    count: 1,
+    skills: ['React', 'TypeScript', 'Tailwind'],
+    pref: '컴포넌트 설계 경험'
+  }, {
+    role: '백엔드 개발자',
+    count: 1,
+    skills: ['Node.js', 'PostgreSQL', 'REST'],
+    pref: 'API 설계 가능자'
+  }, {
+    role: '프로덕트 디자이너',
+    count: 1,
+    skills: ['Figma', 'Prototype', 'UX'],
+    pref: '모바일 앱 경험 우대'
+  }, {
+    role: 'PM/기획자',
+    count: 1,
+    skills: ['Notion', '와이어프레임', '리서치'],
+    pref: '주 1회 미팅 가능'
+  }, {
+    role: '콘텐츠 마케터',
+    count: 1,
+    skills: ['카피', 'SNS', '콘텐츠 기획'],
+    pref: '인스타 운영 경험'
+  }];
+  const TASKS = {
+    todo: [{
+      id: 't1',
+      title: '매칭 알고리즘 가중치 검증',
+      desc: '5명 표본 테스트 후 보정값 결정',
+      owner: '정현우',
+      due: 'D-5',
+      major: '통계/데이터',
+      files: 2,
+      comments: 4,
+      tag: 'Python'
+    }, {
+      id: 't2',
+      title: '랜딩 페이지 와이어프레임',
+      desc: '히어로 섹션 3안',
+      owner: '윤하늘',
+      due: 'D-3',
+      major: '디자인',
+      files: 0,
+      comments: 1,
+      tag: 'Figma'
+    }, {
+      id: 't3',
+      title: '인터뷰 스크립트 작성',
+      desc: '학생 5명 대상',
+      owner: '박서연',
+      due: 'D-7',
+      major: '경영/기획',
+      files: 1,
+      comments: 0
+    }, {
+      id: 't4',
+      title: '디스코드 채널 정리',
+      desc: '카테고리별 분리',
+      owner: '김민준',
+      due: 'D-2',
+      major: '컴공/SW',
+      files: 0,
+      comments: 0
+    }, {
+      id: 't5',
+      title: '발표 자료 톤앤매너 정의',
+      desc: '컬러/폰트 가이드',
+      owner: '이수민',
+      due: 'D-6',
+      major: '디자인',
+      files: 3,
+      comments: 2
+    }],
+    doing: [{
+      id: 'd1',
+      title: '로고 시안 v2',
+      desc: '3개 방향 → 1개 추리기',
+      owner: '이수민',
+      due: '내일',
+      urgent: true,
+      major: '디자인',
+      files: 5,
+      comments: 7,
+      tag: 'Figma'
+    }, {
+      id: 'd2',
+      title: '발표 영상 편집',
+      desc: '2분 30초 컷',
+      owner: '한지우',
+      due: 'D-4',
+      major: '미디어/홍보',
+      files: 12,
+      comments: 3,
+      tag: 'Premiere'
+    }, {
+      id: 'd3',
+      title: '로그인 API 구현',
+      desc: 'JWT + 카카오 OAuth',
+      owner: '정현우',
+      due: 'D-2',
+      urgent: true,
+      major: '컴공/SW',
+      files: 0,
+      comments: 9,
+      tag: 'Spring'
+    }],
+    done: [{
+      id: 'D1',
+      title: '사용자 인터뷰 5명',
+      desc: '인사이트 정리 완료',
+      owner: '박서연',
+      due: '완료',
+      major: '경영/기획',
+      files: 4,
+      comments: 8
+    }, {
+      id: 'D2',
+      title: '경쟁사 분석 리서치',
+      desc: '11개 서비스 정리',
+      owner: '강민서',
+      due: '완료',
+      major: '통계/데이터',
+      files: 2,
+      comments: 3
+    }, {
+      id: 'D3',
+      title: '브랜드 컬러 확정',
+      desc: 'Indigo + Lime',
+      owner: '이수민',
+      due: '완료',
+      major: '디자인',
+      files: 1,
+      comments: 5
+    }, {
+      id: 'D4',
+      title: '기술 스택 결정',
+      desc: 'React/Spring 합의',
+      owner: '김민준',
+      due: '완료',
+      major: '컴공/SW',
+      files: 0,
+      comments: 4
+    }]
+  };
+  const FEATURES = [{
+    id: 'F01',
+    title: '역할 기반 매칭',
+    desc: '5개 항목 100점 만점으로 적합도를 계산해요.'
+  }, {
+    id: 'F02',
+    title: '지원자 비교',
+    desc: '최대 3명을 나란히 비교해서 팀을 짭니다.'
+  }, {
+    id: 'F03',
+    title: '전공 컬러 코딩',
+    desc: '전공별 색으로 한눈에 다양성을 봅니다.'
+  }, {
+    id: 'F04',
+    title: '협업 보드',
+    desc: '칸반 + 멤버 + 자료 + 일정 전부 한 곳에.'
+  }, {
+    id: 'F05',
+    title: '자동 포트폴리오',
+    desc: '프로젝트가 끝나면 PDF 한 장이 자동 생성.'
+  }, {
+    id: 'F06',
+    title: '디스코드 연동',
+    desc: 'Task 알림이 디스코드 채널로 흘러갑니다.'
+  }];
+  const FLOW = [{
+    n: 1,
+    title: '가입',
+    desc: '학교 메일로 인증'
+  }, {
+    n: 2,
+    title: '프로필 작성',
+    desc: '전공·기술·관심사'
+  }, {
+    n: 3,
+    title: '프로젝트 탐색',
+    desc: '필터로 범위 좁히기'
+  }, {
+    n: 4,
+    title: '매칭 점수 확인',
+    desc: '지원 전 미리보기'
+  }, {
+    n: 5,
+    title: '협업 진행',
+    desc: '칸반·일정·자료'
+  }, {
+    n: 6,
+    title: '포트폴리오',
+    desc: '자동 PDF 생성'
+  }];
+  const NOTIFS_TODAY = [{
+    type: 'success',
+    icon: '🎯',
+    color: '#84CC16',
+    title: '매칭 성공',
+    body: '김민준 팀장이 [캠퍼스 분실물 앱] 팀에 당신을 추가했어요',
+    time: '2분 전',
+    cta: '팀 들어가기'
+  }, {
+    type: 'apply',
+    icon: '📥',
+    color: '#4F46E5',
+    title: '새 지원자',
+    body: '이수민(시각디자인 2)이 [멘탈 헬스 챗봇]에 지원했어요. 매칭 87점',
+    time: '14분 전',
+    cta: '지원자 보기'
+  }, {
+    type: 'due',
+    icon: '⏰',
+    color: '#F59E0B',
+    title: '마감 임박',
+    body: '[로고 시안 v2] Task가 내일 마감이에요',
+    time: '1시간 전',
+    cta: 'Task 열기'
+  }];
+  const NOTIFS_WEEK = [{
+    type: 'folio',
+    icon: '🎉',
+    color: '#84CC16',
+    title: '포트폴리오 생성',
+    body: '[교내 카페 줄서기] 포트폴리오 PDF가 준비됐어요',
+    time: '어제',
+    cta: 'PDF 보기'
+  }, {
+    type: 'join',
+    icon: '👋',
+    color: '#4F46E5',
+    title: '팀원 합류',
+    body: '윤하늘님이 [전과생 추천 서비스] 팀에 합류했어요',
+    time: '2일 전',
+    cta: '팀 보기'
+  }, {
+    type: 'comment',
+    icon: '💬',
+    color: '#475569',
+    title: '새 댓글',
+    body: '박서연님이 [인터뷰 스크립트]에 댓글을 남겼어요',
+    time: '3일 전',
+    cta: '댓글 보기'
+  }, {
+    type: 'review',
+    icon: '⭐',
+    color: '#F59E0B',
+    title: '평가 요청',
+    body: '함께한 팀원 4명에게 별점을 남겨주세요',
+    time: '4일 전',
+    cta: '평가하기'
+  }, {
+    type: 'apply',
+    icon: '📥',
+    color: '#4F46E5',
+    title: '새 지원자',
+    body: '강민서(데이터 2)가 [캠퍼스 분실물]에 지원했어요. 매칭 71점',
+    time: '5일 전',
+    cta: '지원자 보기'
+  }];
+  window.CampusData = {
+    MAJOR,
+    majorOf,
+    APPLICANTS,
+    PROJECTS,
+    LEADER,
+    ROLES_NEEDED,
+    TASKS,
+    FEATURES,
+    FLOW,
+    NOTIFS_TODAY,
+    NOTIFS_WEEK
+  };
+})();
+// Reusable atoms — donut, bar, chip, browser/phone frames
+const {
+  useState,
+  useEffect,
+  useRef
+} = React;
+const L = window.lucideReact || {};
+const {
+  MAJOR,
+  majorOf
+} = window.CampusData;
+
+// === Match score gradient color ===
+function scoreColor(score) {
+  if (score >= 85) return {
+    stroke: 'url(#gradHi)',
+    text: '#4F46E5',
+    label: 'EXCELLENT',
+    labelBg: '#EEF2FF',
+    labelText: '#4F46E5'
+  };
+  if (score >= 70) return {
+    stroke: '#22C55E',
+    text: '#15803D',
+    label: 'GOOD',
+    labelBg: '#DCFCE7',
+    labelText: '#15803D'
+  };
+  if (score >= 50) return {
+    stroke: '#F59E0B',
+    text: '#B45309',
+    label: 'FAIR',
+    labelBg: '#FEF3C7',
+    labelText: '#B45309'
+  };
+  return {
+    stroke: '#F43F5E',
+    text: '#BE123C',
+    label: 'LOW',
+    labelBg: '#FFE4E6',
+    labelText: '#BE123C'
+  };
+}
+
+// === Animated count-up ===
+function useCountUp(target, durationMs = 500, delayMs = 40, key = 0) {
+  const [val, setVal] = useState(0);
+  useEffect(() => {
+    setVal(0);
+    let start = null;
+    let raf;
+    const t = setTimeout(() => {
+      const tick = ts => {
+        if (start == null) start = ts;
+        const p = Math.min(1, (ts - start) / durationMs);
+        const eased = 1 - Math.pow(1 - p, 3);
+        setVal(Math.round(target * eased));
+        if (p < 1) raf = requestAnimationFrame(tick);
+      };
+      raf = requestAnimationFrame(tick);
+    }, Math.min(delayMs, 80));
+    return () => {
+      clearTimeout(t);
+      if (raf) cancelAnimationFrame(raf);
+    };
+  }, [target, durationMs, delayMs, key]);
+  return val;
+}
+
+// === Donut score chart ===
+function DonutScore({
+  score,
+  size = 120,
+  stroke = 10,
+  animKey = 0,
+  showLabel = true,
+  delay = 40
+}) {
+  const r = (size - stroke) / 2;
+  const c = 2 * Math.PI * r;
+  const v = useCountUp(score, 500, delay, animKey);
+  const col = scoreColor(score);
+  const offset = c - c * v / 100;
+  return /*#__PURE__*/React.createElement("div", {
+    className: "relative inline-block",
+    style: {
+      width: size,
+      height: size
+    }
+  }, /*#__PURE__*/React.createElement("svg", {
+    width: size,
+    height: size
+  }, /*#__PURE__*/React.createElement("defs", null, /*#__PURE__*/React.createElement("linearGradient", {
+    id: "gradHi",
+    x1: "0",
+    y1: "0",
+    x2: "1",
+    y2: "1"
+  }, /*#__PURE__*/React.createElement("stop", {
+    offset: "0%",
+    stopColor: "#84CC16"
+  }), /*#__PURE__*/React.createElement("stop", {
+    offset: "100%",
+    stopColor: "#4F46E5"
+  }))), /*#__PURE__*/React.createElement("circle", {
+    cx: size / 2,
+    cy: size / 2,
+    r: r,
+    stroke: "#F1F5F9",
+    strokeWidth: stroke,
+    fill: "none"
+  }), /*#__PURE__*/React.createElement("circle", {
+    cx: size / 2,
+    cy: size / 2,
+    r: r,
+    stroke: col.stroke,
+    strokeWidth: stroke,
+    fill: "none",
+    strokeDasharray: c,
+    strokeDashoffset: offset,
+    strokeLinecap: "round",
+    style: {
+      transition: 'stroke-dashoffset 0.5s ease-out',
+      transform: 'rotate(-90deg)',
+      transformOrigin: 'center'
+    }
+  })), /*#__PURE__*/React.createElement("div", {
+    className: "absolute inset-0 flex flex-col items-center justify-center"
+  }, /*#__PURE__*/React.createElement("div", {
+    className: "font-bold tabular-nums",
+    style: {
+      fontSize: size * 0.32,
+      color: col.text,
+      letterSpacing: '-0.02em'
+    }
+  }, v), showLabel && /*#__PURE__*/React.createElement("div", {
+    className: "text-[10px] font-semibold tracking-wide",
+    style: {
+      color: '#94A3B8'
+    }
+  }, "점")));
+}
+
+// === Score breakdown bars ===
+const BREAKDOWN_LABELS = [{
+  key: 'role',
+  label: '역할',
+  max: 30,
+  color: '#4F46E5'
+}, {
+  key: 'skill',
+  label: '기술',
+  max: 25,
+  color: '#22C55E'
+}, {
+  key: 'period',
+  label: '기간',
+  max: 20,
+  color: '#F59E0B'
+}, {
+  key: 'interest',
+  label: '관심',
+  max: 15,
+  color: '#EC4899'
+}, {
+  key: 'folio',
+  label: '포폴',
+  max: 10,
+  color: '#14B8A6'
+}];
+function ScoreBars({
+  b,
+  animKey = 0,
+  dense = false
+}) {
+  return /*#__PURE__*/React.createElement("div", {
+    className: `grid ${dense ? 'gap-1.5' : 'gap-2'}`
+  }, BREAKDOWN_LABELS.map((row, i) => {
+    const v = b[row.key] || 0;
+    const pct = v / row.max * 100;
+    return /*#__PURE__*/React.createElement("div", {
+      key: row.key,
+      className: "flex items-center gap-2.5 text-[11px]",
+      style: {
+        color: '#475569'
+      }
+    }, /*#__PURE__*/React.createElement("div", {
+      className: `${dense ? 'w-7' : 'w-8'} font-medium`
+    }, row.label), /*#__PURE__*/React.createElement("div", {
+      className: "flex-1 h-1.5 rounded-full",
+      style: {
+        background: '#F1F5F9'
+      }
+    }, /*#__PURE__*/React.createElement("div", {
+      key: `${animKey}-${i}`,
+      className: "h-full rounded-full anim-bar",
+      style: {
+        width: `${pct}%`,
+        background: row.color,
+        animationDelay: `${300 + i * 80}ms`
+      }
+    })), /*#__PURE__*/React.createElement("div", {
+      className: "tabular-nums font-semibold w-9 text-right",
+      style: {
+        color: '#0F172A'
+      }
+    }, v, "/", row.max));
+  }));
+}
+
+// === Major chip ===
+function MajorChip({
+  dept,
+  year,
+  size = 'sm'
+}) {
+  const m = MAJOR[majorOf(dept)];
+  const cls = size === 'xs' ? 'text-[11px] px-2 py-0.5' : 'text-xs px-2.5 py-1';
+  return /*#__PURE__*/React.createElement("span", {
+    className: `inline-flex items-center gap-1 rounded-full font-semibold ${cls}`,
+    style: {
+      background: m.bg,
+      color: m.text
+    }
+  }, dept, year ? ` ${year}` : '');
+}
+
+// === Generic chip ===
+function Chip({
+  children,
+  tone = 'gray',
+  className = ''
+}) {
+  const tones = {
+    gray: {
+      bg: '#F4F4F5',
+      text: '#475569'
+    },
+    indigo: {
+      bg: '#EEF2FF',
+      text: '#4F46E5'
+    },
+    lime: {
+      bg: '#ECFCCB',
+      text: '#3F6212'
+    },
+    amber: {
+      bg: '#FEF3C7',
+      text: '#B45309'
+    },
+    rose: {
+      bg: '#FFE4E6',
+      text: '#BE123C'
+    }
+  };
+  const t = tones[tone] || tones.gray;
+  return /*#__PURE__*/React.createElement("span", {
+    className: `inline-flex items-center gap-1 text-[11px] font-semibold rounded-full px-2.5 py-1 ${className}`,
+    style: {
+      background: t.bg,
+      color: t.text
+    }
+  }, children);
+}
+
+// === Avatar ===
+function Avatar({
+  name,
+  dept,
+  size = 32,
+  ring = true
+}) {
+  const initial = (name || '?').slice(0, 1);
+  const m = dept ? MAJOR[majorOf(dept)] : null;
+  const bg = m ? m.bg : '#E4E4E7';
+  const text = m ? m.text : '#475569';
+  const ringColor = m ? m.ring : '#E4E4E7';
+  return /*#__PURE__*/React.createElement("div", {
+    className: "inline-flex items-center justify-center font-bold rounded-full shrink-0",
+    style: {
+      width: size,
+      height: size,
+      background: bg,
+      color: text,
+      fontSize: size * 0.42,
+      boxShadow: ring ? `0 0 0 2px white, 0 0 0 ${size > 40 ? 3 : 2}px ${ringColor}` : undefined
+    }
+  }, initial);
+}
+
+// === Browser frame ===
+function BrowserFrame({
+  url = 'campus-link.kr/',
+  children,
+  height
+}) {
+  return /*#__PURE__*/React.createElement("div", {
+    className: "rounded-2xl overflow-hidden shadow-card border",
+    style: {
+      borderColor: '#E4E4E7',
+      background: '#FFFFFF'
+    }
+  }, /*#__PURE__*/React.createElement("div", {
+    className: "flex items-center gap-3 px-4 py-3 border-b",
+    style: {
+      background: '#F4F4F5',
+      borderColor: '#E4E4E7'
+    }
+  }, /*#__PURE__*/React.createElement("div", {
+    className: "flex gap-1.5"
+  }, /*#__PURE__*/React.createElement("span", {
+    className: "w-3 h-3 rounded-full",
+    style: {
+      background: '#FB7185'
+    }
+  }), /*#__PURE__*/React.createElement("span", {
+    className: "w-3 h-3 rounded-full",
+    style: {
+      background: '#FBBF24'
+    }
+  }), /*#__PURE__*/React.createElement("span", {
+    className: "w-3 h-3 rounded-full",
+    style: {
+      background: '#34D399'
+    }
+  })), /*#__PURE__*/React.createElement("div", {
+    className: "flex-1 mx-2 px-3 py-1 rounded-md text-xs flex items-center gap-2",
+    style: {
+      background: '#FFFFFF',
+      border: '1px solid #E4E4E7',
+      color: '#94A3B8'
+    }
+  }, /*#__PURE__*/React.createElement(L.Lock, {
+    size: 11
+  }), /*#__PURE__*/React.createElement("span", {
+    style: {
+      color: '#475569'
+    }
+  }, "campus-link.kr"), /*#__PURE__*/React.createElement("span", null, "/", url.replace('campus-link.kr/', ''))), /*#__PURE__*/React.createElement("div", {
+    className: "flex gap-2 text-zinc-400"
+  }, /*#__PURE__*/React.createElement(L.Plus, {
+    size: 14
+  }), /*#__PURE__*/React.createElement(L.MoreVertical, {
+    size: 14
+  }))), /*#__PURE__*/React.createElement("div", {
+    className: "overflow-hidden",
+    style: {
+      height: height || 720,
+      background: '#FAFAFA'
+    }
+  }, /*#__PURE__*/React.createElement("div", {
+    className: "h-full overflow-y-auto scrollbar-hide"
+  }, children)));
+}
+
+// === Phone frame ===
+function PhoneFrame({
+  children,
+  height = 720
+}) {
+  return /*#__PURE__*/React.createElement("div", {
+    className: "relative mx-auto",
+    style: {
+      width: 360
+    }
+  }, /*#__PURE__*/React.createElement("div", {
+    className: "rounded-[44px] p-[10px] shadow-cardHov",
+    style: {
+      background: '#0F172A'
+    }
+  }, /*#__PURE__*/React.createElement("div", {
+    className: "rounded-[36px] overflow-hidden relative",
+    style: {
+      background: '#FAFAFA',
+      height
+    }
+  }, /*#__PURE__*/React.createElement("div", {
+    className: "absolute top-0 left-0 right-0 h-9 flex items-center justify-between px-6 z-30 text-[12px] font-semibold",
+    style: {
+      color: '#0F172A'
+    }
+  }, /*#__PURE__*/React.createElement("span", null, "9:41"), /*#__PURE__*/React.createElement("div", {
+    className: "flex items-center gap-1"
+  }, /*#__PURE__*/React.createElement(L.Signal, {
+    size: 13
+  }), /*#__PURE__*/React.createElement(L.Wifi, {
+    size: 13
+  }), /*#__PURE__*/React.createElement(L.BatteryFull, {
+    size: 15
+  }))), /*#__PURE__*/React.createElement("div", {
+    className: "absolute left-1/2 -translate-x-1/2 top-2 z-40 rounded-full",
+    style: {
+      width: 110,
+      height: 28,
+      background: '#0F172A'
+    }
+  }), /*#__PURE__*/React.createElement("div", {
+    className: "h-full overflow-y-auto scrollbar-hide pt-9"
+  }, children))));
+}
+
+// === Mobile bottom tab bar ===
+function MobileTabBar({
+  active = 'notif'
+}) {
+  const items = [{
+    k: 'home',
+    label: '홈',
+    icon: L.Home
+  }, {
+    k: 'explore',
+    label: '탐색',
+    icon: L.Search
+  }, {
+    k: 'notif',
+    label: '알림',
+    icon: L.Bell
+  }, {
+    k: 'mine',
+    label: '내 프로젝트',
+    icon: L.Folder
+  }, {
+    k: 'me',
+    label: '마이',
+    icon: L.User
+  }];
+  return /*#__PURE__*/React.createElement("div", {
+    className: "sticky bottom-0 left-0 right-0 grid grid-cols-5 border-t bg-white",
+    style: {
+      borderColor: '#E4E4E7'
+    }
+  }, items.map(it => {
+    const Ico = it.icon;
+    const on = it.k === active;
+    return /*#__PURE__*/React.createElement("div", {
+      key: it.k,
+      className: "flex flex-col items-center gap-0.5 py-2.5 text-[10px] font-semibold",
+      style: {
+        color: on ? '#4F46E5' : '#94A3B8'
+      }
+    }, Ico && /*#__PURE__*/React.createElement(Ico, {
+      size: 20
+    }), /*#__PURE__*/React.createElement("span", null, it.label));
+  }), /*#__PURE__*/React.createElement("div", {
+    className: "absolute -bottom-0 left-0 right-0 h-1 flex justify-center pt-1"
+  }, /*#__PURE__*/React.createElement("div", {
+    className: "w-32 h-1 rounded-full",
+    style: {
+      background: '#0F172A'
+    }
+  })));
+}
+
+// === Wordmark ===
+function Wordmark({
+  size = 'md'
+}) {
+  const big = size === 'lg';
+  return /*#__PURE__*/React.createElement("div", {
+    className: "inline-flex items-center gap-1",
+    style: {
+      color: '#4F46E5',
+      fontWeight: 800,
+      fontSize: big ? 22 : 17,
+      letterSpacing: '-0.02em'
+    }
+  }, /*#__PURE__*/React.createElement("span", null, "Campus Link"), /*#__PURE__*/React.createElement("span", {
+    className: "rounded-full",
+    style: {
+      width: big ? 8 : 6,
+      height: big ? 8 : 6,
+      background: '#84CC16',
+      display: 'inline-block',
+      marginTop: big ? 6 : 4
+    }
+  }));
+}
+
+// Section card primitive
+function Section({
+  title,
+  action,
+  children,
+  className = ''
+}) {
+  return /*#__PURE__*/React.createElement("div", {
+    className: `rounded-2xl bg-white border shadow-card p-5 ${className}`,
+    style: {
+      borderColor: '#E4E4E7'
+    }
+  }, (title || action) && /*#__PURE__*/React.createElement("div", {
+    className: "flex items-center justify-between mb-4"
+  }, title && /*#__PURE__*/React.createElement("div", {
+    className: "font-semibold text-[15px]",
+    style: {
+      color: '#0F172A'
+    }
+  }, title), action), children);
+}
+
+// Image placeholder (gradient stripe)
+function Placeholder({
+  label,
+  height = 160,
+  gradient = ['#EEF2FF', '#ECFCCB'],
+  className = ''
+}) {
+  return /*#__PURE__*/React.createElement("div", {
+    className: `relative rounded-xl overflow-hidden flex items-end p-4 ${className}`,
+    style: {
+      height,
+      background: `linear-gradient(135deg, ${gradient[0]} 0%, ${gradient[1]} 100%)`
+    }
+  }, /*#__PURE__*/React.createElement("div", {
+    className: "absolute inset-0",
+    style: {
+      backgroundImage: 'repeating-linear-gradient(45deg, rgba(255,255,255,0.4) 0 8px, transparent 8px 24px)',
+      opacity: 0.35
+    }
+  }), label && /*#__PURE__*/React.createElement("div", {
+    className: "relative font-bold text-lg",
+    style: {
+      color: '#0F172A',
+      letterSpacing: '-0.02em'
+    }
+  }, label));
+}
+window.CampusAtoms = {
+  scoreColor,
+  useCountUp,
+  DonutScore,
+  ScoreBars,
+  MajorChip,
+  Chip,
+  Avatar,
+  BrowserFrame,
+  PhoneFrame,
+  MobileTabBar,
+  Wordmark,
+  Section,
+  Placeholder,
+  BREAKDOWN_LABELS
+};
+// Screens 1-4: Landing, Explore, Detail, Compare
+const {
+  useState: useS1,
+  useEffect: useE1,
+  useRef: useR1
+} = React;
+const A = window.CampusAtoms;
+const D = window.CampusData;
+const Lc = window.lucideReact || {};
+
+// ============ SCREEN 1: LANDING ============
+function ScreenLanding({
+  device,
+  animKey
+}) {
+  const isM = device === 'mobile';
+  return /*#__PURE__*/React.createElement("div", {
+    className: "tab-enter",
+    key: animKey
+  }, /*#__PURE__*/React.createElement("div", {
+    className: `flex items-center justify-between ${isM ? 'px-4 py-3' : 'px-10 py-4'} border-b bg-white sticky top-0 z-20`,
+    style: {
+      borderColor: '#E4E4E7'
+    }
+  }, /*#__PURE__*/React.createElement(A.Wordmark, {
+    size: isM ? 'md' : 'md'
+  }), !isM && /*#__PURE__*/React.createElement("div", {
+    className: "flex items-center gap-7 text-sm",
+    style: {
+      color: '#475569'
+    }
+  }, /*#__PURE__*/React.createElement("span", null, "둘러보기"), /*#__PURE__*/React.createElement("span", null, "가이드"), /*#__PURE__*/React.createElement("span", null, "요금제"), /*#__PURE__*/React.createElement("span", null, "FAQ")), /*#__PURE__*/React.createElement("div", {
+    className: "flex items-center gap-2"
+  }, /*#__PURE__*/React.createElement("button", {
+    className: "rounded-xl text-sm font-semibold text-white",
+    style: {
+      background: '#4F46E5',
+      padding: isM ? '6px 12px' : '8px 14px'
+    }
+  }, "시작하기"))), /*#__PURE__*/React.createElement("div", {
+    className: `${isM ? 'px-5 py-8' : 'px-12 py-16'}`,
+    style: {
+      background: 'linear-gradient(180deg, #FAFAFA 0%, #FFFFFF 100%)'
+    }
+  }, /*#__PURE__*/React.createElement("div", {
+    className: isM ? 'flex flex-col gap-7' : 'grid grid-cols-12 gap-10 items-center'
+  }, /*#__PURE__*/React.createElement("div", {
+    className: isM ? '' : 'col-span-7'
+  }, /*#__PURE__*/React.createElement("div", {
+    className: "inline-flex items-center gap-2 rounded-full px-3 py-1.5 mb-5",
+    style: {
+      background: '#EEF2FF'
+    }
+  }, /*#__PURE__*/React.createElement("span", {
+    className: "w-1.5 h-1.5 rounded-full pulse-dot",
+    style: {
+      background: '#84CC16'
+    }
+  }), /*#__PURE__*/React.createElement("span", {
+    className: "text-[12px] font-semibold",
+    style: {
+      color: '#4F46E5'
+    }
+  }, "2026년 7월 정식 출시")), /*#__PURE__*/React.createElement("h1", {
+    className: "font-bold leading-[1.15]",
+    style: {
+      fontSize: isM ? 30 : 52,
+      letterSpacing: '-0.025em',
+      color: '#0F172A'
+    }
+  }, "전공이 다르면,", /*#__PURE__*/React.createElement("br", null), "팀이 강해집니다."), /*#__PURE__*/React.createElement("p", {
+    className: "mt-4 text-[15px] leading-relaxed",
+    style: {
+      color: '#475569',
+      maxWidth: 480
+    }
+  }, "역할 기반 매칭 점수로", /*#__PURE__*/React.createElement("br", {
+    className: isM ? '' : 'hidden'
+  }), "흩어진 전공을 하나의 프로젝트로 잇다."), /*#__PURE__*/React.createElement("div", {
+    className: `mt-7 flex ${isM ? 'flex-col' : ''} gap-3`
+  }, /*#__PURE__*/React.createElement("button", {
+    className: "rounded-xl text-white font-semibold flex items-center justify-center gap-2",
+    style: {
+      background: '#4F46E5',
+      padding: '14px 22px'
+    }
+  }, /*#__PURE__*/React.createElement(Lc.Compass, {
+    size: 16
+  }), " 프로젝트 둘러보기"), /*#__PURE__*/React.createElement("button", {
+    className: "rounded-xl font-semibold border bg-white flex items-center justify-center gap-2",
+    style: {
+      borderColor: '#E4E4E7',
+      color: '#0F172A',
+      padding: '14px 22px'
+    }
+  }, /*#__PURE__*/React.createElement(Lc.Users, {
+    size: 16
+  }), " 팀원 모집하기")), /*#__PURE__*/React.createElement("div", {
+    className: "mt-7 flex items-center gap-5 text-[13px]",
+    style: {
+      color: '#475569'
+    }
+  }, /*#__PURE__*/React.createElement("div", {
+    className: "flex items-center gap-2"
+  }, /*#__PURE__*/React.createElement("div", {
+    className: "flex -space-x-2"
+  }, ['이수민', '박서연', '정현우', '한지우'].map(n => /*#__PURE__*/React.createElement(A.Avatar, {
+    key: n,
+    name: n,
+    dept: "컴퓨터공학",
+    size: 26
+  }))), /*#__PURE__*/React.createElement("span", null, /*#__PURE__*/React.createElement("b", {
+    style: {
+      color: '#0F172A'
+    }
+  }, "1,247명"), "의 학생이 사용 중")), /*#__PURE__*/React.createElement("span", {
+    style: {
+      color: '#E4E4E7'
+    }
+  }, "·"), /*#__PURE__*/React.createElement("span", null, /*#__PURE__*/React.createElement("b", {
+    style: {
+      color: '#0F172A'
+    }
+  }, "312개"), " 프로젝트 진행"))), /*#__PURE__*/React.createElement("div", {
+    className: isM ? '' : 'col-span-5'
+  }, /*#__PURE__*/React.createElement(LiveMatchDemo, {
+    animKey: animKey,
+    compact: isM
+  })))), /*#__PURE__*/React.createElement("div", {
+    className: `${isM ? 'px-5 py-10' : 'px-12 py-16'}`,
+    style: {
+      background: '#FFFFFF'
+    }
+  }, /*#__PURE__*/React.createElement("div", {
+    className: "mb-7"
+  }, /*#__PURE__*/React.createElement("div", {
+    className: "text-[12px] font-bold tracking-wide",
+    style: {
+      color: '#4F46E5'
+    }
+  }, "FEATURES"), /*#__PURE__*/React.createElement("h2", {
+    className: "font-bold mt-2",
+    style: {
+      fontSize: isM ? 22 : 28,
+      letterSpacing: '-0.02em'
+    }
+  }, "5가지 문제, 6가지 해답")), /*#__PURE__*/React.createElement(FeaturesCarousel, null)), /*#__PURE__*/React.createElement("div", {
+    className: `${isM ? 'px-5 py-10' : 'px-12 py-16'}`,
+    style: {
+      background: '#FAFAFA'
+    }
+  }, /*#__PURE__*/React.createElement("div", {
+    className: "text-[12px] font-bold tracking-wide",
+    style: {
+      color: '#4F46E5'
+    }
+  }, "HOW IT WORKS"), /*#__PURE__*/React.createElement("h2", {
+    className: "font-bold mt-2",
+    style: {
+      fontSize: isM ? 22 : 28,
+      letterSpacing: '-0.02em'
+    }
+  }, "가입에서 포트폴리오까지 6단계"), /*#__PURE__*/React.createElement("div", {
+    className: `mt-8 ${isM ? 'flex flex-col gap-3' : 'grid grid-cols-6 gap-3'}`
+  }, D.FLOW.map((s, i) => /*#__PURE__*/React.createElement("div", {
+    key: s.n,
+    className: `relative rounded-2xl p-4 bg-white border ${isM ? '' : ''}`,
+    style: {
+      borderColor: '#E4E4E7'
+    }
+  }, /*#__PURE__*/React.createElement("div", {
+    className: "flex items-center gap-2"
+  }, /*#__PURE__*/React.createElement("div", {
+    className: "rounded-full text-white font-bold text-[12px] w-7 h-7 flex items-center justify-center",
+    style: {
+      background: i === D.FLOW.length - 1 ? '#84CC16' : '#4F46E5'
+    }
+  }, s.n), !isM && i < D.FLOW.length - 1 && /*#__PURE__*/React.createElement("div", {
+    className: "flex-1 h-0.5",
+    style: {
+      background: '#E4E4E7'
+    }
+  })), /*#__PURE__*/React.createElement("div", {
+    className: "mt-3 font-bold text-[15px]"
+  }, s.title), /*#__PURE__*/React.createElement("div", {
+    className: "mt-1 text-[12px]",
+    style: {
+      color: '#475569'
+    }
+  }, s.desc))))), /*#__PURE__*/React.createElement("div", {
+    className: `${isM ? 'px-5 py-10' : 'px-12 py-14'}`,
+    style: {
+      background: '#FFFFFF'
+    }
+  }, /*#__PURE__*/React.createElement("div", {
+    className: "flex items-end justify-between mb-6"
+  }, /*#__PURE__*/React.createElement("div", null, /*#__PURE__*/React.createElement("div", {
+    className: "text-[12px] font-bold tracking-wide",
+    style: {
+      color: '#4F46E5'
+    }
+  }, "LIVE PROJECTS"), /*#__PURE__*/React.createElement("h2", {
+    className: "font-bold mt-2",
+    style: {
+      fontSize: isM ? 22 : 28,
+      letterSpacing: '-0.02em'
+    }
+  }, "지금 모집 중인 프로젝트")), !isM && /*#__PURE__*/React.createElement("button", {
+    className: "text-sm font-semibold flex items-center gap-1",
+    style: {
+      color: '#4F46E5'
+    }
+  }, "전체 보기 ", /*#__PURE__*/React.createElement(Lc.ArrowRight, {
+    size: 14
+  }))), /*#__PURE__*/React.createElement("div", {
+    className: `${isM ? 'grid grid-cols-1 gap-3' : 'grid grid-cols-3 gap-4'}`
+  }, D.PROJECTS.slice(0, 3).map(p => /*#__PURE__*/React.createElement(ProjectCard, {
+    key: p.id,
+    project: p,
+    compact: isM
+  })))), /*#__PURE__*/React.createElement("div", {
+    className: `${isM ? 'px-5 py-8' : 'px-12 py-10'} border-t`,
+    style: {
+      background: '#FAFAFA',
+      borderColor: '#E4E4E7'
+    }
+  }, /*#__PURE__*/React.createElement("div", {
+    className: `${isM ? '' : 'flex items-end justify-between'}`
+  }, /*#__PURE__*/React.createElement("div", null, /*#__PURE__*/React.createElement(A.Wordmark, {
+    size: "md"
+  }), /*#__PURE__*/React.createElement("p", {
+    className: "mt-3 text-[13px]",
+    style: {
+      color: '#475569'
+    }
+  }, "전공 기반 대학생 협업 플랫폼 · 2026.07 정식 출시")), /*#__PURE__*/React.createElement("div", {
+    className: `${isM ? 'mt-5' : ''} flex flex-wrap gap-2`
+  }, Object.keys(D.MAJOR).map(k => {
+    const m = D.MAJOR[k];
+    return /*#__PURE__*/React.createElement("span", {
+      key: k,
+      className: "text-[11px] font-semibold rounded-full px-2.5 py-1",
+      style: {
+        background: m.bg,
+        color: m.text
+      }
+    }, k);
+  })))));
+}
+function FeaturesCarousel() {
+  const trackRef = useR1(null);
+  useE1(() => {
+    if (!document.getElementById('feature-carousel-kf')) {
+      const s = document.createElement('style');
+      s.id = 'feature-carousel-kf';
+      s.textContent = `@keyframes featureScroll { 0% { transform: translateX(0); } 100% { transform: translateX(-50%); } }`;
+      document.head.appendChild(s);
+    }
+    if (trackRef.current) {
+      trackRef.current.style.animation = 'featureScroll 28s linear infinite';
+    }
+  }, []);
+  const items = [...D.FEATURES, ...D.FEATURES];
+  return /*#__PURE__*/React.createElement("div", {
+    style: {
+      overflow: 'hidden',
+      margin: '0 -48px'
+    }
+  }, /*#__PURE__*/React.createElement("div", {
+    ref: trackRef,
+    style: {
+      display: 'flex',
+      gap: 16,
+      width: 'max-content',
+      padding: '4px 48px'
+    },
+    onMouseEnter: e => e.currentTarget.style.animationPlayState = 'paused',
+    onMouseLeave: e => e.currentTarget.style.animationPlayState = 'running'
+  }, items.map((f, i) => /*#__PURE__*/React.createElement("div", {
+    key: `${f.id}-${i}`,
+    className: "rounded-2xl border bg-white p-5",
+    style: {
+      borderColor: '#E4E4E7',
+      width: 260,
+      flexShrink: 0
+    }
+  }, /*#__PURE__*/React.createElement("div", {
+    className: "flex items-center justify-between"
+  }, /*#__PURE__*/React.createElement("span", {
+    className: "text-[11px] font-bold tracking-wider rounded-md px-2 py-1",
+    style: {
+      background: '#EEF2FF',
+      color: '#4F46E5'
+    }
+  }, f.id), /*#__PURE__*/React.createElement("span", {
+    className: "text-zinc-300 text-xs"
+  }, "0", i % D.FEATURES.length + 1)), /*#__PURE__*/React.createElement("div", {
+    className: "mt-5 font-bold text-[17px]",
+    style: {
+      letterSpacing: '-0.02em'
+    }
+  }, f.title), /*#__PURE__*/React.createElement("div", {
+    className: "mt-2 text-[13px] leading-relaxed",
+    style: {
+      color: '#475569'
+    }
+  }, f.desc)))));
+}
+function LiveMatchDemo({
+  animKey,
+  compact
+}) {
+  // auto-cycling 0→87
+  const [tick, setTick] = useS1(0);
+  useE1(() => {
+    const id = setInterval(() => setTick(t => t + 1), 3500);
+    return () => clearInterval(id);
+  }, []);
+  const k = animKey + tick;
+  const breakdown = {
+    role: 30,
+    skill: 22,
+    period: 18,
+    interest: 12,
+    folio: 5
+  };
+  return /*#__PURE__*/React.createElement("div", {
+    className: "rounded-3xl bg-white border p-5 shadow-cardHov",
+    style: {
+      borderColor: '#E4E4E7'
+    }
+  }, /*#__PURE__*/React.createElement("div", {
+    className: "flex items-center justify-between mb-4"
+  }, /*#__PURE__*/React.createElement("div", {
+    className: "text-[11px] font-bold tracking-wider",
+    style: {
+      color: '#84CC16'
+    }
+  }, "● LIVE MATCH"), /*#__PURE__*/React.createElement("div", {
+    className: "text-[11px]",
+    style: {
+      color: '#94A3B8'
+    }
+  }, "실시간 시연")), /*#__PURE__*/React.createElement("div", {
+    className: "flex items-center gap-4"
+  }, /*#__PURE__*/React.createElement(A.Avatar, {
+    name: "이수민",
+    dept: "시각디자인",
+    size: 56
+  }), /*#__PURE__*/React.createElement("div", {
+    className: "flex-1"
+  }, /*#__PURE__*/React.createElement("div", {
+    className: "font-bold text-[16px]"
+  }, "이수민"), /*#__PURE__*/React.createElement("div", {
+    className: "mt-1 flex items-center gap-1.5"
+  }, /*#__PURE__*/React.createElement(A.MajorChip, {
+    dept: "시각디자인",
+    year: 2,
+    size: "xs"
+  })), /*#__PURE__*/React.createElement("div", {
+    className: "text-[11px] mt-1.5",
+    style: {
+      color: '#94A3B8'
+    }
+  }, "지원 → 멘탈 헬스 챗봇")), /*#__PURE__*/React.createElement(A.DonutScore, {
+    score: 87,
+    size: compact ? 80 : 92,
+    stroke: 9,
+    animKey: k,
+    delay: 200
+  })), /*#__PURE__*/React.createElement("div", {
+    className: "mt-5 pt-5 border-t",
+    style: {
+      borderColor: '#F1F5F9'
+    }
+  }, /*#__PURE__*/React.createElement(A.ScoreBars, {
+    b: breakdown,
+    animKey: k,
+    dense: true
+  })), /*#__PURE__*/React.createElement("div", {
+    className: "mt-4 flex items-center gap-2 rounded-xl px-3 py-2.5",
+    style: {
+      background: '#ECFCCB'
+    }
+  }, /*#__PURE__*/React.createElement(Lc.Sparkles, {
+    size: 14,
+    style: {
+      color: '#3F6212'
+    }
+  }), /*#__PURE__*/React.createElement("span", {
+    className: "text-[12px] font-semibold",
+    style: {
+      color: '#3F6212'
+    }
+  }, "EXCELLENT — 상위 14% 매칭")));
+}
+
+// ============ Project card ============
+function ProjectCard({
+  project,
+  compact,
+  withMatch
+}) {
+  const overdue = project.dday <= 7;
+  return /*#__PURE__*/React.createElement("div", {
+    onClick: () => window.__nav && window.__nav.go('detail', {
+      projectId: project.id
+    }),
+    className: "rounded-2xl bg-white border p-4 relative shadow-card hover:shadow-cardHov transition cursor-pointer hover:-translate-y-0.5",
+    style: {
+      borderColor: '#E4E4E7'
+    }
+  }, withMatch && project.match >= 70 && /*#__PURE__*/React.createElement("div", {
+    className: "absolute -top-2 right-3 rounded-full px-2.5 py-1 text-[11px] font-bold text-white shadow",
+    style: {
+      background: 'linear-gradient(90deg, #84CC16 0%, #4F46E5 100%)'
+    }
+  }, "🎯 ", project.match, "% 매칭"), /*#__PURE__*/React.createElement("div", {
+    className: "flex items-center justify-between"
+  }, /*#__PURE__*/React.createElement(A.Chip, null, project.category), /*#__PURE__*/React.createElement("span", {
+    className: `text-[11px] font-bold rounded-full px-2 py-0.5 ${overdue ? 'pulse-dot' : ''}`,
+    style: {
+      background: overdue ? '#FFE4E6' : '#F4F4F5',
+      color: overdue ? '#BE123C' : '#475569'
+    }
+  }, "D-", project.dday)), /*#__PURE__*/React.createElement("div", {
+    className: "mt-3 font-bold text-[15px] leading-snug line-clamp-2",
+    style: {
+      letterSpacing: '-0.01em'
+    }
+  }, project.title), /*#__PURE__*/React.createElement("div", {
+    className: "mt-1.5 text-[12px] line-clamp-1",
+    style: {
+      color: '#475569'
+    }
+  }, project.desc), /*#__PURE__*/React.createElement("div", {
+    className: "mt-3 flex flex-wrap gap-1.5"
+  }, ['프론트엔드', '디자이너', 'PM'].slice(0, compact ? 2 : 3).map(r => /*#__PURE__*/React.createElement(A.Chip, {
+    key: r,
+    tone: "indigo"
+  }, r))), /*#__PURE__*/React.createElement("div", {
+    className: "mt-4 pt-3 flex items-center justify-between border-t",
+    style: {
+      borderColor: '#F1F5F9'
+    }
+  }, /*#__PURE__*/React.createElement("div", {
+    className: "flex items-center gap-2"
+  }, /*#__PURE__*/React.createElement(A.Avatar, {
+    name: project.leader,
+    dept: "컴퓨터공학",
+    size: 24
+  }), /*#__PURE__*/React.createElement("div", {
+    className: "text-[11px]",
+    style: {
+      color: '#475569'
+    }
+  }, project.school)), /*#__PURE__*/React.createElement("div", {
+    className: "flex items-center gap-2"
+  }, /*#__PURE__*/React.createElement("div", {
+    className: "text-[11px] font-semibold",
+    style: {
+      color: '#475569'
+    }
+  }, project.filled, "/", project.total, "명"), /*#__PURE__*/React.createElement("div", {
+    className: "w-14 h-1.5 rounded-full",
+    style: {
+      background: '#F1F5F9'
+    }
+  }, /*#__PURE__*/React.createElement("div", {
+    className: "h-full rounded-full",
+    style: {
+      width: `${project.filled / project.total * 100}%`,
+      background: '#4F46E5'
+    }
+  })))));
+}
+
+// ============ SCREEN 2: EXPLORE ============
+function ScreenExplore({
+  device,
+  animKey
+}) {
+  const isM = device === 'mobile';
+  return /*#__PURE__*/React.createElement("div", {
+    className: "tab-enter",
+    key: animKey
+  }, /*#__PURE__*/React.createElement("div", {
+    className: `flex items-center justify-between ${isM ? 'px-4 py-3' : 'px-10 py-4'} border-b bg-white sticky top-0 z-20`,
+    style: {
+      borderColor: '#E4E4E7'
+    }
+  }, /*#__PURE__*/React.createElement(A.Wordmark, null), !isM && /*#__PURE__*/React.createElement("div", {
+    className: "flex-1 mx-8 max-w-md"
+  }, /*#__PURE__*/React.createElement("div", {
+    className: "flex items-center gap-2 rounded-xl border px-3 py-2",
+    style: {
+      borderColor: '#E4E4E7'
+    }
+  }, /*#__PURE__*/React.createElement(Lc.Search, {
+    size: 15,
+    style: {
+      color: '#94A3B8'
+    }
+  }), /*#__PURE__*/React.createElement("input", {
+    placeholder: "프로젝트, 기술, 학교 검색",
+    className: "bg-transparent outline-none flex-1 text-sm"
+  }))), /*#__PURE__*/React.createElement("div", {
+    className: "flex items-center gap-2"
+  }, /*#__PURE__*/React.createElement("button", {
+    className: "rounded-xl border bg-white text-sm font-medium px-3 py-2",
+    style: {
+      borderColor: '#E4E4E7'
+    }
+  }, /*#__PURE__*/React.createElement(Lc.Bell, {
+    size: 14
+  })), /*#__PURE__*/React.createElement(A.Avatar, {
+    name: "김민준",
+    dept: "컴퓨터공학",
+    size: 32
+  }))), isM ? /*#__PURE__*/React.createElement("div", null, /*#__PURE__*/React.createElement("div", {
+    className: "px-4 py-3 flex items-center gap-2 overflow-x-auto hscroll border-b",
+    style: {
+      borderColor: '#E4E4E7',
+      background: '#FFFFFF'
+    }
+  }, ['역할 ▾', '전공 ▾', '기간 ▾', '마감 ▾', '인원 ▾'].map(c => /*#__PURE__*/React.createElement("button", {
+    key: c,
+    className: "rounded-full border px-3 py-1.5 text-[12px] font-semibold whitespace-nowrap",
+    style: {
+      borderColor: '#E4E4E7',
+      color: '#475569'
+    }
+  }, c))), /*#__PURE__*/React.createElement("div", {
+    className: "px-4 py-3 flex items-center justify-between"
+  }, /*#__PURE__*/React.createElement("div", {
+    className: "text-[12px]",
+    style: {
+      color: '#475569'
+    }
+  }, "총 ", /*#__PURE__*/React.createElement("b", {
+    style: {
+      color: '#0F172A'
+    }
+  }, "34개"), " 프로젝트"), /*#__PURE__*/React.createElement("div", {
+    className: "flex gap-1 rounded-lg border bg-white",
+    style: {
+      borderColor: '#E4E4E7'
+    }
+  }, ['최신', '임박', '매칭'].map((s, i) => /*#__PURE__*/React.createElement("span", {
+    key: s,
+    className: `text-[11px] font-semibold px-2.5 py-1 ${i === 2 ? 'text-white rounded-md' : 'text-zinc-500'}`,
+    style: i === 2 ? {
+      background: '#4F46E5'
+    } : undefined
+  }, s)))), /*#__PURE__*/React.createElement("div", {
+    className: "px-4 pb-6 grid grid-cols-1 gap-3"
+  }, D.PROJECTS.map((p, i) => /*#__PURE__*/React.createElement(ProjectCard, {
+    key: p.id,
+    project: {
+      ...p,
+      match: i === 0 ? 87 : i === 1 ? 72 : 0
+    },
+    compact: true,
+    withMatch: true
+  })))) : /*#__PURE__*/React.createElement("div", {
+    className: "grid grid-cols-12 gap-6 px-10 py-6"
+  }, /*#__PURE__*/React.createElement(FilterSidebar, null), /*#__PURE__*/React.createElement("div", {
+    className: "col-span-9"
+  }, /*#__PURE__*/React.createElement("div", {
+    className: "flex items-center justify-between mb-4"
+  }, /*#__PURE__*/React.createElement("div", null, /*#__PURE__*/React.createElement("h2", {
+    className: "font-bold text-[20px]",
+    style: {
+      letterSpacing: '-0.02em'
+    }
+  }, "프로젝트 탐색"), /*#__PURE__*/React.createElement("div", {
+    className: "text-[12px] mt-1",
+    style: {
+      color: '#475569'
+    }
+  }, "총 ", /*#__PURE__*/React.createElement("b", {
+    style: {
+      color: '#0F172A'
+    }
+  }, "34개"), " 프로젝트 · 매칭 추천 4개")), /*#__PURE__*/React.createElement("div", {
+    className: "flex items-center gap-2"
+  }, /*#__PURE__*/React.createElement("div", {
+    className: "flex gap-1 rounded-xl border bg-white p-1",
+    style: {
+      borderColor: '#E4E4E7'
+    }
+  }, ['최신순', '마감 임박순', '매칭 추천순'].map((s, i) => /*#__PURE__*/React.createElement("span", {
+    key: s,
+    className: `text-[12px] font-semibold px-3 py-1.5 rounded-lg ${i === 2 ? 'text-white' : 'text-zinc-500'}`,
+    style: i === 2 ? {
+      background: '#4F46E5'
+    } : undefined
+  }, s))), /*#__PURE__*/React.createElement("button", {
+    className: "rounded-xl border bg-white p-2",
+    style: {
+      borderColor: '#E4E4E7'
+    }
+  }, /*#__PURE__*/React.createElement(Lc.Grid3x3, {
+    size: 14
+  })))), /*#__PURE__*/React.createElement("div", {
+    className: "grid grid-cols-3 gap-4"
+  }, D.PROJECTS.map((p, i) => /*#__PURE__*/React.createElement(ProjectCard, {
+    key: p.id,
+    project: {
+      ...p,
+      match: i === 0 ? 87 : i === 1 ? 72 : 0
+    },
+    withMatch: true
+  }))))));
+}
+function FilterSidebar() {
+  return /*#__PURE__*/React.createElement("div", {
+    className: "col-span-3"
+  }, /*#__PURE__*/React.createElement("div", {
+    className: "rounded-2xl bg-white border p-5 shadow-card sticky top-24",
+    style: {
+      borderColor: '#E4E4E7'
+    }
+  }, /*#__PURE__*/React.createElement("div", {
+    className: "flex items-center justify-between mb-4"
+  }, /*#__PURE__*/React.createElement("div", {
+    className: "font-bold text-[14px]"
+  }, "필터"), /*#__PURE__*/React.createElement("span", {
+    className: "text-[11px] font-semibold",
+    style: {
+      color: '#4F46E5'
+    }
+  }, "초기화")), /*#__PURE__*/React.createElement(FilterGroup, {
+    title: "모집 역할",
+    items: [{
+      l: '프론트엔드',
+      n: 12,
+      on: true
+    }, {
+      l: '백엔드',
+      n: 9
+    }, {
+      l: '디자이너',
+      n: 14,
+      on: true
+    }, {
+      l: '기획자',
+      n: 7
+    }, {
+      l: '마케터',
+      n: 5
+    }, {
+      l: '데이터',
+      n: 4
+    }],
+    type: "check"
+  }), /*#__PURE__*/React.createElement(FilterGroup, {
+    title: "전공 계열",
+    type: "majors"
+  }), /*#__PURE__*/React.createElement(FilterGroup, {
+    title: "참여 기간",
+    items: ['1개월', '2-3개월', '1학기', '기타'],
+    type: "select",
+    defaultIdx: 1
+  }), /*#__PURE__*/React.createElement(FilterGroup, {
+    title: "마감일",
+    items: ['오늘', '이번주', '이번달'],
+    type: "radio"
+  }), /*#__PURE__*/React.createElement(FilterGroup, {
+    title: "인원",
+    type: "slider"
+  })));
+}
+function FilterGroup({
+  title,
+  items,
+  type,
+  defaultIdx
+}) {
+  return /*#__PURE__*/React.createElement("div", {
+    className: "mb-5 pb-5 border-b last:border-b-0 last:mb-0 last:pb-0",
+    style: {
+      borderColor: '#F1F5F9'
+    }
+  }, /*#__PURE__*/React.createElement("div", {
+    className: "text-[11px] font-bold tracking-wide mb-3",
+    style: {
+      color: '#94A3B8'
+    }
+  }, title.toUpperCase()), type === 'check' && /*#__PURE__*/React.createElement("div", {
+    className: "grid gap-2"
+  }, items.map(it => /*#__PURE__*/React.createElement("label", {
+    key: it.l,
+    className: "flex items-center gap-2 text-[13px]",
+    style: {
+      color: '#475569'
+    }
+  }, /*#__PURE__*/React.createElement("span", {
+    className: `w-4 h-4 rounded border flex items-center justify-center ${it.on ? 'text-white' : ''}`,
+    style: {
+      background: it.on ? '#4F46E5' : '#FFFFFF',
+      borderColor: it.on ? '#4F46E5' : '#E4E4E7'
+    }
+  }, it.on && /*#__PURE__*/React.createElement(Lc.Check, {
+    size: 11
+  })), /*#__PURE__*/React.createElement("span", {
+    className: "flex-1"
+  }, it.l), /*#__PURE__*/React.createElement("span", {
+    className: "text-[11px]",
+    style: {
+      color: '#94A3B8'
+    }
+  }, it.n)))), type === 'majors' && /*#__PURE__*/React.createElement("div", {
+    className: "flex flex-wrap gap-1.5"
+  }, Object.keys(D.MAJOR).map((k, i) => {
+    const m = D.MAJOR[k];
+    const on = i < 2;
+    return /*#__PURE__*/React.createElement("span", {
+      key: k,
+      className: "text-[11px] font-semibold rounded-full px-2.5 py-1 border",
+      style: {
+        background: on ? m.bg : '#FFFFFF',
+        color: on ? m.text : '#475569',
+        borderColor: on ? m.bg : '#E4E4E7'
+      }
+    }, k);
+  })), type === 'select' && /*#__PURE__*/React.createElement("div", {
+    className: "rounded-lg border px-3 py-2 text-[13px] flex items-center justify-between bg-white",
+    style: {
+      borderColor: '#E4E4E7',
+      color: '#0F172A'
+    }
+  }, /*#__PURE__*/React.createElement("span", null, items[defaultIdx ?? 0]), /*#__PURE__*/React.createElement(Lc.ChevronDown, {
+    size: 14
+  })), type === 'radio' && /*#__PURE__*/React.createElement("div", {
+    className: "flex gap-1"
+  }, items.map((l, i) => /*#__PURE__*/React.createElement("span", {
+    key: l,
+    className: `text-[12px] font-semibold rounded-lg px-3 py-1.5 ${i === 1 ? 'text-white' : ''}`,
+    style: i === 1 ? {
+      background: '#4F46E5'
+    } : {
+      background: '#F4F4F5',
+      color: '#475569'
+    }
+  }, l))), type === 'slider' && /*#__PURE__*/React.createElement("div", null, /*#__PURE__*/React.createElement("div", {
+    className: "flex justify-between text-[11px] mb-2",
+    style: {
+      color: '#475569'
+    }
+  }, /*#__PURE__*/React.createElement("span", null, "2명"), /*#__PURE__*/React.createElement("span", {
+    className: "font-bold",
+    style: {
+      color: '#4F46E5'
+    }
+  }, "3-5명"), /*#__PURE__*/React.createElement("span", null, "8명")), /*#__PURE__*/React.createElement("div", {
+    className: "h-1.5 rounded-full relative",
+    style: {
+      background: '#F1F5F9'
+    }
+  }, /*#__PURE__*/React.createElement("div", {
+    className: "absolute h-full rounded-full",
+    style: {
+      left: '15%',
+      right: '38%',
+      background: '#4F46E5'
+    }
+  }), /*#__PURE__*/React.createElement("div", {
+    className: "absolute w-3.5 h-3.5 rounded-full bg-white border-2 -top-1",
+    style: {
+      left: 'calc(15% - 6px)',
+      borderColor: '#4F46E5'
+    }
+  }), /*#__PURE__*/React.createElement("div", {
+    className: "absolute w-3.5 h-3.5 rounded-full bg-white border-2 -top-1",
+    style: {
+      left: 'calc(62% - 6px)',
+      borderColor: '#4F46E5'
+    }
+  }))));
+}
+
+// ============ SCREEN 3: PROJECT DETAIL ============
+function ScreenDetail({
+  device,
+  animKey,
+  projectId
+}) {
+  const isM = device === 'mobile';
+  const project = D.PROJECTS.find(p => p.id === projectId) || D.PROJECTS[0];
+  const myScore = 76;
+  return /*#__PURE__*/React.createElement("div", {
+    className: "tab-enter",
+    key: animKey
+  }, /*#__PURE__*/React.createElement("div", {
+    className: `flex items-center justify-between ${isM ? 'px-4 py-3' : 'px-10 py-4'} border-b bg-white sticky top-0 z-20`,
+    style: {
+      borderColor: '#E4E4E7'
+    }
+  }, /*#__PURE__*/React.createElement("div", {
+    className: "flex items-center gap-3"
+  }, /*#__PURE__*/React.createElement(Lc.ChevronLeft, {
+    size: 20
+  }), !isM && /*#__PURE__*/React.createElement(A.Wordmark, null)), /*#__PURE__*/React.createElement("div", {
+    className: "flex items-center gap-2"
+  }, /*#__PURE__*/React.createElement("button", {
+    className: "rounded-xl border bg-white text-[12px] font-medium px-3 py-2 flex items-center gap-1",
+    style: {
+      borderColor: '#E4E4E7'
+    }
+  }, /*#__PURE__*/React.createElement(Lc.Bookmark, {
+    size: 13
+  }), " 저장"), !isM && /*#__PURE__*/React.createElement("button", {
+    className: "rounded-xl border bg-white text-[12px] font-medium px-3 py-2 flex items-center gap-1",
+    style: {
+      borderColor: '#E4E4E7'
+    }
+  }, /*#__PURE__*/React.createElement(Lc.Share2, {
+    size: 13
+  }), " 공유"))), /*#__PURE__*/React.createElement("div", {
+    className: isM ? 'pb-32' : 'grid grid-cols-12 gap-6 px-10 py-6'
+  }, /*#__PURE__*/React.createElement("div", {
+    className: isM ? 'px-4 pt-4' : 'col-span-7'
+  }, /*#__PURE__*/React.createElement(A.Placeholder, {
+    label: project.title,
+    height: isM ? 160 : 220,
+    gradient: ['#EEF2FF', '#ECFCCB']
+  }), /*#__PURE__*/React.createElement("div", {
+    className: "mt-5"
+  }, /*#__PURE__*/React.createElement("div", {
+    className: "flex items-center gap-2 flex-wrap"
+  }, /*#__PURE__*/React.createElement(A.Chip, null, project.category), /*#__PURE__*/React.createElement(A.Chip, {
+    tone: "rose"
+  }, "D-", project.dday, " 마감")), /*#__PURE__*/React.createElement("h1", {
+    className: "font-bold mt-3",
+    style: {
+      fontSize: isM ? 22 : 28,
+      letterSpacing: '-0.02em'
+    }
+  }, project.title), /*#__PURE__*/React.createElement("div", {
+    className: "mt-3 grid grid-cols-2 sm:grid-cols-4 gap-3 text-[12px]"
+  }, [{
+    l: '기간',
+    v: project.period
+  }, {
+    l: '마감',
+    v: '2026.06.15'
+  }, {
+    l: '인원',
+    v: `${project.filled}/${project.total}명`
+  }, {
+    l: '방식',
+    v: project.meeting
+  }].map(x => /*#__PURE__*/React.createElement("div", {
+    key: x.l,
+    className: "rounded-xl border bg-white p-3",
+    style: {
+      borderColor: '#E4E4E7'
+    }
+  }, /*#__PURE__*/React.createElement("div", {
+    className: "text-[11px]",
+    style: {
+      color: '#94A3B8'
+    }
+  }, x.l), /*#__PURE__*/React.createElement("div", {
+    className: "font-semibold mt-1",
+    style: {
+      color: '#0F172A'
+    }
+  }, x.v))))), /*#__PURE__*/React.createElement(A.Section, {
+    title: "프로젝트 목표",
+    className: "mt-5"
+  }, /*#__PURE__*/React.createElement("p", {
+    className: "text-[14px] leading-relaxed",
+    style: {
+      color: '#475569'
+    }
+  }, "한양대 학생 5,000명을 대상으로 분실물 매칭 서비스를 만듭니다. 사진을 올리면 AI가 유사 분실물과 자동으로 연결하고, 학교 위치 기반으로 가까운 사람에게 알림이 가요. 1차 MVP는 8주 안에 출시 목표.", /*#__PURE__*/React.createElement("br", null), /*#__PURE__*/React.createElement("br", null), "디자인은 모바일 우선, 백엔드는 가벼운 Node.js + S3 이미지 저장. 디자인-개발-기획이 함께 사용자 인터뷰부터 같이 진행합니다.")), /*#__PURE__*/React.createElement(A.Section, {
+    title: "필요한 역할",
+    className: "mt-5"
+  }, /*#__PURE__*/React.createElement("div", {
+    className: "grid gap-3"
+  }, D.ROLES_NEEDED.map((r, i) => /*#__PURE__*/React.createElement("div", {
+    key: r.role,
+    className: "rounded-xl border p-3.5 flex items-start gap-4",
+    style: {
+      borderColor: '#E4E4E7'
+    }
+  }, /*#__PURE__*/React.createElement("div", {
+    className: "rounded-lg w-10 h-10 flex items-center justify-center font-bold",
+    style: {
+      background: '#EEF2FF',
+      color: '#4F46E5'
+    }
+  }, "0", i + 1), /*#__PURE__*/React.createElement("div", {
+    className: "flex-1"
+  }, /*#__PURE__*/React.createElement("div", {
+    className: "flex items-center justify-between gap-2"
+  }, /*#__PURE__*/React.createElement("div", {
+    className: "font-bold text-[14px]"
+  }, r.role), /*#__PURE__*/React.createElement(A.Chip, {
+    tone: i === 0 ? 'lime' : 'gray'
+  }, i === 0 ? '모집중' : `0/${r.count}`)), /*#__PURE__*/React.createElement("div", {
+    className: "mt-1.5 flex flex-wrap gap-1.5"
+  }, r.skills.map(s => /*#__PURE__*/React.createElement(A.Chip, {
+    key: s,
+    tone: "indigo"
+  }, s))), /*#__PURE__*/React.createElement("div", {
+    className: "mt-2 text-[12px]",
+    style: {
+      color: '#475569'
+    }
+  }, "우대 · ", r.pref)))))), /*#__PURE__*/React.createElement(A.Section, {
+    title: "기술 스택",
+    className: "mt-5"
+  }, /*#__PURE__*/React.createElement("div", {
+    className: "flex flex-wrap gap-1.5"
+  }, ['React', 'TypeScript', 'Tailwind', 'Figma', 'Node.js', 'PostgreSQL', 'AWS S3', 'GitHub'].map(t => /*#__PURE__*/React.createElement(A.Chip, {
+    key: t
+  }, t)))), /*#__PURE__*/React.createElement(A.Section, {
+    title: "팀장 한마디",
+    className: "mt-5"
+  }, /*#__PURE__*/React.createElement("p", {
+    className: "text-[14px] leading-relaxed",
+    style: {
+      color: '#475569'
+    }
+  }, "\"이전에 두 번 사이드 프로젝트를 했는데 한 번도 디자이너랑 같이 못 했어요. 이번엔 디자인부터 같이 시작해서 진짜 출시까지 가보고 싶어요. 한양 분실물 카톡방 보면서 만들고 싶다고 생각한 지 1년 됐어요.\""))), !isM && /*#__PURE__*/React.createElement("div", {
+    className: "col-span-5"
+  }, /*#__PURE__*/React.createElement("div", {
+    className: "sticky top-24 grid gap-4"
+  }, /*#__PURE__*/React.createElement(A.Section, null, /*#__PURE__*/React.createElement("div", {
+    className: "flex items-center gap-3"
+  }, /*#__PURE__*/React.createElement(A.Avatar, {
+    name: D.LEADER.name,
+    dept: D.LEADER.dept,
+    size: 48
+  }), /*#__PURE__*/React.createElement("div", {
+    className: "flex-1"
+  }, /*#__PURE__*/React.createElement("div", {
+    className: "font-bold text-[14px]"
+  }, D.LEADER.name), /*#__PURE__*/React.createElement("div", {
+    className: "text-[11px] mt-0.5",
+    style: {
+      color: '#475569'
+    }
+  }, D.LEADER.school, " · ", D.LEADER.dept, " ", D.LEADER.year, "학년"), /*#__PURE__*/React.createElement("div", {
+    className: "text-[11px] mt-0.5",
+    style: {
+      color: '#94A3B8'
+    }
+  }, "이전 프로젝트 ", D.LEADER.priorProjects, "건")), /*#__PURE__*/React.createElement("button", {
+    className: "rounded-lg border text-[12px] font-semibold px-3 py-2",
+    style: {
+      borderColor: '#E4E4E7'
+    }
+  }, "프로필"))), /*#__PURE__*/React.createElement(MyMatchPreview, {
+    score: myScore,
+    animKey: animKey
+  }), /*#__PURE__*/React.createElement("button", {
+    onClick: () => window.__nav && window.__nav.go('compare', {
+      projectId: project.id
+    }),
+    className: "rounded-xl text-white font-bold flex items-center justify-center gap-2 hover:opacity-90 transition",
+    style: {
+      background: '#4F46E5',
+      height: 56
+    }
+  }, "지원하기 ", /*#__PURE__*/React.createElement(Lc.ArrowRight, {
+    size: 16
+  })), /*#__PURE__*/React.createElement("div", {
+    className: "text-center text-[11px]",
+    style: {
+      color: '#94A3B8'
+    }
+  }, "지원 후 24시간 내 팀장이 응답합니다")))), isM && /*#__PURE__*/React.createElement("div", {
+    className: "fixed left-0 right-0 bottom-0 px-4 py-3 border-t bg-white z-30",
+    style: {
+      borderColor: '#E4E4E7'
+    }
+  }, /*#__PURE__*/React.createElement("div", {
+    className: "rounded-xl border p-3 mb-3 flex items-center gap-3",
+    style: {
+      borderColor: '#E4E4E7',
+      background: '#FAFAFA'
+    }
+  }, /*#__PURE__*/React.createElement(A.DonutScore, {
+    score: myScore,
+    size: 48,
+    stroke: 6,
+    animKey: animKey,
+    showLabel: false,
+    delay: 400
+  }), /*#__PURE__*/React.createElement("div", {
+    className: "flex-1"
+  }, /*#__PURE__*/React.createElement("div", {
+    className: "text-[11px]",
+    style: {
+      color: '#475569'
+    }
+  }, "내 매칭 점수"), /*#__PURE__*/React.createElement("div", {
+    className: "text-[13px] font-bold mt-0.5"
+  }, "상위 32% — 지원 추천")), /*#__PURE__*/React.createElement(Lc.ChevronUp, {
+    size: 18,
+    style: {
+      color: '#94A3B8'
+    }
+  })), /*#__PURE__*/React.createElement("button", {
+    onClick: () => window.__nav && window.__nav.go('compare', {
+      projectId: project.id
+    }),
+    className: "w-full rounded-xl text-white font-bold flex items-center justify-center gap-2",
+    style: {
+      background: '#4F46E5',
+      height: 52
+    }
+  }, "지원하기 ", /*#__PURE__*/React.createElement(Lc.ArrowRight, {
+    size: 16
+  }))));
+}
+function MyMatchPreview({
+  score,
+  animKey
+}) {
+  const breakdown = {
+    role: 26,
+    skill: 16,
+    period: 18,
+    interest: 12,
+    folio: 4
+  };
+  return /*#__PURE__*/React.createElement("div", {
+    className: "rounded-2xl bg-white border p-5 shadow-card relative overflow-hidden",
+    style: {
+      borderColor: '#E4E4E7'
+    }
+  }, /*#__PURE__*/React.createElement("div", {
+    className: "absolute -top-8 -right-8 w-32 h-32 rounded-full opacity-50",
+    style: {
+      background: 'radial-gradient(circle, #ECFCCB 0%, transparent 70%)'
+    }
+  }), /*#__PURE__*/React.createElement("div", {
+    className: "relative"
+  }, /*#__PURE__*/React.createElement("div", {
+    className: "flex items-center justify-between mb-4"
+  }, /*#__PURE__*/React.createElement("div", {
+    className: "font-bold text-[14px]"
+  }, "내 매칭 점수 미리보기"), /*#__PURE__*/React.createElement(A.Chip, {
+    tone: "indigo"
+  }, "★ 핵심")), /*#__PURE__*/React.createElement("div", {
+    className: "flex items-center gap-5"
+  }, /*#__PURE__*/React.createElement(A.DonutScore, {
+    score: score,
+    size: 120,
+    stroke: 10,
+    animKey: animKey,
+    delay: 200
+  }), /*#__PURE__*/React.createElement("div", {
+    className: "flex-1"
+  }, /*#__PURE__*/React.createElement("div", {
+    className: "text-[12px]",
+    style: {
+      color: '#475569'
+    }
+  }, "지원하면"), /*#__PURE__*/React.createElement("div", {
+    className: "font-bold text-[20px] mt-0.5",
+    style: {
+      letterSpacing: '-0.02em'
+    }
+  }, "상위 32%"), /*#__PURE__*/React.createElement("div", {
+    className: "text-[12px] mt-1",
+    style: {
+      color: '#475569'
+    }
+  }, "비슷한 점수: 12명 / 38명"))), /*#__PURE__*/React.createElement("div", {
+    className: "mt-5"
+  }, /*#__PURE__*/React.createElement(A.ScoreBars, {
+    b: breakdown,
+    animKey: animKey
+  })), /*#__PURE__*/React.createElement("div", {
+    className: "mt-4 rounded-xl p-3 flex items-start gap-2",
+    style: {
+      background: '#EEF2FF'
+    }
+  }, /*#__PURE__*/React.createElement(Lc.Lightbulb, {
+    size: 14,
+    style: {
+      color: '#4F46E5',
+      marginTop: 2
+    }
+  }), /*#__PURE__*/React.createElement("div", null, /*#__PURE__*/React.createElement("div", {
+    className: "text-[12px] font-bold",
+    style: {
+      color: '#4F46E5'
+    }
+  }, "점수 올리는 방법"), /*#__PURE__*/React.createElement("div", {
+    className: "text-[12px] mt-0.5",
+    style: {
+      color: '#475569'
+    }
+  }, "기술 스택을 더 등록하면 ", /*#__PURE__*/React.createElement("b", null, "+9점"), ", 포트폴리오 1개 추가하면 ", /*#__PURE__*/React.createElement("b", null, "+5점"))))));
+}
+
+// ============ SCREEN 4: APPLICANT COMPARE ============
+function ScreenCompare({
+  device,
+  animKey,
+  projectId
+}) {
+  const isM = device === 'mobile';
+  const [mode, setMode] = useS1('list'); // list | top3
+  const project = D.PROJECTS.find(p => p.id === projectId) || D.PROJECTS[0];
+  // shuffle applicants based on project id so each project shows different applicants
+  const seed = (project.id || 1) - 1;
+  const sorted = [...D.APPLICANTS].map((a, i) => ({
+    ...a,
+    score: Math.max(45, Math.min(98, a.score + (i + seed) % 5 * 3 - 6))
+  })).sort((a, b) => b.score - a.score);
+  return /*#__PURE__*/React.createElement("div", {
+    className: "tab-enter",
+    key: animKey
+  }, /*#__PURE__*/React.createElement("div", {
+    className: `flex items-center justify-between ${isM ? 'px-4 py-3' : 'px-10 py-4'} border-b bg-white sticky top-0 z-20`,
+    style: {
+      borderColor: '#E4E4E7'
+    }
+  }, /*#__PURE__*/React.createElement("div", {
+    className: "flex items-center gap-3"
+  }, /*#__PURE__*/React.createElement(Lc.ChevronLeft, {
+    size: 20,
+    className: "cursor-pointer",
+    onClick: () => window.__nav && window.__nav.go('detail', {
+      projectId: project.id
+    })
+  }), /*#__PURE__*/React.createElement("div", null, /*#__PURE__*/React.createElement("div", {
+    className: "font-bold text-[14px]"
+  }, project.title), /*#__PURE__*/React.createElement("div", {
+    className: "text-[11px]",
+    style: {
+      color: '#475569'
+    }
+  }, "지원자 ", sorted.length, "명 · 마감 D-", project.dday))), !isM && /*#__PURE__*/React.createElement("div", {
+    className: "flex items-center gap-2"
+  }, /*#__PURE__*/React.createElement("div", {
+    className: "flex gap-1 rounded-xl border bg-white p-1",
+    style: {
+      borderColor: '#E4E4E7'
+    }
+  }, ['점수순', '최신순'].map((s, i) => /*#__PURE__*/React.createElement("span", {
+    key: s,
+    className: `text-[12px] font-semibold px-3 py-1.5 rounded-lg ${i === 0 ? 'text-white' : 'text-zinc-500'}`,
+    style: i === 0 ? {
+      background: '#0F172A'
+    } : undefined
+  }, s))), /*#__PURE__*/React.createElement("button", {
+    onClick: () => setMode(mode === 'list' ? 'top3' : 'list'),
+    className: `rounded-xl text-[12px] font-bold px-3 py-2 flex items-center gap-1.5 transition`,
+    style: {
+      background: mode === 'top3' ? '#4F46E5' : '#0F172A',
+      color: 'white'
+    }
+  }, /*#__PURE__*/React.createElement(Lc.Layers, {
+    size: 13
+  }), " ", mode === 'top3' ? '리스트로 보기' : 'TOP 3 비교하기'))), !isM && /*#__PURE__*/React.createElement("div", {
+    className: "px-10 py-6"
+  }, mode === 'list' ? /*#__PURE__*/React.createElement("div", {
+    className: "grid gap-3"
+  }, sorted.map((a, i) => /*#__PURE__*/React.createElement(ApplicantCard, {
+    key: a.id,
+    applicant: a,
+    animKey: animKey,
+    index: i
+  }))) : /*#__PURE__*/React.createElement(Top3Compare, {
+    applicants: sorted.slice(0, 3),
+    animKey: animKey
+  })), isM && /*#__PURE__*/React.createElement("div", {
+    className: "px-4 py-4"
+  }, /*#__PURE__*/React.createElement("div", {
+    className: "flex gap-1 rounded-xl border bg-white p-1 mb-3",
+    style: {
+      borderColor: '#E4E4E7'
+    }
+  }, ['점수순', '최신순'].map((s, i) => /*#__PURE__*/React.createElement("span", {
+    key: s,
+    className: `flex-1 text-center text-[12px] font-semibold px-3 py-1.5 rounded-lg ${i === 0 ? 'text-white' : 'text-zinc-500'}`,
+    style: i === 0 ? {
+      background: '#0F172A'
+    } : undefined
+  }, s))), /*#__PURE__*/React.createElement("div", {
+    className: "text-[11px] mb-3",
+    style: {
+      color: '#475569'
+    }
+  }, "← 거절 / 승인 →로 스와이프"), /*#__PURE__*/React.createElement(ApplicantCardMobile, {
+    applicant: sorted[0],
+    animKey: animKey
+  }), /*#__PURE__*/React.createElement("div", {
+    className: "mt-3 grid gap-3"
+  }, sorted.slice(1, 4).map((a, i) => /*#__PURE__*/React.createElement(ApplicantCardMobile, {
+    key: a.id,
+    applicant: a,
+    animKey: animKey,
+    compact: true
+  })))));
+}
+function ApplicantCard({
+  applicant: a,
+  animKey,
+  index
+}) {
+  const col = A.scoreColor(a.score);
+  return /*#__PURE__*/React.createElement("div", {
+    onClick: () => window.__openApplicant && window.__openApplicant(a),
+    className: "rounded-2xl bg-white border p-5 grid grid-cols-12 gap-5 shadow-card hover:shadow-cardHov transition stagger-card cursor-pointer",
+    style: {
+      borderColor: '#E4E4E7',
+      animationDelay: `${index * 50}ms`
+    }
+  }, /*#__PURE__*/React.createElement("div", {
+    className: "col-span-2 flex flex-col items-center gap-2"
+  }, /*#__PURE__*/React.createElement(A.DonutScore, {
+    score: a.score,
+    size: 108,
+    stroke: 10,
+    animKey: animKey,
+    delay: 200 + index * 50
+  }), /*#__PURE__*/React.createElement("span", {
+    className: "text-[10px] font-bold tracking-wider rounded-full px-2 py-0.5",
+    style: {
+      background: col.labelBg,
+      color: col.labelText
+    }
+  }, col.label)), /*#__PURE__*/React.createElement("div", {
+    className: "col-span-5 border-l pl-5",
+    style: {
+      borderColor: '#F1F5F9'
+    }
+  }, /*#__PURE__*/React.createElement("div", {
+    className: "flex items-center gap-2.5"
+  }, /*#__PURE__*/React.createElement(A.Avatar, {
+    name: a.name,
+    dept: a.dept,
+    size: 36
+  }), /*#__PURE__*/React.createElement("div", null, /*#__PURE__*/React.createElement("div", {
+    className: "font-bold text-[15px]"
+  }, a.name), /*#__PURE__*/React.createElement("div", {
+    className: "mt-0.5 flex items-center gap-1.5"
+  }, /*#__PURE__*/React.createElement(A.MajorChip, {
+    dept: a.dept,
+    year: a.year,
+    size: "xs"
+  }), /*#__PURE__*/React.createElement("span", {
+    className: "text-[11px]",
+    style: {
+      color: '#94A3B8'
+    }
+  }, a.school)))), /*#__PURE__*/React.createElement("div", {
+    className: "mt-3 text-[13px]",
+    style: {
+      color: '#475569'
+    }
+  }, a.intro), /*#__PURE__*/React.createElement("div", {
+    className: "mt-3 flex flex-wrap gap-1.5"
+  }, a.skills.slice(0, 5).map(s => /*#__PURE__*/React.createElement(A.Chip, {
+    key: s,
+    tone: "indigo"
+  }, s))), /*#__PURE__*/React.createElement("div", {
+    className: "mt-3 flex items-center gap-1.5 text-[12px] font-semibold",
+    style: {
+      color: '#4F46E5'
+    }
+  }, /*#__PURE__*/React.createElement(Lc.Link, {
+    size: 12
+  }), " ", a.portfolio)), /*#__PURE__*/React.createElement("div", {
+    className: "col-span-3 border-l pl-5",
+    style: {
+      borderColor: '#F1F5F9'
+    }
+  }, /*#__PURE__*/React.createElement(A.ScoreBars, {
+    b: a.breakdown,
+    animKey: animKey
+  })), /*#__PURE__*/React.createElement("div", {
+    className: "col-span-2 flex flex-col gap-2 justify-center border-l pl-5",
+    style: {
+      borderColor: '#F1F5F9'
+    }
+  }, /*#__PURE__*/React.createElement("button", {
+    className: "rounded-xl text-white font-semibold text-[12px] py-2 flex items-center justify-center gap-1",
+    style: {
+      background: '#84CC16'
+    }
+  }, /*#__PURE__*/React.createElement(Lc.Check, {
+    size: 13
+  }), " 승인"), /*#__PURE__*/React.createElement("button", {
+    className: "rounded-xl border text-[12px] font-semibold py-2 flex items-center justify-center gap-1",
+    style: {
+      borderColor: '#E4E4E7',
+      color: '#0F172A'
+    }
+  }, /*#__PURE__*/React.createElement(Lc.MessageCircle, {
+    size: 12
+  }), " 메시지"), /*#__PURE__*/React.createElement("button", {
+    className: "rounded-xl text-[12px] font-semibold py-2 flex items-center justify-center gap-1",
+    style: {
+      color: '#BE123C',
+      background: '#FFE4E6'
+    }
+  }, /*#__PURE__*/React.createElement(Lc.X, {
+    size: 12
+  }), " 거절")));
+}
+function ApplicantCardMobile({
+  applicant: a,
+  animKey,
+  compact
+}) {
+  const col = A.scoreColor(a.score);
+  if (compact) {
+    return /*#__PURE__*/React.createElement("div", {
+      onClick: () => window.__openApplicant && window.__openApplicant(a),
+      className: "rounded-2xl bg-white border p-3.5 flex items-center gap-3 shadow-card cursor-pointer",
+      style: {
+        borderColor: '#E4E4E7'
+      }
+    }, /*#__PURE__*/React.createElement(A.DonutScore, {
+      score: a.score,
+      size: 56,
+      stroke: 6,
+      animKey: animKey,
+      delay: 300,
+      showLabel: false
+    }), /*#__PURE__*/React.createElement("div", {
+      className: "flex-1 min-w-0"
+    }, /*#__PURE__*/React.createElement("div", {
+      className: "font-bold text-[13px]"
+    }, a.name), /*#__PURE__*/React.createElement("div", {
+      className: "mt-1"
+    }, /*#__PURE__*/React.createElement(A.MajorChip, {
+      dept: a.dept,
+      year: a.year,
+      size: "xs"
+    })), /*#__PURE__*/React.createElement("div", {
+      className: "mt-1 text-[11px] truncate",
+      style: {
+        color: '#475569'
+      }
+    }, a.intro)), /*#__PURE__*/React.createElement("span", {
+      className: "text-[10px] font-bold rounded-full px-2 py-0.5",
+      style: {
+        background: col.labelBg,
+        color: col.labelText
+      }
+    }, col.label));
+  }
+  return /*#__PURE__*/React.createElement("div", {
+    onClick: () => window.__openApplicant && window.__openApplicant(a),
+    className: "rounded-2xl bg-white border p-5 shadow-cardHov stagger-card cursor-pointer",
+    style: {
+      borderColor: '#E4E4E7'
+    }
+  }, /*#__PURE__*/React.createElement("div", {
+    className: "flex items-center justify-center mb-3"
+  }, /*#__PURE__*/React.createElement(A.DonutScore, {
+    score: a.score,
+    size: 120,
+    stroke: 10,
+    animKey: animKey,
+    delay: 200
+  })), /*#__PURE__*/React.createElement("div", {
+    className: "flex items-center justify-center mb-3"
+  }, /*#__PURE__*/React.createElement("span", {
+    className: "text-[11px] font-bold tracking-wider rounded-full px-2.5 py-1",
+    style: {
+      background: col.labelBg,
+      color: col.labelText
+    }
+  }, col.label)), /*#__PURE__*/React.createElement("div", {
+    className: "flex items-center gap-3 pb-3 border-b",
+    style: {
+      borderColor: '#F1F5F9'
+    }
+  }, /*#__PURE__*/React.createElement(A.Avatar, {
+    name: a.name,
+    dept: a.dept,
+    size: 36
+  }), /*#__PURE__*/React.createElement("div", null, /*#__PURE__*/React.createElement("div", {
+    className: "font-bold text-[14px]"
+  }, a.name), /*#__PURE__*/React.createElement("div", {
+    className: "mt-0.5 flex items-center gap-1.5"
+  }, /*#__PURE__*/React.createElement(A.MajorChip, {
+    dept: a.dept,
+    year: a.year,
+    size: "xs"
+  })))), /*#__PURE__*/React.createElement("div", {
+    className: "mt-3 text-[13px]",
+    style: {
+      color: '#475569'
+    }
+  }, a.intro), /*#__PURE__*/React.createElement("div", {
+    className: "mt-3 flex flex-wrap gap-1.5"
+  }, a.skills.slice(0, 4).map(s => /*#__PURE__*/React.createElement(A.Chip, {
+    key: s,
+    tone: "indigo"
+  }, s))), /*#__PURE__*/React.createElement("div", {
+    className: "mt-4 pt-4 border-t",
+    style: {
+      borderColor: '#F1F5F9'
+    }
+  }, /*#__PURE__*/React.createElement(A.ScoreBars, {
+    b: a.breakdown,
+    animKey: animKey
+  })), /*#__PURE__*/React.createElement("div", {
+    className: "mt-4 grid grid-cols-3 gap-2"
+  }, /*#__PURE__*/React.createElement("button", {
+    className: "rounded-xl text-[12px] font-semibold py-2.5 flex items-center justify-center gap-1",
+    style: {
+      color: '#BE123C',
+      background: '#FFE4E6'
+    }
+  }, "거절"), /*#__PURE__*/React.createElement("button", {
+    className: "rounded-xl border text-[12px] font-semibold py-2.5",
+    style: {
+      borderColor: '#E4E4E7',
+      color: '#0F172A'
+    }
+  }, "메시지"), /*#__PURE__*/React.createElement("button", {
+    className: "rounded-xl text-white font-semibold text-[12px] py-2.5",
+    style: {
+      background: '#84CC16'
+    }
+  }, "승인")));
+}
+function Top3Compare({
+  applicants,
+  animKey
+}) {
+  const rows = A.BREAKDOWN_LABELS;
+  const maxByRow = {};
+  rows.forEach(r => {
+    maxByRow[r.key] = Math.max(...applicants.map(a => a.breakdown[r.key]));
+  });
+  return /*#__PURE__*/React.createElement("div", null, /*#__PURE__*/React.createElement("div", {
+    className: "text-[12px] mb-3",
+    style: {
+      color: '#475569'
+    }
+  }, "가장 높은 항목은 ", /*#__PURE__*/React.createElement("span", {
+    className: "rounded px-1.5 py-0.5 font-semibold",
+    style: {
+      background: '#ECFCCB',
+      color: '#3F6212'
+    }
+  }, "Lime"), "으로 표시"), /*#__PURE__*/React.createElement("div", {
+    className: "rounded-2xl bg-white border overflow-hidden shadow-card",
+    style: {
+      borderColor: '#E4E4E7'
+    }
+  }, /*#__PURE__*/React.createElement("div", {
+    className: "grid grid-cols-4"
+  }, /*#__PURE__*/React.createElement("div", {
+    className: "p-5 text-[11px] font-bold tracking-wide",
+    style: {
+      color: '#94A3B8',
+      background: '#FAFAFA'
+    }
+  }, "비교 항목"), applicants.map((a, i) => /*#__PURE__*/React.createElement("div", {
+    key: a.id,
+    className: "p-5 border-l text-center",
+    style: {
+      borderColor: '#F1F5F9',
+      background: '#FAFAFA'
+    }
+  }, /*#__PURE__*/React.createElement(A.DonutScore, {
+    score: a.score,
+    size: 84,
+    stroke: 8,
+    animKey: animKey,
+    delay: 200 + i * 100
+  }), /*#__PURE__*/React.createElement("div", {
+    className: "mt-2 font-bold text-[14px]"
+  }, a.name), /*#__PURE__*/React.createElement("div", {
+    className: "mt-1 flex items-center justify-center"
+  }, /*#__PURE__*/React.createElement(A.MajorChip, {
+    dept: a.dept,
+    year: a.year,
+    size: "xs"
+  }))))), rows.map(row => /*#__PURE__*/React.createElement("div", {
+    key: row.key,
+    className: "grid grid-cols-4 border-t",
+    style: {
+      borderColor: '#F1F5F9'
+    }
+  }, /*#__PURE__*/React.createElement("div", {
+    className: "p-4 text-[12px] font-semibold",
+    style: {
+      color: '#475569'
+    }
+  }, row.label, " ", /*#__PURE__*/React.createElement("span", {
+    style: {
+      color: '#94A3B8'
+    }
+  }, "· /", row.max)), applicants.map(a => {
+    const v = a.breakdown[row.key];
+    const isMax = v === maxByRow[row.key];
+    return /*#__PURE__*/React.createElement("div", {
+      key: a.id,
+      className: "p-4 border-l",
+      style: {
+        borderColor: '#F1F5F9',
+        background: isMax ? '#ECFCCB' : 'transparent'
+      }
+    }, /*#__PURE__*/React.createElement("div", {
+      className: "flex items-center gap-2"
+    }, /*#__PURE__*/React.createElement("div", {
+      className: "flex-1 h-1.5 rounded-full",
+      style: {
+        background: '#F1F5F9'
+      }
+    }, /*#__PURE__*/React.createElement("div", {
+      className: "h-full rounded-full",
+      style: {
+        width: `${v / row.max * 100}%`,
+        background: row.color
+      }
+    })), /*#__PURE__*/React.createElement("div", {
+      className: "text-[12px] font-bold tabular-nums",
+      style: {
+        color: isMax ? '#3F6212' : '#0F172A'
+      }
+    }, v)));
+  }))), /*#__PURE__*/React.createElement("div", {
+    className: "grid grid-cols-4 border-t",
+    style: {
+      borderColor: '#F1F5F9'
+    }
+  }, /*#__PURE__*/React.createElement("div", {
+    className: "p-4 text-[12px] font-semibold",
+    style: {
+      color: '#475569'
+    }
+  }, "한 줄 자기소개"), applicants.map(a => /*#__PURE__*/React.createElement("div", {
+    key: a.id,
+    className: "p-4 border-l text-[12px]",
+    style: {
+      borderColor: '#F1F5F9',
+      color: '#475569'
+    }
+  }, a.intro))), /*#__PURE__*/React.createElement("div", {
+    className: "grid grid-cols-4 border-t",
+    style: {
+      borderColor: '#F1F5F9'
+    }
+  }, /*#__PURE__*/React.createElement("div", {
+    className: "p-4 text-[12px] font-semibold",
+    style: {
+      color: '#475569'
+    }
+  }, "주요 기술"), applicants.map(a => /*#__PURE__*/React.createElement("div", {
+    key: a.id,
+    className: "p-4 border-l flex flex-wrap gap-1",
+    style: {
+      borderColor: '#F1F5F9'
+    }
+  }, a.skills.slice(0, 3).map(s => /*#__PURE__*/React.createElement(A.Chip, {
+    key: s,
+    tone: "indigo"
+  }, s)))))), /*#__PURE__*/React.createElement("div", {
+    className: "mt-5 flex items-center justify-between rounded-2xl p-4",
+    style: {
+      background: 'linear-gradient(90deg, #ECFCCB 0%, #EEF2FF 100%)'
+    }
+  }, /*#__PURE__*/React.createElement("div", null, /*#__PURE__*/React.createElement("div", {
+    className: "font-bold text-[15px]"
+  }, "이 조합으로 팀 구성"), /*#__PURE__*/React.createElement("div", {
+    className: "text-[12px] mt-0.5",
+    style: {
+      color: '#475569'
+    }
+  }, "최도윤 · 이수민 · 박서연 — 평균 매칭 86.7점")), /*#__PURE__*/React.createElement("button", {
+    className: "rounded-xl text-white font-bold px-5 py-3 flex items-center gap-2",
+    style: {
+      background: '#4F46E5'
+    }
+  }, "팀 구성 확정 ", /*#__PURE__*/React.createElement(Lc.ArrowRight, {
+    size: 14
+  }))));
+}
+window.CampusScreens = {
+  ScreenLanding,
+  ScreenExplore,
+  ScreenDetail,
+  ScreenCompare
+};
+// Screens 5-7: Dashboard, Portfolio, Notifications
+const A2 = window.CampusAtoms;
+const D2 = window.CampusData;
+const Lc2 = window.lucideReact || {};
+const {
+  useState: useS2
+} = React;
+
+// ============ SCREEN 5: DASHBOARD ============
+function ScreenDashboard({
+  device,
+  animKey
+}) {
+  const isM = device === 'mobile';
+  return /*#__PURE__*/React.createElement("div", {
+    className: "tab-enter",
+    key: animKey
+  }, /*#__PURE__*/React.createElement("div", {
+    className: `flex items-center justify-between ${isM ? 'px-4 py-3' : 'px-10 py-4'} border-b bg-white sticky top-0 z-20`,
+    style: {
+      borderColor: '#E4E4E7'
+    }
+  }, /*#__PURE__*/React.createElement("div", {
+    className: "flex items-center gap-3"
+  }, !isM && /*#__PURE__*/React.createElement(A2.Wordmark, null), !isM && /*#__PURE__*/React.createElement("span", {
+    style: {
+      color: '#E4E4E7'
+    }
+  }, "/"), /*#__PURE__*/React.createElement("span", {
+    className: "font-semibold text-[14px]"
+  }, "캠퍼스 분실물 찾아주는 앱")), /*#__PURE__*/React.createElement("div", {
+    className: "flex items-center gap-2"
+  }, !isM && /*#__PURE__*/React.createElement("button", {
+    className: "rounded-xl border bg-white text-[12px] font-medium px-3 py-2 flex items-center gap-1.5",
+    style: {
+      borderColor: '#E4E4E7'
+    }
+  }, /*#__PURE__*/React.createElement(Lc2.MessageSquare, {
+    size: 13
+  }), " 디스코드 연동"), /*#__PURE__*/React.createElement(A2.Avatar, {
+    name: "김민준",
+    dept: "컴퓨터공학",
+    size: 32
+  }))), /*#__PURE__*/React.createElement("div", {
+    className: `${isM ? 'px-4 py-4' : 'px-10 py-5'} bg-white border-b`,
+    style: {
+      borderColor: '#E4E4E7'
+    }
+  }, /*#__PURE__*/React.createElement("div", {
+    className: `${isM ? '' : 'flex items-center justify-between'}`
+  }, /*#__PURE__*/React.createElement("div", null, /*#__PURE__*/React.createElement("div", {
+    className: "flex items-center gap-2 flex-wrap"
+  }, /*#__PURE__*/React.createElement(A2.Chip, null, "교내 서비스"), /*#__PURE__*/React.createElement(A2.Chip, {
+    tone: "indigo"
+  }, "진행 중")), /*#__PURE__*/React.createElement("h1", {
+    className: "font-bold mt-2",
+    style: {
+      fontSize: isM ? 20 : 24,
+      letterSpacing: '-0.02em'
+    }
+  }, "캠퍼스 분실물 찾아주는 앱")), /*#__PURE__*/React.createElement("div", {
+    className: `${isM ? 'mt-3' : ''} flex items-center gap-4`
+  }, /*#__PURE__*/React.createElement("div", {
+    className: "flex -space-x-2"
+  }, ['김민준', '이수민', '박서연', '정현우', '한지우'].map((n, i) => /*#__PURE__*/React.createElement(A2.Avatar, {
+    key: n,
+    name: n,
+    dept: ['컴퓨터공학', '시각디자인', '경영학', '통계학', '미디어커뮤니케이션'][i],
+    size: 32
+  }))), /*#__PURE__*/React.createElement("div", {
+    className: "rounded-xl px-4 py-2 text-center",
+    style: {
+      background: '#0F172A',
+      color: 'white'
+    }
+  }, /*#__PURE__*/React.createElement("div", {
+    className: "text-[10px] opacity-70"
+  }, "마감까지"), /*#__PURE__*/React.createElement("div", {
+    className: "text-[15px] font-bold"
+  }, "D-23")))), /*#__PURE__*/React.createElement("div", {
+    className: "mt-4"
+  }, /*#__PURE__*/React.createElement("div", {
+    className: "flex items-center justify-between text-[12px] mb-1.5"
+  }, /*#__PURE__*/React.createElement("span", {
+    style: {
+      color: '#475569'
+    }
+  }, "전체 진행률"), /*#__PURE__*/React.createElement("span", {
+    className: "font-bold"
+  }, "47%")), /*#__PURE__*/React.createElement("div", {
+    className: "h-2 rounded-full",
+    style: {
+      background: '#F1F5F9'
+    }
+  }, /*#__PURE__*/React.createElement("div", {
+    className: "h-full rounded-full",
+    style: {
+      width: '47%',
+      background: 'linear-gradient(90deg, #4F46E5 0%, #84CC16 100%)'
+    }
+  })))), /*#__PURE__*/React.createElement("div", {
+    className: `${isM ? 'px-4' : 'px-10'} border-b bg-white`,
+    style: {
+      borderColor: '#E4E4E7'
+    }
+  }, /*#__PURE__*/React.createElement("div", {
+    className: "flex gap-5 text-[13px] font-semibold"
+  }, [['칸반', true], ['멤버'], ['자료'], ['일정']].map(([l, on]) => /*#__PURE__*/React.createElement("div", {
+    key: l,
+    className: `py-3 border-b-2 ${on ? '' : 'border-transparent'}`,
+    style: {
+      color: on ? '#4F46E5' : '#94A3B8',
+      borderColor: on ? '#4F46E5' : 'transparent'
+    }
+  }, l)))), /*#__PURE__*/React.createElement("div", {
+    className: `${isM ? '' : 'grid grid-cols-12 gap-5 px-10 py-5'}`
+  }, /*#__PURE__*/React.createElement("div", {
+    className: isM ? '' : 'col-span-9'
+  }, isM ? /*#__PURE__*/React.createElement("div", {
+    className: "px-4 py-4"
+  }, /*#__PURE__*/React.createElement("div", {
+    className: "flex gap-2 overflow-x-auto hscroll mb-3"
+  }, [['To Do', 5, true], ['In Progress', 3], ['Done', 8]].map(([l, n, on]) => /*#__PURE__*/React.createElement("div", {
+    key: l,
+    className: "rounded-xl px-3 py-2 text-[12px] font-semibold whitespace-nowrap",
+    style: {
+      background: on ? '#0F172A' : '#F4F4F5',
+      color: on ? 'white' : '#475569'
+    }
+  }, l, " ", /*#__PURE__*/React.createElement("span", {
+    className: "ml-1 opacity-60"
+  }, n)))), /*#__PURE__*/React.createElement("div", {
+    className: "text-[11px] mb-2",
+    style: {
+      color: '#475569'
+    }
+  }, "← 가로로 스와이프해서 다른 열 보기"), /*#__PURE__*/React.createElement("div", {
+    className: "grid gap-2.5"
+  }, D2.TASKS.todo.map(t => /*#__PURE__*/React.createElement(TaskCard, {
+    key: t.id,
+    t: t
+  })))) : /*#__PURE__*/React.createElement("div", {
+    className: "grid grid-cols-3 gap-4"
+  }, /*#__PURE__*/React.createElement(KanbanColumn, {
+    title: "To Do",
+    count: D2.TASKS.todo.length,
+    tone: "gray",
+    tasks: D2.TASKS.todo
+  }), /*#__PURE__*/React.createElement(KanbanColumn, {
+    title: "In Progress",
+    count: D2.TASKS.doing.length,
+    tone: "indigo",
+    tasks: D2.TASKS.doing
+  }), /*#__PURE__*/React.createElement(KanbanColumn, {
+    title: "Done",
+    count: D2.TASKS.done.length,
+    tone: "lime",
+    tasks: D2.TASKS.done,
+    done: true
+  }))), !isM && /*#__PURE__*/React.createElement("div", {
+    className: "col-span-3 grid gap-4"
+  }, /*#__PURE__*/React.createElement(A2.Section, {
+    title: "이번 주 마감"
+  }, /*#__PURE__*/React.createElement("div", {
+    className: "grid gap-2.5"
+  }, [{
+    l: '로그인 API 구현',
+    d: 'D-2',
+    urgent: true,
+    owner: '정현우',
+    dept: '통계학'
+  }, {
+    l: '로고 시안 v2',
+    d: '내일',
+    urgent: true,
+    owner: '이수민',
+    dept: '시각디자인'
+  }, {
+    l: '발표 영상 편집',
+    d: 'D-4',
+    owner: '한지우',
+    dept: '미디어커뮤니케이션'
+  }, {
+    l: '인터뷰 스크립트',
+    d: 'D-7',
+    owner: '박서연',
+    dept: '경영학'
+  }].map(t => /*#__PURE__*/React.createElement("div", {
+    key: t.l,
+    className: "flex items-center gap-2.5 rounded-lg p-2 border",
+    style: {
+      borderColor: '#F1F5F9'
+    }
+  }, /*#__PURE__*/React.createElement(A2.Avatar, {
+    name: t.owner,
+    dept: t.dept,
+    size: 26
+  }), /*#__PURE__*/React.createElement("div", {
+    className: "flex-1 min-w-0"
+  }, /*#__PURE__*/React.createElement("div", {
+    className: "text-[12px] font-semibold truncate"
+  }, t.l), /*#__PURE__*/React.createElement("div", {
+    className: "text-[10px]",
+    style: {
+      color: '#94A3B8'
+    }
+  }, t.owner)), /*#__PURE__*/React.createElement("span", {
+    className: "text-[10px] font-bold rounded-full px-2 py-0.5",
+    style: {
+      background: t.urgent ? '#FFE4E6' : '#F4F4F5',
+      color: t.urgent ? '#BE123C' : '#475569'
+    }
+  }, t.d))))), /*#__PURE__*/React.createElement(A2.Section, {
+    title: "최근 활동"
+  }, /*#__PURE__*/React.createElement("div", {
+    className: "grid gap-3 text-[12px]"
+  }, [{
+    who: '박서연',
+    dept: '경영학',
+    what: '[로고 시안] Task를 완료했어요',
+    t: '5분 전'
+  }, {
+    who: '정현우',
+    dept: '통계학',
+    what: '[로그인 API] 댓글을 남겼어요',
+    t: '23분 전'
+  }, {
+    who: '한지우',
+    dept: '미디어커뮤니케이션',
+    what: '[발표 영상] 자료를 업로드했어요',
+    t: '1시간 전'
+  }, {
+    who: '이수민',
+    dept: '시각디자인',
+    what: '브랜드 컬러를 확정했어요',
+    t: '3시간 전'
+  }].map((a, i) => /*#__PURE__*/React.createElement("div", {
+    key: i,
+    className: "flex items-start gap-2.5"
+  }, /*#__PURE__*/React.createElement(A2.Avatar, {
+    name: a.who,
+    dept: a.dept,
+    size: 26
+  }), /*#__PURE__*/React.createElement("div", {
+    className: "flex-1"
+  }, /*#__PURE__*/React.createElement("div", {
+    style: {
+      color: '#475569'
+    }
+  }, /*#__PURE__*/React.createElement("b", {
+    style: {
+      color: '#0F172A'
+    }
+  }, a.who), "님이 ", a.what), /*#__PURE__*/React.createElement("div", {
+    className: "mt-0.5 text-[10px]",
+    style: {
+      color: '#94A3B8'
+    }
+  }, a.t)))))), /*#__PURE__*/React.createElement(A2.Section, {
+    title: "알림"
+  }, /*#__PURE__*/React.createElement("div", {
+    className: "flex items-center justify-between rounded-xl p-3",
+    style: {
+      background: '#F4F4F5'
+    }
+  }, /*#__PURE__*/React.createElement("div", {
+    className: "flex items-center gap-2.5"
+  }, /*#__PURE__*/React.createElement(Lc2.MessageSquare, {
+    size: 16,
+    style: {
+      color: '#5865F2'
+    }
+  }), /*#__PURE__*/React.createElement("div", null, /*#__PURE__*/React.createElement("div", {
+    className: "text-[12px] font-semibold"
+  }, "디스코드 알림"), /*#__PURE__*/React.createElement("div", {
+    className: "text-[10px]",
+    style: {
+      color: '#94A3B8'
+    }
+  }, "#campus-link-team"))), /*#__PURE__*/React.createElement("div", {
+    className: "w-9 h-5 rounded-full p-0.5",
+    style: {
+      background: '#4F46E5'
+    }
+  }, /*#__PURE__*/React.createElement("div", {
+    className: "w-4 h-4 rounded-full bg-white ml-auto"
+  })))))));
+}
+function KanbanColumn({
+  title,
+  count,
+  tone,
+  tasks,
+  done
+}) {
+  const tones = {
+    gray: {
+      dot: '#94A3B8',
+      bg: '#F4F4F5',
+      text: '#475569'
+    },
+    indigo: {
+      dot: '#4F46E5',
+      bg: '#EEF2FF',
+      text: '#4F46E5'
+    },
+    lime: {
+      dot: '#84CC16',
+      bg: '#ECFCCB',
+      text: '#3F6212'
+    }
+  };
+  const t = tones[tone];
+  return /*#__PURE__*/React.createElement("div", {
+    className: "rounded-2xl p-3",
+    style: {
+      background: '#FAFAFA',
+      border: '1px solid #E4E4E7'
+    }
+  }, /*#__PURE__*/React.createElement("div", {
+    className: "flex items-center justify-between mb-3 px-1.5"
+  }, /*#__PURE__*/React.createElement("div", {
+    className: "flex items-center gap-2"
+  }, /*#__PURE__*/React.createElement("span", {
+    className: "w-2 h-2 rounded-full",
+    style: {
+      background: t.dot
+    }
+  }), /*#__PURE__*/React.createElement("span", {
+    className: "text-[12px] font-bold"
+  }, title), /*#__PURE__*/React.createElement("span", {
+    className: "text-[11px] font-bold rounded-full px-1.5",
+    style: {
+      background: t.bg,
+      color: t.text
+    }
+  }, count)), /*#__PURE__*/React.createElement(Lc2.Plus, {
+    size: 14,
+    style: {
+      color: '#94A3B8'
+    }
+  })), /*#__PURE__*/React.createElement("div", {
+    className: "grid gap-2.5"
+  }, tasks.map(task => /*#__PURE__*/React.createElement(TaskCard, {
+    key: task.id,
+    t: task,
+    done: done
+  })), /*#__PURE__*/React.createElement("div", {
+    className: "rounded-xl border-2 border-dashed text-[12px] font-semibold py-2.5 text-center",
+    style: {
+      borderColor: '#E4E4E7',
+      color: '#94A3B8'
+    }
+  }, "+ Task 추가")));
+}
+function TaskCard({
+  t,
+  done
+}) {
+  const m = D2.MAJOR[t.major];
+  const dept = {
+    '컴공/SW': '컴퓨터공학',
+    '디자인': '시각디자인',
+    '경영/기획': '경영학',
+    '미디어/홍보': '미디어커뮤니케이션',
+    '통계/데이터': '통계학'
+  }[t.major];
+  return /*#__PURE__*/React.createElement("div", {
+    onClick: () => window.__openTask && window.__openTask(t),
+    className: "rounded-xl bg-white p-3 border shadow-card hover:shadow-cardHov transition cursor-pointer",
+    style: {
+      borderColor: '#E4E4E7',
+      opacity: done ? 0.7 : 1
+    }
+  }, /*#__PURE__*/React.createElement("div", {
+    className: "flex items-start justify-between gap-2"
+  }, /*#__PURE__*/React.createElement("div", {
+    className: `text-[13px] font-bold leading-snug ${done ? 'line-through' : ''}`,
+    style: {
+      color: done ? '#94A3B8' : '#0F172A'
+    }
+  }, t.title), t.tag && /*#__PURE__*/React.createElement(A2.Chip, null, t.tag)), /*#__PURE__*/React.createElement("div", {
+    className: "text-[11px] mt-1",
+    style: {
+      color: '#94A3B8'
+    }
+  }, t.desc), /*#__PURE__*/React.createElement("div", {
+    className: "mt-3 flex items-center justify-between"
+  }, /*#__PURE__*/React.createElement("div", {
+    className: "flex items-center gap-1.5"
+  }, /*#__PURE__*/React.createElement(A2.Avatar, {
+    name: t.owner,
+    dept: dept,
+    size: 22
+  }), /*#__PURE__*/React.createElement("span", {
+    className: "text-[11px] font-medium",
+    style: {
+      color: '#475569'
+    }
+  }, t.owner)), /*#__PURE__*/React.createElement("div", {
+    className: "flex items-center gap-2 text-[11px]",
+    style: {
+      color: '#94A3B8'
+    }
+  }, t.files > 0 && /*#__PURE__*/React.createElement("span", {
+    className: "flex items-center gap-0.5"
+  }, /*#__PURE__*/React.createElement(Lc2.Paperclip, {
+    size: 11
+  }), t.files), t.comments > 0 && /*#__PURE__*/React.createElement("span", {
+    className: "flex items-center gap-0.5"
+  }, /*#__PURE__*/React.createElement(Lc2.MessageCircle, {
+    size: 11
+  }), t.comments), /*#__PURE__*/React.createElement("span", {
+    className: "font-bold rounded-full px-1.5 py-0.5",
+    style: {
+      background: t.urgent ? '#FFE4E6' : '#F4F4F5',
+      color: t.urgent ? '#BE123C' : '#475569'
+    }
+  }, t.due))));
+}
+
+// ============ SCREEN 6: PORTFOLIO ============
+function ScreenPortfolio({
+  device,
+  animKey
+}) {
+  const isM = device === 'mobile';
+  return /*#__PURE__*/React.createElement("div", {
+    className: "tab-enter relative",
+    key: animKey,
+    style: {
+      background: 'linear-gradient(180deg, #FAFAFA 0%, #FFFFFF 100%)',
+      minHeight: '100%'
+    }
+  }, window.__ML_SHOW_CONFETTI !== false && /*#__PURE__*/React.createElement("div", {
+    className: "absolute inset-0 overflow-hidden pointer-events-none"
+  }, Array.from({
+    length: 24
+  }).map((_, i) => {
+    const colors = ['#4F46E5', '#84CC16', '#EC4899', '#F97316', '#14B8A6', '#F59E0B'];
+    const shape = i % 3;
+    return /*#__PURE__*/React.createElement("span", {
+      key: i,
+      className: "absolute confetti-piece",
+      style: {
+        left: `${i * 4.3 % 100}%`,
+        top: `${i % 5 * 12}%`,
+        width: 8,
+        height: 8,
+        background: colors[i % colors.length],
+        borderRadius: shape === 0 ? '50%' : shape === 1 ? '0' : '2px',
+        animationDelay: `${i * 0.15 % 2.4}s`
+      }
+    });
+  })), /*#__PURE__*/React.createElement("div", {
+    className: `relative ${isM ? 'px-4 py-5' : 'px-10 py-6'}`
+  }, /*#__PURE__*/React.createElement("div", {
+    className: `flex items-center justify-between ${isM ? 'mb-5' : 'mb-6'}`
+  }, !isM && /*#__PURE__*/React.createElement(A2.Wordmark, null), /*#__PURE__*/React.createElement("div", {
+    className: "flex gap-2 ml-auto"
+  }, /*#__PURE__*/React.createElement("button", {
+    className: "rounded-xl border bg-white text-[12px] font-medium px-3 py-2 flex items-center gap-1.5",
+    style: {
+      borderColor: '#E4E4E7'
+    }
+  }, /*#__PURE__*/React.createElement(Lc2.Share2, {
+    size: 13
+  }), " 링크 복사"))), /*#__PURE__*/React.createElement("div", {
+    className: "text-center mb-6"
+  }, /*#__PURE__*/React.createElement("div", {
+    className: "inline-flex items-center gap-2 rounded-full px-3 py-1.5 mb-3",
+    style: {
+      background: '#ECFCCB'
+    }
+  }, /*#__PURE__*/React.createElement("span", {
+    className: "w-1.5 h-1.5 rounded-full",
+    style: {
+      background: '#84CC16'
+    }
+  }), /*#__PURE__*/React.createElement("span", {
+    className: "text-[12px] font-bold",
+    style: {
+      color: '#3F6212'
+    }
+  }, "PROJECT COMPLETE")), /*#__PURE__*/React.createElement("h1", {
+    className: "font-bold",
+    style: {
+      fontSize: isM ? 24 : 36,
+      letterSpacing: '-0.025em'
+    }
+  }, "프로젝트 완료를 축하해요!"), /*#__PURE__*/React.createElement("p", {
+    className: "mt-2 text-[14px]",
+    style: {
+      color: '#475569'
+    }
+  }, "10주의 협업이 한 장의 포트폴리오로 자동 정리됐어요")), /*#__PURE__*/React.createElement("div", {
+    className: `mx-auto rounded-3xl bg-white shadow-cardHov border overflow-hidden`,
+    style: {
+      borderColor: '#E4E4E7',
+      maxWidth: isM ? '100%' : 800
+    }
+  }, /*#__PURE__*/React.createElement("div", {
+    className: `${isM ? 'p-5' : 'p-8'}`
+  }, /*#__PURE__*/React.createElement("div", {
+    className: "flex items-start justify-between pb-5 border-b",
+    style: {
+      borderColor: '#F1F5F9'
+    }
+  }, /*#__PURE__*/React.createElement("div", null, /*#__PURE__*/React.createElement(A2.Wordmark, {
+    size: "md"
+  }), /*#__PURE__*/React.createElement("div", {
+    className: "mt-3 flex items-center gap-3"
+  }, /*#__PURE__*/React.createElement(A2.Avatar, {
+    name: "최도윤",
+    dept: "컴퓨터공학",
+    size: 48
+  }), /*#__PURE__*/React.createElement("div", null, /*#__PURE__*/React.createElement("div", {
+    className: "font-bold text-[18px]"
+  }, "최도윤"), /*#__PURE__*/React.createElement("div", {
+    className: "text-[12px]",
+    style: {
+      color: '#475569'
+    }
+  }, "한양대 · 컴퓨터공학 3학년")))), /*#__PURE__*/React.createElement("div", {
+    className: "text-right"
+  }, /*#__PURE__*/React.createElement("div", {
+    className: "text-[10px] font-bold tracking-wider",
+    style: {
+      color: '#94A3B8'
+    }
+  }, "PORTFOLIO"), /*#__PURE__*/React.createElement("div", {
+    className: "text-[11px] mt-1",
+    style: {
+      color: '#475569'
+    }
+  }, "2026.07.14 생성"), /*#__PURE__*/React.createElement("div", {
+    className: "text-[10px] mt-0.5 font-mono",
+    style: {
+      color: '#94A3B8'
+    }
+  }, "#ML-2026-0714-892"))), /*#__PURE__*/React.createElement("div", {
+    className: "mt-5"
+  }, /*#__PURE__*/React.createElement(A2.Placeholder, {
+    label: "캠퍼스 분실물 찾아주는 앱",
+    height: isM ? 140 : 180,
+    gradient: ['#EEF2FF', '#ECFCCB']
+  })), /*#__PURE__*/React.createElement("div", {
+    className: `mt-5 grid ${isM ? 'grid-cols-2' : 'grid-cols-4'} gap-3`
+  }, /*#__PURE__*/React.createElement(InfoTile, {
+    label: "내 역할",
+    big: "프론트엔드",
+    small: "개발자",
+    icon: /*#__PURE__*/React.createElement(Lc2.Code, {
+      size: 14
+    })
+  }), /*#__PURE__*/React.createElement(InfoTile, {
+    label: "기여도",
+    custom: /*#__PURE__*/React.createElement("div", {
+      className: "flex items-center gap-2"
+    }, /*#__PURE__*/React.createElement(A2.DonutScore, {
+      score: 28,
+      size: 48,
+      stroke: 6,
+      animKey: animKey,
+      delay: 400,
+      showLabel: false
+    }), /*#__PURE__*/React.createElement("div", {
+      className: "text-[10px]",
+      style: {
+        color: '#475569'
+      }
+    }, "매칭", /*#__PURE__*/React.createElement("br", null), "알고리즘 UI"))
+  }), /*#__PURE__*/React.createElement(InfoTile, {
+    label: "기간",
+    big: "10주",
+    small: "2026.05 - 07",
+    icon: /*#__PURE__*/React.createElement(Lc2.Calendar, {
+      size: 14
+    })
+  }), /*#__PURE__*/React.createElement(InfoTile, {
+    label: "팀 평점",
+    big: "4.7",
+    small: "/ 5.0",
+    icon: /*#__PURE__*/React.createElement(Lc2.Star, {
+      size: 14
+    })
+  })), /*#__PURE__*/React.createElement("div", {
+    className: "mt-5"
+  }, /*#__PURE__*/React.createElement(SectionLabel, null, "사용 기술"), /*#__PURE__*/React.createElement("div", {
+    className: "flex flex-wrap gap-1.5 mt-2"
+  }, ['React', 'TypeScript', 'Tailwind', 'Figma', 'Git', 'Vercel'].map(t => /*#__PURE__*/React.createElement(A2.Chip, {
+    key: t,
+    tone: "indigo"
+  }, t)))), /*#__PURE__*/React.createElement("div", {
+    className: "mt-5"
+  }, /*#__PURE__*/React.createElement(SectionLabel, null, "팀 구성 — 5명"), /*#__PURE__*/React.createElement("div", {
+    className: "mt-3 flex items-center justify-between gap-3 flex-wrap"
+  }, [{
+    n: '최도윤',
+    d: '컴퓨터공학',
+    r: 'FE 개발'
+  }, {
+    n: '정현우',
+    d: '통계학',
+    r: 'BE 개발'
+  }, {
+    n: '이수민',
+    d: '시각디자인',
+    r: '디자인'
+  }, {
+    n: '박서연',
+    d: '경영학',
+    r: 'PM'
+  }, {
+    n: '한지우',
+    d: '미디어커뮤니케이션',
+    r: '콘텐츠'
+  }].map(p => /*#__PURE__*/React.createElement("div", {
+    key: p.n,
+    className: "text-center"
+  }, /*#__PURE__*/React.createElement(A2.Avatar, {
+    name: p.n,
+    dept: p.d,
+    size: 48
+  }), /*#__PURE__*/React.createElement("div", {
+    className: "text-[12px] font-bold mt-2"
+  }, p.n), /*#__PURE__*/React.createElement("div", {
+    className: "text-[10px]",
+    style: {
+      color: '#94A3B8'
+    }
+  }, p.r)))), /*#__PURE__*/React.createElement("div", {
+    className: "mt-3 text-center text-[11px]",
+    style: {
+      color: '#475569'
+    }
+  }, "전공 다양성 ", /*#__PURE__*/React.createElement("b", {
+    style: {
+      color: '#0F172A'
+    }
+  }, "5/5"), " — 5개 계열 모두 참여")), /*#__PURE__*/React.createElement("div", {
+    className: "mt-5"
+  }, /*#__PURE__*/React.createElement(SectionLabel, null, "링크"), /*#__PURE__*/React.createElement("div", {
+    className: `mt-2 grid ${isM ? 'grid-cols-1 gap-2' : 'grid-cols-3 gap-2.5'}`
+  }, [{
+    ico: /*#__PURE__*/React.createElement(Lc2.Github, {
+      size: 14
+    }),
+    l: 'GitHub',
+    v: 'github.com/lostfound-app'
+  }, {
+    ico: /*#__PURE__*/React.createElement(Lc2.Globe, {
+      size: 14
+    }),
+    l: '배포 URL',
+    v: 'lostfound.hanyang.kr'
+  }, {
+    ico: /*#__PURE__*/React.createElement(Lc2.Figma, {
+      size: 14
+    }),
+    l: 'Figma',
+    v: 'figma.com/file/Tn29x'
+  }].map(L => /*#__PURE__*/React.createElement("div", {
+    key: L.l,
+    className: "rounded-xl border p-3 flex items-center gap-2.5",
+    style: {
+      borderColor: '#E4E4E7'
+    }
+  }, /*#__PURE__*/React.createElement("div", {
+    className: "rounded-md w-7 h-7 flex items-center justify-center",
+    style: {
+      background: '#F4F4F5'
+    }
+  }, L.ico), /*#__PURE__*/React.createElement("div", {
+    className: "min-w-0"
+  }, /*#__PURE__*/React.createElement("div", {
+    className: "text-[11px]",
+    style: {
+      color: '#94A3B8'
+    }
+  }, L.l), /*#__PURE__*/React.createElement("div", {
+    className: "text-[12px] font-semibold truncate"
+  }, L.v)))))), /*#__PURE__*/React.createElement("div", {
+    className: "mt-5"
+  }, /*#__PURE__*/React.createElement(SectionLabel, null, "동료 평가 — 4.7 / 5.0"), /*#__PURE__*/React.createElement("div", {
+    className: "mt-3 grid gap-2"
+  }, [{
+    who: '박서연',
+    dept: '경영학',
+    text: '커뮤니케이션이 정말 좋았어요. 막혔을 때 항상 빠르게 해결책을 가져오는 분.'
+  }, {
+    who: '이수민',
+    dept: '시각디자인',
+    text: '디자인 의도를 정확히 구현해줘서 작업이 정말 편했어요.'
+  }].map((c, i) => /*#__PURE__*/React.createElement("div", {
+    key: i,
+    className: "rounded-xl p-3 flex items-start gap-2.5",
+    style: {
+      background: '#FAFAFA'
+    }
+  }, /*#__PURE__*/React.createElement(A2.Avatar, {
+    name: c.who,
+    dept: c.dept,
+    size: 28
+  }), /*#__PURE__*/React.createElement("div", {
+    className: "flex-1"
+  }, /*#__PURE__*/React.createElement("div", {
+    className: "text-[12px] font-semibold"
+  }, c.who), /*#__PURE__*/React.createElement("div", {
+    className: "text-[12px] mt-1",
+    style: {
+      color: '#475569'
+    }
+  }, "\"", c.text, "\"")), /*#__PURE__*/React.createElement("div", {
+    className: "flex gap-0.5",
+    style: {
+      color: '#F59E0B'
+    }
+  }, [1, 2, 3, 4, 5].map(s => /*#__PURE__*/React.createElement(Lc2.Star, {
+    key: s,
+    size: 11,
+    fill: "#F59E0B"
+  }))))))))), /*#__PURE__*/React.createElement("div", {
+    className: `mt-6 mx-auto ${isM ? '' : 'max-w-[800px]'} grid ${isM ? 'grid-cols-1 gap-2.5' : 'grid-cols-3 gap-3'}`
+  }, /*#__PURE__*/React.createElement("button", {
+    className: "rounded-xl text-white font-bold py-3.5 flex items-center justify-center gap-2",
+    style: {
+      background: '#4F46E5'
+    }
+  }, /*#__PURE__*/React.createElement(Lc2.Download, {
+    size: 15
+  }), " PDF로 내보내기 ", /*#__PURE__*/React.createElement(Lc2.Lock, {
+    size: 11,
+    style: {
+      opacity: 0.7
+    }
+  })), /*#__PURE__*/React.createElement("button", {
+    className: "rounded-xl border bg-white font-semibold py-3.5 flex items-center justify-center gap-2",
+    style: {
+      borderColor: '#E4E4E7'
+    }
+  }, /*#__PURE__*/React.createElement(Lc2.Link, {
+    size: 14
+  }), " 공유 링크 복사"), /*#__PURE__*/React.createElement("button", {
+    className: "rounded-xl font-semibold py-3.5 flex items-center justify-center gap-2",
+    style: {
+      background: '#ECFCCB',
+      color: '#3F6212'
+    }
+  }, /*#__PURE__*/React.createElement(Lc2.Compass, {
+    size: 14
+  }), " 다음 프로젝트"))));
+}
+function SectionLabel({
+  children
+}) {
+  return /*#__PURE__*/React.createElement("div", {
+    className: "text-[10px] font-bold tracking-wider",
+    style: {
+      color: '#94A3B8'
+    }
+  }, children);
+}
+function InfoTile({
+  label,
+  big,
+  small,
+  icon,
+  custom
+}) {
+  return /*#__PURE__*/React.createElement("div", {
+    className: "rounded-xl border p-3",
+    style: {
+      borderColor: '#E4E4E7'
+    }
+  }, /*#__PURE__*/React.createElement("div", {
+    className: "flex items-center gap-1.5 text-[10px] font-bold tracking-wide",
+    style: {
+      color: '#94A3B8'
+    }
+  }, icon, label.toUpperCase()), custom ? /*#__PURE__*/React.createElement("div", {
+    className: "mt-2"
+  }, custom) : /*#__PURE__*/React.createElement("div", {
+    className: "mt-2"
+  }, /*#__PURE__*/React.createElement("div", {
+    className: "font-bold text-[16px]",
+    style: {
+      letterSpacing: '-0.02em'
+    }
+  }, big), /*#__PURE__*/React.createElement("div", {
+    className: "text-[11px]",
+    style: {
+      color: '#475569'
+    }
+  }, small)));
+}
+
+// ============ SCREEN 7: NOTIFICATIONS (mobile-only feature) ============
+function ScreenNotifWeb() {
+  return /*#__PURE__*/React.createElement("div", {
+    className: "tab-enter h-full flex flex-col items-center justify-center px-12 py-12",
+    style: {
+      background: '#FAFAFA'
+    }
+  }, /*#__PURE__*/React.createElement("div", {
+    className: "rounded-3xl bg-white border p-10 max-w-md text-center shadow-card",
+    style: {
+      borderColor: '#E4E4E7'
+    }
+  }, /*#__PURE__*/React.createElement("div", {
+    className: "text-[40px] mb-3"
+  }, "📱"), /*#__PURE__*/React.createElement("h2", {
+    className: "font-bold text-[22px]",
+    style: {
+      letterSpacing: '-0.02em'
+    }
+  }, "모바일 전용 화면입니다"), /*#__PURE__*/React.createElement("p", {
+    className: "mt-3 text-[14px]",
+    style: {
+      color: '#475569'
+    }
+  }, "알림은 푸시 중심이라 모바일 앱에서 가장 빛나요. 오른쪽 iPhone 프레임에서 풀스크린으로 미리보기 하세요."), /*#__PURE__*/React.createElement("div", {
+    className: "mt-6 flex items-center justify-center gap-2 text-[12px] font-semibold",
+    style: {
+      color: '#4F46E5'
+    }
+  }, /*#__PURE__*/React.createElement("span", null, "iOS · Android · 카카오톡 알림 연동"))));
+}
+function ScreenNotifMobile({
+  animKey
+}) {
+  return /*#__PURE__*/React.createElement("div", {
+    className: "tab-enter pb-2",
+    key: animKey
+  }, /*#__PURE__*/React.createElement("div", {
+    className: "px-5 pt-4 pb-3 bg-white border-b",
+    style: {
+      borderColor: '#E4E4E7'
+    }
+  }, /*#__PURE__*/React.createElement("div", {
+    className: "flex items-center justify-between"
+  }, /*#__PURE__*/React.createElement("h1", {
+    className: "font-bold text-[24px]",
+    style: {
+      letterSpacing: '-0.02em'
+    }
+  }, "알림"), /*#__PURE__*/React.createElement("div", {
+    className: "flex items-center gap-2"
+  }, /*#__PURE__*/React.createElement("span", {
+    className: "text-[11px] font-bold rounded-full text-white px-2 py-0.5",
+    style: {
+      background: '#F43F5E'
+    }
+  }, "3 NEW"), /*#__PURE__*/React.createElement(Lc2.Settings, {
+    size: 18,
+    style: {
+      color: '#94A3B8'
+    }
+  })))), /*#__PURE__*/React.createElement("div", {
+    className: "px-5 pt-5"
+  }, /*#__PURE__*/React.createElement("div", {
+    className: "text-[11px] font-bold tracking-wider mb-3",
+    style: {
+      color: '#94A3B8'
+    }
+  }, "오늘"), /*#__PURE__*/React.createElement("div", {
+    className: "grid gap-2.5"
+  }, D2.NOTIFS_TODAY.map((n, i) => /*#__PURE__*/React.createElement(NotifCard, {
+    key: i,
+    n: n,
+    idx: i,
+    animKey: animKey
+  })))), /*#__PURE__*/React.createElement("div", {
+    className: "px-5 pt-5"
+  }, /*#__PURE__*/React.createElement("div", {
+    className: "text-[11px] font-bold tracking-wider mb-3",
+    style: {
+      color: '#94A3B8'
+    }
+  }, "이번 주"), /*#__PURE__*/React.createElement("div", {
+    className: "grid gap-2.5"
+  }, D2.NOTIFS_WEEK.map((n, i) => /*#__PURE__*/React.createElement(NotifCard, {
+    key: i,
+    n: n,
+    idx: i + 3,
+    animKey: animKey,
+    dim: true
+  })))), /*#__PURE__*/React.createElement("div", {
+    className: "h-3"
+  }));
+}
+function NotifCard({
+  n,
+  idx,
+  animKey,
+  dim
+}) {
+  return /*#__PURE__*/React.createElement("div", {
+    className: "rounded-2xl bg-white border shadow-card overflow-hidden flex",
+    style: {
+      borderColor: '#E4E4E7'
+    }
+  }, /*#__PURE__*/React.createElement("div", {
+    className: "anim-bar-y w-1",
+    style: {
+      background: n.color,
+      animationDelay: `${idx * 80}ms`
+    }
+  }), /*#__PURE__*/React.createElement("div", {
+    className: "flex-1 p-3.5"
+  }, /*#__PURE__*/React.createElement("div", {
+    className: "flex items-center gap-2 mb-1.5"
+  }, /*#__PURE__*/React.createElement("span", {
+    className: "text-[14px]"
+  }, n.icon), /*#__PURE__*/React.createElement("span", {
+    className: "text-[12px] font-bold",
+    style: {
+      color: n.color
+    }
+  }, n.title), /*#__PURE__*/React.createElement("span", {
+    className: "ml-auto text-[10px]",
+    style: {
+      color: '#94A3B8'
+    }
+  }, n.time)), /*#__PURE__*/React.createElement("div", {
+    className: "text-[13px] leading-snug",
+    style: {
+      color: dim ? '#475569' : '#0F172A'
+    }
+  }, n.body), /*#__PURE__*/React.createElement("div", {
+    className: "mt-3 flex items-center justify-between"
+  }, /*#__PURE__*/React.createElement("button", {
+    className: "text-[11px] font-bold rounded-lg px-3 py-1.5",
+    style: {
+      background: '#F4F4F5',
+      color: '#0F172A'
+    }
+  }, n.cta), /*#__PURE__*/React.createElement(Lc2.MoreHorizontal, {
+    size: 14,
+    style: {
+      color: '#94A3B8'
+    }
+  }))));
+}
+window.CampusScreens2 = {
+  ScreenDashboard,
+  ScreenPortfolio,
+  ScreenNotifWeb,
+  ScreenNotifMobile
+};
+// Modals + My Page
+const A3 = window.CampusAtoms;
+const D3 = window.CampusData;
+const Lc3 = window.lucideReact || {};
+const {
+  useState: useS3,
+  useEffect: useE3
+} = React;
+
+// ============ APPLICANT PROFILE MODAL ============
+function ApplicantModal({
+  applicant,
+  onClose,
+  animKey
+}) {
+  if (!applicant) return null;
+  const a = applicant;
+  const col = A3.scoreColor(a.score);
+  const [k, setK] = useS3(0);
+  useE3(() => {
+    setK(x => x + 1);
+  }, [a.id]);
+  return /*#__PURE__*/React.createElement("div", {
+    className: "fixed inset-0 z-[60] flex items-center justify-center p-4",
+    style: {
+      background: 'rgba(15,23,42,0.55)'
+    },
+    onClick: onClose
+  }, /*#__PURE__*/React.createElement("div", {
+    onClick: e => e.stopPropagation(),
+    className: "rounded-3xl bg-white shadow-cardHov overflow-hidden w-full max-w-[640px] max-h-[88vh] overflow-y-auto",
+    style: {
+      border: '1px solid #E4E4E7'
+    }
+  }, /*#__PURE__*/React.createElement("div", {
+    className: "p-6 pb-4 flex items-start justify-between",
+    style: {
+      background: 'linear-gradient(135deg, #EEF2FF 0%, #ECFCCB 100%)'
+    }
+  }, /*#__PURE__*/React.createElement("div", {
+    className: "flex items-center gap-4"
+  }, /*#__PURE__*/React.createElement(A3.Avatar, {
+    name: a.name,
+    dept: a.dept,
+    size: 64
+  }), /*#__PURE__*/React.createElement("div", null, /*#__PURE__*/React.createElement("div", {
+    className: "font-bold text-[22px]",
+    style: {
+      letterSpacing: '-0.02em'
+    }
+  }, a.name), /*#__PURE__*/React.createElement("div", {
+    className: "mt-1.5 flex items-center gap-2"
+  }, /*#__PURE__*/React.createElement(A3.MajorChip, {
+    dept: a.dept,
+    year: a.year,
+    size: "xs"
+  }), /*#__PURE__*/React.createElement("span", {
+    className: "text-[12px]",
+    style: {
+      color: '#475569'
+    }
+  }, a.school)))), /*#__PURE__*/React.createElement("button", {
+    onClick: onClose,
+    className: "rounded-lg w-8 h-8 flex items-center justify-center bg-white/60"
+  }, /*#__PURE__*/React.createElement(Lc3.X, {
+    size: 16
+  }))), /*#__PURE__*/React.createElement("div", {
+    className: "p-6 grid grid-cols-12 gap-5"
+  }, /*#__PURE__*/React.createElement("div", {
+    className: "col-span-5 flex flex-col items-center text-center"
+  }, /*#__PURE__*/React.createElement(A3.DonutScore, {
+    score: a.score,
+    size: 140,
+    stroke: 12,
+    animKey: k,
+    delay: 150
+  }), /*#__PURE__*/React.createElement("span", {
+    className: "mt-2 text-[10px] font-bold tracking-wider rounded-full px-2.5 py-1",
+    style: {
+      background: col.labelBg,
+      color: col.labelText
+    }
+  }, col.label), /*#__PURE__*/React.createElement("div", {
+    className: "mt-3 text-[12px]",
+    style: {
+      color: '#475569'
+    }
+  }, "희망 역할"), /*#__PURE__*/React.createElement("div", {
+    className: "font-bold text-[14px]"
+  }, a.role)), /*#__PURE__*/React.createElement("div", {
+    className: "col-span-7"
+  }, /*#__PURE__*/React.createElement("div", {
+    className: "text-[11px] font-bold tracking-wider mb-2",
+    style: {
+      color: '#94A3B8'
+    }
+  }, "점수 상세"), /*#__PURE__*/React.createElement(A3.ScoreBars, {
+    b: a.breakdown,
+    animKey: k
+  }))), /*#__PURE__*/React.createElement("div", {
+    className: "px-6 pb-6 grid gap-4"
+  }, /*#__PURE__*/React.createElement("div", null, /*#__PURE__*/React.createElement("div", {
+    className: "text-[11px] font-bold tracking-wider mb-2",
+    style: {
+      color: '#94A3B8'
+    }
+  }, "한 줄 자기소개"), /*#__PURE__*/React.createElement("div", {
+    className: "text-[13px] rounded-xl p-3",
+    style: {
+      background: '#FAFAFA',
+      color: '#475569'
+    }
+  }, "\"", a.intro, "\"")), /*#__PURE__*/React.createElement("div", null, /*#__PURE__*/React.createElement("div", {
+    className: "text-[11px] font-bold tracking-wider mb-2",
+    style: {
+      color: '#94A3B8'
+    }
+  }, "주요 기술"), /*#__PURE__*/React.createElement("div", {
+    className: "flex flex-wrap gap-1.5"
+  }, a.skills.map(s => /*#__PURE__*/React.createElement(A3.Chip, {
+    key: s,
+    tone: "indigo"
+  }, s)))), /*#__PURE__*/React.createElement("div", null, /*#__PURE__*/React.createElement("div", {
+    className: "text-[11px] font-bold tracking-wider mb-2",
+    style: {
+      color: '#94A3B8'
+    }
+  }, "포트폴리오 / 링크"), /*#__PURE__*/React.createElement("div", {
+    className: "rounded-xl border p-3 flex items-center gap-2.5",
+    style: {
+      borderColor: '#E4E4E7'
+    }
+  }, /*#__PURE__*/React.createElement(Lc3.Link, {
+    size: 14,
+    style: {
+      color: '#4F46E5'
+    }
+  }), /*#__PURE__*/React.createElement("span", {
+    className: "text-[13px] font-semibold",
+    style: {
+      color: '#4F46E5'
+    }
+  }, a.portfolio))), /*#__PURE__*/React.createElement("div", null, /*#__PURE__*/React.createElement("div", {
+    className: "text-[11px] font-bold tracking-wider mb-2",
+    style: {
+      color: '#94A3B8'
+    }
+  }, "이전 프로젝트"), /*#__PURE__*/React.createElement("div", {
+    className: "grid gap-2"
+  }, [{
+    t: '교내 카페 줄서기 IoT 솔루션',
+    r: '프론트엔드',
+    s: 4.6
+  }, {
+    t: '학생 멘탈 헬스 챗봇',
+    r: '디자인 보조',
+    s: 4.8
+  }].map(p => /*#__PURE__*/React.createElement("div", {
+    key: p.t,
+    className: "rounded-xl border p-3 flex items-center justify-between",
+    style: {
+      borderColor: '#E4E4E7'
+    }
+  }, /*#__PURE__*/React.createElement("div", null, /*#__PURE__*/React.createElement("div", {
+    className: "text-[13px] font-semibold"
+  }, p.t), /*#__PURE__*/React.createElement("div", {
+    className: "text-[11px] mt-0.5",
+    style: {
+      color: '#94A3B8'
+    }
+  }, p.r)), /*#__PURE__*/React.createElement("div", {
+    className: "flex items-center gap-1 text-[12px] font-bold",
+    style: {
+      color: '#F59E0B'
+    }
+  }, /*#__PURE__*/React.createElement(Lc3.Star, {
+    size: 12,
+    fill: "#F59E0B"
+  }), " ", p.s)))))), /*#__PURE__*/React.createElement("div", {
+    className: "grid grid-cols-3 gap-2 p-4 border-t",
+    style: {
+      borderColor: '#F1F5F9',
+      background: '#FAFAFA'
+    }
+  }, /*#__PURE__*/React.createElement("button", {
+    onClick: onClose,
+    className: "rounded-xl text-[12px] font-semibold py-3",
+    style: {
+      color: '#BE123C',
+      background: '#FFE4E6'
+    }
+  }, "거절"), /*#__PURE__*/React.createElement("button", {
+    className: "rounded-xl border text-[12px] font-semibold py-3",
+    style: {
+      borderColor: '#E4E4E7'
+    }
+  }, "메시지"), /*#__PURE__*/React.createElement("button", {
+    className: "rounded-xl text-white font-bold text-[12px] py-3",
+    style: {
+      background: '#84CC16'
+    }
+  }, "팀에 추가"))));
+}
+
+// ============ TASK DETAIL MODAL ============
+function TaskModal({
+  task,
+  onClose
+}) {
+  if (!task) return null;
+  const t = task;
+  const dept = {
+    '컴공/SW': '컴퓨터공학',
+    '디자인': '시각디자인',
+    '경영/기획': '경영학',
+    '미디어/홍보': '미디어커뮤니케이션',
+    '통계/데이터': '통계학'
+  }[t.major] || '컴퓨터공학';
+  return /*#__PURE__*/React.createElement("div", {
+    className: "fixed inset-0 z-[60] flex items-center justify-center p-4",
+    style: {
+      background: 'rgba(15,23,42,0.55)'
+    },
+    onClick: onClose
+  }, /*#__PURE__*/React.createElement("div", {
+    onClick: e => e.stopPropagation(),
+    className: "rounded-3xl bg-white shadow-cardHov overflow-hidden w-full max-w-[560px] max-h-[88vh] overflow-y-auto",
+    style: {
+      border: '1px solid #E4E4E7'
+    }
+  }, /*#__PURE__*/React.createElement("div", {
+    className: "p-5 flex items-start justify-between border-b",
+    style: {
+      borderColor: '#F1F5F9'
+    }
+  }, /*#__PURE__*/React.createElement("div", null, /*#__PURE__*/React.createElement("div", {
+    className: "flex items-center gap-2"
+  }, t.tag && /*#__PURE__*/React.createElement(A3.Chip, null, t.tag), /*#__PURE__*/React.createElement("span", {
+    className: "text-[11px] font-bold rounded-full px-2 py-0.5",
+    style: {
+      background: t.urgent ? '#FFE4E6' : '#F4F4F5',
+      color: t.urgent ? '#BE123C' : '#475569'
+    }
+  }, t.due)), /*#__PURE__*/React.createElement("div", {
+    className: "font-bold text-[18px] mt-2",
+    style: {
+      letterSpacing: '-0.02em'
+    }
+  }, t.title)), /*#__PURE__*/React.createElement("button", {
+    onClick: onClose,
+    className: "rounded-lg w-8 h-8 flex items-center justify-center"
+  }, /*#__PURE__*/React.createElement(Lc3.X, {
+    size: 16
+  }))), /*#__PURE__*/React.createElement("div", {
+    className: "p-5 grid gap-4"
+  }, /*#__PURE__*/React.createElement("div", {
+    className: "text-[13px] leading-relaxed",
+    style: {
+      color: '#475569'
+    }
+  }, t.desc), /*#__PURE__*/React.createElement("div", {
+    className: "grid grid-cols-3 gap-2 text-[12px]"
+  }, /*#__PURE__*/React.createElement("div", {
+    className: "rounded-xl border p-3",
+    style: {
+      borderColor: '#E4E4E7'
+    }
+  }, /*#__PURE__*/React.createElement("div", {
+    className: "text-[10px]",
+    style: {
+      color: '#94A3B8'
+    }
+  }, "담당자"), /*#__PURE__*/React.createElement("div", {
+    className: "mt-1.5 flex items-center gap-2"
+  }, /*#__PURE__*/React.createElement(A3.Avatar, {
+    name: t.owner,
+    dept: dept,
+    size: 22
+  }), /*#__PURE__*/React.createElement("span", {
+    className: "font-semibold"
+  }, t.owner))), /*#__PURE__*/React.createElement("div", {
+    className: "rounded-xl border p-3",
+    style: {
+      borderColor: '#E4E4E7'
+    }
+  }, /*#__PURE__*/React.createElement("div", {
+    className: "text-[10px]",
+    style: {
+      color: '#94A3B8'
+    }
+  }, "마감"), /*#__PURE__*/React.createElement("div", {
+    className: "mt-1.5 font-bold"
+  }, t.due)), /*#__PURE__*/React.createElement("div", {
+    className: "rounded-xl border p-3",
+    style: {
+      borderColor: '#E4E4E7'
+    }
+  }, /*#__PURE__*/React.createElement("div", {
+    className: "text-[10px]",
+    style: {
+      color: '#94A3B8'
+    }
+  }, "전공"), /*#__PURE__*/React.createElement("div", {
+    className: "mt-1.5"
+  }, /*#__PURE__*/React.createElement(A3.MajorChip, {
+    dept: dept,
+    size: "xs"
+  })))), t.files > 0 && /*#__PURE__*/React.createElement("div", null, /*#__PURE__*/React.createElement("div", {
+    className: "text-[11px] font-bold tracking-wider mb-2",
+    style: {
+      color: '#94A3B8'
+    }
+  }, "첨부 자료 · ", t.files), /*#__PURE__*/React.createElement("div", {
+    className: "grid gap-1.5"
+  }, Array.from({
+    length: Math.min(t.files, 3)
+  }).map((_, i) => /*#__PURE__*/React.createElement("div", {
+    key: i,
+    className: "rounded-lg border p-2.5 flex items-center gap-2 text-[12px]",
+    style: {
+      borderColor: '#E4E4E7'
+    }
+  }, /*#__PURE__*/React.createElement(Lc3.Paperclip, {
+    size: 12,
+    style: {
+      color: '#94A3B8'
+    }
+  }), /*#__PURE__*/React.createElement("span", {
+    className: "font-semibold flex-1"
+  }, ['시안_v2.fig', '요약본.pdf', 'screenshot.png', 'notes.md'][i]), /*#__PURE__*/React.createElement("span", {
+    style: {
+      color: '#94A3B8'
+    }
+  }, ['1.2MB', '340KB', '2.1MB', '8KB'][i]))))), t.comments > 0 && /*#__PURE__*/React.createElement("div", null, /*#__PURE__*/React.createElement("div", {
+    className: "text-[11px] font-bold tracking-wider mb-2",
+    style: {
+      color: '#94A3B8'
+    }
+  }, "댓글 · ", t.comments), /*#__PURE__*/React.createElement("div", {
+    className: "grid gap-2"
+  }, [{
+    who: '박서연',
+    d: '경영학',
+    txt: '히어로 카피 한 줄 더 짧게 갈 수 있을까요?',
+    t: '15분 전'
+  }, {
+    who: '정현우',
+    d: '통계학',
+    txt: '확인했어요, 오늘 안에 PR 올릴게요!',
+    t: '1시간 전'
+  }].map((c, i) => /*#__PURE__*/React.createElement("div", {
+    key: i,
+    className: "flex gap-2 items-start"
+  }, /*#__PURE__*/React.createElement(A3.Avatar, {
+    name: c.who,
+    dept: c.d,
+    size: 26
+  }), /*#__PURE__*/React.createElement("div", {
+    className: "flex-1 rounded-xl p-2.5",
+    style: {
+      background: '#FAFAFA'
+    }
+  }, /*#__PURE__*/React.createElement("div", {
+    className: "flex items-center gap-2 text-[11px]"
+  }, /*#__PURE__*/React.createElement("b", null, c.who), /*#__PURE__*/React.createElement("span", {
+    style: {
+      color: '#94A3B8'
+    }
+  }, c.t)), /*#__PURE__*/React.createElement("div", {
+    className: "text-[12px] mt-1",
+    style: {
+      color: '#475569'
+    }
+  }, c.txt))))))), /*#__PURE__*/React.createElement("div", {
+    className: "grid grid-cols-2 gap-2 p-4 border-t",
+    style: {
+      borderColor: '#F1F5F9',
+      background: '#FAFAFA'
+    }
+  }, /*#__PURE__*/React.createElement("button", {
+    className: "rounded-xl border text-[12px] font-semibold py-3",
+    style: {
+      borderColor: '#E4E4E7'
+    }
+  }, "댓글 달기"), /*#__PURE__*/React.createElement("button", {
+    className: "rounded-xl text-white font-bold text-[12px] py-3",
+    style: {
+      background: '#4F46E5'
+    }
+  }, "완료 처리"))));
+}
+
+// ============ MY PAGE ============
+function ScreenMyPage({
+  device,
+  animKey
+}) {
+  const isM = device === 'mobile';
+  const me = {
+    name: '김민준',
+    dept: '컴퓨터공학',
+    year: 3,
+    school: '한양대',
+    mail: 'demo@campus-link.example',
+    skills: ['React', 'Spring', 'MySQL', 'Git', 'Figma'],
+    interests: ['교내 서비스', 'AI/ML', '헬스케어']
+  };
+  return /*#__PURE__*/React.createElement("div", {
+    className: "tab-enter",
+    key: animKey
+  }, /*#__PURE__*/React.createElement("div", {
+    className: `${isM ? 'px-4 pt-5 pb-16' : 'px-10 pt-8 pb-20'} relative overflow-hidden`,
+    style: {
+      background: 'linear-gradient(135deg, #4F46E5 0%, #7C3AED 60%, #84CC16 130%)'
+    }
+  }, /*#__PURE__*/React.createElement("div", {
+    className: "absolute inset-0 opacity-20",
+    style: {
+      backgroundImage: 'radial-gradient(circle at 20% 30%, white 0, transparent 50%)'
+    }
+  }), /*#__PURE__*/React.createElement("div", {
+    className: "relative flex items-center justify-between"
+  }, !isM && /*#__PURE__*/React.createElement(A3.Wordmark, {
+    size: "md"
+  }), /*#__PURE__*/React.createElement("span", {
+    className: "text-[11px] font-bold tracking-wider text-white/70"
+  }, "MY PAGE"), /*#__PURE__*/React.createElement("div", {
+    className: "flex gap-2"
+  }, /*#__PURE__*/React.createElement("button", {
+    className: "rounded-lg bg-white/15 text-white p-2"
+  }, /*#__PURE__*/React.createElement(Lc3.Settings, {
+    size: 14
+  })), /*#__PURE__*/React.createElement("button", {
+    className: "rounded-lg bg-white/15 text-white p-2"
+  }, /*#__PURE__*/React.createElement(Lc3.Bell, {
+    size: 14
+  }))))), /*#__PURE__*/React.createElement("div", {
+    className: `${isM ? 'px-4' : 'px-10'} -mt-12 relative z-10`
+  }, /*#__PURE__*/React.createElement("div", {
+    className: "rounded-3xl bg-white border p-6 shadow-cardHov",
+    style: {
+      borderColor: '#E4E4E7'
+    }
+  }, /*#__PURE__*/React.createElement("div", {
+    className: `${isM ? 'flex flex-col items-center text-center gap-3' : 'flex items-center gap-5'}`
+  }, /*#__PURE__*/React.createElement(A3.Avatar, {
+    name: me.name,
+    dept: me.dept,
+    size: isM ? 80 : 96
+  }), /*#__PURE__*/React.createElement("div", {
+    className: isM ? '' : 'flex-1'
+  }, /*#__PURE__*/React.createElement("div", {
+    className: "font-bold text-[22px]",
+    style: {
+      letterSpacing: '-0.02em'
+    }
+  }, me.name), /*#__PURE__*/React.createElement("div", {
+    className: "mt-1.5 flex items-center gap-2 flex-wrap justify-center"
+  }, /*#__PURE__*/React.createElement(A3.MajorChip, {
+    dept: me.dept,
+    year: me.year,
+    size: "xs"
+  }), /*#__PURE__*/React.createElement("span", {
+    className: "text-[12px]",
+    style: {
+      color: '#475569'
+    }
+  }, me.school)), /*#__PURE__*/React.createElement("div", {
+    className: "mt-1 text-[12px]",
+    style: {
+      color: '#94A3B8'
+    }
+  }, me.mail)), !isM && /*#__PURE__*/React.createElement("button", {
+    className: "rounded-xl border text-[12px] font-semibold px-4 py-2",
+    style: {
+      borderColor: '#E4E4E7'
+    }
+  }, "프로필 수정")), /*#__PURE__*/React.createElement("div", {
+    className: `mt-5 grid ${isM ? 'grid-cols-3' : 'grid-cols-4'} gap-3 pt-5 border-t`,
+    style: {
+      borderColor: '#F1F5F9'
+    }
+  }, [{
+    l: '진행 중',
+    v: 2,
+    c: '#4F46E5'
+  }, {
+    l: '완료',
+    v: 5,
+    c: '#84CC16'
+  }, {
+    l: '평균 ★',
+    v: '4.7',
+    c: '#F59E0B'
+  }, !isM && {
+    l: '평균 매칭',
+    v: '82',
+    c: '#EC4899'
+  }].filter(Boolean).map(s => /*#__PURE__*/React.createElement("div", {
+    key: s.l,
+    className: "text-center rounded-xl p-3",
+    style: {
+      background: '#FAFAFA'
+    }
+  }, /*#__PURE__*/React.createElement("div", {
+    className: "text-[11px]",
+    style: {
+      color: '#94A3B8'
+    }
+  }, s.l), /*#__PURE__*/React.createElement("div", {
+    className: "font-bold text-[22px] mt-1 tabular-nums",
+    style: {
+      color: s.c,
+      letterSpacing: '-0.02em'
+    }
+  }, s.v)))))), /*#__PURE__*/React.createElement("div", {
+    className: `${isM ? 'px-4 py-5' : 'px-10 py-8 grid grid-cols-12 gap-5'}`
+  }, /*#__PURE__*/React.createElement("div", {
+    className: isM ? '' : 'col-span-7 grid gap-5'
+  }, /*#__PURE__*/React.createElement(A3.Section, {
+    title: "진행 중인 프로젝트",
+    action: /*#__PURE__*/React.createElement("span", {
+      className: "text-[11px] font-semibold",
+      style: {
+        color: '#4F46E5'
+      }
+    }, "전체 보기")
+  }, /*#__PURE__*/React.createElement("div", {
+    className: "grid gap-3"
+  }, D3.PROJECTS.slice(0, 2).map(p => /*#__PURE__*/React.createElement("div", {
+    key: p.id,
+    className: "rounded-xl border p-3.5 flex items-center gap-3 hover:shadow-card cursor-pointer",
+    style: {
+      borderColor: '#E4E4E7'
+    },
+    onClick: () => window.__nav && window.__nav.go('dashboard', {
+      projectId: p.id
+    })
+  }, /*#__PURE__*/React.createElement(A3.Placeholder, {
+    height: 56,
+    gradient: ['#EEF2FF', '#ECFCCB'],
+    className: "!w-16 !shrink-0 !p-0"
+  }), /*#__PURE__*/React.createElement("div", {
+    className: "flex-1 min-w-0"
+  }, /*#__PURE__*/React.createElement("div", {
+    className: "text-[13px] font-bold truncate"
+  }, p.title), /*#__PURE__*/React.createElement("div", {
+    className: "mt-1 flex items-center gap-2 text-[11px]",
+    style: {
+      color: '#475569'
+    }
+  }, /*#__PURE__*/React.createElement("span", null, p.school), /*#__PURE__*/React.createElement("span", null, "·"), /*#__PURE__*/React.createElement("span", null, p.filled, "/", p.total, "명")), /*#__PURE__*/React.createElement("div", {
+    className: "mt-2 h-1 rounded-full",
+    style: {
+      background: '#F1F5F9'
+    }
+  }, /*#__PURE__*/React.createElement("div", {
+    className: "h-full rounded-full",
+    style: {
+      width: `${p.filled / p.total * 100}%`,
+      background: '#4F46E5'
+    }
+  }))), /*#__PURE__*/React.createElement("span", {
+    className: "text-[11px] font-bold rounded-full px-2 py-0.5",
+    style: {
+      background: p.dday <= 7 ? '#FFE4E6' : '#F4F4F5',
+      color: p.dday <= 7 ? '#BE123C' : '#475569'
+    }
+  }, "D-", p.dday))))), /*#__PURE__*/React.createElement(A3.Section, {
+    title: "완료한 프로젝트 · 포트폴리오",
+    className: isM ? 'mt-5' : ''
+  }, /*#__PURE__*/React.createElement("div", {
+    className: "grid gap-3"
+  }, [{
+    t: '학생 멘탈 헬스 챗봇',
+    r: '프론트엔드',
+    d: '2025.09–12',
+    s: 4.8
+  }, {
+    t: '교내 카페 줄서기 IoT',
+    r: '프론트엔드 보조',
+    d: '2025.06–08',
+    s: 4.6
+  }, {
+    t: '광운대 동아리 매칭',
+    r: '풀스택',
+    d: '2024.12–2025.02',
+    s: 4.5
+  }].map((p, i) => /*#__PURE__*/React.createElement("div", {
+    key: i,
+    className: "rounded-xl border p-3.5 flex items-center gap-3 cursor-pointer hover:shadow-card",
+    style: {
+      borderColor: '#E4E4E7'
+    },
+    onClick: () => window.__nav && window.__nav.go('portfolio')
+  }, /*#__PURE__*/React.createElement("div", {
+    className: "rounded-lg w-10 h-10 flex items-center justify-center font-bold text-[12px]",
+    style: {
+      background: '#ECFCCB',
+      color: '#3F6212'
+    }
+  }, "0", i + 1), /*#__PURE__*/React.createElement("div", {
+    className: "flex-1 min-w-0"
+  }, /*#__PURE__*/React.createElement("div", {
+    className: "text-[13px] font-bold truncate"
+  }, p.t), /*#__PURE__*/React.createElement("div", {
+    className: "text-[11px] mt-0.5",
+    style: {
+      color: '#94A3B8'
+    }
+  }, p.r, " · ", p.d)), /*#__PURE__*/React.createElement("div", {
+    className: "flex items-center gap-1 text-[12px] font-bold",
+    style: {
+      color: '#F59E0B'
+    }
+  }, /*#__PURE__*/React.createElement(Lc3.Star, {
+    size: 12,
+    fill: "#F59E0B"
+  }), " ", p.s), /*#__PURE__*/React.createElement(Lc3.Download, {
+    size: 14,
+    style: {
+      color: '#94A3B8'
+    }
+  })))))), /*#__PURE__*/React.createElement("div", {
+    className: isM ? 'mt-5 grid gap-5' : 'col-span-5 grid gap-5'
+  }, /*#__PURE__*/React.createElement(A3.Section, {
+    title: "내 기술 스택",
+    action: /*#__PURE__*/React.createElement(Lc3.Plus, {
+      size: 14,
+      style: {
+        color: '#94A3B8'
+      }
+    })
+  }, /*#__PURE__*/React.createElement("div", {
+    className: "flex flex-wrap gap-1.5"
+  }, me.skills.map(s => /*#__PURE__*/React.createElement(A3.Chip, {
+    key: s,
+    tone: "indigo"
+  }, s))), /*#__PURE__*/React.createElement("div", {
+    className: "mt-3 rounded-xl p-3 flex items-start gap-2",
+    style: {
+      background: '#EEF2FF'
+    }
+  }, /*#__PURE__*/React.createElement(Lc3.Lightbulb, {
+    size: 14,
+    style: {
+      color: '#4F46E5',
+      marginTop: 2
+    }
+  }), /*#__PURE__*/React.createElement("div", {
+    className: "text-[12px]",
+    style: {
+      color: '#475569'
+    }
+  }, /*#__PURE__*/React.createElement("b", {
+    style: {
+      color: '#4F46E5'
+    }
+  }, "TypeScript"), " 추가하면 매칭 점수가 평균 ", /*#__PURE__*/React.createElement("b", null, "+9점"), " 올라요"))), /*#__PURE__*/React.createElement(A3.Section, {
+    title: "관심 분야"
+  }, /*#__PURE__*/React.createElement("div", {
+    className: "flex flex-wrap gap-1.5"
+  }, me.interests.map(s => /*#__PURE__*/React.createElement(A3.Chip, {
+    key: s,
+    tone: "lime"
+  }, s)))), /*#__PURE__*/React.createElement(A3.Section, {
+    title: "활동 통계"
+  }, /*#__PURE__*/React.createElement("div", {
+    className: "grid gap-2.5"
+  }, [{
+    l: '함께한 사람',
+    v: '14명',
+    c: '#4F46E5'
+  }, {
+    l: '받은 별점',
+    v: '38회',
+    c: '#F59E0B'
+  }, {
+    l: '작성 댓글',
+    v: '127개',
+    c: '#14B8A6'
+  }, {
+    l: '완료 Task',
+    v: '64개',
+    c: '#84CC16'
+  }].map(s => /*#__PURE__*/React.createElement("div", {
+    key: s.l,
+    className: "flex items-center justify-between text-[13px]"
+  }, /*#__PURE__*/React.createElement("span", {
+    style: {
+      color: '#475569'
+    }
+  }, s.l), /*#__PURE__*/React.createElement("span", {
+    className: "font-bold tabular-nums",
+    style: {
+      color: s.c
+    }
+  }, s.v))))), /*#__PURE__*/React.createElement(A3.Section, {
+    title: "설정"
+  }, /*#__PURE__*/React.createElement("div", {
+    className: "grid gap-1"
+  }, [{
+    l: '알림 설정',
+    i: /*#__PURE__*/React.createElement(Lc3.Bell, {
+      size: 14
+    })
+  }, {
+    l: '디스코드 연동',
+    i: /*#__PURE__*/React.createElement(Lc3.MessageSquare, {
+      size: 14
+    })
+  }, {
+    l: '계정 설정',
+    i: /*#__PURE__*/React.createElement(Lc3.User, {
+      size: 14
+    })
+  }, {
+    l: '도움말 / 문의',
+    i: /*#__PURE__*/React.createElement(Lc3.Lightbulb, {
+      size: 14
+    })
+  }].map(r => /*#__PURE__*/React.createElement("div", {
+    key: r.l,
+    className: "flex items-center gap-3 py-2.5 px-1 cursor-pointer"
+  }, /*#__PURE__*/React.createElement("div", {
+    className: "rounded-lg w-7 h-7 flex items-center justify-center",
+    style: {
+      background: '#F4F4F5',
+      color: '#475569'
+    }
+  }, r.i), /*#__PURE__*/React.createElement("span", {
+    className: "flex-1 text-[13px] font-medium"
+  }, r.l), /*#__PURE__*/React.createElement(Lc3.ChevronRight, {
+    size: 14,
+    style: {
+      color: '#94A3B8'
+    }
+  }))))))));
+}
+window.CampusScreens3 = {
+  ApplicantModal,
+  TaskModal,
+  ScreenMyPage
+};
+
+// tweaks-panel.jsx
+// Reusable Tweaks shell + form-control helpers.
+//
+// Owns the host protocol (listens for __activate_edit_mode / __deactivate_edit_mode,
+// posts __edit_mode_available / __edit_mode_set_keys / __edit_mode_dismissed) so
+// individual prototypes don't re-roll it. Ships a consistent set of controls so you
+// don't hand-draw <input type="range">, segmented radios, steppers, etc.
+//
+// Usage (in an HTML file that loads React + Babel):
+//
+//   const TWEAK_DEFAULTS = /*EDITMODE-BEGIN*/{
+//     "primaryColor": "#D97757",
+//     "palette": ["#D97757", "#29261b", "#f6f4ef"],
+//     "fontSize": 16,
+//     "density": "regular",
+//     "dark": false
+//   }/*EDITMODE-END*/;
+//
+//   function App() {
+//     const [t, setTweak] = useTweaks(TWEAK_DEFAULTS);
+//     return (
+//       <div style={{ fontSize: t.fontSize, color: t.primaryColor }}>
+//         Hello
+//         <TweaksPanel>
+//           <TweakSection label="Typography" />
+//           <TweakSlider label="Font size" value={t.fontSize} min={10} max={32} unit="px"
+//                        onChange={(v) => setTweak('fontSize', v)} />
+//           <TweakRadio  label="Density" value={t.density}
+//                        options={['compact', 'regular', 'comfy']}
+//                        onChange={(v) => setTweak('density', v)} />
+//           <TweakSection label="Theme" />
+//           <TweakColor  label="Primary" value={t.primaryColor}
+//                        options={['#D97757', '#2A6FDB', '#1F8A5B', '#7A5AE0']}
+//                        onChange={(v) => setTweak('primaryColor', v)} />
+//           <TweakColor  label="Palette" value={t.palette}
+//                        options={[['#D97757', '#29261b', '#f6f4ef'],
+//                                  ['#475569', '#0f172a', '#f1f5f9']]}
+//                        onChange={(v) => setTweak('palette', v)} />
+//           <TweakToggle label="Dark mode" value={t.dark}
+//                        onChange={(v) => setTweak('dark', v)} />
+//         </TweaksPanel>
+//       </div>
+//     );
+//   }
+//
+// ─────────────────────────────────────────────────────────────────────────────
+
+const __TWEAKS_STYLE = `
   .twk-panel{position:fixed;right:16px;bottom:16px;z-index:2147483646;width:280px;
     max-height:calc(100vh - 32px);display:flex;flex-direction:column;
     transform:scale(var(--dc-inv-zoom,1));transform-origin:bottom right;
@@ -106,4 +4946,1001 @@ const I=(a,s="0 0 24 24")=>({size:o=16,color:e,fill:t="none",strokeWidth:r=2,sty
   .twk-chip>span>i:first-child{box-shadow:none}
   .twk-chip svg{position:absolute;top:6px;left:6px;width:13px;height:13px;
     filter:drop-shadow(0 1px 1px rgba(0,0,0,.3))}
-`;function useTweaks(a){const[s,o]=React.useState(a),e=React.useCallback((t,r)=>{const i=typeof t=="object"&&t!==null?t:{[t]:r};o(d=>({...d,...i})),window.parent.postMessage({type:"__edit_mode_set_keys",edits:i},"*"),window.dispatchEvent(new CustomEvent("tweakchange",{detail:i}))},[]);return[s,e]}function TweaksPanel({title:a="Tweaks",noDeckControls:s=!1,children:o}){const[e,t]=React.useState(!1),r=React.useRef(null),i=React.useMemo(()=>typeof document!="undefined"&&!!document.querySelector("deck-stage"),[]),[d,m]=React.useState(()=>{var l;return i&&!!((l=document.querySelector("deck-stage"))!=null&&l._railEnabled)});React.useEffect(()=>{if(!i||d)return;const l=c=>{c.data&&c.data.type==="__omelette_rail_enabled"&&m(!0)};return window.addEventListener("message",l),()=>window.removeEventListener("message",l)},[i,d]);const[p,n]=React.useState(()=>{try{return localStorage.getItem("deck-stage.railVisible")!=="0"}catch(l){return!0}}),x=l=>{n(l),window.postMessage({type:"__deck_rail_visible",on:l},"*")},v=React.useRef({x:16,y:16}),u=16,g=React.useCallback(()=>{const l=r.current;if(!l)return;const c=l.offsetWidth,b=l.offsetHeight,f=Math.max(u,window.innerWidth-c-u),h=Math.max(u,window.innerHeight-b-u);v.current={x:Math.min(f,Math.max(u,v.current.x)),y:Math.min(h,Math.max(u,v.current.y))},l.style.right=v.current.x+"px",l.style.bottom=v.current.y+"px"},[]);React.useEffect(()=>{if(!e)return;if(g(),typeof ResizeObserver=="undefined")return window.addEventListener("resize",g),()=>window.removeEventListener("resize",g);const l=new ResizeObserver(g);return l.observe(document.documentElement),()=>l.disconnect()},[e,g]),React.useEffect(()=>{const l=c=>{var f;const b=(f=c==null?void 0:c.data)==null?void 0:f.type;b==="__activate_edit_mode"?t(!0):b==="__deactivate_edit_mode"&&t(!1)};return window.addEventListener("message",l),window.parent.postMessage({type:"__edit_mode_available"},"*"),()=>window.removeEventListener("message",l)},[]);const w=()=>{t(!1),window.parent.postMessage({type:"__edit_mode_dismissed"},"*")},y=l=>{const c=r.current;if(!c)return;const b=c.getBoundingClientRect(),f=l.clientX,h=l.clientY,N=window.innerWidth-b.right,C=window.innerHeight-b.bottom,k=E=>{v.current={x:N-(E.clientX-f),y:C-(E.clientY-h)},g()},F=()=>{window.removeEventListener("mousemove",k),window.removeEventListener("mouseup",F)};window.addEventListener("mousemove",k),window.addEventListener("mouseup",F)};return e?React.createElement(React.Fragment,null,React.createElement("style",null,__TWEAKS_STYLE),React.createElement("div",{ref:r,className:"twk-panel","data-noncommentable":"",style:{right:v.current.x,bottom:v.current.y}},React.createElement("div",{className:"twk-hd",onMouseDown:y},React.createElement("b",null,a),React.createElement("button",{className:"twk-x","aria-label":"Close tweaks",onMouseDown:l=>l.stopPropagation(),onClick:w},"\u2715")),React.createElement("div",{className:"twk-body"},o,i&&d&&!s&&React.createElement(TweakSection,{label:"Deck"},React.createElement(TweakToggle,{label:"Thumbnail rail",value:p,onChange:x}))))):null}function TweakSection({label:a,children:s}){return React.createElement(React.Fragment,null,React.createElement("div",{className:"twk-sect"},a),s)}function TweakRow({label:a,value:s,children:o,inline:e=!1}){return React.createElement("div",{className:e?"twk-row twk-row-h":"twk-row"},React.createElement("div",{className:"twk-lbl"},React.createElement("span",null,a),s!=null&&React.createElement("span",{className:"twk-val"},s)),o)}function TweakSlider({label:a,value:s,min:o=0,max:e=100,step:t=1,unit:r="",onChange:i}){return React.createElement(TweakRow,{label:a,value:`${s}${r}`},React.createElement("input",{type:"range",className:"twk-slider",min:o,max:e,step:t,value:s,onChange:d=>i(Number(d.target.value))}))}function TweakToggle({label:a,value:s,onChange:o}){return React.createElement("div",{className:"twk-row twk-row-h"},React.createElement("div",{className:"twk-lbl"},React.createElement("span",null,a)),React.createElement("button",{type:"button",className:"twk-toggle","data-on":s?"1":"0",role:"switch","aria-checked":!!s,onClick:()=>o(!s)},React.createElement("i",null)))}function TweakRadio({label:a,value:s,options:o,onChange:e}){var y;const t=React.useRef(null),[r,i]=React.useState(!1),d=React.useRef(s);d.current=s;const m=l=>String(typeof l=="object"?l.label:l).length;if(!(o.reduce((l,c)=>Math.max(l,m(c)),0)<=((y={2:16,3:10}[o.length])!=null?y:0))){const l=c=>{const b=o.find(f=>String(typeof f=="object"?f.value:f)===c);return b===void 0?c:typeof b=="object"?b.value:b};return React.createElement(TweakSelect,{label:a,value:s,options:o,onChange:c=>e(l(c))})}const x=o.map(l=>typeof l=="object"?l:{value:l,label:l}),v=Math.max(0,x.findIndex(l=>l.value===s)),u=x.length,g=l=>{const c=t.current.getBoundingClientRect(),b=c.width-4,f=Math.floor((l-c.left-2)/b*u);return x[Math.max(0,Math.min(u-1,f))].value};return React.createElement(TweakRow,{label:a},React.createElement("div",{ref:t,role:"radiogroup",onPointerDown:l=>{i(!0);const c=g(l.clientX);c!==d.current&&e(c);const b=h=>{if(!t.current)return;const N=g(h.clientX);N!==d.current&&e(N)},f=()=>{i(!1),window.removeEventListener("pointermove",b),window.removeEventListener("pointerup",f)};window.addEventListener("pointermove",b),window.addEventListener("pointerup",f)},className:r?"twk-seg dragging":"twk-seg"},React.createElement("div",{className:"twk-seg-thumb",style:{left:`calc(2px + ${v} * (100% - 4px) / ${u})`,width:`calc((100% - 4px) / ${u})`}}),x.map(l=>React.createElement("button",{key:l.value,type:"button",role:"radio","aria-checked":l.value===s},l.label))))}function TweakSelect({label:a,value:s,options:o,onChange:e}){return React.createElement(TweakRow,{label:a},React.createElement("select",{className:"twk-field",value:s,onChange:t=>e(t.target.value)},o.map(t=>{const r=typeof t=="object"?t.value:t,i=typeof t=="object"?t.label:t;return React.createElement("option",{key:r,value:r},i)})))}function TweakText({label:a,value:s,placeholder:o,onChange:e}){return React.createElement(TweakRow,{label:a},React.createElement("input",{className:"twk-field",type:"text",value:s,placeholder:o,onChange:t=>e(t.target.value)}))}function TweakNumber({label:a,value:s,min:o,max:e,step:t=1,unit:r="",onChange:i}){const d=n=>o!=null&&n<o?o:e!=null&&n>e?e:n,m=React.useRef({x:0,val:0});return React.createElement("div",{className:"twk-num"},React.createElement("span",{className:"twk-num-lbl",onPointerDown:n=>{n.preventDefault(),m.current={x:n.clientX,val:s};const x=(String(t).split(".")[1]||"").length,v=g=>{const w=g.clientX-m.current.x,y=m.current.val+w*t,l=Math.round(y/t)*t;i(d(Number(l.toFixed(x))))},u=()=>{window.removeEventListener("pointermove",v),window.removeEventListener("pointerup",u)};window.addEventListener("pointermove",v),window.addEventListener("pointerup",u)}},a),React.createElement("input",{type:"number",value:s,min:o,max:e,step:t,onChange:n=>i(d(Number(n.target.value)))}),r&&React.createElement("span",{className:"twk-num-unit"},r))}function __twkIsLight(a){const s=String(a).replace("#",""),o=s.length===3?s.replace(/./g,d=>d+d):s.padEnd(6,"0"),e=parseInt(o.slice(0,6),16);if(Number.isNaN(e))return!0;const t=e>>16&255,r=e>>8&255,i=e&255;return t*299+r*587+i*114>148e3}const __TwkCheck=({light:a})=>React.createElement("svg",{viewBox:"0 0 14 14","aria-hidden":"true"},React.createElement("path",{d:"M3 7.2 5.8 10 11 4.2",fill:"none",strokeWidth:"2.2",strokeLinecap:"round",strokeLinejoin:"round",stroke:a?"rgba(0,0,0,.78)":"#fff"}));function TweakColor({label:a,value:s,options:o,onChange:e}){if(!o||!o.length)return React.createElement("div",{className:"twk-row twk-row-h"},React.createElement("div",{className:"twk-lbl"},React.createElement("span",null,a)),React.createElement("input",{type:"color",className:"twk-swatch",value:s,onChange:i=>e(i.target.value)}));const t=i=>String(JSON.stringify(i)).toLowerCase(),r=t(s);return React.createElement(TweakRow,{label:a},React.createElement("div",{className:"twk-chips",role:"radiogroup"},o.map((i,d)=>{const m=Array.isArray(i)?i:[i],[p,...n]=m,x=n.slice(0,4),v=t(i)===r;return React.createElement("button",{key:d,type:"button",className:"twk-chip",role:"radio","aria-checked":v,"data-on":v?"1":"0","aria-label":m.join(", "),title:m.join(" \xB7 "),style:{background:p},onClick:()=>e(i)},x.length>0&&React.createElement("span",null,x.map((u,g)=>React.createElement("i",{key:g,style:{background:u}}))),v&&React.createElement(__TwkCheck,{light:__twkIsLight(p)}))})))}function TweakButton({label:a,onClick:s,secondary:o=!1}){return React.createElement("button",{type:"button",className:o?"twk-btn secondary":"twk-btn",onClick:s},a)}Object.assign(window,{useTweaks,TweaksPanel,TweakSection,TweakRow,TweakSlider,TweakToggle,TweakRadio,TweakSelect,TweakText,TweakNumber,TweakColor,TweakButton});const Atoms=window.CampusAtoms,S1=window.CampusScreens,S2=window.CampusScreens2,S3=window.CampusScreens3,Li=window.lucideReact||{},{useState:useApp,useEffect:useAppE}=React,TABS=[{k:"landing",label:"\uB79C\uB529",url:"",desktop:"web",mobile:"web"},{k:"explore",label:"\uD0D0\uC0C9",url:"explore",desktop:"web",mobile:"web"},{k:"detail",label:"\uC0C1\uC138",url:"projects/lost-and-found",desktop:"web",mobile:"web"},{k:"compare",label:"\uB9E4\uCE6D \uBE44\uAD50",url:"projects/.../applicants",desktop:"web",mobile:"web"},{k:"dashboard",label:"\uB300\uC2DC\uBCF4\uB4DC",url:"workspace/lost-and-found",desktop:"web",mobile:"web"},{k:"portfolio",label:"\uD3EC\uD2B8\uD3F4\uB9AC\uC624",url:"me/portfolio/892",desktop:"web",mobile:"web"},{k:"notif",label:"\uBAA8\uBC14\uC77C \uC54C\uB9BC",url:"notifications",desktop:"fallback",mobile:"web"},{k:"mypage",label:"\uB9C8\uC774\uD398\uC774\uC9C0",url:"me",desktop:"web",mobile:"web"}],TWEAK_DEFAULTS={wRole:30,wSkill:25,wPeriod:20,wInterest:15,wFolio:10,showConfetti:!0};function App(){const[a,s]=useApp("landing"),[o,e]=useApp(0),[t,r]=useApp(1),[i,d]=useApp(null),[m,p]=useApp(null),[n,x]=useTweaks(TWEAK_DEFAULTS);useAppE(()=>{window.__nav={go(l,c={}){c.projectId&&r(c.projectId),s(l)}},window.__openApplicant=l=>d(l),window.__openTask=l=>p(l)},[]),useAppE(()=>{const l={role:n.wRole,skill:n.wSkill,period:n.wPeriod,interest:n.wInterest,folio:n.wFolio};Atoms.BREAKDOWN_LABELS.forEach(c=>{c.max=l[c.key]}),e(c=>c+1)},[n.wRole,n.wSkill,n.wPeriod,n.wInterest,n.wFolio]),useAppE(()=>{window.__ML_SHOW_CONFETTI=n.showConfetti,e(l=>l+1)},[n.showConfetti]),useAppE(()=>{e(l=>l+1)},[a]);const v=n.wRole+n.wSkill+n.wPeriod+n.wInterest+n.wFolio,u=()=>a==="notif"?React.createElement(S2.ScreenNotifWeb,null):{landing:React.createElement(S1.ScreenLanding,{device:"web",animKey:o}),explore:React.createElement(S1.ScreenExplore,{device:"web",animKey:o}),detail:React.createElement(S1.ScreenDetail,{device:"web",animKey:o,projectId:t}),compare:React.createElement(S1.ScreenCompare,{device:"web",animKey:o,projectId:t}),dashboard:React.createElement(S2.ScreenDashboard,{device:"web",animKey:o}),portfolio:React.createElement(S2.ScreenPortfolio,{device:"web",animKey:o}),mypage:React.createElement(S3.ScreenMyPage,{device:"web",animKey:o})}[a],g=()=>{if(a==="notif")return React.createElement(React.Fragment,null,React.createElement(S2.ScreenNotifMobile,{animKey:o}),React.createElement(Atoms.MobileTabBar,{active:"notif"}));const l={landing:React.createElement(S1.ScreenLanding,{device:"mobile",animKey:o}),explore:React.createElement(S1.ScreenExplore,{device:"mobile",animKey:o}),detail:React.createElement(S1.ScreenDetail,{device:"mobile",animKey:o,projectId:t}),compare:React.createElement(S1.ScreenCompare,{device:"mobile",animKey:o,projectId:t}),dashboard:React.createElement(S2.ScreenDashboard,{device:"mobile",animKey:o}),portfolio:React.createElement(S2.ScreenPortfolio,{device:"mobile",animKey:o}),mypage:React.createElement(S3.ScreenMyPage,{device:"mobile",animKey:o})},c={explore:"explore",detail:"explore",compare:"mine",dashboard:"mine",portfolio:"me",mypage:"me",landing:"home"}[a];return React.createElement(React.Fragment,null,l[a],React.createElement(Atoms.MobileTabBar,{active:c}))},y=TABS.find(l=>l.k===a).url;return React.createElement("div",{className:"min-h-screen grid-bg pb-12"},React.createElement("header",{className:"sticky top-0 z-50 backdrop-blur bg-white/85 border-b",style:{borderColor:"#E4E4E7"}},React.createElement("div",{className:"max-w-[1700px] mx-auto px-8 py-4 flex items-center gap-6"},React.createElement("div",{className:"flex items-center gap-3"},React.createElement(Atoms.Wordmark,{size:"lg"}),React.createElement("div",{className:"hidden md:flex flex-col leading-tight"},React.createElement("span",{className:"text-[11px] font-bold tracking-wider",style:{color:"#94A3B8"}},"SHOWCASE"),React.createElement("span",{className:"text-[12px] font-semibold",style:{color:"#475569"}},"\uB514\uC790\uC778 \uBBF8\uB9AC\uBCF4\uAE30 \xB7 7\uAC1C \uD654\uBA74"))),React.createElement("div",{className:"flex-1 flex items-center gap-1.5 overflow-x-auto hscroll"},TABS.map((l,c)=>{const b=l.k===a;return React.createElement("button",{key:l.k,onClick:()=>s(l.k),className:"whitespace-nowrap rounded-xl text-[12px] font-semibold flex items-center gap-1.5 px-3 py-2 transition border",style:{background:b?"#0F172A":"#FFFFFF",color:b?"#FFFFFF":"#475569",borderColor:b?"#0F172A":"#E4E4E7"}},React.createElement("span",{className:"opacity-50 tabular-nums text-[10px]"},"0",c+1),l.label)})),React.createElement("div",{className:"hidden lg:flex items-center gap-1.5 text-[11px] font-semibold rounded-full px-3 py-1.5",style:{background:"#ECFCCB",color:"#3F6212"}},React.createElement("span",{className:"w-1.5 h-1.5 rounded-full pulse-dot",style:{background:"#84CC16"}}),"\uB9E4\uCE6D \uC810\uC218 \uC560\uB2C8\uBA54\uC774\uC158 \uC790\uB3D9 \uC7AC\uC0DD"))),React.createElement("main",{className:"max-w-[1700px] mx-auto px-8 py-8"},React.createElement("div",{className:"grid gap-6",style:{gridTemplateColumns:"minmax(0, 1.55fr) minmax(380px, 1fr)"}},React.createElement("div",null,React.createElement(DeviceBadge,{label:"DESKTOP \xB7 1280",url:y}),React.createElement(Atoms.BrowserFrame,{url:y,height:820},u())),React.createElement("div",null,React.createElement(DeviceBadge,{label:"MOBILE \xB7 375 \xD7 812",url:y,mobile:!0}),React.createElement(Atoms.PhoneFrame,{height:820},g()))),React.createElement("div",{className:"mt-10 grid grid-cols-1 md:grid-cols-3 gap-4"},React.createElement("div",{className:"rounded-2xl border bg-white p-5",style:{borderColor:"#E4E4E7"}},React.createElement("div",{className:"text-[11px] font-bold tracking-wider",style:{color:"#4F46E5"}},"DESIGN PRINCIPLES"),React.createElement("ul",{className:"mt-3 space-y-2 text-[13px]",style:{color:"#475569"}},React.createElement("li",null,"\u2460 \uB9E4\uCE6D \uC810\uC218\uAC00 \uBAA8\uB4E0 \uD654\uBA74\uC758 \uC8FC\uC778\uACF5"),React.createElement("li",null,"\u2461 \uB2E4\uC591\uC131\uC774 \uACE7 \uAC00\uCE58 \u2014 \uC804\uACF5 \uCEEC\uB7EC \uCF54\uB529"),React.createElement("li",null,"\u2462 \uCC28\uBD84\uD55C \uBCA0\uC774\uC2A4 + \uD55C \uACF3\uC758 \uAC15\uB82C\uD55C \uD3EC\uC778\uD2B8"),React.createElement("li",null,"\u2463 \uD559\uC0DD \uD1A4 \u2014 \uBC18\uB9D0 \uC0B4\uC9DD, \uC2E0\uB8B0\uAC10 \uC788\uAC8C"),React.createElement("li",null,"\u2464 \uACB0\uACFC\uBB3C(\uD3EC\uD2B8\uD3F4\uB9AC\uC624)\uC5D0 \uC790\uBD80\uC2EC\uC744"))),React.createElement("div",{className:"rounded-2xl border bg-white p-5",style:{borderColor:"#E4E4E7"}},React.createElement("div",{className:"text-[11px] font-bold tracking-wider",style:{color:"#84CC16"}},"SCORE WEIGHTS"),React.createElement("div",{className:"mt-3 grid gap-2"},[{l:"\uC5ED\uD560 \uB9E4\uCE6D",v:30,c:"#4F46E5"},{l:"\uAE30\uC220 \uC2A4\uD0DD",v:25,c:"#22C55E"},{l:"\uCC38\uC5EC \uAE30\uAC04",v:20,c:"#F59E0B"},{l:"\uAD00\uC2EC \uBD84\uC57C",v:15,c:"#EC4899"},{l:"\uD3EC\uD2B8\uD3F4\uB9AC\uC624",v:10,c:"#14B8A6"}].map(l=>React.createElement("div",{key:l.l,className:"flex items-center gap-2 text-[12px]"},React.createElement("span",{className:"w-16",style:{color:"#475569"}},l.l),React.createElement("div",{className:"flex-1 h-1.5 rounded-full",style:{background:"#F1F5F9"}},React.createElement("div",{className:"h-full rounded-full",style:{width:`${l.v}%`,background:l.c}})),React.createElement("span",{className:"text-[11px] font-bold w-7 text-right tabular-nums"},l.v))))),React.createElement("div",{className:"rounded-2xl border bg-white p-5",style:{borderColor:"#E4E4E7"}},React.createElement("div",{className:"text-[11px] font-bold tracking-wider",style:{color:"#EC4899"}},"MAJORS \xB7 5"),React.createElement("div",{className:"mt-3 flex flex-wrap gap-1.5"},Object.keys(window.CampusData.MAJOR).map(l=>{const c=window.CampusData.MAJOR[l];return React.createElement("span",{key:l,className:"text-[11px] font-semibold rounded-full px-2.5 py-1 inline-flex items-center gap-1.5",style:{background:c.bg,color:c.text}},React.createElement("span",{className:"w-1.5 h-1.5 rounded-full",style:{background:c.ring}}),l)})),React.createElement("div",{className:"mt-4 pt-4 border-t text-[11px]",style:{borderColor:"#F1F5F9",color:"#94A3B8"}},"Campus Link \xB7 2026.07 \uC815\uC2DD \uCD9C\uC2DC \uC608\uC815 \xB7 \uD55C\uAD6D \uB300\uD559\uC0DD 20\u201325\uC138")))),React.createElement(TweaksPanel,null,React.createElement(TweakSection,{label:"\uB9E4\uCE6D \uC810\uC218 \uAC00\uC911\uCE58"}),React.createElement(TweakSection,{label:"\uB9E4\uCE6D \uC810\uC218 \uAC00\uC911\uCE58"}),React.createElement("div",{style:{fontSize:10,color:v===100?"#3F6212":"#BE123C",textAlign:"right",marginTop:-4}},"\uD569\uACC4 ",v," / 100 ",v===100?"\u2713":"\u26A0"),React.createElement(TweakSlider,{label:"\uC5ED\uD560 \uB9E4\uCE6D",value:n.wRole,min:0,max:50,step:1,unit:"\uC810",onChange:l=>x("wRole",l)}),React.createElement(TweakSlider,{label:"\uAE30\uC220 \uC2A4\uD0DD",value:n.wSkill,min:0,max:50,step:1,unit:"\uC810",onChange:l=>x("wSkill",l)}),React.createElement(TweakSlider,{label:"\uCC38\uC5EC \uAE30\uAC04",value:n.wPeriod,min:0,max:50,step:1,unit:"\uC810",onChange:l=>x("wPeriod",l)}),React.createElement(TweakSlider,{label:"\uAD00\uC2EC \uBD84\uC57C",value:n.wInterest,min:0,max:50,step:1,unit:"\uC810",onChange:l=>x("wInterest",l)}),React.createElement(TweakSlider,{label:"\uD3EC\uD2B8\uD3F4\uB9AC\uC624",value:n.wFolio,min:0,max:50,step:1,unit:"\uC810",onChange:l=>x("wFolio",l)}),React.createElement(TweakSection,{label:"\uD3EC\uD2B8\uD3F4\uB9AC\uC624 \uD654\uBA74"}),React.createElement(TweakToggle,{label:"\uCEE8\uD398\uD2F0 \uD6A8\uACFC",value:n.showConfetti,onChange:l=>x("showConfetti",l)})),i&&React.createElement(S3.ApplicantModal,{applicant:i,onClose:()=>d(null)}),m&&React.createElement(S3.TaskModal,{task:m,onClose:()=>p(null)}))}function DeviceBadge({label:a,url:s,mobile:o}){return React.createElement("div",{className:"flex items-center justify-between mb-3"},React.createElement("div",{className:"flex items-center gap-2 text-[11px] font-bold tracking-wider",style:{color:"#94A3B8"}},o?React.createElement(Li.Smartphone,{size:12}):React.createElement(Li.Monitor,{size:12}),a),React.createElement("div",{className:"text-[10px] font-mono",style:{color:"#94A3B8"}},"campus-link.kr/",s))}ReactDOM.createRoot(document.getElementById("root")).render(React.createElement(App,null));
+`;
+
+// ── useTweaks ───────────────────────────────────────────────────────────────
+// Single source of truth for tweak values. setTweak persists via the host
+// (__edit_mode_set_keys → host rewrites the EDITMODE block on disk).
+function useTweaks(defaults) {
+  const [values, setValues] = React.useState(defaults);
+  // Accepts either setTweak('key', value) or setTweak({ key: value, ... }) so a
+  // useState-style call doesn't write a "[object Object]" key into the persisted
+  // JSON block.
+  const setTweak = React.useCallback((keyOrEdits, val) => {
+    const edits = typeof keyOrEdits === 'object' && keyOrEdits !== null ? keyOrEdits : {
+      [keyOrEdits]: val
+    };
+    setValues(prev => ({
+      ...prev,
+      ...edits
+    }));
+    window.parent.postMessage({
+      type: '__edit_mode_set_keys',
+      edits
+    }, '*');
+    // Same-window signal so in-page listeners (deck-stage rail thumbnails)
+    // can react — the parent message only reaches the host, not peers.
+    window.dispatchEvent(new CustomEvent('tweakchange', {
+      detail: edits
+    }));
+  }, []);
+  return [values, setTweak];
+}
+
+// ── TweaksPanel ─────────────────────────────────────────────────────────────
+// Floating shell. Registers the protocol listener BEFORE announcing
+// availability — if the announce ran first, the host's activate could land
+// before our handler exists and the toolbar toggle would silently no-op.
+// The close button posts __edit_mode_dismissed so the host's toolbar toggle
+// flips off in lockstep; the host echoes __deactivate_edit_mode back which
+// is what actually hides the panel.
+function TweaksPanel({
+  title = 'Tweaks',
+  noDeckControls = false,
+  children
+}) {
+  const [open, setOpen] = React.useState(false);
+  const dragRef = React.useRef(null);
+  // Auto-inject a rail toggle when a <deck-stage> is on the page. The
+  // toggle drives the deck's per-viewer _railVisible via window message;
+  // state is mirrored from the same localStorage key the deck reads so
+  // the control reflects reality across reloads. The mechanism is the
+  // message — authors who want custom placement can post it directly
+  // and pass noDeckControls to suppress this one.
+  const hasDeckStage = React.useMemo(() => typeof document !== 'undefined' && !!document.querySelector('deck-stage'), []);
+  // Hide the toggle until the host has actually enabled the rail (the
+  // __omelette_rail_enabled window message, posted only when the
+  // omelette_deck_rail_enabled flag is on for this user). The initial read
+  // covers TweaksPanel mounting after the message already arrived; the
+  // listener covers the common case of mounting first.
+  const [railEnabled, setRailEnabled] = React.useState(() => hasDeckStage && !!document.querySelector('deck-stage')?._railEnabled);
+  React.useEffect(() => {
+    if (!hasDeckStage || railEnabled) return undefined;
+    const onMsg = e => {
+      if (e.data && e.data.type === '__omelette_rail_enabled') setRailEnabled(true);
+    };
+    window.addEventListener('message', onMsg);
+    return () => window.removeEventListener('message', onMsg);
+  }, [hasDeckStage, railEnabled]);
+  const [railVisible, setRailVisible] = React.useState(() => {
+    try {
+      return localStorage.getItem('deck-stage.railVisible') !== '0';
+    } catch (e) {
+      return true;
+    }
+  });
+  const toggleRail = on => {
+    setRailVisible(on);
+    window.postMessage({
+      type: '__deck_rail_visible',
+      on
+    }, '*');
+  };
+  const offsetRef = React.useRef({
+    x: 16,
+    y: 16
+  });
+  const PAD = 16;
+  const clampToViewport = React.useCallback(() => {
+    const panel = dragRef.current;
+    if (!panel) return;
+    const w = panel.offsetWidth,
+      h = panel.offsetHeight;
+    const maxRight = Math.max(PAD, window.innerWidth - w - PAD);
+    const maxBottom = Math.max(PAD, window.innerHeight - h - PAD);
+    offsetRef.current = {
+      x: Math.min(maxRight, Math.max(PAD, offsetRef.current.x)),
+      y: Math.min(maxBottom, Math.max(PAD, offsetRef.current.y))
+    };
+    panel.style.right = offsetRef.current.x + 'px';
+    panel.style.bottom = offsetRef.current.y + 'px';
+  }, []);
+  React.useEffect(() => {
+    if (!open) return;
+    clampToViewport();
+    if (typeof ResizeObserver === 'undefined') {
+      window.addEventListener('resize', clampToViewport);
+      return () => window.removeEventListener('resize', clampToViewport);
+    }
+    const ro = new ResizeObserver(clampToViewport);
+    ro.observe(document.documentElement);
+    return () => ro.disconnect();
+  }, [open, clampToViewport]);
+  React.useEffect(() => {
+    const onMsg = e => {
+      const t = e?.data?.type;
+      if (t === '__activate_edit_mode') setOpen(true);else if (t === '__deactivate_edit_mode') setOpen(false);
+    };
+    window.addEventListener('message', onMsg);
+    window.parent.postMessage({
+      type: '__edit_mode_available'
+    }, '*');
+    return () => window.removeEventListener('message', onMsg);
+  }, []);
+  const dismiss = () => {
+    setOpen(false);
+    window.parent.postMessage({
+      type: '__edit_mode_dismissed'
+    }, '*');
+  };
+  const onDragStart = e => {
+    const panel = dragRef.current;
+    if (!panel) return;
+    const r = panel.getBoundingClientRect();
+    const sx = e.clientX,
+      sy = e.clientY;
+    const startRight = window.innerWidth - r.right;
+    const startBottom = window.innerHeight - r.bottom;
+    const move = ev => {
+      offsetRef.current = {
+        x: startRight - (ev.clientX - sx),
+        y: startBottom - (ev.clientY - sy)
+      };
+      clampToViewport();
+    };
+    const up = () => {
+      window.removeEventListener('mousemove', move);
+      window.removeEventListener('mouseup', up);
+    };
+    window.addEventListener('mousemove', move);
+    window.addEventListener('mouseup', up);
+  };
+  if (!open) return null;
+  return /*#__PURE__*/React.createElement(React.Fragment, null, /*#__PURE__*/React.createElement("style", null, __TWEAKS_STYLE), /*#__PURE__*/React.createElement("div", {
+    ref: dragRef,
+    className: "twk-panel",
+    "data-noncommentable": "",
+    style: {
+      right: offsetRef.current.x,
+      bottom: offsetRef.current.y
+    }
+  }, /*#__PURE__*/React.createElement("div", {
+    className: "twk-hd",
+    onMouseDown: onDragStart
+  }, /*#__PURE__*/React.createElement("b", null, title), /*#__PURE__*/React.createElement("button", {
+    className: "twk-x",
+    "aria-label": "Close tweaks",
+    onMouseDown: e => e.stopPropagation(),
+    onClick: dismiss
+  }, "✕")), /*#__PURE__*/React.createElement("div", {
+    className: "twk-body"
+  }, children, hasDeckStage && railEnabled && !noDeckControls && /*#__PURE__*/React.createElement(TweakSection, {
+    label: "Deck"
+  }, /*#__PURE__*/React.createElement(TweakToggle, {
+    label: "Thumbnail rail",
+    value: railVisible,
+    onChange: toggleRail
+  })))));
+}
+
+// ── Layout helpers ──────────────────────────────────────────────────────────
+
+function TweakSection({
+  label,
+  children
+}) {
+  return /*#__PURE__*/React.createElement(React.Fragment, null, /*#__PURE__*/React.createElement("div", {
+    className: "twk-sect"
+  }, label), children);
+}
+function TweakRow({
+  label,
+  value,
+  children,
+  inline = false
+}) {
+  return /*#__PURE__*/React.createElement("div", {
+    className: inline ? 'twk-row twk-row-h' : 'twk-row'
+  }, /*#__PURE__*/React.createElement("div", {
+    className: "twk-lbl"
+  }, /*#__PURE__*/React.createElement("span", null, label), value != null && /*#__PURE__*/React.createElement("span", {
+    className: "twk-val"
+  }, value)), children);
+}
+
+// ── Controls ────────────────────────────────────────────────────────────────
+
+function TweakSlider({
+  label,
+  value,
+  min = 0,
+  max = 100,
+  step = 1,
+  unit = '',
+  onChange
+}) {
+  return /*#__PURE__*/React.createElement(TweakRow, {
+    label: label,
+    value: `${value}${unit}`
+  }, /*#__PURE__*/React.createElement("input", {
+    type: "range",
+    className: "twk-slider",
+    min: min,
+    max: max,
+    step: step,
+    value: value,
+    onChange: e => onChange(Number(e.target.value))
+  }));
+}
+function TweakToggle({
+  label,
+  value,
+  onChange
+}) {
+  return /*#__PURE__*/React.createElement("div", {
+    className: "twk-row twk-row-h"
+  }, /*#__PURE__*/React.createElement("div", {
+    className: "twk-lbl"
+  }, /*#__PURE__*/React.createElement("span", null, label)), /*#__PURE__*/React.createElement("button", {
+    type: "button",
+    className: "twk-toggle",
+    "data-on": value ? '1' : '0',
+    role: "switch",
+    "aria-checked": !!value,
+    onClick: () => onChange(!value)
+  }, /*#__PURE__*/React.createElement("i", null)));
+}
+function TweakRadio({
+  label,
+  value,
+  options,
+  onChange
+}) {
+  const trackRef = React.useRef(null);
+  const [dragging, setDragging] = React.useState(false);
+  // The active value is read by pointer-move handlers attached for the lifetime
+  // of a drag — ref it so a stale closure doesn't fire onChange for every move.
+  const valueRef = React.useRef(value);
+  valueRef.current = value;
+
+  // Segments wrap mid-word once per-segment width runs out. The track is
+  // ~248px (280 panel − 28 body pad − 4 seg pad), each button loses 12px
+  // to its own padding, and 11.5px system-ui averages ~6.3px/char — so 2
+  // options fit ~16 chars each, 3 fit ~10. Past that (or >3 options), fall
+  // back to a dropdown rather than wrap.
+  const labelLen = o => String(typeof o === 'object' ? o.label : o).length;
+  const maxLen = options.reduce((m, o) => Math.max(m, labelLen(o)), 0);
+  const fitsAsSegments = maxLen <= ({
+    2: 16,
+    3: 10
+  }[options.length] ?? 0);
+  if (!fitsAsSegments) {
+    // <select> emits strings — map back to the original option value so the
+    // fallback stays type-preserving (numbers, booleans) like the segment path.
+    const resolve = s => {
+      const m = options.find(o => String(typeof o === 'object' ? o.value : o) === s);
+      return m === undefined ? s : typeof m === 'object' ? m.value : m;
+    };
+    return /*#__PURE__*/React.createElement(TweakSelect, {
+      label: label,
+      value: value,
+      options: options,
+      onChange: s => onChange(resolve(s))
+    });
+  }
+  const opts = options.map(o => typeof o === 'object' ? o : {
+    value: o,
+    label: o
+  });
+  const idx = Math.max(0, opts.findIndex(o => o.value === value));
+  const n = opts.length;
+  const segAt = clientX => {
+    const r = trackRef.current.getBoundingClientRect();
+    const inner = r.width - 4;
+    const i = Math.floor((clientX - r.left - 2) / inner * n);
+    return opts[Math.max(0, Math.min(n - 1, i))].value;
+  };
+  const onPointerDown = e => {
+    setDragging(true);
+    const v0 = segAt(e.clientX);
+    if (v0 !== valueRef.current) onChange(v0);
+    const move = ev => {
+      if (!trackRef.current) return;
+      const v = segAt(ev.clientX);
+      if (v !== valueRef.current) onChange(v);
+    };
+    const up = () => {
+      setDragging(false);
+      window.removeEventListener('pointermove', move);
+      window.removeEventListener('pointerup', up);
+    };
+    window.addEventListener('pointermove', move);
+    window.addEventListener('pointerup', up);
+  };
+  return /*#__PURE__*/React.createElement(TweakRow, {
+    label: label
+  }, /*#__PURE__*/React.createElement("div", {
+    ref: trackRef,
+    role: "radiogroup",
+    onPointerDown: onPointerDown,
+    className: dragging ? 'twk-seg dragging' : 'twk-seg'
+  }, /*#__PURE__*/React.createElement("div", {
+    className: "twk-seg-thumb",
+    style: {
+      left: `calc(2px + ${idx} * (100% - 4px) / ${n})`,
+      width: `calc((100% - 4px) / ${n})`
+    }
+  }), opts.map(o => /*#__PURE__*/React.createElement("button", {
+    key: o.value,
+    type: "button",
+    role: "radio",
+    "aria-checked": o.value === value
+  }, o.label))));
+}
+function TweakSelect({
+  label,
+  value,
+  options,
+  onChange
+}) {
+  return /*#__PURE__*/React.createElement(TweakRow, {
+    label: label
+  }, /*#__PURE__*/React.createElement("select", {
+    className: "twk-field",
+    value: value,
+    onChange: e => onChange(e.target.value)
+  }, options.map(o => {
+    const v = typeof o === 'object' ? o.value : o;
+    const l = typeof o === 'object' ? o.label : o;
+    return /*#__PURE__*/React.createElement("option", {
+      key: v,
+      value: v
+    }, l);
+  })));
+}
+function TweakText({
+  label,
+  value,
+  placeholder,
+  onChange
+}) {
+  return /*#__PURE__*/React.createElement(TweakRow, {
+    label: label
+  }, /*#__PURE__*/React.createElement("input", {
+    className: "twk-field",
+    type: "text",
+    value: value,
+    placeholder: placeholder,
+    onChange: e => onChange(e.target.value)
+  }));
+}
+function TweakNumber({
+  label,
+  value,
+  min,
+  max,
+  step = 1,
+  unit = '',
+  onChange
+}) {
+  const clamp = n => {
+    if (min != null && n < min) return min;
+    if (max != null && n > max) return max;
+    return n;
+  };
+  const startRef = React.useRef({
+    x: 0,
+    val: 0
+  });
+  const onScrubStart = e => {
+    e.preventDefault();
+    startRef.current = {
+      x: e.clientX,
+      val: value
+    };
+    const decimals = (String(step).split('.')[1] || '').length;
+    const move = ev => {
+      const dx = ev.clientX - startRef.current.x;
+      const raw = startRef.current.val + dx * step;
+      const snapped = Math.round(raw / step) * step;
+      onChange(clamp(Number(snapped.toFixed(decimals))));
+    };
+    const up = () => {
+      window.removeEventListener('pointermove', move);
+      window.removeEventListener('pointerup', up);
+    };
+    window.addEventListener('pointermove', move);
+    window.addEventListener('pointerup', up);
+  };
+  return /*#__PURE__*/React.createElement("div", {
+    className: "twk-num"
+  }, /*#__PURE__*/React.createElement("span", {
+    className: "twk-num-lbl",
+    onPointerDown: onScrubStart
+  }, label), /*#__PURE__*/React.createElement("input", {
+    type: "number",
+    value: value,
+    min: min,
+    max: max,
+    step: step,
+    onChange: e => onChange(clamp(Number(e.target.value)))
+  }), unit && /*#__PURE__*/React.createElement("span", {
+    className: "twk-num-unit"
+  }, unit));
+}
+
+// Relative-luminance contrast pick — checkmarks drawn over a swatch need to
+// read on both #111 and #fafafa without per-option configuration. Hex input
+// only (#rgb / #rrggbb); named or rgb()/hsl() colors fall through to "light".
+function __twkIsLight(hex) {
+  const h = String(hex).replace('#', '');
+  const x = h.length === 3 ? h.replace(/./g, c => c + c) : h.padEnd(6, '0');
+  const n = parseInt(x.slice(0, 6), 16);
+  if (Number.isNaN(n)) return true;
+  const r = n >> 16 & 255,
+    g = n >> 8 & 255,
+    b = n & 255;
+  return r * 299 + g * 587 + b * 114 > 148000;
+}
+const __TwkCheck = ({
+  light
+}) => /*#__PURE__*/React.createElement("svg", {
+  viewBox: "0 0 14 14",
+  "aria-hidden": "true"
+}, /*#__PURE__*/React.createElement("path", {
+  d: "M3 7.2 5.8 10 11 4.2",
+  fill: "none",
+  strokeWidth: "2.2",
+  strokeLinecap: "round",
+  strokeLinejoin: "round",
+  stroke: light ? 'rgba(0,0,0,.78)' : '#fff'
+}));
+
+// TweakColor — curated color/palette picker. Each option is either a single
+// hex string or an array of 1-5 hex strings; the card adapts — a lone color
+// renders solid, a palette renders colors[0] as the hero (left ~2/3) with the
+// rest stacked in a sharp column on the right. onChange emits the
+// option in the shape it was passed (string stays string, array stays array).
+// Without options it falls back to the native color input for back-compat.
+function TweakColor({
+  label,
+  value,
+  options,
+  onChange
+}) {
+  if (!options || !options.length) {
+    return /*#__PURE__*/React.createElement("div", {
+      className: "twk-row twk-row-h"
+    }, /*#__PURE__*/React.createElement("div", {
+      className: "twk-lbl"
+    }, /*#__PURE__*/React.createElement("span", null, label)), /*#__PURE__*/React.createElement("input", {
+      type: "color",
+      className: "twk-swatch",
+      value: value,
+      onChange: e => onChange(e.target.value)
+    }));
+  }
+  // Native <input type=color> emits lowercase hex per the HTML spec, so
+  // compare case-insensitively. String() guards JSON.stringify(undefined),
+  // which returns the primitive undefined (no .toLowerCase).
+  const key = o => String(JSON.stringify(o)).toLowerCase();
+  const cur = key(value);
+  return /*#__PURE__*/React.createElement(TweakRow, {
+    label: label
+  }, /*#__PURE__*/React.createElement("div", {
+    className: "twk-chips",
+    role: "radiogroup"
+  }, options.map((o, i) => {
+    const colors = Array.isArray(o) ? o : [o];
+    const [hero, ...rest] = colors;
+    const sup = rest.slice(0, 4);
+    const on = key(o) === cur;
+    return /*#__PURE__*/React.createElement("button", {
+      key: i,
+      type: "button",
+      className: "twk-chip",
+      role: "radio",
+      "aria-checked": on,
+      "data-on": on ? '1' : '0',
+      "aria-label": colors.join(', '),
+      title: colors.join(' · '),
+      style: {
+        background: hero
+      },
+      onClick: () => onChange(o)
+    }, sup.length > 0 && /*#__PURE__*/React.createElement("span", null, sup.map((c, j) => /*#__PURE__*/React.createElement("i", {
+      key: j,
+      style: {
+        background: c
+      }
+    }))), on && /*#__PURE__*/React.createElement(__TwkCheck, {
+      light: __twkIsLight(hero)
+    }));
+  })));
+}
+function TweakButton({
+  label,
+  onClick,
+  secondary = false
+}) {
+  return /*#__PURE__*/React.createElement("button", {
+    type: "button",
+    className: secondary ? 'twk-btn secondary' : 'twk-btn',
+    onClick: onClick
+  }, label);
+}
+Object.assign(window, {
+  useTweaks,
+  TweaksPanel,
+  TweakSection,
+  TweakRow,
+  TweakSlider,
+  TweakToggle,
+  TweakRadio,
+  TweakSelect,
+  TweakText,
+  TweakNumber,
+  TweakColor,
+  TweakButton
+});
+// App shell: tabs + side-by-side desktop + mobile preview
+const Atoms = window.CampusAtoms;
+const S1 = window.CampusScreens;
+const S2 = window.CampusScreens2;
+const S3 = window.CampusScreens3;
+const Li = window.lucideReact || {};
+const {
+  useState: useApp,
+  useEffect: useAppE
+} = React;
+const TABS = [{
+  k: 'landing',
+  label: '랜딩',
+  url: '',
+  desktop: 'web',
+  mobile: 'web'
+}, {
+  k: 'explore',
+  label: '탐색',
+  url: 'explore',
+  desktop: 'web',
+  mobile: 'web'
+}, {
+  k: 'detail',
+  label: '상세',
+  url: 'projects/lost-and-found',
+  desktop: 'web',
+  mobile: 'web'
+}, {
+  k: 'compare',
+  label: '매칭 비교',
+  url: 'projects/.../applicants',
+  desktop: 'web',
+  mobile: 'web'
+}, {
+  k: 'dashboard',
+  label: '대시보드',
+  url: 'workspace/lost-and-found',
+  desktop: 'web',
+  mobile: 'web'
+}, {
+  k: 'portfolio',
+  label: '포트폴리오',
+  url: 'me/portfolio/892',
+  desktop: 'web',
+  mobile: 'web'
+}, {
+  k: 'notif',
+  label: '모바일 알림',
+  url: 'notifications',
+  desktop: 'fallback',
+  mobile: 'web'
+}, {
+  k: 'mypage',
+  label: '마이페이지',
+  url: 'me',
+  desktop: 'web',
+  mobile: 'web'
+}];
+const TWEAK_DEFAULTS = /*EDITMODE-BEGIN*/{
+  "wRole": 30,
+  "wSkill": 25,
+  "wPeriod": 20,
+  "wInterest": 15,
+  "wFolio": 10,
+  "showConfetti": true
+} /*EDITMODE-END*/;
+function App() {
+  const [tab, setTab] = useApp('landing');
+  const [animKey, setAnimKey] = useApp(0);
+  const [projectId, setProjectId] = useApp(1);
+  const [activeApplicant, setActiveApplicant] = useApp(null);
+  const [activeTask, setActiveTask] = useApp(null);
+  const [t, setTweak] = useTweaks(TWEAK_DEFAULTS);
+
+  // Expose nav globally so cards/buttons can navigate
+  useAppE(() => {
+    window.__nav = {
+      go(target, args = {}) {
+        if (args.projectId) setProjectId(args.projectId);
+        setTab(target);
+      }
+    };
+    window.__openApplicant = a => setActiveApplicant(a);
+    window.__openTask = t => setActiveTask(t);
+  }, []);
+
+  // Push weights into BREAKDOWN_LABELS so ScoreBars + demo reflect them
+  useAppE(() => {
+    const max = {
+      role: t.wRole,
+      skill: t.wSkill,
+      period: t.wPeriod,
+      interest: t.wInterest,
+      folio: t.wFolio
+    };
+    Atoms.BREAKDOWN_LABELS.forEach(r => {
+      r.max = max[r.key];
+    });
+    setAnimKey(k => k + 1);
+  }, [t.wRole, t.wSkill, t.wPeriod, t.wInterest, t.wFolio]);
+  useAppE(() => {
+    window.__ML_SHOW_CONFETTI = t.showConfetti;
+    setAnimKey(k => k + 1);
+  }, [t.showConfetti]);
+  useAppE(() => {
+    setAnimKey(k => k + 1);
+  }, [tab]);
+  const total = t.wRole + t.wSkill + t.wPeriod + t.wInterest + t.wFolio;
+  const renderDesktop = () => {
+    if (tab === 'notif') return /*#__PURE__*/React.createElement(S2.ScreenNotifWeb, null);
+    const map = {
+      landing: /*#__PURE__*/React.createElement(S1.ScreenLanding, {
+        device: "web",
+        animKey: animKey
+      }),
+      explore: /*#__PURE__*/React.createElement(S1.ScreenExplore, {
+        device: "web",
+        animKey: animKey
+      }),
+      detail: /*#__PURE__*/React.createElement(S1.ScreenDetail, {
+        device: "web",
+        animKey: animKey,
+        projectId: projectId
+      }),
+      compare: /*#__PURE__*/React.createElement(S1.ScreenCompare, {
+        device: "web",
+        animKey: animKey,
+        projectId: projectId
+      }),
+      dashboard: /*#__PURE__*/React.createElement(S2.ScreenDashboard, {
+        device: "web",
+        animKey: animKey
+      }),
+      portfolio: /*#__PURE__*/React.createElement(S2.ScreenPortfolio, {
+        device: "web",
+        animKey: animKey
+      }),
+      mypage: /*#__PURE__*/React.createElement(S3.ScreenMyPage, {
+        device: "web",
+        animKey: animKey
+      })
+    };
+    return map[tab];
+  };
+  const renderMobile = () => {
+    if (tab === 'notif') return /*#__PURE__*/React.createElement(React.Fragment, null, /*#__PURE__*/React.createElement(S2.ScreenNotifMobile, {
+      animKey: animKey
+    }), /*#__PURE__*/React.createElement(Atoms.MobileTabBar, {
+      active: "notif"
+    }));
+    const map = {
+      landing: /*#__PURE__*/React.createElement(S1.ScreenLanding, {
+        device: "mobile",
+        animKey: animKey
+      }),
+      explore: /*#__PURE__*/React.createElement(S1.ScreenExplore, {
+        device: "mobile",
+        animKey: animKey
+      }),
+      detail: /*#__PURE__*/React.createElement(S1.ScreenDetail, {
+        device: "mobile",
+        animKey: animKey,
+        projectId: projectId
+      }),
+      compare: /*#__PURE__*/React.createElement(S1.ScreenCompare, {
+        device: "mobile",
+        animKey: animKey,
+        projectId: projectId
+      }),
+      dashboard: /*#__PURE__*/React.createElement(S2.ScreenDashboard, {
+        device: "mobile",
+        animKey: animKey
+      }),
+      portfolio: /*#__PURE__*/React.createElement(S2.ScreenPortfolio, {
+        device: "mobile",
+        animKey: animKey
+      }),
+      mypage: /*#__PURE__*/React.createElement(S3.ScreenMyPage, {
+        device: "mobile",
+        animKey: animKey
+      })
+    };
+    const tabActive = {
+      explore: 'explore',
+      detail: 'explore',
+      compare: 'mine',
+      dashboard: 'mine',
+      portfolio: 'me',
+      mypage: 'me',
+      landing: 'home'
+    }[tab];
+    return /*#__PURE__*/React.createElement(React.Fragment, null, map[tab], /*#__PURE__*/React.createElement(Atoms.MobileTabBar, {
+      active: tabActive
+    }));
+  };
+  const cur = TABS.find(t => t.k === tab);
+  const desktopURL = cur.url;
+  return /*#__PURE__*/React.createElement("div", {
+    className: "min-h-screen grid-bg pb-12"
+  }, /*#__PURE__*/React.createElement("header", {
+    className: "sticky top-0 z-50 backdrop-blur bg-white/85 border-b",
+    style: {
+      borderColor: '#E4E4E7'
+    }
+  }, /*#__PURE__*/React.createElement("div", {
+    className: "max-w-[1700px] mx-auto px-8 py-4 flex items-center gap-6"
+  }, /*#__PURE__*/React.createElement("div", {
+    className: "flex items-center gap-3"
+  }, /*#__PURE__*/React.createElement(Atoms.Wordmark, {
+    size: "lg"
+  }), /*#__PURE__*/React.createElement("div", {
+    className: "hidden md:flex flex-col leading-tight"
+  }, /*#__PURE__*/React.createElement("span", {
+    className: "text-[11px] font-bold tracking-wider",
+    style: {
+      color: '#94A3B8'
+    }
+  }, "SHOWCASE"), /*#__PURE__*/React.createElement("span", {
+    className: "text-[12px] font-semibold",
+    style: {
+      color: '#475569'
+    }
+  }, "디자인 미리보기 · 7개 화면"))), /*#__PURE__*/React.createElement("div", {
+    className: "flex-1 flex items-center gap-1.5 overflow-x-auto hscroll"
+  }, TABS.map((t, i) => {
+    const on = t.k === tab;
+    return /*#__PURE__*/React.createElement("button", {
+      key: t.k,
+      onClick: () => setTab(t.k),
+      className: "whitespace-nowrap rounded-xl text-[12px] font-semibold flex items-center gap-1.5 px-3 py-2 transition border",
+      style: {
+        background: on ? '#0F172A' : '#FFFFFF',
+        color: on ? '#FFFFFF' : '#475569',
+        borderColor: on ? '#0F172A' : '#E4E4E7'
+      }
+    }, /*#__PURE__*/React.createElement("span", {
+      className: "opacity-50 tabular-nums text-[10px]"
+    }, "0", i + 1), t.label);
+  })), /*#__PURE__*/React.createElement("div", {
+    className: "hidden lg:flex items-center gap-1.5 text-[11px] font-semibold rounded-full px-3 py-1.5",
+    style: {
+      background: '#ECFCCB',
+      color: '#3F6212'
+    }
+  }, /*#__PURE__*/React.createElement("span", {
+    className: "w-1.5 h-1.5 rounded-full pulse-dot",
+    style: {
+      background: '#84CC16'
+    }
+  }), "매칭 점수 애니메이션 자동 재생"))), /*#__PURE__*/React.createElement("main", {
+    className: "max-w-[1700px] mx-auto px-8 py-8"
+  }, /*#__PURE__*/React.createElement("div", {
+    className: "grid gap-6",
+    style: {
+      gridTemplateColumns: 'minmax(0, 1.55fr) minmax(380px, 1fr)'
+    }
+  }, /*#__PURE__*/React.createElement("div", null, /*#__PURE__*/React.createElement(DeviceBadge, {
+    label: "DESKTOP · 1280",
+    url: desktopURL
+  }), /*#__PURE__*/React.createElement(Atoms.BrowserFrame, {
+    url: desktopURL,
+    height: 820
+  }, renderDesktop())), /*#__PURE__*/React.createElement("div", null, /*#__PURE__*/React.createElement(DeviceBadge, {
+    label: "MOBILE · 375 × 812",
+    url: desktopURL,
+    mobile: true
+  }), /*#__PURE__*/React.createElement(Atoms.PhoneFrame, {
+    height: 820
+  }, renderMobile()))), /*#__PURE__*/React.createElement("div", {
+    className: "mt-10 grid grid-cols-1 md:grid-cols-3 gap-4"
+  }, /*#__PURE__*/React.createElement("div", {
+    className: "rounded-2xl border bg-white p-5",
+    style: {
+      borderColor: '#E4E4E7'
+    }
+  }, /*#__PURE__*/React.createElement("div", {
+    className: "text-[11px] font-bold tracking-wider",
+    style: {
+      color: '#4F46E5'
+    }
+  }, "DESIGN PRINCIPLES"), /*#__PURE__*/React.createElement("ul", {
+    className: "mt-3 space-y-2 text-[13px]",
+    style: {
+      color: '#475569'
+    }
+  }, /*#__PURE__*/React.createElement("li", null, "① 매칭 점수가 모든 화면의 주인공"), /*#__PURE__*/React.createElement("li", null, "② 다양성이 곧 가치 — 전공 컬러 코딩"), /*#__PURE__*/React.createElement("li", null, "③ 차분한 베이스 + 한 곳의 강렬한 포인트"), /*#__PURE__*/React.createElement("li", null, "④ 학생 톤 — 반말 살짝, 신뢰감 있게"), /*#__PURE__*/React.createElement("li", null, "⑤ 결과물(포트폴리오)에 자부심을"))), /*#__PURE__*/React.createElement("div", {
+    className: "rounded-2xl border bg-white p-5",
+    style: {
+      borderColor: '#E4E4E7'
+    }
+  }, /*#__PURE__*/React.createElement("div", {
+    className: "text-[11px] font-bold tracking-wider",
+    style: {
+      color: '#84CC16'
+    }
+  }, "SCORE WEIGHTS"), /*#__PURE__*/React.createElement("div", {
+    className: "mt-3 grid gap-2"
+  }, [{
+    l: '역할 매칭',
+    v: 30,
+    c: '#4F46E5'
+  }, {
+    l: '기술 스택',
+    v: 25,
+    c: '#22C55E'
+  }, {
+    l: '참여 기간',
+    v: 20,
+    c: '#F59E0B'
+  }, {
+    l: '관심 분야',
+    v: 15,
+    c: '#EC4899'
+  }, {
+    l: '포트폴리오',
+    v: 10,
+    c: '#14B8A6'
+  }].map(r => /*#__PURE__*/React.createElement("div", {
+    key: r.l,
+    className: "flex items-center gap-2 text-[12px]"
+  }, /*#__PURE__*/React.createElement("span", {
+    className: "w-16",
+    style: {
+      color: '#475569'
+    }
+  }, r.l), /*#__PURE__*/React.createElement("div", {
+    className: "flex-1 h-1.5 rounded-full",
+    style: {
+      background: '#F1F5F9'
+    }
+  }, /*#__PURE__*/React.createElement("div", {
+    className: "h-full rounded-full",
+    style: {
+      width: `${r.v}%`,
+      background: r.c
+    }
+  })), /*#__PURE__*/React.createElement("span", {
+    className: "text-[11px] font-bold w-7 text-right tabular-nums"
+  }, r.v))))), /*#__PURE__*/React.createElement("div", {
+    className: "rounded-2xl border bg-white p-5",
+    style: {
+      borderColor: '#E4E4E7'
+    }
+  }, /*#__PURE__*/React.createElement("div", {
+    className: "text-[11px] font-bold tracking-wider",
+    style: {
+      color: '#EC4899'
+    }
+  }, "MAJORS · 5"), /*#__PURE__*/React.createElement("div", {
+    className: "mt-3 flex flex-wrap gap-1.5"
+  }, Object.keys(window.CampusData.MAJOR).map(k => {
+    const m = window.CampusData.MAJOR[k];
+    return /*#__PURE__*/React.createElement("span", {
+      key: k,
+      className: "text-[11px] font-semibold rounded-full px-2.5 py-1 inline-flex items-center gap-1.5",
+      style: {
+        background: m.bg,
+        color: m.text
+      }
+    }, /*#__PURE__*/React.createElement("span", {
+      className: "w-1.5 h-1.5 rounded-full",
+      style: {
+        background: m.ring
+      }
+    }), k);
+  })), /*#__PURE__*/React.createElement("div", {
+    className: "mt-4 pt-4 border-t text-[11px]",
+    style: {
+      borderColor: '#F1F5F9',
+      color: '#94A3B8'
+    }
+  }, "Campus Link · 2026.07 정식 출시 예정 · 한국 대학생 20–25세")))), /*#__PURE__*/React.createElement(TweaksPanel, null, /*#__PURE__*/React.createElement(TweakSection, {
+    label: "매칭 점수 가중치"
+  }), /*#__PURE__*/React.createElement(TweakSection, {
+    label: "매칭 점수 가중치"
+  }), /*#__PURE__*/React.createElement("div", {
+    style: {
+      fontSize: 10,
+      color: total === 100 ? '#3F6212' : '#BE123C',
+      textAlign: 'right',
+      marginTop: -4
+    }
+  }, "합계 ", total, " / 100 ", total === 100 ? '✓' : '⚠'), /*#__PURE__*/React.createElement(TweakSlider, {
+    label: "역할 매칭",
+    value: t.wRole,
+    min: 0,
+    max: 50,
+    step: 1,
+    unit: "점",
+    onChange: v => setTweak('wRole', v)
+  }), /*#__PURE__*/React.createElement(TweakSlider, {
+    label: "기술 스택",
+    value: t.wSkill,
+    min: 0,
+    max: 50,
+    step: 1,
+    unit: "점",
+    onChange: v => setTweak('wSkill', v)
+  }), /*#__PURE__*/React.createElement(TweakSlider, {
+    label: "참여 기간",
+    value: t.wPeriod,
+    min: 0,
+    max: 50,
+    step: 1,
+    unit: "점",
+    onChange: v => setTweak('wPeriod', v)
+  }), /*#__PURE__*/React.createElement(TweakSlider, {
+    label: "관심 분야",
+    value: t.wInterest,
+    min: 0,
+    max: 50,
+    step: 1,
+    unit: "점",
+    onChange: v => setTweak('wInterest', v)
+  }), /*#__PURE__*/React.createElement(TweakSlider, {
+    label: "포트폴리오",
+    value: t.wFolio,
+    min: 0,
+    max: 50,
+    step: 1,
+    unit: "점",
+    onChange: v => setTweak('wFolio', v)
+  }), /*#__PURE__*/React.createElement(TweakSection, {
+    label: "포트폴리오 화면"
+  }), /*#__PURE__*/React.createElement(TweakToggle, {
+    label: "컨페티 효과",
+    value: t.showConfetti,
+    onChange: v => setTweak('showConfetti', v)
+  })), activeApplicant && /*#__PURE__*/React.createElement(S3.ApplicantModal, {
+    applicant: activeApplicant,
+    onClose: () => setActiveApplicant(null)
+  }), activeTask && /*#__PURE__*/React.createElement(S3.TaskModal, {
+    task: activeTask,
+    onClose: () => setActiveTask(null)
+  }));
+}
+function DeviceBadge({
+  label,
+  url,
+  mobile
+}) {
+  return /*#__PURE__*/React.createElement("div", {
+    className: "flex items-center justify-between mb-3"
+  }, /*#__PURE__*/React.createElement("div", {
+    className: "flex items-center gap-2 text-[11px] font-bold tracking-wider",
+    style: {
+      color: '#94A3B8'
+    }
+  }, mobile ? /*#__PURE__*/React.createElement(Li.Smartphone, {
+    size: 12
+  }) : /*#__PURE__*/React.createElement(Li.Monitor, {
+    size: 12
+  }), label), /*#__PURE__*/React.createElement("div", {
+    className: "text-[10px] font-mono",
+    style: {
+      color: '#94A3B8'
+    }
+  }, "campus-link.kr/", url));
+}
+ReactDOM.createRoot(document.getElementById('root')).render(/*#__PURE__*/React.createElement(App, null));

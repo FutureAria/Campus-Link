@@ -468,7 +468,6 @@ function ScreenLanding({ device, animKey }) {
           </div>
         )}
         <div className="flex items-center gap-2">
-          {!isM && <button className="text-sm px-3 py-2 font-medium" style={{ color: '#475569' }}>로그인</button>}
           <button className="rounded-xl text-sm font-semibold text-white" style={{ background: '#4F46E5', padding: isM ? '6px 12px' : '8px 14px' }}>시작하기</button>
         </div>
       </div>
@@ -517,25 +516,11 @@ function ScreenLanding({ device, animKey }) {
 
       {/* Section 2 — features */}
       <div className={`${isM ? 'px-5 py-10' : 'px-12 py-16'}`} style={{ background: '#FFFFFF' }}>
-        <div className="flex items-end justify-between mb-7">
-          <div>
-            <div className="text-[12px] font-bold tracking-wide" style={{ color: '#4F46E5' }}>FEATURES</div>
-            <h2 className="font-bold mt-2" style={{ fontSize: isM ? 22 : 28, letterSpacing: '-0.02em' }}>5가지 문제, 6가지 해답</h2>
-          </div>
-          {!isM && <div className="text-sm" style={{ color: '#94A3B8' }}>← 가로로 스크롤 →</div>}
+        <div className="mb-7">
+          <div className="text-[12px] font-bold tracking-wide" style={{ color: '#4F46E5' }}>FEATURES</div>
+          <h2 className="font-bold mt-2" style={{ fontSize: isM ? 22 : 28, letterSpacing: '-0.02em' }}>5가지 문제, 6가지 해답</h2>
         </div>
-        <div className={`${isM ? 'grid grid-cols-1 gap-3' : 'flex gap-4 overflow-x-auto hscroll pb-2 -mx-12 px-12'}`}>
-          {D.FEATURES.map((f, i) => (
-            <div key={f.id} className="rounded-2xl border bg-white p-5 shrink-0" style={{ borderColor: '#E4E4E7', width: isM ? '100%' : 260 }}>
-              <div className="flex items-center justify-between">
-                <span className="text-[11px] font-bold tracking-wider rounded-md px-2 py-1" style={{ background: '#EEF2FF', color: '#4F46E5' }}>{f.id}</span>
-                <span className="text-zinc-300 text-xs">0{i+1}</span>
-              </div>
-              <div className="mt-5 font-bold text-[17px]" style={{ letterSpacing: '-0.02em' }}>{f.title}</div>
-              <div className="mt-2 text-[13px] leading-relaxed" style={{ color: '#475569' }}>{f.desc}</div>
-            </div>
-          ))}
-        </div>
+        <FeaturesCarousel />
       </div>
 
       {/* Section 3 — flow */}
@@ -584,6 +569,46 @@ function ScreenLanding({ device, animKey }) {
             })}
           </div>
         </div>
+      </div>
+    </div>
+  );
+}
+
+function FeaturesCarousel() {
+  const trackRef = useR1(null);
+
+  useE1(() => {
+    if (!document.getElementById('feature-carousel-kf')) {
+      const s = document.createElement('style');
+      s.id = 'feature-carousel-kf';
+      s.textContent = `@keyframes featureScroll { 0% { transform: translateX(0); } 100% { transform: translateX(-50%); } }`;
+      document.head.appendChild(s);
+    }
+    if (trackRef.current) {
+      trackRef.current.style.animation = 'featureScroll 28s linear infinite';
+    }
+  }, []);
+
+  const items = [...D.FEATURES, ...D.FEATURES];
+
+  return (
+    <div style={{ overflow: 'hidden', margin: '0 -48px' }}>
+      <div
+        ref={trackRef}
+        style={{ display: 'flex', gap: 16, width: 'max-content', padding: '4px 48px' }}
+        onMouseEnter={e => e.currentTarget.style.animationPlayState = 'paused'}
+        onMouseLeave={e => e.currentTarget.style.animationPlayState = 'running'}
+      >
+        {items.map((f, i) => (
+          <div key={`${f.id}-${i}`} className="rounded-2xl border bg-white p-5" style={{ borderColor: '#E4E4E7', width: 260, flexShrink: 0 }}>
+            <div className="flex items-center justify-between">
+              <span className="text-[11px] font-bold tracking-wider rounded-md px-2 py-1" style={{ background: '#EEF2FF', color: '#4F46E5' }}>{f.id}</span>
+              <span className="text-zinc-300 text-xs">0{(i % D.FEATURES.length) + 1}</span>
+            </div>
+            <div className="mt-5 font-bold text-[17px]" style={{ letterSpacing: '-0.02em' }}>{f.title}</div>
+            <div className="mt-2 text-[13px] leading-relaxed" style={{ color: '#475569' }}>{f.desc}</div>
+          </div>
+        ))}
       </div>
     </div>
   );
