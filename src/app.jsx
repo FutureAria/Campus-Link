@@ -3,6 +3,8 @@ const Atoms = window.MajorAtoms;
 const S1 = window.MajorScreens;
 const S2 = window.MajorScreens2;
 const S3 = window.MajorScreens3;
+const S4 = window.MajorScreens4;
+const S5 = window.MajorScreens5;
 const Li = window.lucideReact || {};
 const { useState: useApp, useEffect: useAppE } = React;
 
@@ -16,6 +18,13 @@ const TABS = [
   { k: 'notif',     label: '모바일 알림', url: 'notifications',          desktop: 'fallback', mobile: 'web' },
   { k: 'mypage',    label: '마이페이지',   url: 'me',                      desktop: 'web', mobile: 'web' },
   { k: 'pricing',   label: '요금제',       url: 'pricing',                 desktop: 'web', mobile: 'web' },
+  { k: 'auth',          label: '로그인·가입',     url: 'signup',              desktop: 'web', mobile: 'web' },
+  { k: 'billing',       label: '구독 결제',       url: 'me/billing',          desktop: 'web', mobile: 'web' },
+  { k: 'messages',      label: '쪽지함',          url: 'messages',            desktop: 'web', mobile: 'web' },
+  { k: 'safety',        label: '안전센터',        url: 'me/safety',           desktop: 'web', mobile: 'web' },
+  { k: 'verifications', label: '인증·수상 내역',  url: 'me/verifications',    desktop: 'web', mobile: 'web' },
+  { k: 'org',           label: '기관 대시보드',    url: 'org/dashboard',       desktop: 'web', mobile: 'web' },
+  { k: 'admin',         label: '운영자 콘솔',      url: 'admin',               desktop: 'web', mobile: 'web' },
 ];
 
 const TWEAK_DEFAULTS = /*EDITMODE-BEGIN*/{
@@ -83,6 +92,13 @@ function App() {
       portfolio: <S2.ScreenPortfolio device="web" animKey={animKey} />,
       mypage:    <S3.ScreenMyPage    device="web" animKey={animKey} />,
       pricing:   <S1.ScreenPricing   device="web" animKey={animKey} />,
+      auth:          <S4.ScreenAuth          device="web" animKey={animKey} />,
+      billing:       <S4.ScreenBilling       device="web" animKey={animKey} />,
+      messages:      <S4.ScreenMessages      device="web" animKey={animKey} />,
+      safety:        <S5.ScreenSafety        device="web" animKey={animKey} />,
+      verifications: <S5.ScreenVerifications device="web" animKey={animKey} />,
+      org:           <S5.ScreenOrg           device="web" animKey={animKey} />,
+      admin:         <S5.ScreenAdmin         device="web" animKey={animKey} />,
     };
     return map[tab];
   };
@@ -97,8 +113,18 @@ function App() {
       portfolio: <S2.ScreenPortfolio device="mobile" animKey={animKey} />,
       mypage:    <S3.ScreenMyPage    device="mobile" animKey={animKey} />,
       pricing:   <S1.ScreenPricing   device="mobile" animKey={animKey} />,
+      auth:          <S4.ScreenAuth          device="mobile" animKey={animKey} />,
+      billing:       <S4.ScreenBilling       device="mobile" animKey={animKey} />,
+      messages:      <S4.ScreenMessages      device="mobile" animKey={animKey} />,
+      safety:        <S5.ScreenSafety        device="mobile" animKey={animKey} />,
+      verifications: <S5.ScreenVerifications device="mobile" animKey={animKey} />,
+      org:           <S5.ScreenOrg           device="mobile" animKey={animKey} />,
+      admin:         <S5.ScreenAdmin         device="mobile" animKey={animKey} />,
     };
-    const tabActive = { explore: 'explore', detail: 'explore', compare: 'mine', dashboard: 'mine', portfolio: 'me', mypage: 'me', landing: 'home' }[tab];
+    const tabActive = {
+      explore: 'explore', detail: 'explore', compare: 'mine', dashboard: 'mine', portfolio: 'me', mypage: 'me', landing: 'home',
+      auth: 'home', billing: 'me', messages: 'notif', safety: 'me', verifications: 'me', org: 'mine', admin: 'mine',
+    }[tab];
     return <>{map[tab]}<Atoms.MobileTabBar active={tabActive} /></>;
   };
 
@@ -114,7 +140,7 @@ function App() {
             <Atoms.Wordmark size="lg" />
             <div className="hidden md:flex flex-col leading-tight">
               <span className="text-[11px] font-bold tracking-wider" style={{ color: '#94A3B8' }}>SHOWCASE</span>
-              <span className="text-[12px] font-semibold" style={{ color: '#475569' }}>디자인 미리보기 · 7개 화면</span>
+              <span className="text-[12px] font-semibold" style={{ color: '#475569' }}>디자인 미리보기 · {TABS.length}개 화면</span>
             </div>
           </div>
           <div className="flex-1 flex items-center gap-1.5 overflow-x-auto hscroll">
